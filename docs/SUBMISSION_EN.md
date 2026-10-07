@@ -2,7 +2,9 @@
 
 Applicant: **[ENGLISH NAME REQUIRED]**  
 GitHub account: **jinzzze**  
-Intended repository: **jinzzze/simu-lab** (not yet confirmed published)  
+Repository: **https://github.com/jinzzze/simu-lab**
+
+Recorded artifacts: **https://github.com/jinzzze/simu-lab/releases/tag/v1.0.0**  
 Challenge: https://jobs.ashbyhq.com/humanoid/e1a2a9de-ad23-4632-9d93-ee50fd41a221
 
 ## Short application description
@@ -11,7 +13,7 @@ I investigated whether object and hand supervision extracted from personally col
 
 The result is negative: combined supervision did not improve success. At 256 simulation adaptation images all groups achieved 192/192 executions; an exploratory 32-image follow-up gave RGB-only 184/192 and combined supervision 181/192. These executions reuse 64 initial scenes across three training seeds. I also implemented an action-conditioned macro-outcome world model and a separate compact Diffusion Policy extension. The world model obtained 28.41 mm mean endpoint error and 153/160 correct outcome labels on 32 held-out simulated initial scenes. The learned action policy achieved 84/192 strict grasp successes using additional simulated expert trajectories.
 
-The deliverable includes source code, data lineage, all-seed results, failure examples, checkpoints and reproduction instructions prepared as local release candidates. There is no claimed improvement in real-world generalization, no real-robot evaluation and no VLA. New independent real recordings are deferred. I used Codex assistance for implementation, experiments and documentation; the personal recordings were supplied by me. I will verify the materials and authorship statements before submission.
+The deliverable includes source code, data lineage, all-seed results, failure examples, checkpoints and reproduction instructions published as versioned repository and release artifacts. There is no claimed improvement in real-world generalization, no real-robot evaluation and no VLA. New independent real recordings are deferred. I used Codex assistance for implementation, experiments and documentation; the personal recordings were supplied by me. I will verify the materials and authorship statements before submission.
 
 ## Technical choices to discuss
 

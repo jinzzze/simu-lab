@@ -8,9 +8,9 @@ The applicant supplied 12 videos of grasping a 20 × 20 × 10 mm black block and
 
 The reported A/B/C/D/R experiments implement visual representation transfer and a fixed grasp controller. They do not train a VLA or imitate human action sequences. A separate macro-action world-model extension is now complete and reported below; it does not change those experiments. The original pushing/MPC proposal remains historical design.
 
-## Release candidate
+## Repository and recorded artifacts
 
-Prepared for GitHub account **jinzzze**, intended repository **simu-lab**. Publication is pending. [Submission draft](docs/SUBMISSION_EN.md) · [Release reproduction](docs/RELEASE_REPRODUCTION.md) · [Data/model card](docs/DATA_MODEL_CARD.md) · [Release checklist](docs/RELEASE_CHECKLIST_ZH.md) · [Third-party notices](THIRD_PARTY_NOTICES.md).
+Public repository: [jinzzze/simu-lab](https://github.com/jinzzze/simu-lab). The complete source/report archive and personal-data/checkpoint archive are provided through [release v1.0.0](https://github.com/jinzzze/simu-lab/releases/tag/v1.0.0). Extract both into one folder to reproduce the recorded study; verify the accompanying SHA256 checksums. [Submission draft](docs/SUBMISSION_EN.md) · [Release reproduction](docs/RELEASE_REPRODUCTION.md) · [Data/model card](docs/DATA_MODEL_CARD.md) · [Release checklist](docs/RELEASE_CHECKLIST_ZH.md) · [Third-party notices](THIRD_PARTY_NOTICES.md).
 
 Independent real-scene validation is deferred at the applicant's request (2026-10-07). All existing phone clips remain development data. Human pseudo-label accuracy is still unmeasured; a blinded review set is prepared. These limits do not change the recorded simulation results.
 

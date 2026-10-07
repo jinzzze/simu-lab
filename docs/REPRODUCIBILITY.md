@@ -91,3 +91,8 @@ See [DP-D scope and commands](DIFFUSION_POLICY.md). Recompute its report with `.
 ## Release preparation update (2026-10-07)
 
 Independent real-scene validation is deferred by the applicant. Local source/report and input/checkpoint release candidates, an English application draft, a 112-second captioned demonstration and a 48-frame blinded development-label review are prepared. Human box/keypoint accuracy is not yet measured. Same-host clean installation passes the recorded checks; publication, final license/data permissions, applicant identity and the actual application remain pending. See [release checklist](RELEASE_CHECKLIST_ZH.md) and [archive reproduction](RELEASE_REPRODUCTION.md).
+
+
+## Public release addendum
+
+The applicant approved publication of all original videos, processed data and checkpoints on 2026-10-07. Repository: https://github.com/jinzzze/simu-lab ; artifact release: https://github.com/jinzzze/simu-lab/releases/tag/v1.0.0 . Earlier local-only descriptions record the pre-release state. Final application submission and a blanket original-source license grant remain separate steps.

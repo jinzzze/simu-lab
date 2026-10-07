@@ -63,7 +63,7 @@ def validate(stage):
                 if not target.is_relative_to(stage) or not target.exists():missing.append(links[-1])
     return {'local_link_count':len(links),'missing_local_links':missing,'credential_pattern_matches':secrets,'source_files_over_100MiB':large,'note':'Credential pattern scan is limited; no guarantee of exhaustive secret detection. Personal video/images are present in this local candidate and need publication review.'}
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--stage-only',action='store_true');args=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('--stage-only',action='store_true');ap.add_argument('--reuse-input-archive',action='store_true');args=ap.parse_args()
     OUT.mkdir(parents=True,exist_ok=True);rows=[]
     for label,folder,files in [('source-report','repository',collect()[0]),('inputs-checkpoints','inputs',collect()[1])]:
         for f in files:
@@ -82,6 +82,19 @@ def main():
     archives=[]
     for folder,name in [('repository','simu-lab-source-report.zip'),('inputs','simu-lab-inputs-checkpoints.zip')]:
         target=OUT/name
+        if args.reuse_input_archive and folder=='inputs':
+            prior=json.loads((OUT/'release_manifest.json').read_text())
+            item=next(x for x in prior['archives'] if x['name']==name)
+            if not target.exists() or sha(target)!=item['sha256']:raise ValueError('Existing input archive changed')
+            with zipfile.ZipFile(target) as z:
+                expected={r['path']:r for r in rows if r['archive']=='inputs-checkpoints'}
+                if set(z.namelist())!=set(expected):raise ValueError('Input inventory changed')
+                for path,row in expected.items():
+                    h=hashlib.sha256()
+                    with z.open(path) as stream:
+                        for block in iter(lambda:stream.read(1024*1024),b''):h.update(block)
+                    if h.hexdigest()!=row['sha256']:raise ValueError('Input content changed')
+            archives.append(item);continue
         with zipfile.ZipFile(target,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=1,allowZip64=True) as z:
             for f in sorted((OUT/folder).rglob('*')):
                 if f.is_file() and '.git' not in f.relative_to(OUT/folder).parts:z.write(f,f.relative_to(OUT/folder).as_posix())

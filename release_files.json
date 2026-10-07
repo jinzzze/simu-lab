@@ -6,8 +6,8 @@
     {
       "path": ".gitattributes",
       "archive": "source-report",
-      "bytes": 70,
-      "sha256": "aae091a90c7c37e15bf8620a385d02e890a2aef8dfb5cee27711eec1dffe9a63"
+      "bytes": 87,
+      "sha256": "50924d82f4374a33be4dc199cb6ee797f54f515a65ae17fafb9ec9817c3ba3e6"
     },
     {
       "path": ".gitignore",
@@ -3924,8 +3924,8 @@
     {
       "path": "docs/CHALLENGE_ALIGNMENT.md",
       "archive": "source-report",
-      "bytes": 6234,
-      "sha256": "b4c225e6ab9affef53015d21a6dc575de430a272182bab4c94613e26fe367faf"
+      "bytes": 6658,
+      "sha256": "9e2e38be433830c61968b66de4118cbbdca2637acb47594b45933a4289e01536"
     },
     {
       "path": "docs/CHALLENGE_VERIFIED_20261007.md",
@@ -3942,8 +3942,8 @@
     {
       "path": "docs/DATA_MODEL_CARD.md",
       "archive": "source-report",
-      "bytes": 2848,
-      "sha256": "ed51ae3d883a85e9348802fd292a4b62dcb72e35f51e7366cb18550d1ff8067a"
+      "bytes": 2882,
+      "sha256": "daa9ad2fc5ba52043cd5538bcdc4fd35bbd7f06293c10ae613fccf1818d3c3ec"
     },
     {
       "path": "docs/DIFFUSION_POLICY.md",
@@ -3954,8 +3954,8 @@
     {
       "path": "docs/ENVIRONMENT.md",
       "archive": "source-report",
-      "bytes": 5250,
-      "sha256": "5539d759f5f600e29310ac721b8008bc19e396bd0e90074d08677e6c14b7b386"
+      "bytes": 5674,
+      "sha256": "2526eab5caa8cbf8e0ab601d31ad5aa94fd4278bfb4dece42cb0b78579af11d9"
     },
     {
       "path": "docs/GRASP_SIM_REPORT.md",
@@ -4008,32 +4008,32 @@
     {
       "path": "docs/PUBLISH_GUIDE_ZH.md",
       "archive": "source-report",
-      "bytes": 1863,
-      "sha256": "6f6f8472e4fec4d6a08b229c76c94702f100c09963608bae57a044e37e4fc009"
+      "bytes": 1986,
+      "sha256": "698be61c717e4fdb81a0744b8d1cb6cf3b5bfb317313f3575257319952ae892a"
     },
     {
       "path": "docs/RELEASE_CHECKLIST_ZH.md",
       "archive": "source-report",
-      "bytes": 2058,
-      "sha256": "884e2b7e9bc24f6737e38b88326e122ec4f631a10076d8ad4903c121da94dddb"
+      "bytes": 2064,
+      "sha256": "d03e1538847989fd8e6a0ff5b43ddd2942697c5b506084391aea8db0d5d5c6e8"
     },
     {
       "path": "docs/RELEASE_REPRODUCTION.md",
       "archive": "source-report",
-      "bytes": 3700,
-      "sha256": "6edd051d20ee44395ac58d152cf5f0eef39fd8e94715c658f1c43876a7e50a88"
+      "bytes": 3797,
+      "sha256": "0d1e5f1bd32e595115eadea24a036febacde572cb79952c19b08c4635eb367ef"
     },
     {
       "path": "docs/REPRODUCIBILITY.md",
       "archive": "source-report",
-      "bytes": 9995,
-      "sha256": "93c2f153bf4b4658446d900651ad37bc25679d8ff93a0c9c2c9867608dacc8e3"
+      "bytes": 10419,
+      "sha256": "267834dccf786d455b6c56e92a1465d7f1389a89a54e5f2a3021b390fa6ea30c"
     },
     {
       "path": "docs/SUBMISSION_EN.md",
       "archive": "source-report",
-      "bytes": 3413,
-      "sha256": "1feba50f5b2f818f43972fbd617b8305c12e555a729a8b26e7b63fe14e909410"
+      "bytes": 3495,
+      "sha256": "94b0499c5b79be9b40fd45451e06d626757d3a261c0df28fd8eff7323aa66dbb"
     },
     {
       "path": "docs/VISUAL_TRAINING.md",
@@ -4050,8 +4050,8 @@
     {
       "path": "README.md",
       "archive": "source-report",
-      "bytes": 14658,
-      "sha256": "6d564bf72807fccacdc298b84929ce334ffa93fa40641b9ffe15cce8fadd903e"
+      "bytes": 14923,
+      "sha256": "f0a4079eaf7015499d19f8d265fdd781d2d7d1516476b17d172610e5842b77ef"
     },
     {
       "path": "requirements.txt",
@@ -4218,8 +4218,8 @@
     {
       "path": "scripts/prepare_release.py",
       "archive": "source-report",
-      "bytes": 7182,
-      "sha256": "d9457cc85512d83796da990c5498a477e0270a774bd0ca02fa7697ef3249fb2d"
+      "bytes": 8176,
+      "sha256": "ab14a7f1092c113a7fea12223ab289401b2f7c8e1284f85bb9f275024367ccc5"
     },
     {
       "path": "scripts/record_diffusion_failures.py",
@@ -4452,8 +4452,8 @@
     {
       "path": "THIRD_PARTY_NOTICES.md",
       "archive": "source-report",
-      "bytes": 2844,
-      "sha256": "8ee628699c014b5bd40b47f9a461abfba48291c6b85ead667d90a81c07e8d613"
+      "bytes": 2903,
+      "sha256": "08438fab67be5119126e5cd4373b68415c3eadc0854acd5454e24744f621c6f5"
     },
     {
       "path": "artifacts/runs/diffusion_policy_grasp_v1/DP_seed17/scene_30000_actions.npz",

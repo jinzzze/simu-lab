@@ -1,6 +1,6 @@
 # 发布准备与操作
 
-候选文件位于项目的 `artifacts/release_candidate_v1`。目标账户与仓库为 `jinzzze/simu-lab`。GitHub 浏览器当前停在登录页，因此尚未创建远端仓库，也没有上传或提交申请。
+候选文件位于项目的 `artifacts/release_candidate_v1`。目标账户与仓库为 `jinzzze/simu-lab`。已创建公开仓库 https://github.com/jinzzze/simu-lab ，源码报告已推送。用户已授权公开全部原片、处理后数据和权重；v1.0.0 Release 用于分发校验过的附件。正式岗位申请仍未提交。
 
 1. 审阅英文 README、申请说明、112 秒演示和发布清单。演示与部分诊断图片含个人采集的手部画面；源码报告包也不是纯文本。
 2. 确认源码许可证。建议 MIT，仅对你有权授权的原创源码生效；原片、衍生数据和权重另行决定。当前没有生效的根 LICENSE。

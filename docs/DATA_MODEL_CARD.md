@@ -19,4 +19,4 @@ All visual auxiliary heads are discarded at runtime. Simulator truth is used for
 
 ## Access and intended use
 
-Research prototype for a local application challenge. No real-robot deployment or broad scene robustness is established. Canonical videos, processed inputs and checkpoints are staged locally; no public access is asserted before the owner approves publication and the upload is verified. Media, data and derived weights require their own release decision; a source-code license does not automatically cover them. External base weights remain fetched from their original sources and verified by SHA256.
+Research prototype for a local application challenge. No real-robot deployment or broad scene robustness is established. The applicant authorized public distribution of all 12 original videos, processed inputs and trained checkpoints on 2026-10-07. These are provided in the versioned GitHub Release alongside checksums. Media, data and derived weights require their own release decision; a source-code license does not automatically cover them. External base weights remain fetched from their original sources and verified by SHA256.

@@ -1,8 +1,8 @@
 # Release reproduction
 
-## Candidate archive layout
+## Recorded artifact archive layout
 
-Extract `simu-lab-source-report.zip` into a new folder. It contains the source, reports, demo, manifests and non-weight run evidence. Extract `simu-lab-inputs-checkpoints.zip` into the **same** folder to supply the exact recorded input data and all saved experiment weights. This second archive is a local publication candidate, not an assertion of public licensing. No installed Python environment is copied into either archive. Use `SHA256SUMS.txt` to check both archives and `scripts/verify_release.py` to verify the extracted files against `release_files.json`.
+Extract `simu-lab-source-report.zip` into a new folder. It contains the source, reports, demo, manifests and non-weight run evidence. Extract `simu-lab-inputs-checkpoints.zip` into the **same** folder to supply the exact recorded input data and all saved experiment weights. The applicant approved public distribution of the original videos, processed data and checkpoints. This approval is not a blanket MIT grant for model weights or third-party assets. No installed Python environment is copied into either archive. Use `SHA256SUMS.txt` to check both archives and `scripts/verify_release.py` to verify the extracted files against `release_files.json`.
 
 ## Windows 64-bit installation
 

@@ -1,0 +1,11 @@
+name: humanoid-robot-learning
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.11
+  - numpy=1.26.4
+  - pybullet=3.25
+  - pip
+# Install requirements.txt afterward; keep PyBullet owned by conda.
+# CUDA packages are installed separately from the official PyTorch cu126 index.

@@ -1,0 +1,72 @@
+{
+  "data_path": "E:\\HumanoidRobotLearning\\data\\processed\\pilot_pretraining_v1.npz",
+  "data_sha256": "47509e28e150f8fa1227d891235b4ce55f9ea731e8090ed9bffdedf2209980e6",
+  "code_sha256": {
+    "src\\perception\\__init__.py": "fac602379e482e251ddd71dbf67bf200024de7bcc175024df8f81725b13bbb79",
+    "src\\perception\\losses.py": "987c2a687e8fe5675acc337f7a0991d8204df059e397776a0390a0b9b823c053",
+    "src\\perception\\models.py": "c090cb35d05b5fc3dd3dc033575c0cc57c3d6ab0e98afdc241ba15fdda6e6d55",
+    "src\\perception\\training.py": "2534ad37f7a1a563897f0b47739b1121097a5eb2ef3e676034ea9776ef27f40d",
+    "scripts\\train_visual_ablation.py": "8f9b34eff5562d3a79d8bd3e84194da06bfb2d2349b610e12da142190bf7ba1d",
+    "scripts\\adapt_visual_state.py": "e5fd11b0d19822360dd1c388ce6090628cbc8408d6d34623c0434ce635bbe565"
+  },
+  "config": {
+    "steps": 240,
+    "batch_size": 16,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "photometric_strength": 0.1,
+    "object_weight": 1.0,
+    "hand_weight": 1.0,
+    "checkpoint_rule": "last fixed-budget step; no checkpoint selection",
+    "teacher": "frozen eval-mode initial ImageNet ResNet18 pooled 512 features",
+    "consistency": "mean squared L2 distance between unit-normalized feature vectors"
+  },
+  "torch": "2.10.0+cu126",
+  "numpy": "1.26.4",
+  "cuda": "12.6",
+  "gpu": "NVIDIA GeForce RTX 3080 Ti Laptop GPU",
+  "real_data_status": "all 12 pilot episodes are one conservative development scene family; no held-out real test",
+  "teacher_state_sha256": "de620ffcedf6c2818d8b6575ad3b3fc89a41351a1588ef8c0d904defc28ebf8e",
+  "kind": "visual_pretraining_v1",
+  "group": "D",
+  "seed": 27,
+  "initial_model_sha256": "b3bf36a347a3c2219a785fe17a6a658594e606ec3901ff3719b8d88d1774b109",
+  "started_utc": "2026-10-06T10:56:53.635224+00:00",
+  "rgb_frames": 438,
+  "episodes": [
+    "pilot_24ccfc77eefb",
+    "pilot_6813f786a2f8",
+    "pilot_6f9ba1c96ca3",
+    "pilot_738fca5dd5fe",
+    "pilot_777231764b48",
+    "pilot_782a0f67a0fa",
+    "pilot_81483695ce19",
+    "pilot_88e1459ca56b",
+    "pilot_8ffaddf69ca6",
+    "pilot_dbff39bd344b",
+    "pilot_f3d45d8bca66",
+    "pilot_f77c2afc0208"
+  ],
+  "object_valid_frames": 398,
+  "hand_valid_landmarks": 4575,
+  "enabled": {
+    "object": true,
+    "hand": true
+  },
+  "evaluation_status": "development pretraining only; no real holdout performance",
+  "elapsed_seconds": 36.5613188999705,
+  "batch_sequence_sha256": "8aad3185b61a4f7bd16821cfb3f1555eb337f25fd2c743f6181682951c5e1c85",
+  "augmentation_final_rng_sha256": "9ec9cee2e2e752e484ba4fd7483feb35589037f7ad58dfdd026d8a7e8faa7dc8",
+  "final_losses": {
+    "step": 240,
+    "total": 0.10703013092279434,
+    "consistency": 0.0638110414147377,
+    "object": 0.00915727112442255,
+    "hand": 0.034061819314956665,
+    "object_valid": 15,
+    "hand_valid_points": 188,
+    "grad_norm": 0.2568233013153076
+  },
+  "status": "completed",
+  "steps_completed": 240
+}

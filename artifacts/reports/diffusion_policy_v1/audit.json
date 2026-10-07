@@ -1,0 +1,3393 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check": "collection completed and plan unchanged",
+      "passed": true
+    },
+    {
+      "check": "collection source scripts\\collect_diffusion_demonstrations.py",
+      "passed": true
+    },
+    {
+      "check": "collection source src\\policy\\environment.py",
+      "passed": true
+    },
+    {
+      "check": "collection source src\\sim\\grasp_env.py",
+      "passed": true
+    },
+    {
+      "check": "collection source configs\\grasp_sim.json",
+      "passed": true
+    },
+    {
+      "check": "collection source configs\\diffusion_policy.json",
+      "passed": true
+    },
+    {
+      "check": "collection source src\\predictor_process.py",
+      "passed": true
+    },
+    {
+      "check": "collection source scripts\\rgb_predictor_worker.py",
+      "passed": true
+    },
+    {
+      "check": "train dataset SHA",
+      "passed": true
+    },
+    {
+      "check": "train metadata SHA",
+      "passed": true
+    },
+    {
+      "check": "train scene split disjoint",
+      "passed": true
+    },
+    {
+      "check": "train observation previous command is causal",
+      "passed": true
+    },
+    {
+      "check": "train only frozen vision provides initial XY",
+      "passed": true
+    },
+    {
+      "check": "train clock is pre-action timestep",
+      "passed": true
+    },
+    {
+      "check": "val dataset SHA",
+      "passed": true
+    },
+    {
+      "check": "val metadata SHA",
+      "passed": true
+    },
+    {
+      "check": "val scene split disjoint",
+      "passed": true
+    },
+    {
+      "check": "val observation previous command is causal",
+      "passed": true
+    },
+    {
+      "check": "val only frozen vision provides initial XY",
+      "passed": true
+    },
+    {
+      "check": "val clock is pre-action timestep",
+      "passed": true
+    },
+    {
+      "check": "baseline identical full scenes",
+      "passed": true
+    },
+    {
+      "check": "DP train/validation scenes disjoint from test IDs",
+      "passed": true
+    },
+    {
+      "check": "7 complete training/evaluation",
+      "passed": true
+    },
+    {
+      "check": "7 exact plan and final budget",
+      "passed": true
+    },
+    {
+      "check": "7 checkpoint identity",
+      "passed": true
+    },
+    {
+      "check": "7 data lineage",
+      "passed": true
+    },
+    {
+      "check": "7 fixed visual checkpoint",
+      "passed": true
+    },
+    {
+      "check": "7 source scripts\\train_diffusion_policy.py",
+      "passed": true
+    },
+    {
+      "check": "7 source src\\policy\\diffusion.py",
+      "passed": true
+    },
+    {
+      "check": "7 source configs\\diffusion_policy.json",
+      "passed": true
+    },
+    {
+      "check": "7 source src\\perception\\training.py",
+      "passed": true
+    },
+    {
+      "check": "7 source scripts\\evaluate_diffusion_policy.py",
+      "passed": true
+    },
+    {
+      "check": "7 source src\\policy\\environment.py",
+      "passed": true
+    },
+    {
+      "check": "7 source src\\policy\\process.py",
+      "passed": true
+    },
+    {
+      "check": "7 source src\\policy\\diffusion.py",
+      "passed": true
+    },
+    {
+      "check": "7 source scripts\\diffusion_policy_worker.py",
+      "passed": true
+    },
+    {
+      "check": "7 source src\\sim\\grasp_env.py",
+      "passed": true
+    },
+    {
+      "check": "7 source configs\\grasp_sim.json",
+      "passed": true
+    },
+    {
+      "check": "7 source configs\\diffusion_policy.json",
+      "passed": true
+    },
+    {
+      "check": "7 full ordered paired evaluation",
+      "passed": true
+    },
+    {
+      "check": "7 episodes SHA",
+      "passed": true
+    },
+    {
+      "check": "7/30000 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30000 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30000 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30000 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30001 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30001 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30001 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30001 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30002 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30002 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30002 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30002 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30003 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30003 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30003 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30003 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30004 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30004 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30004 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30004 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30005 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30005 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30005 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30005 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30006 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30006 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30006 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30006 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30007 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30007 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30007 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30007 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30008 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30008 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30008 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30008 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30009 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30009 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30009 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30009 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30010 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30010 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30010 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30010 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30011 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30011 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30011 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30011 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30012 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30012 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30012 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30012 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30013 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30013 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30013 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30013 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30014 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30014 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30014 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30014 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30015 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30015 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30015 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30015 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30016 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30016 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30016 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30016 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30017 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30017 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30017 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30017 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30018 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30018 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30018 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30018 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30019 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30019 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30019 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30019 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30020 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30020 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30020 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30020 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30021 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30021 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30021 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30021 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30022 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30022 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30022 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30022 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30023 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30023 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30023 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30023 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30024 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30024 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30024 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30024 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30025 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30025 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30025 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30025 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30026 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30026 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30026 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30026 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30027 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30027 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30027 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30027 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30028 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30028 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30028 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30028 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30029 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30029 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30029 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30029 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30030 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30030 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30030 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30030 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30031 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30031 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30031 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30031 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30032 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30032 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30032 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30032 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30033 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30033 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30033 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30033 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30034 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30034 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30034 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30034 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30035 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30035 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30035 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30035 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30036 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30036 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30036 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30036 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30037 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30037 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30037 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30037 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30038 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30038 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30038 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30038 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30039 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30039 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30039 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30039 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30040 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30040 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30040 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30040 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30041 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30041 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30041 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30041 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30042 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30042 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30042 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30042 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30043 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30043 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30043 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30043 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30044 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30044 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30044 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30044 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30045 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30045 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30045 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30045 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30046 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30046 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30046 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30046 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30047 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30047 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30047 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30047 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30048 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30048 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30048 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30048 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30049 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30049 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30049 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30049 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30050 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30050 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30050 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30050 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30051 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30051 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30051 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30051 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30052 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30052 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30052 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30052 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30053 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30053 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30053 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30053 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30054 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30054 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30054 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30054 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30055 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30055 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30055 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30055 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30056 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30056 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30056 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30056 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30057 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30057 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30057 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30057 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30058 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30058 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30058 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30058 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30059 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30059 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30059 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30059 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30060 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30060 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30060 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30060 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30061 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30061 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30061 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30061 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30062 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30062 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30062 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30062 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "7/30063 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "7/30063 action trace",
+      "passed": true
+    },
+    {
+      "check": "7/30063 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "7/30063 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17 complete training/evaluation",
+      "passed": true
+    },
+    {
+      "check": "17 exact plan and final budget",
+      "passed": true
+    },
+    {
+      "check": "17 checkpoint identity",
+      "passed": true
+    },
+    {
+      "check": "17 data lineage",
+      "passed": true
+    },
+    {
+      "check": "17 fixed visual checkpoint",
+      "passed": true
+    },
+    {
+      "check": "17 source scripts\\train_diffusion_policy.py",
+      "passed": true
+    },
+    {
+      "check": "17 source src\\policy\\diffusion.py",
+      "passed": true
+    },
+    {
+      "check": "17 source configs\\diffusion_policy.json",
+      "passed": true
+    },
+    {
+      "check": "17 source src\\perception\\training.py",
+      "passed": true
+    },
+    {
+      "check": "17 source scripts\\evaluate_diffusion_policy.py",
+      "passed": true
+    },
+    {
+      "check": "17 source src\\policy\\environment.py",
+      "passed": true
+    },
+    {
+      "check": "17 source src\\policy\\process.py",
+      "passed": true
+    },
+    {
+      "check": "17 source src\\policy\\diffusion.py",
+      "passed": true
+    },
+    {
+      "check": "17 source scripts\\diffusion_policy_worker.py",
+      "passed": true
+    },
+    {
+      "check": "17 source src\\sim\\grasp_env.py",
+      "passed": true
+    },
+    {
+      "check": "17 source configs\\grasp_sim.json",
+      "passed": true
+    },
+    {
+      "check": "17 source configs\\diffusion_policy.json",
+      "passed": true
+    },
+    {
+      "check": "17 full ordered paired evaluation",
+      "passed": true
+    },
+    {
+      "check": "17 episodes SHA",
+      "passed": true
+    },
+    {
+      "check": "17/30000 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30000 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30000 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30000 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30001 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30001 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30001 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30001 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30002 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30002 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30002 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30002 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30003 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30003 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30003 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30003 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30004 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30004 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30004 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30004 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30005 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30005 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30005 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30005 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30006 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30006 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30006 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30006 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30007 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30007 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30007 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30007 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30008 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30008 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30008 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30008 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30009 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30009 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30009 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30009 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30010 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30010 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30010 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30010 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30011 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30011 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30011 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30011 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30012 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30012 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30012 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30012 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30013 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30013 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30013 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30013 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30014 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30014 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30014 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30014 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30015 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30015 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30015 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30015 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30016 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30016 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30016 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30016 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30017 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30017 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30017 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30017 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30018 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30018 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30018 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30018 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30019 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30019 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30019 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30019 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30020 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30020 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30020 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30020 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30021 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30021 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30021 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30021 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30022 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30022 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30022 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30022 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30023 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30023 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30023 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30023 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30024 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30024 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30024 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30024 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30025 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30025 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30025 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30025 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30026 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30026 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30026 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30026 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30027 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30027 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30027 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30027 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30028 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30028 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30028 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30028 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30029 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30029 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30029 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30029 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30030 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30030 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30030 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30030 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30031 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30031 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30031 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30031 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30032 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30032 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30032 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30032 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30033 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30033 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30033 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30033 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30034 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30034 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30034 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30034 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30035 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30035 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30035 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30035 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30036 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30036 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30036 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30036 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30037 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30037 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30037 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30037 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30038 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30038 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30038 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30038 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30039 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30039 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30039 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30039 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30040 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30040 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30040 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30040 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30041 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30041 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30041 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30041 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30042 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30042 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30042 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30042 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30043 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30043 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30043 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30043 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30044 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30044 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30044 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30044 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30045 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30045 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30045 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30045 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30046 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30046 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30046 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30046 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30047 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30047 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30047 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30047 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30048 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30048 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30048 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30048 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30049 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30049 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30049 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30049 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30050 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30050 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30050 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30050 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30051 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30051 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30051 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30051 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30052 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30052 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30052 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30052 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30053 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30053 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30053 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30053 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30054 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30054 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30054 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30054 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30055 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30055 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30055 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30055 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30056 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30056 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30056 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30056 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30057 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30057 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30057 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30057 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30058 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30058 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30058 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30058 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30059 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30059 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30059 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30059 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30060 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30060 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30060 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30060 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30061 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30061 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30061 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30061 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30062 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30062 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30062 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30062 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "17/30063 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "17/30063 action trace",
+      "passed": true
+    },
+    {
+      "check": "17/30063 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "17/30063 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27 complete training/evaluation",
+      "passed": true
+    },
+    {
+      "check": "27 exact plan and final budget",
+      "passed": true
+    },
+    {
+      "check": "27 checkpoint identity",
+      "passed": true
+    },
+    {
+      "check": "27 data lineage",
+      "passed": true
+    },
+    {
+      "check": "27 fixed visual checkpoint",
+      "passed": true
+    },
+    {
+      "check": "27 source scripts\\train_diffusion_policy.py",
+      "passed": true
+    },
+    {
+      "check": "27 source src\\policy\\diffusion.py",
+      "passed": true
+    },
+    {
+      "check": "27 source configs\\diffusion_policy.json",
+      "passed": true
+    },
+    {
+      "check": "27 source src\\perception\\training.py",
+      "passed": true
+    },
+    {
+      "check": "27 source scripts\\evaluate_diffusion_policy.py",
+      "passed": true
+    },
+    {
+      "check": "27 source src\\policy\\environment.py",
+      "passed": true
+    },
+    {
+      "check": "27 source src\\policy\\process.py",
+      "passed": true
+    },
+    {
+      "check": "27 source src\\policy\\diffusion.py",
+      "passed": true
+    },
+    {
+      "check": "27 source scripts\\diffusion_policy_worker.py",
+      "passed": true
+    },
+    {
+      "check": "27 source src\\sim\\grasp_env.py",
+      "passed": true
+    },
+    {
+      "check": "27 source configs\\grasp_sim.json",
+      "passed": true
+    },
+    {
+      "check": "27 source configs\\diffusion_policy.json",
+      "passed": true
+    },
+    {
+      "check": "27 full ordered paired evaluation",
+      "passed": true
+    },
+    {
+      "check": "27 episodes SHA",
+      "passed": true
+    },
+    {
+      "check": "27/30000 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30000 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30000 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30000 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30001 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30001 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30001 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30001 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30002 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30002 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30002 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30002 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30003 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30003 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30003 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30003 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30004 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30004 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30004 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30004 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30005 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30005 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30005 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30005 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30006 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30006 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30006 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30006 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30007 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30007 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30007 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30007 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30008 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30008 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30008 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30008 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30009 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30009 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30009 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30009 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30010 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30010 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30010 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30010 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30011 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30011 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30011 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30011 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30012 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30012 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30012 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30012 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30013 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30013 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30013 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30013 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30014 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30014 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30014 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30014 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30015 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30015 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30015 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30015 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30016 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30016 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30016 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30016 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30017 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30017 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30017 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30017 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30018 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30018 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30018 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30018 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30019 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30019 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30019 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30019 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30020 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30020 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30020 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30020 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30021 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30021 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30021 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30021 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30022 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30022 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30022 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30022 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30023 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30023 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30023 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30023 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30024 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30024 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30024 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30024 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30025 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30025 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30025 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30025 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30026 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30026 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30026 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30026 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30027 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30027 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30027 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30027 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30028 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30028 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30028 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30028 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30029 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30029 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30029 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30029 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30030 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30030 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30030 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30030 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30031 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30031 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30031 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30031 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30032 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30032 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30032 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30032 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30033 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30033 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30033 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30033 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30034 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30034 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30034 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30034 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30035 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30035 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30035 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30035 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30036 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30036 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30036 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30036 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30037 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30037 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30037 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30037 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30038 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30038 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30038 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30038 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30039 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30039 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30039 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30039 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30040 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30040 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30040 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30040 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30041 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30041 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30041 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30041 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30042 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30042 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30042 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30042 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30043 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30043 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30043 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30043 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30044 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30044 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30044 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30044 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30045 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30045 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30045 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30045 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30046 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30046 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30046 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30046 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30047 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30047 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30047 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30047 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30048 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30048 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30048 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30048 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30049 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30049 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30049 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30049 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30050 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30050 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30050 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30050 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30051 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30051 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30051 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30051 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30052 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30052 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30052 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30052 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30053 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30053 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30053 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30053 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30054 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30054 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30054 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30054 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30055 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30055 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30055 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30055 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30056 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30056 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30056 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30056 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30057 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30057 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30057 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30057 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30058 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30058 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30058 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30058 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30059 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30059 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30059 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30059 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30060 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30060 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30060 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30060 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30061 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30061 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30061 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30061 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30062 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30062 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30062 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30062 actual physical execution",
+      "passed": true
+    },
+    {
+      "check": "27/30063 initial image identical to D7 baseline",
+      "passed": true
+    },
+    {
+      "check": "27/30063 action trace",
+      "passed": true
+    },
+    {
+      "check": "27/30063 same sampling RNG across seeds",
+      "passed": true
+    },
+    {
+      "check": "27/30063 actual physical execution",
+      "passed": true
+    }
+  ]
+}

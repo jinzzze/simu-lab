@@ -1,0 +1,74 @@
+{
+  "policy_seed": 17,
+  "scene_seed": 30001,
+  "selection": "first failure in ascending original scene order",
+  "replayed_original_commands": true,
+  "resampled_diffusion": false,
+  "replay_matches_original": true,
+  "final_position_difference_m": 0.0,
+  "original": {
+    "success": false,
+    "lifted": false,
+    "scene_seed": 30001,
+    "max_clearance_m": 0.0,
+    "max_lift_duration_s": 0.0,
+    "final_stable_duration_s": 0.0,
+    "final_flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": true,
+      "withdrawn": true
+    },
+    "final_object_xyz_m": [
+      -0.07581905591018859,
+      0.04424618235042641,
+      0.004989958554570662
+    ],
+    "simulated_duration_s": 12.8,
+    "diagnostic_ground_truth_only": true,
+    "object_attached_or_teleported": false,
+    "policy_seed": 17,
+    "initial_visual_xy_m": [
+      -0.07574069499969482,
+      0.038994237780570984
+    ],
+    "initial_rgb_sha256": "8112cc93c2b5614afac3412ceb5ae879ef2e7f6154cd82a5bb81134355baeae4",
+    "sampling_seed": 38822,
+    "clipped_actions": 0,
+    "inference_calls": 40,
+    "inference_mean_seconds": 0.08341930749011225,
+    "wall_seconds": 3.9558622000040486,
+    "controller": "learned DDIM action chunks + shared low-level IK; no scripted stages",
+    "action_trace_sha256": "fab97c3e21d649e9f66ee59a84b0eeb2246892088206e7831125bbf75e155a1e"
+  },
+  "replay": {
+    "success": false,
+    "lifted": false,
+    "scene_seed": 30001,
+    "max_clearance_m": 0.0,
+    "max_lift_duration_s": 0.0,
+    "final_stable_duration_s": 0.0,
+    "final_flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": true,
+      "withdrawn": true
+    },
+    "final_object_xyz_m": [
+      -0.07581905591018859,
+      0.04424618235042641,
+      0.004989958554570662
+    ],
+    "simulated_duration_s": 12.8,
+    "diagnostic_ground_truth_only": true,
+    "object_attached_or_teleported": false
+  },
+  "relative_folder": "DP_seed17_scene30001",
+  "scope": "diagnostic replay; not an additional independent evaluation sample"
+}

@@ -1,0 +1,16 @@
+{
+  "version": "grasp-world-model-rgb-diagnostic-v1",
+  "scope": "Exploratory paired input diagnostic specified after the true-state world-model report and one RGB integration demo; no new training or policy evaluation",
+  "visual_checkpoint": "artifacts/runs/visual_state_v1/D_seed7/checkpoint.pt",
+  "world_model": "artifacts/runs/grasp_world_model_v1/ensemble.npz",
+  "visual_selection": "Reuse the already preselected integration model D seed 7; no selection using this diagnostic",
+  "scenes": {"start": 42000, "count": 32},
+  "actions": "All five previously recorded absolute commands per held-out scene, unchanged",
+  "commands_source": "Privileged state plus preset offsets during original simulation collection, before execution; this diagnostic replays the recorded command values, not a policy choosing actions from RGB",
+  "input": "Freshly rendered RGB to visual estimator; estimated XY plus recorded absolute command to frozen macro-outcome predictor",
+  "checks": ["all initial RGB hashes match original transition records", "source and dataset/checkpoint hashes", "no test labels enter RGB inference or macro-prediction", "all 160 outcomes included"],
+  "metrics": ["final XY error from predicted final coordinate versus recorded actual final coordinate", "success and lift Brier, accuracy, AUROC", "paired true-state reference", "visual localization error over 32 scenes"],
+  "training_or_tuning": false,
+  "fresh_physical_executions": 0,
+  "limits": "Single visual checkpoint, same fixed-appearance test scenes, five correlated actions per scene; no policy success improvement or independent real-world generalization claim"
+}

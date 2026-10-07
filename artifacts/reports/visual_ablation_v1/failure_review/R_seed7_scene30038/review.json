@@ -1,0 +1,105 @@
+{
+  "original": {
+    "group": "R",
+    "training_seed": 7,
+    "scene_seed": 30038,
+    "initial_rgb_sha256": "a12bd3f8f712212c8436330e9df3ea4efd55cf0ac6a97d36853e7430e33fcf99",
+    "prediction_xy_m": [
+      -0.06229754909873009,
+      0.03922151401638985
+    ],
+    "label_xy_m": [
+      -0.037909255439751544,
+      0.04905372943123594
+    ],
+    "initial_xy_error_mm": 26.2956522558485,
+    "prediction_wall_seconds": 0.16202739998698235,
+    "outcome": {
+      "success": false,
+      "seed": 30038,
+      "estimated_xy_m": [
+        -0.06229754909873009,
+        0.03922151401638985
+      ],
+      "final_object_xyz_m": [
+        -0.03790438920720208,
+        0.04905071228679976,
+        0.004989943969320428
+      ],
+      "max_clearance_m": 0.0,
+      "max_lift_duration_s": 0.0,
+      "final_stable_duration_s": 0.0,
+      "lifted": false,
+      "final_flags": {
+        "fully_right": false,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.52,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false
+    },
+    "success": false
+  },
+  "replayed_prediction_xy_m": [
+    -0.06229754909873009,
+    0.03922151401638985
+  ],
+  "replayed_outcome": {
+    "success": false,
+    "seed": 30038,
+    "estimated_xy_m": [
+      -0.06229754909873009,
+      0.03922151401638985
+    ],
+    "final_object_xyz_m": [
+      -0.03790438920720208,
+      0.04905071228679976,
+      0.004989943969320428
+    ],
+    "max_clearance_m": 0.0,
+    "max_lift_duration_s": 0.0,
+    "final_stable_duration_s": 0.0,
+    "lifted": false,
+    "final_flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": true,
+      "withdrawn": true
+    },
+    "stages_reached": {
+      "approach": true,
+      "descend": true,
+      "close": true,
+      "lift": true,
+      "transport": true,
+      "place": true,
+      "release": true,
+      "withdraw": true
+    },
+    "simulated_duration_s": 9.52,
+    "diagnostic_ground_truth_only": true,
+    "object_attached_or_teleported": false
+  },
+  "frames_verified": 120,
+  "selection": "first failed scene by training seed then scene seed; selected after evaluation for diagnosis",
+  "not_additional_independent_test_episode": true,
+  "checkpoint_sha256": "fcc9c79cb3278967be0070b2da4f9a53597954245b6c44c9e922c7108601b5a8"
+}

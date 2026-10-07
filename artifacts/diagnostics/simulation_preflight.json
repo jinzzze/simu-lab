@@ -1,0 +1,19 @@
+{
+  "environment": "PandaPush-v3",
+  "pybullet_api": 202010061,
+  "frame_shape": [
+    512,
+    512,
+    3
+  ],
+  "action_shape": [
+    3
+  ],
+  "end_effector_motion_m": 0.052336197524385786,
+  "observation_keys": [
+    "observation",
+    "achieved_goal",
+    "desired_goal"
+  ],
+  "note": "Tests rendering and commanded arm motion only; no learned policy or task success claim."
+}

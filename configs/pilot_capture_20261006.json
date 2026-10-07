@@ -1,0 +1,85 @@
+{
+  "protocol_id": "grasp_place_right_of_line_v0.2",
+  "status": "task_intent_confirmed_geometry_and_sim_thresholds_pending",
+  "confirmed_date": "2026-10-06",
+  "task": {
+    "instruction": "Grasp the black block from the starting rectangle, move it to the right of the black boundary line, release it onto the table, and withdraw the hand or gripper.",
+    "goal_type": "right_of_boundary_line",
+    "goal_is_target_box": false,
+    "stay_in_camera_view": true,
+    "require_lift": true,
+    "lift_height_threshold_mm": null,
+    "success_intent": [
+      "all of object footprint beyond right edge of the boundary strip",
+      "object supported by table",
+      "gripper released and withdrawn",
+      "object stable for a short window"
+    ],
+    "stability_window_s_proposed": 0.5,
+    "numerical_scoring_parameters_frozen": false
+  },
+  "object": {
+    "dimensions_mm": [
+      20,
+      20,
+      10
+    ],
+    "dimensions_axes": [
+      "length",
+      "width",
+      "height"
+    ],
+    "color": "black",
+    "source": "user_report",
+    "measured_by_agent": false
+  },
+  "board": {
+    "nominal_geometry_file": "assets/calibration/board_geometry.json",
+    "expected_marker_ids": [
+      0,
+      2
+    ],
+    "nominal_ruler_mm": 50,
+    "measured_ruler_mm": 48,
+    "measurement_source": "user_report",
+    "measured_horizontal_scale": 0.96,
+    "uniform_scale_assumption": 0.96,
+    "uniform_scale_verified": false,
+    "note": "The ruler verifies one direction only. Do not treat nominal board geometry as physically measured or alter the original print design. If uniform scaling is adopted provisionally, nominal relative board distances are multiplied by 0.96; physical paper-edge origin and vertical scale are unverified."
+  },
+  "data": {
+    "received_manifest": "data/manifests/pilot_received_20261006.json",
+    "received_count": 12,
+    "session_id": null,
+    "direct_phone_originals_confirmed": null,
+    "usage": "pilot_development",
+    "old_push_plan_applies": false,
+    "primary_source": "data/raw/pilot",
+    "best_available_quality_acceptance": {
+      "date": "2026-10-06",
+      "source": "user_confirmation",
+      "statement": "User confirmed the existing videos are the clearest available; proceed with these files.",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 25,
+      "higher_quality_replacement_requested": false,
+      "scope": "Accepted source for continued pilot development; not a claim of object-label accuracy or final training sufficiency."
+    },
+    "duplicate_source_directory": "data/raw/pilot_originals",
+    "duplicate_directory_excluded_from_independent_sampling": true
+  },
+  "simulation": {
+    "previous_push_smoke_test_is_not_grasp_validation": true,
+    "grasp_backend_implemented": false,
+    "ground_truth_allowed": [
+      "training_labels",
+      "scoring",
+      "separate_oracle_diagnostics"
+    ],
+    "ground_truth_for_primary_runtime_object_localization": false,
+    "shared_backend_for_all_groups": true,
+    "world_model_and_controller_revision_pending": true
+  }
+}

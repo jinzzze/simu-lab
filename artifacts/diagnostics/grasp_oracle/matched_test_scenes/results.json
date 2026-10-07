@@ -1,0 +1,2833 @@
+{
+  "kind": "oracle_development_diagnostic",
+  "config": {
+    "version": "grasp-prototype-v1",
+    "object_size_m": [
+      0.02,
+      0.02,
+      0.01
+    ],
+    "object_mass_kg": 0.02,
+    "object_friction": 0.8,
+    "finger_friction": 1.4,
+    "finger_force_n": 20.0,
+    "start_low_xy_m": [
+      -0.1,
+      -0.055
+    ],
+    "start_high_xy_m": [
+      -0.035,
+      0.055
+    ],
+    "start_yaw_range_rad": [
+      0.0,
+      0.0
+    ],
+    "line_x_m": 0.045,
+    "line_width_m": 0.003,
+    "place_xy_m": [
+      0.1,
+      0.0
+    ],
+    "workspace_xy_m": [
+      -0.15,
+      0.16,
+      -0.12,
+      0.12
+    ],
+    "grasp_ee_z_m": 0.008,
+    "transport_ee_z_m": 0.12,
+    "open_width_m": 0.065,
+    "closed_width_m": 0.0,
+    "max_ee_step_m": 0.008,
+    "min_lift_clearance_m": 0.015,
+    "min_lift_duration_s": 0.12,
+    "stable_duration_s": 0.5,
+    "stable_linear_speed_m_s": 0.005,
+    "stable_angular_speed_rad_s": 0.1,
+    "table_clearance_tolerance_m": 0.002,
+    "withdraw_distance_m": 0.06,
+    "upright_tolerance_deg": 20,
+    "camera_eye_m": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "camera_target_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "camera_up": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "camera_fov_deg": 22.0,
+    "image_size": 224,
+    "assumptions": "Mass, friction, start distribution, camera and line coordinates are prototype choices, not measured from videos. Object dimensions are user supplied.",
+    "initial_ee_xyz_m": [
+      -0.2,
+      0.0,
+      0.1
+    ]
+  },
+  "episodes": 64,
+  "successes": 64,
+  "success_rate": 1.0,
+  "not_a_research_result": true,
+  "results": [
+    {
+      "success": true,
+      "seed": 30000,
+      "estimated_xy_m": [
+        -0.08045831044381126,
+        0.012714078806239799
+      ],
+      "final_object_xyz_m": [
+        0.09995528482861979,
+        -0.0030008470001245554,
+        0.004989943970930049
+      ],
+      "max_clearance_m": 0.11259857595948397,
+      "max_lift_duration_s": 3.400000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.48,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.08045831044381126,
+        0.012714078806239799
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30001,
+      "estimated_xy_m": [
+        -0.07651454307355587,
+        0.039398799917647144
+      ],
+      "final_object_xyz_m": [
+        0.09996595807090301,
+        -0.010621786306105205,
+        0.00498994396908036
+      ],
+      "max_clearance_m": 0.11256610818991941,
+      "max_lift_duration_s": 3.400000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.56,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.07651454307355587,
+        0.039398799917647144
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30002,
+      "estimated_xy_m": [
+        -0.07678295794773628,
+        0.053430912612398976
+      ],
+      "final_object_xyz_m": [
+        0.0999658646526772,
+        -0.010849417429824485,
+        0.004989943968888477
+      ],
+      "max_clearance_m": 0.11254540356783074,
+      "max_lift_duration_s": 3.440000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.6,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.07678295794773628,
+        0.053430912612398976
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30003,
+      "estimated_xy_m": [
+        -0.04162916118642259,
+        0.025592074915773075
+      ],
+      "final_object_xyz_m": [
+        0.0999581793422792,
+        -0.010233940771455887,
+        0.0049899439687397275
+      ],
+      "max_clearance_m": 0.1123587568023033,
+      "max_lift_duration_s": 3.160000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.48,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.04162916118642259,
+        0.025592074915773075
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30004,
+      "estimated_xy_m": [
+        -0.08760363632799467,
+        0.033462267397481475
+      ],
+      "final_object_xyz_m": [
+        0.09996158628797565,
+        -0.010696335417756579,
+        0.004989943968918717
+      ],
+      "max_clearance_m": 0.11263584414547236,
+      "max_lift_duration_s": 3.480000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.52,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.08760363632799467,
+        0.033462267397481475
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30005,
+      "estimated_xy_m": [
+        -0.08039126837924598,
+        0.05280712436364822
+      ],
+      "final_object_xyz_m": [
+        0.09996405525739491,
+        -0.010649611015285125,
+        0.004989943968914079
+      ],
+      "max_clearance_m": 0.11256606355335387,
+      "max_lift_duration_s": 3.440000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.6,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.08039126837924598,
+        0.05280712436364822
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30006,
+      "estimated_xy_m": [
+        -0.09827495872592193,
+        0.0047870572343851414
+      ],
+      "final_object_xyz_m": [
+        0.0999585141269332,
+        0.004783643531603751,
+        0.0049899439689369265
+      ],
+      "max_clearance_m": 0.11273505601582541,
+      "max_lift_duration_s": 3.5200000000000022,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.48,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.09827495872592193,
+        0.0047870572343851414
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30007,
+      "estimated_xy_m": [
+        -0.058451788232265815,
+        -0.04990055899834854
+      ],
+      "final_object_xyz_m": [
+        0.09995431536103763,
+        0.01026957599390978,
+        0.004989943968765409
+      ],
+      "max_clearance_m": 0.112424679464061,
+      "max_lift_duration_s": 3.280000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.52,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.058451788232265815,
+        -0.04990055899834854
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30008,
+      "estimated_xy_m": [
+        -0.04215954347078153,
+        0.00991258922274118
+      ],
+      "final_object_xyz_m": [
+        0.10000719338418494,
+        0.008544179334302461,
+        0.004989943971954781
+      ],
+      "max_clearance_m": 0.11236503594757177,
+      "max_lift_duration_s": 3.160000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.44,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.04215954347078153,
+        0.00991258922274118
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30009,
+      "estimated_xy_m": [
+        -0.08623108331505375,
+        -0.010879720697702431
+      ],
+      "final_object_xyz_m": [
+        0.09999080818002798,
+        0.005563483291188283,
+        0.004989943972014564
+      ],
+      "max_clearance_m": 0.11262002728591348,
+      "max_lift_duration_s": 3.440000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.48,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.08623108331505375,
+        -0.010879720697702431
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30010,
+      "estimated_xy_m": [
+        -0.060757815766495284,
+        0.05161713388683238
+      ],
+      "final_object_xyz_m": [
+        0.09997407086245633,
+        -0.010771146459580805,
+        0.004989943968909971
+      ],
+      "max_clearance_m": 0.11246383085005453,
+      "max_lift_duration_s": 3.320000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.56,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.060757815766495284,
+        0.05161713388683238
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30011,
+      "estimated_xy_m": [
+        -0.08170284398339438,
+        -0.005397535674775878
+      ],
+      "final_object_xyz_m": [
+        0.09996426129496355,
+        -0.007042795340245608,
+        0.004989943968893704
+      ],
+      "max_clearance_m": 0.11261321651207096,
+      "max_lift_duration_s": 3.440000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.52,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.08170284398339438,
+        -0.005397535674775878
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30012,
+      "estimated_xy_m": [
+        -0.05815643413415392,
+        0.04321581779035987
+      ],
+      "final_object_xyz_m": [
+        0.0999727110034479,
+        -0.010649428111325495,
+        0.00498994396890552
+      ],
+      "max_clearance_m": 0.11245787439978612,
+      "max_lift_duration_s": 3.280000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.52,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.05815643413415392,
+        0.04321581779035987
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30013,
+      "estimated_xy_m": [
+        -0.09645996296948393,
+        0.014371665344445875
+      ],
+      "final_object_xyz_m": [
+        0.09994156979403067,
+        -0.010427733791449529,
+        0.004989943968793923
+      ],
+      "max_clearance_m": 0.11268423391402535,
+      "max_lift_duration_s": 3.5200000000000022,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.48,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.09645996296948393,
+        0.014371665344445875
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30014,
+      "estimated_xy_m": [
+        -0.03971353416152509,
+        0.02232512323786171
+      ],
+      "final_object_xyz_m": [
+        0.09995907798395562,
+        -0.010296751720774967,
+        0.004989943968754179
+      ],
+      "max_clearance_m": 0.11235092166566434,
+      "max_lift_duration_s": 3.160000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.48,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.03971353416152509,
+        0.02232512323786171
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30015,
+      "estimated_xy_m": [
+        -0.06331149904479814,
+        0.007171600678807656
+      ],
+      "final_object_xyz_m": [
+        0.0999717368509242,
+        0.006931498517580373,
+        0.004989943969109285
+      ],
+      "max_clearance_m": 0.11250284388637827,
+      "max_lift_duration_s": 3.280000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.44,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.06331149904479814,
+        0.007171600678807656
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30016,
+      "estimated_xy_m": [
+        -0.050200553835967415,
+        0.02340627870142808
+      ],
+      "final_object_xyz_m": [
+        0.09995687901432093,
+        -0.010303799897479189,
+        0.004989943968713236
+      ],
+      "max_clearance_m": 0.1123918832354855,
+      "max_lift_duration_s": 3.200000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.44,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.050200553835967415,
+        0.02340627870142808
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30017,
+      "estimated_xy_m": [
+        -0.06994172690235914,
+        0.004312841326252406
+      ],
+      "final_object_xyz_m": [
+        0.09995101477774257,
+        0.0037739437742460823,
+        0.004989943968774065
+      ],
+      "max_clearance_m": 0.11250886908214039,
+      "max_lift_duration_s": 3.360000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.52,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.06994172690235914,
+        0.004312841326252406
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30018,
+      "estimated_xy_m": [
+        -0.04341585694337888,
+        -0.025794398381041507
+      ],
+      "final_object_xyz_m": [
+        0.09998167255748978,
+        0.010817865904428691,
+        0.004989943968911488
+      ],
+      "max_clearance_m": 0.11240536259335034,
+      "max_lift_duration_s": 3.160000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.44,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.04341585694337888,
+        -0.025794398381041507
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30019,
+      "estimated_xy_m": [
+        -0.07220469821817621,
+        0.049560459298586955
+      ],
+      "final_object_xyz_m": [
+        0.0999669157217275,
+        -0.010675254232732656,
+        0.004989943968888082
+      ],
+      "max_clearance_m": 0.11252775145352945,
+      "max_lift_duration_s": 3.400000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.6,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.07220469821817621,
+        0.049560459298586955
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30020,
+      "estimated_xy_m": [
+        -0.07861075216288724,
+        0.009030011294599816
+      ],
+      "final_object_xyz_m": [
+        0.09996698636444289,
+        0.009256595551141378,
+        0.004989943968989979
+      ],
+      "max_clearance_m": 0.11259565594599621,
+      "max_lift_duration_s": 3.400000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.48,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.07861075216288724,
+        0.009030011294599816
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30021,
+      "estimated_xy_m": [
+        -0.08077650675377862,
+        0.04150406773880647
+      ],
+      "final_object_xyz_m": [
+        0.09996396709447788,
+        -0.010645319593535336,
+        0.004989943968875521
+      ],
+      "max_clearance_m": 0.11258252498437639,
+      "max_lift_duration_s": 3.440000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.56,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.08077650675377862,
+        0.04150406773880647
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30022,
+      "estimated_xy_m": [
+        -0.06808695958765637,
+        0.03253228444790191
+      ],
+      "final_object_xyz_m": [
+        0.09994716123814014,
+        -0.010245807648025546,
+        0.004989943968733711
+      ],
+      "max_clearance_m": 0.11248254639745191,
+      "max_lift_duration_s": 3.360000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.56,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.06808695958765637,
+        0.03253228444790191
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30023,
+      "estimated_xy_m": [
+        -0.04249346784371041,
+        -0.011349457239270366
+      ],
+      "final_object_xyz_m": [
+        0.09995697708017112,
+        0.008713626913681247,
+        0.004989943968754018
+      ],
+      "max_clearance_m": 0.11236565817566829,
+      "max_lift_duration_s": 3.160000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.44,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.04249346784371041,
+        -0.011349457239270366
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30024,
+      "estimated_xy_m": [
+        -0.08770929695651543,
+        0.020523179185523814
+      ],
+      "final_object_xyz_m": [
+        0.09996272488744597,
+        -0.010658162575934663,
+        0.004989943968829267
+      ],
+      "max_clearance_m": 0.11264825245510178,
+      "max_lift_duration_s": 3.480000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.52,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.08770929695651543,
+        0.020523179185523814
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30025,
+      "estimated_xy_m": [
+        -0.08458316837674218,
+        0.044327652346607606
+      ],
+      "final_object_xyz_m": [
+        0.09996648244548385,
+        -0.010686786245572228,
+        0.00498994396894057
+      ],
+      "max_clearance_m": 0.112601766995801,
+      "max_lift_duration_s": 3.480000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.6,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.08458316837674218,
+        0.044327652346607606
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30026,
+      "estimated_xy_m": [
+        -0.09281194468704285,
+        -0.007410006802354829
+      ],
+      "final_object_xyz_m": [
+        0.09996183822360138,
+        -0.009630269696216007,
+        0.004989943968910969
+      ],
+      "max_clearance_m": 0.1126933630588593,
+      "max_lift_duration_s": 3.5200000000000022,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.52,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.09281194468704285,
+        -0.007410006802354829
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30027,
+      "estimated_xy_m": [
+        -0.08706754252827673,
+        -0.0036808091493855683
+      ],
+      "final_object_xyz_m": [
+        0.09994350165312876,
+        -0.006513182730933258,
+        0.004989943968750171
+      ],
+      "max_clearance_m": 0.11262032698894249,
+      "max_lift_duration_s": 3.480000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.52,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.08706754252827673,
+        -0.0036808091493855683
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30028,
+      "estimated_xy_m": [
+        -0.06920035916839301,
+        0.044768990601109275
+      ],
+      "final_object_xyz_m": [
+        0.09996263043888211,
+        -0.010668560338654154,
+        0.004989943970850508
+      ],
+      "max_clearance_m": 0.11250886540984738,
+      "max_lift_duration_s": 3.360000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.56,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.06920035916839301,
+        0.044768990601109275
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30029,
+      "estimated_xy_m": [
+        -0.06746131063272956,
+        0.021019959294702836
+      ],
+      "final_object_xyz_m": [
+        0.09999479084744516,
+        -0.010970180211744555,
+        0.004989943972030579
+      ],
+      "max_clearance_m": 0.11249586072302074,
+      "max_lift_duration_s": 3.320000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.48,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.06746131063272956,
+        0.021019959294702836
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30030,
+      "estimated_xy_m": [
+        -0.08971407839087336,
+        -0.03312114037127515
+      ],
+      "final_object_xyz_m": [
+        0.09994507551461826,
+        0.010200194852244574,
+        0.004989943968780451
+      ],
+      "max_clearance_m": 0.11262576022977677,
+      "max_lift_duration_s": 3.480000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.52,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.08971407839087336,
+        -0.03312114037127515
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30031,
+      "estimated_xy_m": [
+        -0.03595403377439246,
+        -0.013741138263619357
+      ],
+      "final_object_xyz_m": [
+        0.09997139148553864,
+        0.010977324685045316,
+        0.004989943970384135
+      ],
+      "max_clearance_m": 0.1123696480834055,
+      "max_lift_duration_s": 3.120000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.44,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.03595403377439246,
+        -0.013741138263619357
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30032,
+      "estimated_xy_m": [
+        -0.09211323824303277,
+        -0.011765393936796636
+      ],
+      "final_object_xyz_m": [
+        0.09996348887405387,
+        0.00764651476543773,
+        0.004989943968928417
+      ],
+      "max_clearance_m": 0.11269436426013928,
+      "max_lift_duration_s": 3.480000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.48,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.09211323824303277,
+        -0.011765393936796636
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30033,
+      "estimated_xy_m": [
+        -0.0734550209142202,
+        -0.03080890521759723
+      ],
+      "final_object_xyz_m": [
+        0.09995975991406904,
+        0.010951618657899613,
+        0.004989943970948019
+      ],
+      "max_clearance_m": 0.11254664022378837,
+      "max_lift_duration_s": 3.360000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.52,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.0734550209142202,
+        -0.03080890521759723
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30034,
+      "estimated_xy_m": [
+        -0.0687691919183919,
+        0.013620133035095456
+      ],
+      "final_object_xyz_m": [
+        0.09994806370335849,
+        -0.0104306728660707,
+        0.004989943968827195
+      ],
+      "max_clearance_m": 0.11249054787498153,
+      "max_lift_duration_s": 3.320000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.48,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.0687691919183919,
+        0.013620133035095456
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30035,
+      "estimated_xy_m": [
+        -0.07496835241725436,
+        0.0329823596244958
+      ],
+      "final_object_xyz_m": [
+        0.09996876190645454,
+        -0.010784047909111605,
+        0.00498994396888819
+      ],
+      "max_clearance_m": 0.11255395683158498,
+      "max_lift_duration_s": 3.400000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.52,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.07496835241725436,
+        0.0329823596244958
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30036,
+      "estimated_xy_m": [
+        -0.07132940590394939,
+        -0.02651700846946231
+      ],
+      "final_object_xyz_m": [
+        0.09996219987587569,
+        0.01091237909731916,
+        0.00498994397091872
+      ],
+      "max_clearance_m": 0.11253780600687954,
+      "max_lift_duration_s": 3.360000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.52,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.07132940590394939,
+        -0.02651700846946231
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30037,
+      "estimated_xy_m": [
+        -0.07599827783433198,
+        0.0016993487304057925
+      ],
+      "final_object_xyz_m": [
+        0.09994601748915814,
+        0.00014987202071272844,
+        0.004989943968740709
+      ],
+      "max_clearance_m": 0.1125380984963415,
+      "max_lift_duration_s": 3.400000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.48,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.07599827783433198,
+        0.0016993487304057925
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30038,
+      "estimated_xy_m": [
+        -0.037909255439751544,
+        0.04905372943123594
+      ],
+      "final_object_xyz_m": [
+        0.10000480342774418,
+        -0.010954574344438315,
+        0.004989943971992976
+      ],
+      "max_clearance_m": 0.11234230127132183,
+      "max_lift_duration_s": 3.160000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.52,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.037909255439751544,
+        0.04905372943123594
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30039,
+      "estimated_xy_m": [
+        -0.04643910247825388,
+        -0.007727518472188206
+      ],
+      "final_object_xyz_m": [
+        0.09997701143788774,
+        -0.00954676423612293,
+        0.004989943968880868
+      ],
+      "max_clearance_m": 0.11242756786641332,
+      "max_lift_duration_s": 3.200000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.48,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.04643910247825388,
+        -0.007727518472188206
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30040,
+      "estimated_xy_m": [
+        -0.06945297935044739,
+        0.045537527727891276
+      ],
+      "final_object_xyz_m": [
+        0.09996782536107679,
+        -0.01077038853778163,
+        0.004989943968882573
+      ],
+      "max_clearance_m": 0.11251197324249791,
+      "max_lift_duration_s": 3.360000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.56,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.06945297935044739,
+        0.045537527727891276
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30041,
+      "estimated_xy_m": [
+        -0.06502236830847345,
+        -0.04493614120097459
+      ],
+      "final_object_xyz_m": [
+        0.0999733104961955,
+        0.010836581506440459,
+        0.004989943968927825
+      ],
+      "max_clearance_m": 0.1124990115338378,
+      "max_lift_duration_s": 3.320000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.52,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.06502236830847345,
+        -0.04493614120097459
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30042,
+      "estimated_xy_m": [
+        -0.07134038929698719,
+        0.025245506127656293
+      ],
+      "final_object_xyz_m": [
+        0.09996921022137326,
+        -0.010645426130635344,
+        0.004989943968888994
+      ],
+      "max_clearance_m": 0.11253619341388141,
+      "max_lift_duration_s": 3.360000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.52,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.07134038929698719,
+        0.025245506127656293
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30043,
+      "estimated_xy_m": [
+        -0.087309264993484,
+        -0.016906723769697037
+      ],
+      "final_object_xyz_m": [
+        0.09995869453365892,
+        0.01095413733899082,
+        0.004989943970813585
+      ],
+      "max_clearance_m": 0.11264244447980569,
+      "max_lift_duration_s": 3.480000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.52,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.087309264993484,
+        -0.016906723769697037
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30044,
+      "estimated_xy_m": [
+        -0.04197209914163308,
+        0.033387202138805326
+      ],
+      "final_object_xyz_m": [
+        0.10000790702436518,
+        -0.010891207310028355,
+        0.0049899439720586195
+      ],
+      "max_clearance_m": 0.11236375827327769,
+      "max_lift_duration_s": 3.160000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.48,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.04197209914163308,
+        0.033387202138805326
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30045,
+      "estimated_xy_m": [
+        -0.089412981059687,
+        -0.038822371024098405
+      ],
+      "final_object_xyz_m": [
+        0.09994546609937822,
+        0.010261028878423617,
+        0.004989943968780847
+      ],
+      "max_clearance_m": 0.11262308222610898,
+      "max_lift_duration_s": 3.480000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.56,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.089412981059687,
+        -0.038822371024098405
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30046,
+      "estimated_xy_m": [
+        -0.07915225569953532,
+        -0.025265692260445394
+      ],
+      "final_object_xyz_m": [
+        0.09996614177215297,
+        0.010811850093911718,
+        0.004989943968781354
+      ],
+      "max_clearance_m": 0.11258659939142338,
+      "max_lift_duration_s": 3.400000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.48,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.07915225569953532,
+        -0.025265692260445394
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30047,
+      "estimated_xy_m": [
+        -0.05148696226990068,
+        -0.042893881520104656
+      ],
+      "final_object_xyz_m": [
+        0.1000036047102807,
+        0.010351416393135023,
+        0.0049899439716988995
+      ],
+      "max_clearance_m": 0.1124158418638798,
+      "max_lift_duration_s": 3.240000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.52,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.05148696226990068,
+        -0.042893881520104656
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30048,
+      "estimated_xy_m": [
+        -0.042959973989149816,
+        0.006978086644167636
+      ],
+      "final_object_xyz_m": [
+        0.0999636746607404,
+        0.00583820379907479,
+        0.004989943968840029
+      ],
+      "max_clearance_m": 0.11239165327215404,
+      "max_lift_duration_s": 3.160000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.44,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.042959973989149816,
+        0.006978086644167636
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30049,
+      "estimated_xy_m": [
+        -0.04494130146448978,
+        -0.028745446483219743
+      ],
+      "final_object_xyz_m": [
+        0.09997753852355473,
+        0.01085239134922145,
+        0.004989943968918862
+      ],
+      "max_clearance_m": 0.11241166476952469,
+      "max_lift_duration_s": 3.200000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.48,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.04494130146448978,
+        -0.028745446483219743
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30050,
+      "estimated_xy_m": [
+        -0.04905838015307215,
+        0.02505420008679414
+      ],
+      "final_object_xyz_m": [
+        0.10000346938273236,
+        -0.010959110995618002,
+        0.004989943971995628
+      ],
+      "max_clearance_m": 0.11239739098885736,
+      "max_lift_duration_s": 3.200000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.44,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.04905838015307215,
+        0.02505420008679414
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30051,
+      "estimated_xy_m": [
+        -0.05297913292701293,
+        0.019587679925395427
+      ],
+      "final_object_xyz_m": [
+        0.09996275445703409,
+        -0.010390809014530414,
+        0.004989943968837315
+      ],
+      "max_clearance_m": 0.1124396982068077,
+      "max_lift_duration_s": 3.240000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.48,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.05297913292701293,
+        0.019587679925395427
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30052,
+      "estimated_xy_m": [
+        -0.09968856945555242,
+        0.038366410514018644
+      ],
+      "final_object_xyz_m": [
+        0.09996007228447969,
+        -0.010714586689777263,
+        0.004989943968867976
+      ],
+      "max_clearance_m": 0.11271844791972017,
+      "max_lift_duration_s": 3.5600000000000023,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.56,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.09968856945555242,
+        0.038366410514018644
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30053,
+      "estimated_xy_m": [
+        -0.07522279059675113,
+        0.013521041456869236
+      ],
+      "final_object_xyz_m": [
+        0.09995418064460222,
+        -0.007191688529145009,
+        0.00498994396885163
+      ],
+      "max_clearance_m": 0.11256474306234646,
+      "max_lift_duration_s": 3.400000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.52,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.07522279059675113,
+        0.013521041456869236
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30054,
+      "estimated_xy_m": [
+        -0.04656656058570472,
+        0.04434059671489035
+      ],
+      "final_object_xyz_m": [
+        0.09997690662923929,
+        -0.0106484938874904,
+        0.004989943968905829
+      ],
+      "max_clearance_m": 0.11240789724058299,
+      "max_lift_duration_s": 3.200000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.52,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.04656656058570472,
+        0.04434059671489035
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30055,
+      "estimated_xy_m": [
+        -0.08864501804272394,
+        0.035057674160888834
+      ],
+      "final_object_xyz_m": [
+        0.09996200441166825,
+        -0.010647164313046407,
+        0.004989943968889908
+      ],
+      "max_clearance_m": 0.11264004104545187,
+      "max_lift_duration_s": 3.480000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.52,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.08864501804272394,
+        0.035057674160888834
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30056,
+      "estimated_xy_m": [
+        -0.03643295592803579,
+        0.03475351024192356
+      ],
+      "final_object_xyz_m": [
+        0.09997963486436834,
+        -0.010649490877281486,
+        0.004989943968902369
+      ],
+      "max_clearance_m": 0.11236826659634261,
+      "max_lift_duration_s": 3.120000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.48,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.03643295592803579,
+        0.03475351024192356
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30057,
+      "estimated_xy_m": [
+        -0.06788663557417296,
+        -0.05218213539149485
+      ],
+      "final_object_xyz_m": [
+        0.099954398887628,
+        0.010930086904149384,
+        0.004989943971913828
+      ],
+      "max_clearance_m": 0.1125048613272263,
+      "max_lift_duration_s": 3.360000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.56,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.06788663557417296,
+        -0.05218213539149485
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30058,
+      "estimated_xy_m": [
+        -0.09563462799785885,
+        -0.009642732930581568
+      ],
+      "final_object_xyz_m": [
+        0.09996175043091132,
+        -0.003429386996499341,
+        0.004989943969129954
+      ],
+      "max_clearance_m": 0.11272377214755915,
+      "max_lift_duration_s": 3.5200000000000022,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.48,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.09563462799785885,
+        -0.009642732930581568
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30059,
+      "estimated_xy_m": [
+        -0.036268409742307765,
+        -0.05081638832291048
+      ],
+      "final_object_xyz_m": [
+        0.09997394893976214,
+        0.010957235245018284,
+        0.004989943970608701
+      ],
+      "max_clearance_m": 0.11236215920041191,
+      "max_lift_duration_s": 3.160000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.56,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.036268409742307765,
+        -0.05081638832291048
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30060,
+      "estimated_xy_m": [
+        -0.0883759776057032,
+        0.021527500591025157
+      ],
+      "final_object_xyz_m": [
+        0.09995431432123923,
+        -0.010218396815747932,
+        0.004989943968890893
+      ],
+      "max_clearance_m": 0.11265628545181804,
+      "max_lift_duration_s": 3.480000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.52,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.0883759776057032,
+        0.021527500591025157
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30061,
+      "estimated_xy_m": [
+        -0.0492210821112152,
+        -0.024787798584930406
+      ],
+      "final_object_xyz_m": [
+        0.09998214161722901,
+        0.01076557446582876,
+        0.004989943968984038
+      ],
+      "max_clearance_m": 0.11243751178421736,
+      "max_lift_duration_s": 3.200000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.44,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.0492210821112152,
+        -0.024787798584930406
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30062,
+      "estimated_xy_m": [
+        -0.049837725773428584,
+        -0.05491165150193772
+      ],
+      "final_object_xyz_m": [
+        0.09997629622410681,
+        0.010848072441204835,
+        0.004989943968907638
+      ],
+      "max_clearance_m": 0.11241689559404039,
+      "max_lift_duration_s": 3.240000000000002,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.56,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.049837725773428584,
+        -0.05491165150193772
+      ]
+    },
+    {
+      "success": true,
+      "seed": 30063,
+      "estimated_xy_m": [
+        -0.09703461034986599,
+        0.0013564600713036536
+      ],
+      "final_object_xyz_m": [
+        0.09994866784071632,
+        0.00029787517738392777,
+        0.0049899439696662355
+      ],
+      "max_clearance_m": 0.11266848870662738,
+      "max_lift_duration_s": 3.5200000000000022,
+      "final_stable_duration_s": 1.4000000000000006,
+      "lifted": true,
+      "final_flags": {
+        "fully_right": true,
+        "in_workspace": true,
+        "on_table": true,
+        "upright": true,
+        "slow": true,
+        "released": true,
+        "withdrawn": true
+      },
+      "stages_reached": {
+        "approach": true,
+        "descend": true,
+        "close": true,
+        "lift": true,
+        "transport": true,
+        "place": true,
+        "release": true,
+        "withdraw": true
+      },
+      "simulated_duration_s": 9.48,
+      "diagnostic_ground_truth_only": true,
+      "object_attached_or_teleported": false,
+      "initial_object_xy_m": [
+        -0.09703461034986599,
+        0.0013564600713036536
+      ]
+    }
+  ]
+}

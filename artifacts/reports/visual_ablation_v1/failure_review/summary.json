@@ -1,0 +1,47 @@
+{
+  "selection": [
+    {
+      "group": "A",
+      "seed": 7,
+      "scene": 30014,
+      "path": "failure_review\\A_seed7_scene30014",
+      "error_mm": 14.111494066434224,
+      "replay_matches_success": true
+    },
+    {
+      "group": "B",
+      "seed": 7,
+      "scene": 30038,
+      "path": "failure_review\\B_seed7_scene30038",
+      "error_mm": 24.61710942474604,
+      "replay_matches_success": true
+    },
+    {
+      "group": "C",
+      "seed": 7,
+      "scene": 30014,
+      "path": "failure_review\\C_seed7_scene30014",
+      "error_mm": 14.239914176130743,
+      "replay_matches_success": true
+    },
+    {
+      "group": "D",
+      "seed": 7,
+      "scene": 30014,
+      "path": "failure_review\\D_seed7_scene30014",
+      "error_mm": 15.556314259801875,
+      "replay_matches_success": true
+    },
+    {
+      "group": "R",
+      "seed": 7,
+      "scene": 30038,
+      "path": "failure_review\\R_seed7_scene30038",
+      "error_mm": 26.2956522558485,
+      "replay_matches_success": true
+    }
+  ],
+  "total_low_data_failures": 46,
+  "failed_without_qualified_lift": 46,
+  "scope": "Post-evaluation diagnosis; replays not counted as extra independent evidence"
+}

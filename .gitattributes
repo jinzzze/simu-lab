@@ -1,0 +1,2 @@
+# Preserve exact source/data bytes: historical provenance is SHA256 anchored.
+* -text

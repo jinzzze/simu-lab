@@ -1,0 +1,1224 @@
+[
+  {
+    "t_s": 0.2,
+    "stage": "approach",
+    "object_xyz_m": [
+      -0.03971340476836077,
+      0.022325043071660618,
+      0.0049899439688040614
+    ],
+    "ee_xyz_m": [
+      -0.13601379255026513,
+      0.004781129806533736,
+      0.10450054631324021
+    ],
+    "finger_width_m": 0.06500000524192592,
+    "clearance_m": -1.0132380962686247e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": true,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 0.4,
+    "stage": "approach",
+    "object_xyz_m": [
+      -0.03971327537580994,
+      0.022324962904498473,
+      0.004989943968817251
+    ],
+    "ee_xyz_m": [
+      -0.1066913102659924,
+      0.009387359602774287,
+      0.11080079381574451
+    ],
+    "finger_width_m": 0.06500000644347284,
+    "clearance_m": -1.0132380932715429e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": true,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 0.6,
+    "stage": "approach",
+    "object_xyz_m": [
+      -0.03971314598387282,
+      0.022324882736375357,
+      0.0049899439688304926
+    ],
+    "ee_xyz_m": [
+      -0.07774314180683399,
+      0.01373150638934573,
+      0.1164386763093543
+    ],
+    "finger_width_m": 0.06500000847264328,
+    "clearance_m": -1.0132380902624916e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": true,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 0.8,
+    "stage": "approach",
+    "object_xyz_m": [
+      -0.03971301659254966,
+      0.022324802567291354,
+      0.004989943968843789
+    ],
+    "ee_xyz_m": [
+      -0.053313826526733325,
+      0.016844390163074367,
+      0.12001745604534293
+    ],
+    "finger_width_m": 0.06499999540034436,
+    "clearance_m": -1.0132380872404298e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": true,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 1.0,
+    "stage": "approach",
+    "object_xyz_m": [
+      -0.039712887201840665,
+      0.022324722397246588,
+      0.00498994396885714
+    ],
+    "ee_xyz_m": [
+      -0.05280935181085982,
+      0.01687213907404771,
+      0.12000677358329125
+    ],
+    "finger_width_m": 0.06500000358567355,
+    "clearance_m": -1.0132380842063117e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": true,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 1.2,
+    "stage": "descend",
+    "object_xyz_m": [
+      -0.03971275781174607,
+      0.022324642226241146,
+      0.004989943968870535
+    ],
+    "ee_xyz_m": [
+      -0.052831953294322186,
+      0.016853201161348502,
+      0.10700701967197912
+    ],
+    "finger_width_m": 0.06499999036373483,
+    "clearance_m": -1.0132380811600505e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": true,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 1.4000000000000001,
+    "stage": "descend",
+    "object_xyz_m": [
+      -0.039712628422266145,
+      0.022324562054275115,
+      0.004989943968883981
+    ],
+    "ee_xyz_m": [
+      -0.0531606471343865,
+      0.016806604181477065,
+      0.07428959544195671
+    ],
+    "finger_width_m": 0.06499999107752265,
+    "clearance_m": -1.0132380781010392e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": true,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 1.6,
+    "stage": "descend",
+    "object_xyz_m": [
+      -0.03971258291360017,
+      0.022324497760612697,
+      0.00498999960158156
+    ],
+    "ee_xyz_m": [
+      -0.053487623346926624,
+      0.01678742389338494,
+      0.04170222486266292
+    ],
+    "finger_width_m": 0.0650000018082047,
+    "clearance_m": -1.0000796834462589e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": true,
+      "withdrawn": false
+    }
+  },
+  {
+    "t_s": 1.8,
+    "stage": "descend",
+    "object_xyz_m": [
+      -0.039712582913364984,
+      0.022324497562174084,
+      0.004989999999891957
+    ],
+    "ee_xyz_m": [
+      -0.05310537153002053,
+      0.016853413084504366,
+      0.009485043932817724
+    ],
+    "finger_width_m": 0.06500000255452895,
+    "clearance_m": -1.0000000242884298e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": true,
+      "withdrawn": false
+    }
+  },
+  {
+    "t_s": 2.0,
+    "stage": "descend",
+    "object_xyz_m": [
+      -0.03971258291330229,
+      0.02232449756218233,
+      0.004989999999999927
+    ],
+    "ee_xyz_m": [
+      -0.05281033136370786,
+      0.01687574043715216,
+      0.00804008226248984
+    ],
+    "finger_width_m": 0.06499997187924267,
+    "clearance_m": -1.0000000000148779e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": true,
+      "withdrawn": false
+    }
+  },
+  {
+    "t_s": 2.2,
+    "stage": "close",
+    "object_xyz_m": [
+      -0.021453820431019746,
+      0.0013856398942177102,
+      0.004951172851131058
+    ],
+    "ee_xyz_m": [
+      -0.05277651363889538,
+      0.016876754494602356,
+      0.008041503176716785
+    ],
+    "finger_width_m": 0.001192084293444888,
+    "clearance_m": -7.774527511176382e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": false,
+      "released": false,
+      "withdrawn": false
+    }
+  },
+  {
+    "t_s": 2.4,
+    "stage": "close",
+    "object_xyz_m": [
+      -0.016578946226386674,
+      -0.006678673377176679,
+      0.004989990717179033
+    ],
+    "ee_xyz_m": [
+      -0.05277280982921959,
+      0.016870500259448067,
+      0.008026012254590084
+    ],
+    "finger_width_m": 6.936965001506642e-06,
+    "clearance_m": -1.0016205066370847e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": false,
+      "withdrawn": false
+    }
+  },
+  {
+    "t_s": 2.6,
+    "stage": "close",
+    "object_xyz_m": [
+      -0.016578944599286154,
+      -0.006678676303091674,
+      0.004989999997779443
+    ],
+    "ee_xyz_m": [
+      -0.052763630136515,
+      0.016887381240237555,
+      0.008028638116781936
+    ],
+    "finger_width_m": -9.922564410131185e-07,
+    "clearance_m": -1.0000003876442162e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": false,
+      "withdrawn": false
+    }
+  },
+  {
+    "t_s": 2.8000000000000003,
+    "stage": "close",
+    "object_xyz_m": [
+      -0.01657894459889692,
+      -0.006678676303791588,
+      0.004989999999999472
+    ],
+    "ee_xyz_m": [
+      -0.05275285272897505,
+      0.01689339829803745,
+      0.008032638139484835
+    ],
+    "finger_width_m": -1.3620675586955988e-06,
+    "clearance_m": -1.0000000000923333e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": false,
+      "withdrawn": false
+    }
+  },
+  {
+    "t_s": 3.0,
+    "stage": "close",
+    "object_xyz_m": [
+      -0.01657894459889684,
+      -0.006678676303791746,
+      0.004989999999999996
+    ],
+    "ee_xyz_m": [
+      -0.05274867951482992,
+      0.016891979242897374,
+      0.008032952796227275
+    ],
+    "finger_width_m": 2.088823218318213e-06,
+    "clearance_m": -1.000000000002041e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": false,
+      "withdrawn": false
+    }
+  },
+  {
+    "t_s": 3.2,
+    "stage": "lift",
+    "object_xyz_m": [
+      -0.016578945835147546,
+      -0.006678677145664943,
+      0.0049899964724049945
+    ],
+    "ee_xyz_m": [
+      -0.05287658047596476,
+      0.016902923106240416,
+      0.013927297540182779
+    ],
+    "finger_width_m": -3.9526218922039544e-08,
+    "clearance_m": -1.0007187421752842e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": false,
+      "withdrawn": false
+    }
+  },
+  {
+    "t_s": 3.4,
+    "stage": "lift",
+    "object_xyz_m": [
+      -0.016578945542401732,
+      -0.0066786766433747265,
+      0.004989997011004715
+    ],
+    "ee_xyz_m": [
+      -0.05246546469954439,
+      0.01694202145521032,
+      0.04536755738384084
+    ],
+    "finger_width_m": 8.973315538832877e-09,
+    "clearance_m": -1.0005991490879412e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": false,
+      "withdrawn": false
+    }
+  },
+  {
+    "t_s": 3.6,
+    "stage": "lift",
+    "object_xyz_m": [
+      -0.016579019357245036,
+      -0.006678657728466016,
+      0.004990011425382404
+    ],
+    "ee_xyz_m": [
+      -0.05239571451995676,
+      0.016951734466739463,
+      0.0769028058822455
+    ],
+    "finger_width_m": 1.0925560615095997e-08,
+    "clearance_m": -1.0060463166479232e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": false,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 3.8000000000000003,
+    "stage": "lift",
+    "object_xyz_m": [
+      -0.016579118182302437,
+      -0.006678629032888575,
+      0.00499001142223862
+    ],
+    "ee_xyz_m": [
+      -0.052603980738428965,
+      0.016917437350381946,
+      0.10859328324849458
+    ],
+    "finger_width_m": 1.967429687324357e-08,
+    "clearance_m": -1.0060478053063385e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": false,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 4.0,
+    "stage": "lift",
+    "object_xyz_m": [
+      -0.016579217009660276,
+      -0.006678600334581155,
+      0.004990011420943155
+    ],
+    "ee_xyz_m": [
+      -0.05267967540187541,
+      0.016878591062398987,
+      0.11993442640398268
+    ],
+    "finger_width_m": 6.36233942668218e-09,
+    "clearance_m": -1.006048477716643e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": false,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 4.2,
+    "stage": "lift",
+    "object_xyz_m": [
+      -0.016579315841643585,
+      -0.006678571633638505,
+      0.004990011419647616
+    ],
+    "ee_xyz_m": [
+      -0.05269505011171453,
+      0.01687765444316373,
+      0.1199705420217695
+    ],
+    "finger_width_m": 3.589591412504403e-09,
+    "clearance_m": -1.0060491501713564e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": false,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 4.4,
+    "stage": "transport",
+    "object_xyz_m": [
+      -0.016579414678253048,
+      -0.006678542930060086,
+      0.0049900114183519615
+    ],
+    "ee_xyz_m": [
+      -0.04705239296874951,
+      0.016090856104309,
+      0.12004195682351015
+    ],
+    "finger_width_m": 4.0823789742829794e-08,
+    "clearance_m": -1.0060498226758564e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": false,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 4.6000000000000005,
+    "stage": "transport",
+    "object_xyz_m": [
+      -0.01657951351948945,
+      -0.006678514223845391,
+      0.0049900114170562705
+    ],
+    "ee_xyz_m": [
+      -0.01900133038271873,
+      0.01227810584708137,
+      0.12031972530918687
+    ],
+    "finger_width_m": -6.707894438006832e-11,
+    "clearance_m": -1.0060504952212092e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": false,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 4.8,
+    "stage": "transport",
+    "object_xyz_m": [
+      -0.01657961236535353,
+      -0.006678485514993886,
+      0.004990011415760497
+    ],
+    "ee_xyz_m": [
+      0.008146975259241133,
+      0.008717355562204106,
+      0.12047098848307625
+    ],
+    "finger_width_m": -8.518198522808159e-10,
+    "clearance_m": -1.0060511678126188e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": false,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 5.0,
+    "stage": "transport",
+    "object_xyz_m": [
+      -0.016579711215846005,
+      -0.006678456803505048,
+      0.004990011414464616
+    ],
+    "ee_xyz_m": [
+      0.03418611473068916,
+      0.005497213909695186,
+      0.1205089287340197
+    ],
+    "finger_width_m": -2.0369065385974674e-10,
+    "clearance_m": -1.0060518404526875e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": false,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 5.2,
+    "stage": "transport",
+    "object_xyz_m": [
+      -0.016579810070967614,
+      -0.006678428089378363,
+      0.004990011413168705
+    ],
+    "ee_xyz_m": [
+      0.05887804081364384,
+      0.0027547191872971046,
+      0.1204340258470919
+    ],
+    "finger_width_m": -4.1898489642519644e-10,
+    "clearance_m": -1.0060525131330017e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": false,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 5.4,
+    "stage": "transport",
+    "object_xyz_m": [
+      -0.01657990893071907,
+      -0.0066783993726132855,
+      0.004990011411872684
+    ],
+    "ee_xyz_m": [
+      0.081978948399903,
+      0.0007245654278574938,
+      0.12024991813867283
+    ],
+    "finger_width_m": 7.593768940991939e-09,
+    "clearance_m": -1.0060531858610208e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": false,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 5.6000000000000005,
+    "stage": "transport",
+    "object_xyz_m": [
+      -0.016580007795101128,
+      -0.006678370653209304,
+      0.0049900114105765735
+    ],
+    "ee_xyz_m": [
+      0.09882770223516263,
+      -3.747717015982397e-06,
+      0.1200181680576999
+    ],
+    "finger_width_m": 5.644558929722597e-08,
+    "clearance_m": -1.0060538586358775e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": false,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 5.8,
+    "stage": "transport",
+    "object_xyz_m": [
+      -0.016580106664114552,
+      -0.006678341931165907,
+      0.004990011409280408
+    ],
+    "ee_xyz_m": [
+      0.09990479325923857,
+      -4.284751100884767e-06,
+      0.1199998014275179
+    ],
+    "finger_width_m": 6.808303015957776e-08,
+    "clearance_m": -1.0060545314529747e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": false,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 6.0,
+    "stage": "place",
+    "object_xyz_m": [
+      -0.01658020553776005,
+      -0.006678313206482534,
+      0.004990011407984164
+    ],
+    "ee_xyz_m": [
+      0.09982659055574195,
+      -1.1574718078377445e-05,
+      0.10644881753842289
+    ],
+    "finger_width_m": 2.6466398880733283e-08,
+    "clearance_m": -1.0060552043187308e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": false,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 6.2,
+    "stage": "place",
+    "object_xyz_m": [
+      -0.016580304416038374,
+      -0.006678284479158702,
+      0.004990011406687848
+    ],
+    "ee_xyz_m": [
+      0.09914614466562058,
+      -2.1971614857488695e-05,
+      0.0726066941861144
+    ],
+    "finger_width_m": 2.9537754930967127e-08,
+    "clearance_m": -1.0060558772274214e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": false,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 6.4,
+    "stage": "place",
+    "object_xyz_m": [
+      -0.016580403298950237,
+      -0.006678255749193854,
+      0.004990011405391441
+    ],
+    "ee_xyz_m": [
+      0.09815456642639359,
+      -2.1273364079035055e-05,
+      0.038885572297364474
+    ],
+    "finger_width_m": 3.393828908291498e-08,
+    "clearance_m": -1.0060565501822556e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": false,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 6.6000000000000005,
+    "stage": "place",
+    "object_xyz_m": [
+      -0.016580502186496406,
+      -0.006678227016587473,
+      0.004990011404094949
+    ],
+    "ee_xyz_m": [
+      0.09891596565621939,
+      -2.7527099168322153e-06,
+      0.009640260337565598
+    ],
+    "finger_width_m": 1.0881373750098874e-08,
+    "clearance_m": -1.006057223183407e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": false,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 6.8,
+    "stage": "place",
+    "object_xyz_m": [
+      -0.0165806010786776,
+      -0.006678198281339032,
+      0.004990011402798409
+    ],
+    "ee_xyz_m": [
+      0.09990490358953333,
+      -1.502000949747958e-06,
+      0.009017115116824848
+    ],
+    "finger_width_m": 4.603313304029588e-09,
+    "clearance_m": -1.0060578962282733e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": false,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 7.0,
+    "stage": "release",
+    "object_xyz_m": [
+      -0.016580699975494568,
+      -0.006678169543448021,
+      0.0049900114015017805
+    ],
+    "ee_xyz_m": [
+      0.09992215042399459,
+      -1.6506671779511648e-07,
+      0.009017403435912133
+    ],
+    "finger_width_m": 0.06387672195639735,
+    "clearance_m": -1.0060585693186762e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": true,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 7.2,
+    "stage": "release",
+    "object_xyz_m": [
+      -0.016580798876948036,
+      -0.006678140802913903,
+      0.00499001140020506
+    ],
+    "ee_xyz_m": [
+      0.09993678714355674,
+      4.2441653283365767e-07,
+      0.009015820188150878
+    ],
+    "finger_width_m": 0.06499997472486745,
+    "clearance_m": -1.006059242456437e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": true,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 7.4,
+    "stage": "release",
+    "object_xyz_m": [
+      -0.016580897783038732,
+      -0.006678112059736141,
+      0.004990011398908291
+    ],
+    "ee_xyz_m": [
+      0.09994903691878795,
+      6.034522478707066e-07,
+      0.009013797469369048
+    ],
+    "finger_width_m": 0.06500000456249982,
+    "clearance_m": -1.0060599156366118e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": true,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 7.6000000000000005,
+    "stage": "release",
+    "object_xyz_m": [
+      -0.016580996693767423,
+      -0.006678083313914231,
+      0.004990011397611424
+    ],
+    "ee_xyz_m": [
+      0.09995932065631341,
+      6.568259885613078e-07,
+      0.009011890046747073
+    ],
+    "finger_width_m": 0.06500000456541288,
+    "clearance_m": -1.006060588862323e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": true,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 7.8,
+    "stage": "withdraw",
+    "object_xyz_m": [
+      -0.01658109560913484,
+      -0.00667805456544762,
+      0.004990011396314481
+    ],
+    "ee_xyz_m": [
+      0.09994588192598361,
+      -4.514687310103097e-07,
+      0.014559299912307491
+    ],
+    "finger_width_m": 0.06499998847357824,
+    "clearance_m": -1.0060612621360862e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": true,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 8.0,
+    "stage": "withdraw",
+    "object_xyz_m": [
+      -0.01658119452914172,
+      -0.006678025814335811,
+      0.00499001139501746
+    ],
+    "ee_xyz_m": [
+      0.1014824001935246,
+      -5.765519099490329e-06,
+      0.04606325326464854
+    ],
+    "finger_width_m": 0.06499999621723965,
+    "clearance_m": -1.0060619354538246e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": true,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 8.2,
+    "stage": "withdraw",
+    "object_xyz_m": [
+      -0.016581293453788823,
+      -0.006677997060578259,
+      0.004990011393720356
+    ],
+    "ee_xyz_m": [
+      0.10184901420248739,
+      -8.495734067041618e-06,
+      0.0776306378976054
+    ],
+    "finger_width_m": 0.06499999676036333,
+    "clearance_m": -1.0060626088179668e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": true,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 8.4,
+    "stage": "withdraw",
+    "object_xyz_m": [
+      -0.01658139238307686,
+      -0.0066779683041744324,
+      0.004990011392423187
+    ],
+    "ee_xyz_m": [
+      0.10100666758057321,
+      -5.82390335369964e-06,
+      0.10932078868341179
+    ],
+    "finger_width_m": 0.06499999654189068,
+    "clearance_m": -1.0060632822259108e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": true,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 8.6,
+    "stage": "withdraw",
+    "object_xyz_m": [
+      -0.01658149131700658,
+      -0.006677939545123839,
+      0.00499001139112594
+    ],
+    "ee_xyz_m": [
+      0.10009396145322182,
+      -4.167274516782943e-06,
+      0.11999351871004925
+    ],
+    "finger_width_m": 0.06499998200332063,
+    "clearance_m": -1.0060639556793045e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": true,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 8.8,
+    "stage": "withdraw",
+    "object_xyz_m": [
+      -0.016581590255578708,
+      -0.006677910783425907,
+      0.004990011389828604
+    ],
+    "ee_xyz_m": [
+      0.10007516749675201,
+      -4.8317619524675055e-06,
+      0.11999607242889802
+    ],
+    "finger_width_m": 0.06499998185400466,
+    "clearance_m": -1.0060646291802297e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": true,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 9.0,
+    "stage": "withdraw",
+    "object_xyz_m": [
+      -0.016581689198794027,
+      -0.006677882019080147,
+      0.004990011388531208
+    ],
+    "ee_xyz_m": [
+      0.10005979993086936,
+      -4.7425474682161354e-06,
+      0.11999696114599019
+    ],
+    "finger_width_m": 0.06499998185814322,
+    "clearance_m": -1.006065302724523e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": true,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 9.200000000000001,
+    "stage": "withdraw",
+    "object_xyz_m": [
+      -0.016581788146653252,
+      -0.006677853252085995,
+      0.004990011387233748
+    ],
+    "ee_xyz_m": [
+      0.10004708744722719,
+      -4.7171474735450545e-06,
+      0.11999736102339986
+    ],
+    "finger_width_m": 0.06499998186259622,
+    "clearance_m": -1.0060659763136588e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": true,
+      "withdrawn": true
+    }
+  },
+  {
+    "t_s": 9.4,
+    "stage": "withdraw",
+    "object_xyz_m": [
+      -0.01658188709915711,
+      -0.006677824482442952,
+      0.0049900113859361606
+    ],
+    "ee_xyz_m": [
+      0.10003655529453008,
+      -4.710621893487002e-06,
+      0.11999759176576445
+    ],
+    "finger_width_m": 0.0649999818670973,
+    "clearance_m": -1.0060666499509333e-05,
+    "bilateral_grasp_contact": false,
+    "flags": {
+      "fully_right": false,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": true,
+      "withdrawn": true
+    }
+  }
+]

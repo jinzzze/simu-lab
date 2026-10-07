@@ -1,0 +1,3131 @@
+{
+  "plan": {
+    "version": "low-data-32-v1",
+    "scope": "Exploratory follow-up introduced after the ImageNet-only reference achieved 192/192 and some primary outcomes were visible; same reused development test scenes",
+    "question": "Do personal-video auxiliary losses help when simulator adaptation labels are scarce?",
+    "groups": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "R"
+    ],
+    "training_seeds": [
+      7,
+      17,
+      27
+    ],
+    "train_scene_seeds": "10000 through 10031, selected by index without reading outcomes",
+    "training_images": 32,
+    "validation_images": 64,
+    "test_images": 64,
+    "adaptation_steps": 300,
+    "batch_size": 16,
+    "initialization": "reuse frozen completed primary phone-video encoders; R uses the same original ImageNet encoder",
+    "control_and_scoring": "identical frozen primary physics and state machine",
+    "selection": "all 15 final checkpoints and all 64 test scenes; no checkpoint/group/seed selection",
+    "physical_evaluation_episodes": 960,
+    "interpretation": "label-budget comparison at equal optimizer steps, not equal dataset epochs; no new real or synthetic test distribution",
+    "primary_ABCD_results_unchanged": true
+  },
+  "groups": [
+    {
+      "group": "A",
+      "n": 192,
+      "successes": 184,
+      "success_rate": 0.9583333333333334,
+      "xy_mean_error_mm": 4.76104881442465,
+      "xy_p90_error_mm": 11.958584373953816
+    },
+    {
+      "group": "B",
+      "n": 192,
+      "successes": 183,
+      "success_rate": 0.953125,
+      "xy_mean_error_mm": 5.116515176865529,
+      "xy_p90_error_mm": 12.622116877349173
+    },
+    {
+      "group": "C",
+      "n": 192,
+      "successes": 184,
+      "success_rate": 0.9583333333333334,
+      "xy_mean_error_mm": 4.662209600254363,
+      "xy_p90_error_mm": 11.515206003502572
+    },
+    {
+      "group": "D",
+      "n": 192,
+      "successes": 181,
+      "success_rate": 0.9427083333333334,
+      "xy_mean_error_mm": 5.217416170711407,
+      "xy_p90_error_mm": 13.135679327421705
+    },
+    {
+      "group": "R",
+      "n": 192,
+      "successes": 182,
+      "success_rate": 0.9479166666666666,
+      "xy_mean_error_mm": 5.6631601632196835,
+      "xy_p90_error_mm": 13.092706523527372
+    }
+  ],
+  "per_run": [
+    {
+      "group": "A",
+      "training_seed": 7,
+      "scene_seeds": [
+        30000,
+        30001,
+        30002,
+        30003,
+        30004,
+        30005,
+        30006,
+        30007,
+        30008,
+        30009,
+        30010,
+        30011,
+        30012,
+        30013,
+        30014,
+        30015,
+        30016,
+        30017,
+        30018,
+        30019,
+        30020,
+        30021,
+        30022,
+        30023,
+        30024,
+        30025,
+        30026,
+        30027,
+        30028,
+        30029,
+        30030,
+        30031,
+        30032,
+        30033,
+        30034,
+        30035,
+        30036,
+        30037,
+        30038,
+        30039,
+        30040,
+        30041,
+        30042,
+        30043,
+        30044,
+        30045,
+        30046,
+        30047,
+        30048,
+        30049,
+        30050,
+        30051,
+        30052,
+        30053,
+        30054,
+        30055,
+        30056,
+        30057,
+        30058,
+        30059,
+        30060,
+        30061,
+        30062,
+        30063
+      ],
+      "checkpoint_sha256": "803d19b06a44dea58d71e3775076671674defcb3b3ccbef20203f0413a4d32de",
+      "sim_config_sha256": "fa30186703956bf40afbf42df3b8c2a29f4263419316b911a04c158e5cc1c9fa",
+      "sim_code_sha256": "103d93e2d444ec6fae7db2ef27e65ca80118a17ac02e162192adbd13e76f5a1a",
+      "n": 64,
+      "successes": 61,
+      "success_rate": 0.953125,
+      "xy_mean_error_mm": 5.048301528205588,
+      "xy_median_error_mm": 3.3212122271543167,
+      "xy_p90_error_mm": 11.812678132631698,
+      "scope": "exploratory pilot-trained visual grasp evaluation; not final multi-session real-data evidence",
+      "demo_is_first_scene_not_best_scene": true
+    },
+    {
+      "group": "B",
+      "training_seed": 7,
+      "scene_seeds": [
+        30000,
+        30001,
+        30002,
+        30003,
+        30004,
+        30005,
+        30006,
+        30007,
+        30008,
+        30009,
+        30010,
+        30011,
+        30012,
+        30013,
+        30014,
+        30015,
+        30016,
+        30017,
+        30018,
+        30019,
+        30020,
+        30021,
+        30022,
+        30023,
+        30024,
+        30025,
+        30026,
+        30027,
+        30028,
+        30029,
+        30030,
+        30031,
+        30032,
+        30033,
+        30034,
+        30035,
+        30036,
+        30037,
+        30038,
+        30039,
+        30040,
+        30041,
+        30042,
+        30043,
+        30044,
+        30045,
+        30046,
+        30047,
+        30048,
+        30049,
+        30050,
+        30051,
+        30052,
+        30053,
+        30054,
+        30055,
+        30056,
+        30057,
+        30058,
+        30059,
+        30060,
+        30061,
+        30062,
+        30063
+      ],
+      "checkpoint_sha256": "8e460cd7d77d21cdaa70c8e55b0aa2cca57e3e309e31206ae5cd6e26c753c22c",
+      "sim_config_sha256": "fa30186703956bf40afbf42df3b8c2a29f4263419316b911a04c158e5cc1c9fa",
+      "sim_code_sha256": "103d93e2d444ec6fae7db2ef27e65ca80118a17ac02e162192adbd13e76f5a1a",
+      "n": 64,
+      "successes": 62,
+      "success_rate": 0.96875,
+      "xy_mean_error_mm": 5.066487083555397,
+      "xy_median_error_mm": 2.8213334148815603,
+      "xy_p90_error_mm": 12.787940863104659,
+      "scope": "exploratory pilot-trained visual grasp evaluation; not final multi-session real-data evidence",
+      "demo_is_first_scene_not_best_scene": true
+    },
+    {
+      "group": "C",
+      "training_seed": 7,
+      "scene_seeds": [
+        30000,
+        30001,
+        30002,
+        30003,
+        30004,
+        30005,
+        30006,
+        30007,
+        30008,
+        30009,
+        30010,
+        30011,
+        30012,
+        30013,
+        30014,
+        30015,
+        30016,
+        30017,
+        30018,
+        30019,
+        30020,
+        30021,
+        30022,
+        30023,
+        30024,
+        30025,
+        30026,
+        30027,
+        30028,
+        30029,
+        30030,
+        30031,
+        30032,
+        30033,
+        30034,
+        30035,
+        30036,
+        30037,
+        30038,
+        30039,
+        30040,
+        30041,
+        30042,
+        30043,
+        30044,
+        30045,
+        30046,
+        30047,
+        30048,
+        30049,
+        30050,
+        30051,
+        30052,
+        30053,
+        30054,
+        30055,
+        30056,
+        30057,
+        30058,
+        30059,
+        30060,
+        30061,
+        30062,
+        30063
+      ],
+      "checkpoint_sha256": "88c112057c8407f99a061c02db9e3d2c201c17457bcd2e9bb567bcb83c28c479",
+      "sim_config_sha256": "fa30186703956bf40afbf42df3b8c2a29f4263419316b911a04c158e5cc1c9fa",
+      "sim_code_sha256": "103d93e2d444ec6fae7db2ef27e65ca80118a17ac02e162192adbd13e76f5a1a",
+      "n": 64,
+      "successes": 61,
+      "success_rate": 0.953125,
+      "xy_mean_error_mm": 5.1230260569158315,
+      "xy_median_error_mm": 3.2064518602984133,
+      "xy_p90_error_mm": 13.289668423253612,
+      "scope": "exploratory pilot-trained visual grasp evaluation; not final multi-session real-data evidence",
+      "demo_is_first_scene_not_best_scene": true
+    },
+    {
+      "group": "D",
+      "training_seed": 7,
+      "scene_seeds": [
+        30000,
+        30001,
+        30002,
+        30003,
+        30004,
+        30005,
+        30006,
+        30007,
+        30008,
+        30009,
+        30010,
+        30011,
+        30012,
+        30013,
+        30014,
+        30015,
+        30016,
+        30017,
+        30018,
+        30019,
+        30020,
+        30021,
+        30022,
+        30023,
+        30024,
+        30025,
+        30026,
+        30027,
+        30028,
+        30029,
+        30030,
+        30031,
+        30032,
+        30033,
+        30034,
+        30035,
+        30036,
+        30037,
+        30038,
+        30039,
+        30040,
+        30041,
+        30042,
+        30043,
+        30044,
+        30045,
+        30046,
+        30047,
+        30048,
+        30049,
+        30050,
+        30051,
+        30052,
+        30053,
+        30054,
+        30055,
+        30056,
+        30057,
+        30058,
+        30059,
+        30060,
+        30061,
+        30062,
+        30063
+      ],
+      "checkpoint_sha256": "9f8ca57bb8fc1662047658bb436adabe3b8b1cf261561a4860da77442ba9c651",
+      "sim_config_sha256": "fa30186703956bf40afbf42df3b8c2a29f4263419316b911a04c158e5cc1c9fa",
+      "sim_code_sha256": "103d93e2d444ec6fae7db2ef27e65ca80118a17ac02e162192adbd13e76f5a1a",
+      "n": 64,
+      "successes": 61,
+      "success_rate": 0.953125,
+      "xy_mean_error_mm": 5.2474664727308635,
+      "xy_median_error_mm": 3.096379996069109,
+      "xy_p90_error_mm": 12.268010730770541,
+      "scope": "exploratory pilot-trained visual grasp evaluation; not final multi-session real-data evidence",
+      "demo_is_first_scene_not_best_scene": true
+    },
+    {
+      "group": "R",
+      "training_seed": 7,
+      "scene_seeds": [
+        30000,
+        30001,
+        30002,
+        30003,
+        30004,
+        30005,
+        30006,
+        30007,
+        30008,
+        30009,
+        30010,
+        30011,
+        30012,
+        30013,
+        30014,
+        30015,
+        30016,
+        30017,
+        30018,
+        30019,
+        30020,
+        30021,
+        30022,
+        30023,
+        30024,
+        30025,
+        30026,
+        30027,
+        30028,
+        30029,
+        30030,
+        30031,
+        30032,
+        30033,
+        30034,
+        30035,
+        30036,
+        30037,
+        30038,
+        30039,
+        30040,
+        30041,
+        30042,
+        30043,
+        30044,
+        30045,
+        30046,
+        30047,
+        30048,
+        30049,
+        30050,
+        30051,
+        30052,
+        30053,
+        30054,
+        30055,
+        30056,
+        30057,
+        30058,
+        30059,
+        30060,
+        30061,
+        30062,
+        30063
+      ],
+      "checkpoint_sha256": "fcc9c79cb3278967be0070b2da4f9a53597954245b6c44c9e922c7108601b5a8",
+      "sim_config_sha256": "fa30186703956bf40afbf42df3b8c2a29f4263419316b911a04c158e5cc1c9fa",
+      "sim_code_sha256": "103d93e2d444ec6fae7db2ef27e65ca80118a17ac02e162192adbd13e76f5a1a",
+      "n": 64,
+      "successes": 61,
+      "success_rate": 0.953125,
+      "xy_mean_error_mm": 5.978659710933954,
+      "xy_median_error_mm": 4.577015338900112,
+      "xy_p90_error_mm": 12.810444552752566,
+      "scope": "exploratory pilot-trained visual grasp evaluation; not final multi-session real-data evidence",
+      "demo_is_first_scene_not_best_scene": true
+    },
+    {
+      "group": "A",
+      "training_seed": 17,
+      "scene_seeds": [
+        30000,
+        30001,
+        30002,
+        30003,
+        30004,
+        30005,
+        30006,
+        30007,
+        30008,
+        30009,
+        30010,
+        30011,
+        30012,
+        30013,
+        30014,
+        30015,
+        30016,
+        30017,
+        30018,
+        30019,
+        30020,
+        30021,
+        30022,
+        30023,
+        30024,
+        30025,
+        30026,
+        30027,
+        30028,
+        30029,
+        30030,
+        30031,
+        30032,
+        30033,
+        30034,
+        30035,
+        30036,
+        30037,
+        30038,
+        30039,
+        30040,
+        30041,
+        30042,
+        30043,
+        30044,
+        30045,
+        30046,
+        30047,
+        30048,
+        30049,
+        30050,
+        30051,
+        30052,
+        30053,
+        30054,
+        30055,
+        30056,
+        30057,
+        30058,
+        30059,
+        30060,
+        30061,
+        30062,
+        30063
+      ],
+      "checkpoint_sha256": "8b3677d1c7672759d6e4ffb83f4a1d6bda138d710d5608619a1520803afbbd3a",
+      "sim_config_sha256": "fa30186703956bf40afbf42df3b8c2a29f4263419316b911a04c158e5cc1c9fa",
+      "sim_code_sha256": "103d93e2d444ec6fae7db2ef27e65ca80118a17ac02e162192adbd13e76f5a1a",
+      "n": 64,
+      "successes": 62,
+      "success_rate": 0.96875,
+      "xy_mean_error_mm": 4.350272790378042,
+      "xy_median_error_mm": 2.809327439353125,
+      "xy_p90_error_mm": 10.28181063063932,
+      "scope": "exploratory pilot-trained visual grasp evaluation; not final multi-session real-data evidence",
+      "demo_is_first_scene_not_best_scene": true
+    },
+    {
+      "group": "B",
+      "training_seed": 17,
+      "scene_seeds": [
+        30000,
+        30001,
+        30002,
+        30003,
+        30004,
+        30005,
+        30006,
+        30007,
+        30008,
+        30009,
+        30010,
+        30011,
+        30012,
+        30013,
+        30014,
+        30015,
+        30016,
+        30017,
+        30018,
+        30019,
+        30020,
+        30021,
+        30022,
+        30023,
+        30024,
+        30025,
+        30026,
+        30027,
+        30028,
+        30029,
+        30030,
+        30031,
+        30032,
+        30033,
+        30034,
+        30035,
+        30036,
+        30037,
+        30038,
+        30039,
+        30040,
+        30041,
+        30042,
+        30043,
+        30044,
+        30045,
+        30046,
+        30047,
+        30048,
+        30049,
+        30050,
+        30051,
+        30052,
+        30053,
+        30054,
+        30055,
+        30056,
+        30057,
+        30058,
+        30059,
+        30060,
+        30061,
+        30062,
+        30063
+      ],
+      "checkpoint_sha256": "f9877370062a336ee673739289165d13adfb42de5a609546f06fa82a54b39367",
+      "sim_config_sha256": "fa30186703956bf40afbf42df3b8c2a29f4263419316b911a04c158e5cc1c9fa",
+      "sim_code_sha256": "103d93e2d444ec6fae7db2ef27e65ca80118a17ac02e162192adbd13e76f5a1a",
+      "n": 64,
+      "successes": 60,
+      "success_rate": 0.9375,
+      "xy_mean_error_mm": 5.156009690672517,
+      "xy_median_error_mm": 3.069402221875052,
+      "xy_p90_error_mm": 12.192817951305457,
+      "scope": "exploratory pilot-trained visual grasp evaluation; not final multi-session real-data evidence",
+      "demo_is_first_scene_not_best_scene": true
+    },
+    {
+      "group": "C",
+      "training_seed": 17,
+      "scene_seeds": [
+        30000,
+        30001,
+        30002,
+        30003,
+        30004,
+        30005,
+        30006,
+        30007,
+        30008,
+        30009,
+        30010,
+        30011,
+        30012,
+        30013,
+        30014,
+        30015,
+        30016,
+        30017,
+        30018,
+        30019,
+        30020,
+        30021,
+        30022,
+        30023,
+        30024,
+        30025,
+        30026,
+        30027,
+        30028,
+        30029,
+        30030,
+        30031,
+        30032,
+        30033,
+        30034,
+        30035,
+        30036,
+        30037,
+        30038,
+        30039,
+        30040,
+        30041,
+        30042,
+        30043,
+        30044,
+        30045,
+        30046,
+        30047,
+        30048,
+        30049,
+        30050,
+        30051,
+        30052,
+        30053,
+        30054,
+        30055,
+        30056,
+        30057,
+        30058,
+        30059,
+        30060,
+        30061,
+        30062,
+        30063
+      ],
+      "checkpoint_sha256": "72bd9b6416f5f9286a8728e1987470a8c2dab543aa7e8a7b7d5f02bf18be6429",
+      "sim_config_sha256": "fa30186703956bf40afbf42df3b8c2a29f4263419316b911a04c158e5cc1c9fa",
+      "sim_code_sha256": "103d93e2d444ec6fae7db2ef27e65ca80118a17ac02e162192adbd13e76f5a1a",
+      "n": 64,
+      "successes": 62,
+      "success_rate": 0.96875,
+      "xy_mean_error_mm": 3.895548285716301,
+      "xy_median_error_mm": 2.496009070965159,
+      "xy_p90_error_mm": 9.821264127635738,
+      "scope": "exploratory pilot-trained visual grasp evaluation; not final multi-session real-data evidence",
+      "demo_is_first_scene_not_best_scene": true
+    },
+    {
+      "group": "D",
+      "training_seed": 17,
+      "scene_seeds": [
+        30000,
+        30001,
+        30002,
+        30003,
+        30004,
+        30005,
+        30006,
+        30007,
+        30008,
+        30009,
+        30010,
+        30011,
+        30012,
+        30013,
+        30014,
+        30015,
+        30016,
+        30017,
+        30018,
+        30019,
+        30020,
+        30021,
+        30022,
+        30023,
+        30024,
+        30025,
+        30026,
+        30027,
+        30028,
+        30029,
+        30030,
+        30031,
+        30032,
+        30033,
+        30034,
+        30035,
+        30036,
+        30037,
+        30038,
+        30039,
+        30040,
+        30041,
+        30042,
+        30043,
+        30044,
+        30045,
+        30046,
+        30047,
+        30048,
+        30049,
+        30050,
+        30051,
+        30052,
+        30053,
+        30054,
+        30055,
+        30056,
+        30057,
+        30058,
+        30059,
+        30060,
+        30061,
+        30062,
+        30063
+      ],
+      "checkpoint_sha256": "ce414d08399a61bc6608844b8800400635ee180c3ad1234a74049e57665ae8bd",
+      "sim_config_sha256": "fa30186703956bf40afbf42df3b8c2a29f4263419316b911a04c158e5cc1c9fa",
+      "sim_code_sha256": "103d93e2d444ec6fae7db2ef27e65ca80118a17ac02e162192adbd13e76f5a1a",
+      "n": 64,
+      "successes": 61,
+      "success_rate": 0.953125,
+      "xy_mean_error_mm": 4.907128237342436,
+      "xy_median_error_mm": 3.2169694237734907,
+      "xy_p90_error_mm": 12.480338930762592,
+      "scope": "exploratory pilot-trained visual grasp evaluation; not final multi-session real-data evidence",
+      "demo_is_first_scene_not_best_scene": true
+    },
+    {
+      "group": "R",
+      "training_seed": 17,
+      "scene_seeds": [
+        30000,
+        30001,
+        30002,
+        30003,
+        30004,
+        30005,
+        30006,
+        30007,
+        30008,
+        30009,
+        30010,
+        30011,
+        30012,
+        30013,
+        30014,
+        30015,
+        30016,
+        30017,
+        30018,
+        30019,
+        30020,
+        30021,
+        30022,
+        30023,
+        30024,
+        30025,
+        30026,
+        30027,
+        30028,
+        30029,
+        30030,
+        30031,
+        30032,
+        30033,
+        30034,
+        30035,
+        30036,
+        30037,
+        30038,
+        30039,
+        30040,
+        30041,
+        30042,
+        30043,
+        30044,
+        30045,
+        30046,
+        30047,
+        30048,
+        30049,
+        30050,
+        30051,
+        30052,
+        30053,
+        30054,
+        30055,
+        30056,
+        30057,
+        30058,
+        30059,
+        30060,
+        30061,
+        30062,
+        30063
+      ],
+      "checkpoint_sha256": "c30e2295f9a96a73d3c6c20e9b3f2d8a922ea790c394de4dbbec8331e68b07a4",
+      "sim_config_sha256": "fa30186703956bf40afbf42df3b8c2a29f4263419316b911a04c158e5cc1c9fa",
+      "sim_code_sha256": "103d93e2d444ec6fae7db2ef27e65ca80118a17ac02e162192adbd13e76f5a1a",
+      "n": 64,
+      "successes": 61,
+      "success_rate": 0.953125,
+      "xy_mean_error_mm": 5.387442418441221,
+      "xy_median_error_mm": 3.812160605383402,
+      "xy_p90_error_mm": 12.574551043109713,
+      "scope": "exploratory pilot-trained visual grasp evaluation; not final multi-session real-data evidence",
+      "demo_is_first_scene_not_best_scene": true
+    },
+    {
+      "group": "A",
+      "training_seed": 27,
+      "scene_seeds": [
+        30000,
+        30001,
+        30002,
+        30003,
+        30004,
+        30005,
+        30006,
+        30007,
+        30008,
+        30009,
+        30010,
+        30011,
+        30012,
+        30013,
+        30014,
+        30015,
+        30016,
+        30017,
+        30018,
+        30019,
+        30020,
+        30021,
+        30022,
+        30023,
+        30024,
+        30025,
+        30026,
+        30027,
+        30028,
+        30029,
+        30030,
+        30031,
+        30032,
+        30033,
+        30034,
+        30035,
+        30036,
+        30037,
+        30038,
+        30039,
+        30040,
+        30041,
+        30042,
+        30043,
+        30044,
+        30045,
+        30046,
+        30047,
+        30048,
+        30049,
+        30050,
+        30051,
+        30052,
+        30053,
+        30054,
+        30055,
+        30056,
+        30057,
+        30058,
+        30059,
+        30060,
+        30061,
+        30062,
+        30063
+      ],
+      "checkpoint_sha256": "d93fe9f11bf0a8a28857cfd826103658e0962745b36fa5e149ca8f41c78b574b",
+      "sim_config_sha256": "fa30186703956bf40afbf42df3b8c2a29f4263419316b911a04c158e5cc1c9fa",
+      "sim_code_sha256": "103d93e2d444ec6fae7db2ef27e65ca80118a17ac02e162192adbd13e76f5a1a",
+      "n": 64,
+      "successes": 61,
+      "success_rate": 0.953125,
+      "xy_mean_error_mm": 4.884572124690321,
+      "xy_median_error_mm": 2.8990660500525736,
+      "xy_p90_error_mm": 13.17770772828547,
+      "scope": "exploratory pilot-trained visual grasp evaluation; not final multi-session real-data evidence",
+      "demo_is_first_scene_not_best_scene": true
+    },
+    {
+      "group": "B",
+      "training_seed": 27,
+      "scene_seeds": [
+        30000,
+        30001,
+        30002,
+        30003,
+        30004,
+        30005,
+        30006,
+        30007,
+        30008,
+        30009,
+        30010,
+        30011,
+        30012,
+        30013,
+        30014,
+        30015,
+        30016,
+        30017,
+        30018,
+        30019,
+        30020,
+        30021,
+        30022,
+        30023,
+        30024,
+        30025,
+        30026,
+        30027,
+        30028,
+        30029,
+        30030,
+        30031,
+        30032,
+        30033,
+        30034,
+        30035,
+        30036,
+        30037,
+        30038,
+        30039,
+        30040,
+        30041,
+        30042,
+        30043,
+        30044,
+        30045,
+        30046,
+        30047,
+        30048,
+        30049,
+        30050,
+        30051,
+        30052,
+        30053,
+        30054,
+        30055,
+        30056,
+        30057,
+        30058,
+        30059,
+        30060,
+        30061,
+        30062,
+        30063
+      ],
+      "checkpoint_sha256": "ed78b319b7c54bf685dd6d1396758b28dc1477284a6b4796d925c4f172bcd1fc",
+      "sim_config_sha256": "fa30186703956bf40afbf42df3b8c2a29f4263419316b911a04c158e5cc1c9fa",
+      "sim_code_sha256": "103d93e2d444ec6fae7db2ef27e65ca80118a17ac02e162192adbd13e76f5a1a",
+      "n": 64,
+      "successes": 61,
+      "success_rate": 0.953125,
+      "xy_mean_error_mm": 5.127048756368674,
+      "xy_median_error_mm": 3.5784973146210675,
+      "xy_p90_error_mm": 11.87768030600529,
+      "scope": "exploratory pilot-trained visual grasp evaluation; not final multi-session real-data evidence",
+      "demo_is_first_scene_not_best_scene": true
+    },
+    {
+      "group": "C",
+      "training_seed": 27,
+      "scene_seeds": [
+        30000,
+        30001,
+        30002,
+        30003,
+        30004,
+        30005,
+        30006,
+        30007,
+        30008,
+        30009,
+        30010,
+        30011,
+        30012,
+        30013,
+        30014,
+        30015,
+        30016,
+        30017,
+        30018,
+        30019,
+        30020,
+        30021,
+        30022,
+        30023,
+        30024,
+        30025,
+        30026,
+        30027,
+        30028,
+        30029,
+        30030,
+        30031,
+        30032,
+        30033,
+        30034,
+        30035,
+        30036,
+        30037,
+        30038,
+        30039,
+        30040,
+        30041,
+        30042,
+        30043,
+        30044,
+        30045,
+        30046,
+        30047,
+        30048,
+        30049,
+        30050,
+        30051,
+        30052,
+        30053,
+        30054,
+        30055,
+        30056,
+        30057,
+        30058,
+        30059,
+        30060,
+        30061,
+        30062,
+        30063
+      ],
+      "checkpoint_sha256": "e25eb24d8a322360e939f5cfd9ceadb81f4edd1ea5f73767a732ff6beeddb60d",
+      "sim_config_sha256": "fa30186703956bf40afbf42df3b8c2a29f4263419316b911a04c158e5cc1c9fa",
+      "sim_code_sha256": "103d93e2d444ec6fae7db2ef27e65ca80118a17ac02e162192adbd13e76f5a1a",
+      "n": 64,
+      "successes": 61,
+      "success_rate": 0.953125,
+      "xy_mean_error_mm": 4.968054458130956,
+      "xy_median_error_mm": 3.128235522661745,
+      "xy_p90_error_mm": 12.61997157340851,
+      "scope": "exploratory pilot-trained visual grasp evaluation; not final multi-session real-data evidence",
+      "demo_is_first_scene_not_best_scene": true
+    },
+    {
+      "group": "D",
+      "training_seed": 27,
+      "scene_seeds": [
+        30000,
+        30001,
+        30002,
+        30003,
+        30004,
+        30005,
+        30006,
+        30007,
+        30008,
+        30009,
+        30010,
+        30011,
+        30012,
+        30013,
+        30014,
+        30015,
+        30016,
+        30017,
+        30018,
+        30019,
+        30020,
+        30021,
+        30022,
+        30023,
+        30024,
+        30025,
+        30026,
+        30027,
+        30028,
+        30029,
+        30030,
+        30031,
+        30032,
+        30033,
+        30034,
+        30035,
+        30036,
+        30037,
+        30038,
+        30039,
+        30040,
+        30041,
+        30042,
+        30043,
+        30044,
+        30045,
+        30046,
+        30047,
+        30048,
+        30049,
+        30050,
+        30051,
+        30052,
+        30053,
+        30054,
+        30055,
+        30056,
+        30057,
+        30058,
+        30059,
+        30060,
+        30061,
+        30062,
+        30063
+      ],
+      "checkpoint_sha256": "3a10fdf3849b5637d86cde8a1d29f12bd50c124789cdcfddcb8b73884f44d77c",
+      "sim_config_sha256": "fa30186703956bf40afbf42df3b8c2a29f4263419316b911a04c158e5cc1c9fa",
+      "sim_code_sha256": "103d93e2d444ec6fae7db2ef27e65ca80118a17ac02e162192adbd13e76f5a1a",
+      "n": 64,
+      "successes": 59,
+      "success_rate": 0.921875,
+      "xy_mean_error_mm": 5.497653802060923,
+      "xy_median_error_mm": 3.5797297907609487,
+      "xy_p90_error_mm": 13.315700799333076,
+      "scope": "exploratory pilot-trained visual grasp evaluation; not final multi-session real-data evidence",
+      "demo_is_first_scene_not_best_scene": true
+    },
+    {
+      "group": "R",
+      "training_seed": 27,
+      "scene_seeds": [
+        30000,
+        30001,
+        30002,
+        30003,
+        30004,
+        30005,
+        30006,
+        30007,
+        30008,
+        30009,
+        30010,
+        30011,
+        30012,
+        30013,
+        30014,
+        30015,
+        30016,
+        30017,
+        30018,
+        30019,
+        30020,
+        30021,
+        30022,
+        30023,
+        30024,
+        30025,
+        30026,
+        30027,
+        30028,
+        30029,
+        30030,
+        30031,
+        30032,
+        30033,
+        30034,
+        30035,
+        30036,
+        30037,
+        30038,
+        30039,
+        30040,
+        30041,
+        30042,
+        30043,
+        30044,
+        30045,
+        30046,
+        30047,
+        30048,
+        30049,
+        30050,
+        30051,
+        30052,
+        30053,
+        30054,
+        30055,
+        30056,
+        30057,
+        30058,
+        30059,
+        30060,
+        30061,
+        30062,
+        30063
+      ],
+      "checkpoint_sha256": "e3f508111c87e16b41dd255204940e06768feb84ee4bf6ce5f546bd842a0a34b",
+      "sim_config_sha256": "fa30186703956bf40afbf42df3b8c2a29f4263419316b911a04c158e5cc1c9fa",
+      "sim_code_sha256": "103d93e2d444ec6fae7db2ef27e65ca80118a17ac02e162192adbd13e76f5a1a",
+      "n": 64,
+      "successes": 60,
+      "success_rate": 0.9375,
+      "xy_mean_error_mm": 5.6233783602838745,
+      "xy_median_error_mm": 3.933906345451849,
+      "xy_p90_error_mm": 13.39557925305137,
+      "scope": "exploratory pilot-trained visual grasp evaluation; not final multi-session real-data evidence",
+      "demo_is_first_scene_not_best_scene": true
+    }
+  ],
+  "comparisons": [
+    {
+      "comparison": "D-A",
+      "difference_pp": -1.5625,
+      "per_seed_pp": {
+        "7": 0.0,
+        "17": -1.5625,
+        "27": -3.125
+      }
+    },
+    {
+      "comparison": "D-B",
+      "difference_pp": -1.0416666666666667,
+      "per_seed_pp": {
+        "7": -1.5625,
+        "17": 1.5625,
+        "27": -3.125
+      }
+    },
+    {
+      "comparison": "D-C",
+      "difference_pp": -1.5625,
+      "per_seed_pp": {
+        "7": 0.0,
+        "17": -1.5625,
+        "27": -3.125
+      }
+    },
+    {
+      "comparison": "A-R",
+      "difference_pp": 1.0416666666666667,
+      "per_seed_pp": {
+        "7": 0.0,
+        "17": 1.5625,
+        "27": 1.5625
+      }
+    },
+    {
+      "comparison": "D-R",
+      "difference_pp": -0.5208333333333334,
+      "per_seed_pp": {
+        "7": 0.0,
+        "17": 0.0,
+        "27": -1.5625
+      }
+    }
+  ],
+  "audit": [
+    {
+      "check": "subset source hash",
+      "passed": true
+    },
+    {
+      "check": "subset dataset hash",
+      "passed": true
+    },
+    {
+      "check": "subset plan matches",
+      "passed": true
+    },
+    {
+      "check": "subset arrays match source exactly",
+      "passed": true
+    },
+    {
+      "check": "fixed 32-scene subset",
+      "passed": true
+    },
+    {
+      "check": "subset manifest scene identities",
+      "passed": true
+    },
+    {
+      "check": "evaluation implementation/evaluator_sha256",
+      "passed": true
+    },
+    {
+      "check": "evaluation implementation/predictor_worker_sha256",
+      "passed": true
+    },
+    {
+      "check": "evaluation implementation/predictor_transport_sha256",
+      "passed": true
+    },
+    {
+      "check": "evaluation groups/seeds/scenes",
+      "passed": true
+    },
+    {
+      "check": "A_seed7/state complete and identity",
+      "passed": true
+    },
+    {
+      "check": "A_seed7/initialization identity",
+      "passed": true
+    },
+    {
+      "check": "A_seed7/initialization status",
+      "passed": true
+    },
+    {
+      "check": "A_seed7/pretraining lineage",
+      "passed": true
+    },
+    {
+      "check": "A_seed7/same adaptation config across budgets",
+      "passed": true
+    },
+    {
+      "check": "A_seed7/training plan",
+      "passed": true
+    },
+    {
+      "check": "A_seed7/low-data training source",
+      "passed": true
+    },
+    {
+      "check": "A_seed7/episode identities",
+      "passed": true
+    },
+    {
+      "check": "A_seed7/primary episode identities",
+      "passed": true
+    },
+    {
+      "check": "A_seed7/summary identity",
+      "passed": true
+    },
+    {
+      "check": "A_seed7/outcome agreement",
+      "passed": true
+    },
+    {
+      "check": "A_seed7/data hash",
+      "passed": true
+    },
+    {
+      "check": "A_seed7/32 training images",
+      "passed": true
+    },
+    {
+      "check": "A_seed7/fixed budget",
+      "passed": true
+    },
+    {
+      "check": "A_seed7/scenes",
+      "passed": true
+    },
+    {
+      "check": "A_seed7/same RGB across budgets",
+      "passed": true
+    },
+    {
+      "check": "A_seed7/counts",
+      "passed": true
+    },
+    {
+      "check": "A_seed7/deployment lineage",
+      "passed": true
+    },
+    {
+      "check": "A_seed7/sim code",
+      "passed": true
+    },
+    {
+      "check": "A_seed7/sim config",
+      "passed": true
+    },
+    {
+      "check": "A_seed7/training source/src\\perception\\__init__.py",
+      "passed": true
+    },
+    {
+      "check": "A_seed7/training source/src\\perception\\losses.py",
+      "passed": true
+    },
+    {
+      "check": "A_seed7/training source/src\\perception\\models.py",
+      "passed": true
+    },
+    {
+      "check": "A_seed7/training source/src\\perception\\training.py",
+      "passed": true
+    },
+    {
+      "check": "A_seed7/training source/scripts\\train_visual_ablation.py",
+      "passed": true
+    },
+    {
+      "check": "A_seed7/training source/scripts\\adapt_visual_state.py",
+      "passed": true
+    },
+    {
+      "check": "B_seed7/state complete and identity",
+      "passed": true
+    },
+    {
+      "check": "B_seed7/initialization identity",
+      "passed": true
+    },
+    {
+      "check": "B_seed7/initialization status",
+      "passed": true
+    },
+    {
+      "check": "B_seed7/pretraining lineage",
+      "passed": true
+    },
+    {
+      "check": "B_seed7/same adaptation config across budgets",
+      "passed": true
+    },
+    {
+      "check": "B_seed7/training plan",
+      "passed": true
+    },
+    {
+      "check": "B_seed7/low-data training source",
+      "passed": true
+    },
+    {
+      "check": "B_seed7/episode identities",
+      "passed": true
+    },
+    {
+      "check": "B_seed7/primary episode identities",
+      "passed": true
+    },
+    {
+      "check": "B_seed7/summary identity",
+      "passed": true
+    },
+    {
+      "check": "B_seed7/outcome agreement",
+      "passed": true
+    },
+    {
+      "check": "B_seed7/data hash",
+      "passed": true
+    },
+    {
+      "check": "B_seed7/32 training images",
+      "passed": true
+    },
+    {
+      "check": "B_seed7/fixed budget",
+      "passed": true
+    },
+    {
+      "check": "B_seed7/scenes",
+      "passed": true
+    },
+    {
+      "check": "B_seed7/same RGB across budgets",
+      "passed": true
+    },
+    {
+      "check": "B_seed7/counts",
+      "passed": true
+    },
+    {
+      "check": "B_seed7/deployment lineage",
+      "passed": true
+    },
+    {
+      "check": "B_seed7/sim code",
+      "passed": true
+    },
+    {
+      "check": "B_seed7/sim config",
+      "passed": true
+    },
+    {
+      "check": "B_seed7/training source/src\\perception\\__init__.py",
+      "passed": true
+    },
+    {
+      "check": "B_seed7/training source/src\\perception\\losses.py",
+      "passed": true
+    },
+    {
+      "check": "B_seed7/training source/src\\perception\\models.py",
+      "passed": true
+    },
+    {
+      "check": "B_seed7/training source/src\\perception\\training.py",
+      "passed": true
+    },
+    {
+      "check": "B_seed7/training source/scripts\\train_visual_ablation.py",
+      "passed": true
+    },
+    {
+      "check": "B_seed7/training source/scripts\\adapt_visual_state.py",
+      "passed": true
+    },
+    {
+      "check": "C_seed7/state complete and identity",
+      "passed": true
+    },
+    {
+      "check": "C_seed7/initialization identity",
+      "passed": true
+    },
+    {
+      "check": "C_seed7/initialization status",
+      "passed": true
+    },
+    {
+      "check": "C_seed7/pretraining lineage",
+      "passed": true
+    },
+    {
+      "check": "C_seed7/same adaptation config across budgets",
+      "passed": true
+    },
+    {
+      "check": "C_seed7/training plan",
+      "passed": true
+    },
+    {
+      "check": "C_seed7/low-data training source",
+      "passed": true
+    },
+    {
+      "check": "C_seed7/episode identities",
+      "passed": true
+    },
+    {
+      "check": "C_seed7/primary episode identities",
+      "passed": true
+    },
+    {
+      "check": "C_seed7/summary identity",
+      "passed": true
+    },
+    {
+      "check": "C_seed7/outcome agreement",
+      "passed": true
+    },
+    {
+      "check": "C_seed7/data hash",
+      "passed": true
+    },
+    {
+      "check": "C_seed7/32 training images",
+      "passed": true
+    },
+    {
+      "check": "C_seed7/fixed budget",
+      "passed": true
+    },
+    {
+      "check": "C_seed7/scenes",
+      "passed": true
+    },
+    {
+      "check": "C_seed7/same RGB across budgets",
+      "passed": true
+    },
+    {
+      "check": "C_seed7/counts",
+      "passed": true
+    },
+    {
+      "check": "C_seed7/deployment lineage",
+      "passed": true
+    },
+    {
+      "check": "C_seed7/sim code",
+      "passed": true
+    },
+    {
+      "check": "C_seed7/sim config",
+      "passed": true
+    },
+    {
+      "check": "C_seed7/training source/src\\perception\\__init__.py",
+      "passed": true
+    },
+    {
+      "check": "C_seed7/training source/src\\perception\\losses.py",
+      "passed": true
+    },
+    {
+      "check": "C_seed7/training source/src\\perception\\models.py",
+      "passed": true
+    },
+    {
+      "check": "C_seed7/training source/src\\perception\\training.py",
+      "passed": true
+    },
+    {
+      "check": "C_seed7/training source/scripts\\train_visual_ablation.py",
+      "passed": true
+    },
+    {
+      "check": "C_seed7/training source/scripts\\adapt_visual_state.py",
+      "passed": true
+    },
+    {
+      "check": "D_seed7/state complete and identity",
+      "passed": true
+    },
+    {
+      "check": "D_seed7/initialization identity",
+      "passed": true
+    },
+    {
+      "check": "D_seed7/initialization status",
+      "passed": true
+    },
+    {
+      "check": "D_seed7/pretraining lineage",
+      "passed": true
+    },
+    {
+      "check": "D_seed7/same adaptation config across budgets",
+      "passed": true
+    },
+    {
+      "check": "D_seed7/training plan",
+      "passed": true
+    },
+    {
+      "check": "D_seed7/low-data training source",
+      "passed": true
+    },
+    {
+      "check": "D_seed7/episode identities",
+      "passed": true
+    },
+    {
+      "check": "D_seed7/primary episode identities",
+      "passed": true
+    },
+    {
+      "check": "D_seed7/summary identity",
+      "passed": true
+    },
+    {
+      "check": "D_seed7/outcome agreement",
+      "passed": true
+    },
+    {
+      "check": "D_seed7/data hash",
+      "passed": true
+    },
+    {
+      "check": "D_seed7/32 training images",
+      "passed": true
+    },
+    {
+      "check": "D_seed7/fixed budget",
+      "passed": true
+    },
+    {
+      "check": "D_seed7/scenes",
+      "passed": true
+    },
+    {
+      "check": "D_seed7/same RGB across budgets",
+      "passed": true
+    },
+    {
+      "check": "D_seed7/counts",
+      "passed": true
+    },
+    {
+      "check": "D_seed7/deployment lineage",
+      "passed": true
+    },
+    {
+      "check": "D_seed7/sim code",
+      "passed": true
+    },
+    {
+      "check": "D_seed7/sim config",
+      "passed": true
+    },
+    {
+      "check": "D_seed7/training source/src\\perception\\__init__.py",
+      "passed": true
+    },
+    {
+      "check": "D_seed7/training source/src\\perception\\losses.py",
+      "passed": true
+    },
+    {
+      "check": "D_seed7/training source/src\\perception\\models.py",
+      "passed": true
+    },
+    {
+      "check": "D_seed7/training source/src\\perception\\training.py",
+      "passed": true
+    },
+    {
+      "check": "D_seed7/training source/scripts\\train_visual_ablation.py",
+      "passed": true
+    },
+    {
+      "check": "D_seed7/training source/scripts\\adapt_visual_state.py",
+      "passed": true
+    },
+    {
+      "check": "R_seed7/state complete and identity",
+      "passed": true
+    },
+    {
+      "check": "R_seed7/initialization identity",
+      "passed": true
+    },
+    {
+      "check": "R_seed7/initialization status",
+      "passed": true
+    },
+    {
+      "check": "R_seed7/pretraining lineage",
+      "passed": true
+    },
+    {
+      "check": "R_seed7/same adaptation config across budgets",
+      "passed": true
+    },
+    {
+      "check": "R_seed7/training plan",
+      "passed": true
+    },
+    {
+      "check": "R_seed7/low-data training source",
+      "passed": true
+    },
+    {
+      "check": "R_seed7/episode identities",
+      "passed": true
+    },
+    {
+      "check": "R_seed7/primary episode identities",
+      "passed": true
+    },
+    {
+      "check": "R_seed7/summary identity",
+      "passed": true
+    },
+    {
+      "check": "R_seed7/outcome agreement",
+      "passed": true
+    },
+    {
+      "check": "R_seed7/data hash",
+      "passed": true
+    },
+    {
+      "check": "R_seed7/32 training images",
+      "passed": true
+    },
+    {
+      "check": "R_seed7/fixed budget",
+      "passed": true
+    },
+    {
+      "check": "R_seed7/scenes",
+      "passed": true
+    },
+    {
+      "check": "R_seed7/same RGB across budgets",
+      "passed": true
+    },
+    {
+      "check": "R_seed7/counts",
+      "passed": true
+    },
+    {
+      "check": "R_seed7/deployment lineage",
+      "passed": true
+    },
+    {
+      "check": "R_seed7/sim code",
+      "passed": true
+    },
+    {
+      "check": "R_seed7/sim config",
+      "passed": true
+    },
+    {
+      "check": "R_seed7/training source/src\\perception\\__init__.py",
+      "passed": true
+    },
+    {
+      "check": "R_seed7/training source/src\\perception\\losses.py",
+      "passed": true
+    },
+    {
+      "check": "R_seed7/training source/src\\perception\\models.py",
+      "passed": true
+    },
+    {
+      "check": "R_seed7/training source/src\\perception\\training.py",
+      "passed": true
+    },
+    {
+      "check": "R_seed7/training source/scripts\\train_visual_ablation.py",
+      "passed": true
+    },
+    {
+      "check": "R_seed7/training source/scripts\\adapt_visual_state.py",
+      "passed": true
+    },
+    {
+      "check": "seed7/paired data_sha256",
+      "passed": true
+    },
+    {
+      "check": "seed7/paired head_initial_sha256",
+      "passed": true
+    },
+    {
+      "check": "seed7/paired batch_sequence_sha256",
+      "passed": true
+    },
+    {
+      "check": "seed7/paired augmentation_final_rng_sha256",
+      "passed": true
+    },
+    {
+      "check": "seed7/paired config",
+      "passed": true
+    },
+    {
+      "check": "seed7/paired target_mean",
+      "passed": true
+    },
+    {
+      "check": "seed7/paired target_scale",
+      "passed": true
+    },
+    {
+      "check": "A_seed17/state complete and identity",
+      "passed": true
+    },
+    {
+      "check": "A_seed17/initialization identity",
+      "passed": true
+    },
+    {
+      "check": "A_seed17/initialization status",
+      "passed": true
+    },
+    {
+      "check": "A_seed17/pretraining lineage",
+      "passed": true
+    },
+    {
+      "check": "A_seed17/same adaptation config across budgets",
+      "passed": true
+    },
+    {
+      "check": "A_seed17/training plan",
+      "passed": true
+    },
+    {
+      "check": "A_seed17/low-data training source",
+      "passed": true
+    },
+    {
+      "check": "A_seed17/episode identities",
+      "passed": true
+    },
+    {
+      "check": "A_seed17/primary episode identities",
+      "passed": true
+    },
+    {
+      "check": "A_seed17/summary identity",
+      "passed": true
+    },
+    {
+      "check": "A_seed17/outcome agreement",
+      "passed": true
+    },
+    {
+      "check": "A_seed17/data hash",
+      "passed": true
+    },
+    {
+      "check": "A_seed17/32 training images",
+      "passed": true
+    },
+    {
+      "check": "A_seed17/fixed budget",
+      "passed": true
+    },
+    {
+      "check": "A_seed17/scenes",
+      "passed": true
+    },
+    {
+      "check": "A_seed17/same RGB across budgets",
+      "passed": true
+    },
+    {
+      "check": "A_seed17/counts",
+      "passed": true
+    },
+    {
+      "check": "A_seed17/deployment lineage",
+      "passed": true
+    },
+    {
+      "check": "A_seed17/sim code",
+      "passed": true
+    },
+    {
+      "check": "A_seed17/sim config",
+      "passed": true
+    },
+    {
+      "check": "A_seed17/training source/src\\perception\\__init__.py",
+      "passed": true
+    },
+    {
+      "check": "A_seed17/training source/src\\perception\\losses.py",
+      "passed": true
+    },
+    {
+      "check": "A_seed17/training source/src\\perception\\models.py",
+      "passed": true
+    },
+    {
+      "check": "A_seed17/training source/src\\perception\\training.py",
+      "passed": true
+    },
+    {
+      "check": "A_seed17/training source/scripts\\train_visual_ablation.py",
+      "passed": true
+    },
+    {
+      "check": "A_seed17/training source/scripts\\adapt_visual_state.py",
+      "passed": true
+    },
+    {
+      "check": "B_seed17/state complete and identity",
+      "passed": true
+    },
+    {
+      "check": "B_seed17/initialization identity",
+      "passed": true
+    },
+    {
+      "check": "B_seed17/initialization status",
+      "passed": true
+    },
+    {
+      "check": "B_seed17/pretraining lineage",
+      "passed": true
+    },
+    {
+      "check": "B_seed17/same adaptation config across budgets",
+      "passed": true
+    },
+    {
+      "check": "B_seed17/training plan",
+      "passed": true
+    },
+    {
+      "check": "B_seed17/low-data training source",
+      "passed": true
+    },
+    {
+      "check": "B_seed17/episode identities",
+      "passed": true
+    },
+    {
+      "check": "B_seed17/primary episode identities",
+      "passed": true
+    },
+    {
+      "check": "B_seed17/summary identity",
+      "passed": true
+    },
+    {
+      "check": "B_seed17/outcome agreement",
+      "passed": true
+    },
+    {
+      "check": "B_seed17/data hash",
+      "passed": true
+    },
+    {
+      "check": "B_seed17/32 training images",
+      "passed": true
+    },
+    {
+      "check": "B_seed17/fixed budget",
+      "passed": true
+    },
+    {
+      "check": "B_seed17/scenes",
+      "passed": true
+    },
+    {
+      "check": "B_seed17/same RGB across budgets",
+      "passed": true
+    },
+    {
+      "check": "B_seed17/counts",
+      "passed": true
+    },
+    {
+      "check": "B_seed17/deployment lineage",
+      "passed": true
+    },
+    {
+      "check": "B_seed17/sim code",
+      "passed": true
+    },
+    {
+      "check": "B_seed17/sim config",
+      "passed": true
+    },
+    {
+      "check": "B_seed17/training source/src\\perception\\__init__.py",
+      "passed": true
+    },
+    {
+      "check": "B_seed17/training source/src\\perception\\losses.py",
+      "passed": true
+    },
+    {
+      "check": "B_seed17/training source/src\\perception\\models.py",
+      "passed": true
+    },
+    {
+      "check": "B_seed17/training source/src\\perception\\training.py",
+      "passed": true
+    },
+    {
+      "check": "B_seed17/training source/scripts\\train_visual_ablation.py",
+      "passed": true
+    },
+    {
+      "check": "B_seed17/training source/scripts\\adapt_visual_state.py",
+      "passed": true
+    },
+    {
+      "check": "C_seed17/state complete and identity",
+      "passed": true
+    },
+    {
+      "check": "C_seed17/initialization identity",
+      "passed": true
+    },
+    {
+      "check": "C_seed17/initialization status",
+      "passed": true
+    },
+    {
+      "check": "C_seed17/pretraining lineage",
+      "passed": true
+    },
+    {
+      "check": "C_seed17/same adaptation config across budgets",
+      "passed": true
+    },
+    {
+      "check": "C_seed17/training plan",
+      "passed": true
+    },
+    {
+      "check": "C_seed17/low-data training source",
+      "passed": true
+    },
+    {
+      "check": "C_seed17/episode identities",
+      "passed": true
+    },
+    {
+      "check": "C_seed17/primary episode identities",
+      "passed": true
+    },
+    {
+      "check": "C_seed17/summary identity",
+      "passed": true
+    },
+    {
+      "check": "C_seed17/outcome agreement",
+      "passed": true
+    },
+    {
+      "check": "C_seed17/data hash",
+      "passed": true
+    },
+    {
+      "check": "C_seed17/32 training images",
+      "passed": true
+    },
+    {
+      "check": "C_seed17/fixed budget",
+      "passed": true
+    },
+    {
+      "check": "C_seed17/scenes",
+      "passed": true
+    },
+    {
+      "check": "C_seed17/same RGB across budgets",
+      "passed": true
+    },
+    {
+      "check": "C_seed17/counts",
+      "passed": true
+    },
+    {
+      "check": "C_seed17/deployment lineage",
+      "passed": true
+    },
+    {
+      "check": "C_seed17/sim code",
+      "passed": true
+    },
+    {
+      "check": "C_seed17/sim config",
+      "passed": true
+    },
+    {
+      "check": "C_seed17/training source/src\\perception\\__init__.py",
+      "passed": true
+    },
+    {
+      "check": "C_seed17/training source/src\\perception\\losses.py",
+      "passed": true
+    },
+    {
+      "check": "C_seed17/training source/src\\perception\\models.py",
+      "passed": true
+    },
+    {
+      "check": "C_seed17/training source/src\\perception\\training.py",
+      "passed": true
+    },
+    {
+      "check": "C_seed17/training source/scripts\\train_visual_ablation.py",
+      "passed": true
+    },
+    {
+      "check": "C_seed17/training source/scripts\\adapt_visual_state.py",
+      "passed": true
+    },
+    {
+      "check": "D_seed17/state complete and identity",
+      "passed": true
+    },
+    {
+      "check": "D_seed17/initialization identity",
+      "passed": true
+    },
+    {
+      "check": "D_seed17/initialization status",
+      "passed": true
+    },
+    {
+      "check": "D_seed17/pretraining lineage",
+      "passed": true
+    },
+    {
+      "check": "D_seed17/same adaptation config across budgets",
+      "passed": true
+    },
+    {
+      "check": "D_seed17/training plan",
+      "passed": true
+    },
+    {
+      "check": "D_seed17/low-data training source",
+      "passed": true
+    },
+    {
+      "check": "D_seed17/episode identities",
+      "passed": true
+    },
+    {
+      "check": "D_seed17/primary episode identities",
+      "passed": true
+    },
+    {
+      "check": "D_seed17/summary identity",
+      "passed": true
+    },
+    {
+      "check": "D_seed17/outcome agreement",
+      "passed": true
+    },
+    {
+      "check": "D_seed17/data hash",
+      "passed": true
+    },
+    {
+      "check": "D_seed17/32 training images",
+      "passed": true
+    },
+    {
+      "check": "D_seed17/fixed budget",
+      "passed": true
+    },
+    {
+      "check": "D_seed17/scenes",
+      "passed": true
+    },
+    {
+      "check": "D_seed17/same RGB across budgets",
+      "passed": true
+    },
+    {
+      "check": "D_seed17/counts",
+      "passed": true
+    },
+    {
+      "check": "D_seed17/deployment lineage",
+      "passed": true
+    },
+    {
+      "check": "D_seed17/sim code",
+      "passed": true
+    },
+    {
+      "check": "D_seed17/sim config",
+      "passed": true
+    },
+    {
+      "check": "D_seed17/training source/src\\perception\\__init__.py",
+      "passed": true
+    },
+    {
+      "check": "D_seed17/training source/src\\perception\\losses.py",
+      "passed": true
+    },
+    {
+      "check": "D_seed17/training source/src\\perception\\models.py",
+      "passed": true
+    },
+    {
+      "check": "D_seed17/training source/src\\perception\\training.py",
+      "passed": true
+    },
+    {
+      "check": "D_seed17/training source/scripts\\train_visual_ablation.py",
+      "passed": true
+    },
+    {
+      "check": "D_seed17/training source/scripts\\adapt_visual_state.py",
+      "passed": true
+    },
+    {
+      "check": "R_seed17/state complete and identity",
+      "passed": true
+    },
+    {
+      "check": "R_seed17/initialization identity",
+      "passed": true
+    },
+    {
+      "check": "R_seed17/initialization status",
+      "passed": true
+    },
+    {
+      "check": "R_seed17/pretraining lineage",
+      "passed": true
+    },
+    {
+      "check": "R_seed17/same adaptation config across budgets",
+      "passed": true
+    },
+    {
+      "check": "R_seed17/training plan",
+      "passed": true
+    },
+    {
+      "check": "R_seed17/low-data training source",
+      "passed": true
+    },
+    {
+      "check": "R_seed17/episode identities",
+      "passed": true
+    },
+    {
+      "check": "R_seed17/primary episode identities",
+      "passed": true
+    },
+    {
+      "check": "R_seed17/summary identity",
+      "passed": true
+    },
+    {
+      "check": "R_seed17/outcome agreement",
+      "passed": true
+    },
+    {
+      "check": "R_seed17/data hash",
+      "passed": true
+    },
+    {
+      "check": "R_seed17/32 training images",
+      "passed": true
+    },
+    {
+      "check": "R_seed17/fixed budget",
+      "passed": true
+    },
+    {
+      "check": "R_seed17/scenes",
+      "passed": true
+    },
+    {
+      "check": "R_seed17/same RGB across budgets",
+      "passed": true
+    },
+    {
+      "check": "R_seed17/counts",
+      "passed": true
+    },
+    {
+      "check": "R_seed17/deployment lineage",
+      "passed": true
+    },
+    {
+      "check": "R_seed17/sim code",
+      "passed": true
+    },
+    {
+      "check": "R_seed17/sim config",
+      "passed": true
+    },
+    {
+      "check": "R_seed17/training source/src\\perception\\__init__.py",
+      "passed": true
+    },
+    {
+      "check": "R_seed17/training source/src\\perception\\losses.py",
+      "passed": true
+    },
+    {
+      "check": "R_seed17/training source/src\\perception\\models.py",
+      "passed": true
+    },
+    {
+      "check": "R_seed17/training source/src\\perception\\training.py",
+      "passed": true
+    },
+    {
+      "check": "R_seed17/training source/scripts\\train_visual_ablation.py",
+      "passed": true
+    },
+    {
+      "check": "R_seed17/training source/scripts\\adapt_visual_state.py",
+      "passed": true
+    },
+    {
+      "check": "seed17/paired data_sha256",
+      "passed": true
+    },
+    {
+      "check": "seed17/paired head_initial_sha256",
+      "passed": true
+    },
+    {
+      "check": "seed17/paired batch_sequence_sha256",
+      "passed": true
+    },
+    {
+      "check": "seed17/paired augmentation_final_rng_sha256",
+      "passed": true
+    },
+    {
+      "check": "seed17/paired config",
+      "passed": true
+    },
+    {
+      "check": "seed17/paired target_mean",
+      "passed": true
+    },
+    {
+      "check": "seed17/paired target_scale",
+      "passed": true
+    },
+    {
+      "check": "A_seed27/state complete and identity",
+      "passed": true
+    },
+    {
+      "check": "A_seed27/initialization identity",
+      "passed": true
+    },
+    {
+      "check": "A_seed27/initialization status",
+      "passed": true
+    },
+    {
+      "check": "A_seed27/pretraining lineage",
+      "passed": true
+    },
+    {
+      "check": "A_seed27/same adaptation config across budgets",
+      "passed": true
+    },
+    {
+      "check": "A_seed27/training plan",
+      "passed": true
+    },
+    {
+      "check": "A_seed27/low-data training source",
+      "passed": true
+    },
+    {
+      "check": "A_seed27/episode identities",
+      "passed": true
+    },
+    {
+      "check": "A_seed27/primary episode identities",
+      "passed": true
+    },
+    {
+      "check": "A_seed27/summary identity",
+      "passed": true
+    },
+    {
+      "check": "A_seed27/outcome agreement",
+      "passed": true
+    },
+    {
+      "check": "A_seed27/data hash",
+      "passed": true
+    },
+    {
+      "check": "A_seed27/32 training images",
+      "passed": true
+    },
+    {
+      "check": "A_seed27/fixed budget",
+      "passed": true
+    },
+    {
+      "check": "A_seed27/scenes",
+      "passed": true
+    },
+    {
+      "check": "A_seed27/same RGB across budgets",
+      "passed": true
+    },
+    {
+      "check": "A_seed27/counts",
+      "passed": true
+    },
+    {
+      "check": "A_seed27/deployment lineage",
+      "passed": true
+    },
+    {
+      "check": "A_seed27/sim code",
+      "passed": true
+    },
+    {
+      "check": "A_seed27/sim config",
+      "passed": true
+    },
+    {
+      "check": "A_seed27/training source/src\\perception\\__init__.py",
+      "passed": true
+    },
+    {
+      "check": "A_seed27/training source/src\\perception\\losses.py",
+      "passed": true
+    },
+    {
+      "check": "A_seed27/training source/src\\perception\\models.py",
+      "passed": true
+    },
+    {
+      "check": "A_seed27/training source/src\\perception\\training.py",
+      "passed": true
+    },
+    {
+      "check": "A_seed27/training source/scripts\\train_visual_ablation.py",
+      "passed": true
+    },
+    {
+      "check": "A_seed27/training source/scripts\\adapt_visual_state.py",
+      "passed": true
+    },
+    {
+      "check": "B_seed27/state complete and identity",
+      "passed": true
+    },
+    {
+      "check": "B_seed27/initialization identity",
+      "passed": true
+    },
+    {
+      "check": "B_seed27/initialization status",
+      "passed": true
+    },
+    {
+      "check": "B_seed27/pretraining lineage",
+      "passed": true
+    },
+    {
+      "check": "B_seed27/same adaptation config across budgets",
+      "passed": true
+    },
+    {
+      "check": "B_seed27/training plan",
+      "passed": true
+    },
+    {
+      "check": "B_seed27/low-data training source",
+      "passed": true
+    },
+    {
+      "check": "B_seed27/episode identities",
+      "passed": true
+    },
+    {
+      "check": "B_seed27/primary episode identities",
+      "passed": true
+    },
+    {
+      "check": "B_seed27/summary identity",
+      "passed": true
+    },
+    {
+      "check": "B_seed27/outcome agreement",
+      "passed": true
+    },
+    {
+      "check": "B_seed27/data hash",
+      "passed": true
+    },
+    {
+      "check": "B_seed27/32 training images",
+      "passed": true
+    },
+    {
+      "check": "B_seed27/fixed budget",
+      "passed": true
+    },
+    {
+      "check": "B_seed27/scenes",
+      "passed": true
+    },
+    {
+      "check": "B_seed27/same RGB across budgets",
+      "passed": true
+    },
+    {
+      "check": "B_seed27/counts",
+      "passed": true
+    },
+    {
+      "check": "B_seed27/deployment lineage",
+      "passed": true
+    },
+    {
+      "check": "B_seed27/sim code",
+      "passed": true
+    },
+    {
+      "check": "B_seed27/sim config",
+      "passed": true
+    },
+    {
+      "check": "B_seed27/training source/src\\perception\\__init__.py",
+      "passed": true
+    },
+    {
+      "check": "B_seed27/training source/src\\perception\\losses.py",
+      "passed": true
+    },
+    {
+      "check": "B_seed27/training source/src\\perception\\models.py",
+      "passed": true
+    },
+    {
+      "check": "B_seed27/training source/src\\perception\\training.py",
+      "passed": true
+    },
+    {
+      "check": "B_seed27/training source/scripts\\train_visual_ablation.py",
+      "passed": true
+    },
+    {
+      "check": "B_seed27/training source/scripts\\adapt_visual_state.py",
+      "passed": true
+    },
+    {
+      "check": "C_seed27/state complete and identity",
+      "passed": true
+    },
+    {
+      "check": "C_seed27/initialization identity",
+      "passed": true
+    },
+    {
+      "check": "C_seed27/initialization status",
+      "passed": true
+    },
+    {
+      "check": "C_seed27/pretraining lineage",
+      "passed": true
+    },
+    {
+      "check": "C_seed27/same adaptation config across budgets",
+      "passed": true
+    },
+    {
+      "check": "C_seed27/training plan",
+      "passed": true
+    },
+    {
+      "check": "C_seed27/low-data training source",
+      "passed": true
+    },
+    {
+      "check": "C_seed27/episode identities",
+      "passed": true
+    },
+    {
+      "check": "C_seed27/primary episode identities",
+      "passed": true
+    },
+    {
+      "check": "C_seed27/summary identity",
+      "passed": true
+    },
+    {
+      "check": "C_seed27/outcome agreement",
+      "passed": true
+    },
+    {
+      "check": "C_seed27/data hash",
+      "passed": true
+    },
+    {
+      "check": "C_seed27/32 training images",
+      "passed": true
+    },
+    {
+      "check": "C_seed27/fixed budget",
+      "passed": true
+    },
+    {
+      "check": "C_seed27/scenes",
+      "passed": true
+    },
+    {
+      "check": "C_seed27/same RGB across budgets",
+      "passed": true
+    },
+    {
+      "check": "C_seed27/counts",
+      "passed": true
+    },
+    {
+      "check": "C_seed27/deployment lineage",
+      "passed": true
+    },
+    {
+      "check": "C_seed27/sim code",
+      "passed": true
+    },
+    {
+      "check": "C_seed27/sim config",
+      "passed": true
+    },
+    {
+      "check": "C_seed27/training source/src\\perception\\__init__.py",
+      "passed": true
+    },
+    {
+      "check": "C_seed27/training source/src\\perception\\losses.py",
+      "passed": true
+    },
+    {
+      "check": "C_seed27/training source/src\\perception\\models.py",
+      "passed": true
+    },
+    {
+      "check": "C_seed27/training source/src\\perception\\training.py",
+      "passed": true
+    },
+    {
+      "check": "C_seed27/training source/scripts\\train_visual_ablation.py",
+      "passed": true
+    },
+    {
+      "check": "C_seed27/training source/scripts\\adapt_visual_state.py",
+      "passed": true
+    },
+    {
+      "check": "D_seed27/state complete and identity",
+      "passed": true
+    },
+    {
+      "check": "D_seed27/initialization identity",
+      "passed": true
+    },
+    {
+      "check": "D_seed27/initialization status",
+      "passed": true
+    },
+    {
+      "check": "D_seed27/pretraining lineage",
+      "passed": true
+    },
+    {
+      "check": "D_seed27/same adaptation config across budgets",
+      "passed": true
+    },
+    {
+      "check": "D_seed27/training plan",
+      "passed": true
+    },
+    {
+      "check": "D_seed27/low-data training source",
+      "passed": true
+    },
+    {
+      "check": "D_seed27/episode identities",
+      "passed": true
+    },
+    {
+      "check": "D_seed27/primary episode identities",
+      "passed": true
+    },
+    {
+      "check": "D_seed27/summary identity",
+      "passed": true
+    },
+    {
+      "check": "D_seed27/outcome agreement",
+      "passed": true
+    },
+    {
+      "check": "D_seed27/data hash",
+      "passed": true
+    },
+    {
+      "check": "D_seed27/32 training images",
+      "passed": true
+    },
+    {
+      "check": "D_seed27/fixed budget",
+      "passed": true
+    },
+    {
+      "check": "D_seed27/scenes",
+      "passed": true
+    },
+    {
+      "check": "D_seed27/same RGB across budgets",
+      "passed": true
+    },
+    {
+      "check": "D_seed27/counts",
+      "passed": true
+    },
+    {
+      "check": "D_seed27/deployment lineage",
+      "passed": true
+    },
+    {
+      "check": "D_seed27/sim code",
+      "passed": true
+    },
+    {
+      "check": "D_seed27/sim config",
+      "passed": true
+    },
+    {
+      "check": "D_seed27/training source/src\\perception\\__init__.py",
+      "passed": true
+    },
+    {
+      "check": "D_seed27/training source/src\\perception\\losses.py",
+      "passed": true
+    },
+    {
+      "check": "D_seed27/training source/src\\perception\\models.py",
+      "passed": true
+    },
+    {
+      "check": "D_seed27/training source/src\\perception\\training.py",
+      "passed": true
+    },
+    {
+      "check": "D_seed27/training source/scripts\\train_visual_ablation.py",
+      "passed": true
+    },
+    {
+      "check": "D_seed27/training source/scripts\\adapt_visual_state.py",
+      "passed": true
+    },
+    {
+      "check": "R_seed27/state complete and identity",
+      "passed": true
+    },
+    {
+      "check": "R_seed27/initialization identity",
+      "passed": true
+    },
+    {
+      "check": "R_seed27/initialization status",
+      "passed": true
+    },
+    {
+      "check": "R_seed27/pretraining lineage",
+      "passed": true
+    },
+    {
+      "check": "R_seed27/same adaptation config across budgets",
+      "passed": true
+    },
+    {
+      "check": "R_seed27/training plan",
+      "passed": true
+    },
+    {
+      "check": "R_seed27/low-data training source",
+      "passed": true
+    },
+    {
+      "check": "R_seed27/episode identities",
+      "passed": true
+    },
+    {
+      "check": "R_seed27/primary episode identities",
+      "passed": true
+    },
+    {
+      "check": "R_seed27/summary identity",
+      "passed": true
+    },
+    {
+      "check": "R_seed27/outcome agreement",
+      "passed": true
+    },
+    {
+      "check": "R_seed27/data hash",
+      "passed": true
+    },
+    {
+      "check": "R_seed27/32 training images",
+      "passed": true
+    },
+    {
+      "check": "R_seed27/fixed budget",
+      "passed": true
+    },
+    {
+      "check": "R_seed27/scenes",
+      "passed": true
+    },
+    {
+      "check": "R_seed27/same RGB across budgets",
+      "passed": true
+    },
+    {
+      "check": "R_seed27/counts",
+      "passed": true
+    },
+    {
+      "check": "R_seed27/deployment lineage",
+      "passed": true
+    },
+    {
+      "check": "R_seed27/sim code",
+      "passed": true
+    },
+    {
+      "check": "R_seed27/sim config",
+      "passed": true
+    },
+    {
+      "check": "R_seed27/training source/src\\perception\\__init__.py",
+      "passed": true
+    },
+    {
+      "check": "R_seed27/training source/src\\perception\\losses.py",
+      "passed": true
+    },
+    {
+      "check": "R_seed27/training source/src\\perception\\models.py",
+      "passed": true
+    },
+    {
+      "check": "R_seed27/training source/src\\perception\\training.py",
+      "passed": true
+    },
+    {
+      "check": "R_seed27/training source/scripts\\train_visual_ablation.py",
+      "passed": true
+    },
+    {
+      "check": "R_seed27/training source/scripts\\adapt_visual_state.py",
+      "passed": true
+    },
+    {
+      "check": "seed27/paired data_sha256",
+      "passed": true
+    },
+    {
+      "check": "seed27/paired head_initial_sha256",
+      "passed": true
+    },
+    {
+      "check": "seed27/paired batch_sequence_sha256",
+      "passed": true
+    },
+    {
+      "check": "seed27/paired augmentation_final_rng_sha256",
+      "passed": true
+    },
+    {
+      "check": "seed27/paired config",
+      "passed": true
+    },
+    {
+      "check": "seed27/paired target_mean",
+      "passed": true
+    },
+    {
+      "check": "seed27/paired target_scale",
+      "passed": true
+    },
+    {
+      "check": "planned total episode count",
+      "passed": true
+    }
+  ],
+  "audit_passed": true,
+  "failure_concentration": {
+    "failed_executions": 46,
+    "unique_test_scenes": 64,
+    "unique_failed_scenes": 6,
+    "executions_per_scene": 15,
+    "scenes_failed_in_every_group_and_seed": [
+      30038,
+      30056
+    ],
+    "failures_by_scene": [
+      {
+        "scene_seed": 30014,
+        "failures": 9,
+        "executions": 15,
+        "failed_runs": [
+          "A_seed7",
+          "C_seed7",
+          "D_seed7",
+          "B_seed17",
+          "R_seed17",
+          "B_seed27",
+          "C_seed27",
+          "D_seed27",
+          "R_seed27"
+        ]
+      },
+      {
+        "scene_seed": 30031,
+        "failures": 1,
+        "executions": 15,
+        "failed_runs": [
+          "D_seed27"
+        ]
+      },
+      {
+        "scene_seed": 30038,
+        "failures": 15,
+        "executions": 15,
+        "failed_runs": [
+          "A_seed7",
+          "B_seed7",
+          "C_seed7",
+          "D_seed7",
+          "R_seed7",
+          "A_seed17",
+          "B_seed17",
+          "C_seed17",
+          "D_seed17",
+          "R_seed17",
+          "A_seed27",
+          "B_seed27",
+          "C_seed27",
+          "D_seed27",
+          "R_seed27"
+        ]
+      },
+      {
+        "scene_seed": 30044,
+        "failures": 3,
+        "executions": 15,
+        "failed_runs": [
+          "B_seed17",
+          "A_seed27",
+          "D_seed27"
+        ]
+      },
+      {
+        "scene_seed": 30054,
+        "failures": 3,
+        "executions": 15,
+        "failed_runs": [
+          "R_seed7",
+          "D_seed17",
+          "R_seed27"
+        ]
+      },
+      {
+        "scene_seed": 30056,
+        "failures": 15,
+        "executions": 15,
+        "failed_runs": [
+          "A_seed7",
+          "B_seed7",
+          "C_seed7",
+          "D_seed7",
+          "R_seed7",
+          "A_seed17",
+          "B_seed17",
+          "C_seed17",
+          "D_seed17",
+          "R_seed17",
+          "A_seed27",
+          "B_seed27",
+          "C_seed27",
+          "D_seed27",
+          "R_seed27"
+        ]
+      }
+    ],
+    "interpretation": "Training seeds and groups reuse the same scene seeds; these are correlated executions, not independent environments."
+  },
+  "subset_limitation": "All training seeds reuse the same fixed 32-image subset; no resampling of alternative 32-image subsets was performed.",
+  "scope": "Exploratory reused-test follow-up. Equal steps, different epochs. No selection by observed low-data outcomes."
+}

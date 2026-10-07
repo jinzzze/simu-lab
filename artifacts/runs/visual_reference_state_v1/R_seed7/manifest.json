@@ -1,0 +1,102 @@
+{
+  "data_path": "E:\\HumanoidRobotLearning\\data\\processed\\sim_adaptation_v1.npz",
+  "data_sha256": "48ff653f12d20a8550f1bb9ba95cc24679756d8be8ac2e51f88cb8a76a1a20ab",
+  "code_sha256": {
+    "src\\perception\\__init__.py": "fac602379e482e251ddd71dbf67bf200024de7bcc175024df8f81725b13bbb79",
+    "src\\perception\\losses.py": "987c2a687e8fe5675acc337f7a0991d8204df059e397776a0390a0b9b823c053",
+    "src\\perception\\models.py": "c090cb35d05b5fc3dd3dc033575c0cc57c3d6ab0e98afdc241ba15fdda6e6d55",
+    "src\\perception\\training.py": "2534ad37f7a1a563897f0b47739b1121097a5eb2ef3e676034ea9776ef27f40d",
+    "scripts\\train_visual_ablation.py": "8f9b34eff5562d3a79d8bd3e84194da06bfb2d2349b610e12da142190bf7ba1d",
+    "scripts\\adapt_visual_state.py": "e5fd11b0d19822360dd1c388ce6090628cbc8408d6d34623c0434ce635bbe565"
+  },
+  "config": {
+    "steps": 300,
+    "batch_size": 16,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "photometric_strength": 0.05,
+    "encoder_finetune": true,
+    "xy_head": "layer4 512x7x7 -> conv1x1 32 -> flatten -> linear128 -> XY",
+    "checkpoint_rule": "last fixed-budget step; test metrics evaluated only after training",
+    "prediction": "current object world XY metres from full RGB; no airborne Z or yaw"
+  },
+  "torch": "2.10.0+cu126",
+  "numpy": "1.26.4",
+  "cuda": "12.6",
+  "gpu": "NVIDIA GeForce RTX 3080 Ti Laptop GPU",
+  "scope": "Additional exploratory diagnostic, added after some primary localization metrics were visible; not a preregistered confirmatory comparison",
+  "real_video_pretraining": false,
+  "role": "additional ImageNet-only diagnostic, not one of A/B/C/D",
+  "diagnostic_plan": {
+    "version": "imagenet-reference-v1",
+    "scope": "Additional exploratory diagnostic, added after some primary localization metrics were visible; not a preregistered confirmatory comparison",
+    "question": "Does personal-video pretraining add value over the same ImageNet initialization alone?",
+    "group": "R",
+    "training_seeds": [
+      7,
+      17,
+      27
+    ],
+    "real_video_frames": 0,
+    "real_pretraining_steps": 0,
+    "adaptation": "identical to the fixed primary adaptation config: 256 scenes, 300 steps, batch 16",
+    "test_scene_seeds": "same 30000 through 30063 as primary; reused development test, not new untouched evidence",
+    "controller": "unchanged shared physical grasp state machine",
+    "selection": "all three final fixed-budget checkpoints; report regardless of outcome",
+    "primary_ABCD_protocol_changed": false
+  },
+  "kind": "visual_state_xy_v1",
+  "group": "R",
+  "seed": 7,
+  "pretraining_path": "E:\\HumanoidRobotLearning\\artifacts\\runs\\imagenet_reference_initialization\\R_seed7\\checkpoint.pt",
+  "pretraining_sha256": "a563e24a0047e36839fa0e13afad24a58f3046d0178f2020d7375973af319ec7",
+  "head_initial_sha256": "6f86303f0de666704c392c1bcb2f62753fc593a86ee800b4243dd0e17ad6bbaa",
+  "target_mean": [
+    -0.06925497949123383,
+    0.0002588987408671528
+  ],
+  "target_scale": [
+    0.018071798607707024,
+    0.032919321209192276
+  ],
+  "selection": "fixed final step; no best-checkpoint selection",
+  "runtime_inputs": "RGB only; no simulator object state",
+  "output": "XY metres",
+  "train_frames": 256,
+  "status": "completed",
+  "elapsed_seconds": 135.31160680006724,
+  "batch_sequence_sha256": "62d811c6d5248290e1bbded50bbaf344105edce443d007f2103b8ebfe3a38834",
+  "augmentation_final_rng_sha256": "095bb94dac89d638fad1e2346e40b8704b11658997871c0e38d9f7af972706b1",
+  "steps_completed": 300,
+  "final_training_loss": {
+    "step": 300,
+    "xy_scaled_smooth_l1": 0.0038723619654774666,
+    "grad_norm": 0.5019453167915344
+  },
+  "metrics": {
+    "train": {
+      "n_frames": 256,
+      "n_scenes": 256,
+      "xy_mean_error_mm": 1.6862084865570068,
+      "xy_median_error_mm": 1.5635634660720825,
+      "xy_p90_error_mm": 2.965449333190918,
+      "xy_rmse_mm": 1.9136460032314062
+    },
+    "val": {
+      "n_frames": 64,
+      "n_scenes": 64,
+      "xy_mean_error_mm": 1.8966714143753052,
+      "xy_median_error_mm": 1.8260397911071777,
+      "xy_p90_error_mm": 3.218160104751587,
+      "xy_rmse_mm": 2.1578664891421795
+    },
+    "test": {
+      "n_frames": 64,
+      "n_scenes": 64,
+      "xy_mean_error_mm": 1.8800649642944336,
+      "xy_median_error_mm": 1.6695330142974854,
+      "xy_p90_error_mm": 3.3358566284179694,
+      "xy_rmse_mm": 2.133431611582637
+    }
+  }
+}

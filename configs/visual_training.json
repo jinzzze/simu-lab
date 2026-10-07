@@ -1,0 +1,33 @@
+{
+  "protocol": "development_visual_ablation_v1",
+  "real_data_status": "all 12 pilot episodes are one conservative development scene family; no held-out real test",
+  "pretraining": {
+    "steps": 240,
+    "batch_size": 16,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "photometric_strength": 0.1,
+    "object_weight": 1.0,
+    "hand_weight": 1.0,
+    "checkpoint_rule": "last fixed-budget step; no checkpoint selection",
+    "teacher": "frozen eval-mode initial ImageNet ResNet18 pooled 512 features",
+    "consistency": "mean squared L2 distance between unit-normalized feature vectors"
+  },
+  "adaptation": {
+    "steps": 300,
+    "batch_size": 16,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "photometric_strength": 0.05,
+    "encoder_finetune": true,
+    "xy_head": "layer4 512x7x7 -> conv1x1 32 -> flatten -> linear128 -> XY",
+    "checkpoint_rule": "last fixed-budget step; test metrics evaluated only after training",
+    "prediction": "current object world XY metres from full RGB; no airborne Z or yaw"
+  },
+  "training_seeds": [
+    7,
+    17,
+    27
+  ],
+  "fixed_before_observing_real_metrics": true
+}

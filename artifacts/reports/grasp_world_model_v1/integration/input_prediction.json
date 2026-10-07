@@ -1,0 +1,28 @@
+{
+  "scene_seed": 43000,
+  "state_estimate_xy_m": [
+    -0.08905583620071411,
+    0.05192261561751366
+  ],
+  "command_xy_m": [
+    -0.08905583620071411,
+    0.05192261561751366
+  ],
+  "world_model_prediction": {
+    "delta_xy_m": [
+      0.18841136991977692,
+      -0.06220794469118118
+    ],
+    "final_xy_m": [
+      0.0993555337190628,
+      -0.010285329073667526
+    ],
+    "lift_probability": 0.9992998242378235,
+    "success_probability": 0.9992260932922363
+  },
+  "rgb_sha256": "e2ca7ffbd580ecafcc41ed191e439a2d67646add21b6d2b452470d9ad64de561",
+  "visual_checkpoint_sha256": "0ff69564b60ddffa241e8ba392a70ce29845c635e4df3431353e4e69143e9f03",
+  "world_model_sha256": "486178915c723fb1da34ea2c24d98a59b1c02bbe3ed2703a3fd597347e2dab5a",
+  "ground_truth_supplied_to_model": false,
+  "recorded_before_action_execution": true
+}

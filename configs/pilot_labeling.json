@@ -1,0 +1,43 @@
+{
+  "version": "pilot-labels-v2",
+  "scope": "development_diagnostics_only",
+  "work_polygon_nominal_board_units": [
+    [
+      40,
+      45
+    ],
+    [
+      325,
+      45
+    ],
+    [
+      325,
+      235
+    ],
+    [
+      40,
+      235
+    ]
+  ],
+  "dark_max_channel": 35,
+  "comparison_dark_max_channel": 45,
+  "morph_open_kernel": 3,
+  "min_area_ratio": 0.7,
+  "max_area_ratio": 2.2,
+  "min_solidity": 0.86,
+  "min_rectangularity": 0.68,
+  "max_rotated_aspect": 1.85,
+  "min_threshold_bbox_iou": 0.78,
+  "marker_exclusion_margin_px": 12,
+  "boundary_exclusion_margin_px": 6,
+  "max_reference_marker_center_shift_px": 12,
+  "object_size_mm": [
+    20,
+    20
+  ],
+  "assumed_print_scale": 0.96,
+  "min_hand_detection_confidence": 0.5,
+  "min_hand_presence_confidence": 0.5,
+  "num_hands": 2,
+  "note": "Thresholds selected on pilot development images only. Object candidates use current RGB and first-frame board reference, never hand landmarks or past/future object positions. Size gate is approximate and does not estimate object height. v2: stricter size support rejects regular narrow fragments; component centers are not full-object ground truth. Visible-marker corner/similarity checks also guard reference rotation/scale."
+}

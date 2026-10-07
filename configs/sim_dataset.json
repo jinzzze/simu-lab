@@ -1,0 +1,10 @@
+{
+  "version": "sim-adaptation-v1",
+  "purpose": "exploratory state adaptation and matched-scene evaluation",
+  "image_size": 224,
+  "seed_ranges": {"train": [10000,10256], "val": [20000,20064], "test": [30000,30064]},
+  "samples_per_scene": 1,
+  "scene_seed_intervals_are_end_exclusive": true,
+  "oracle_development_seeds": [0,1,2,3,4,5,6,7,8,9],
+  "note": "One initial-state RGB observation per independent scene. Same static camera/appearance family; no out-of-domain generalization claim. Test seeds are held out from optimizer and checkpoint selection."
+}

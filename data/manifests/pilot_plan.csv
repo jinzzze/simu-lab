@@ -1,0 +1,13 @@
+﻿episode_id,session_id,status,source_video,planned_side,planned_offset,planned_tool_travel_mm,object_length_mm,object_width_mm,object_height_mm,pusher_width_mm,camera_settings,execution_deviation,notes
+pilot_001,pilot_session_01,planned,,N,center,10,,,,,,,
+pilot_002,pilot_session_01,planned,,E,center,10,,,,,,,
+pilot_003,pilot_session_01,planned,,S,center,10,,,,,,,
+pilot_004,pilot_session_01,planned,,W,center,10,,,,,,,
+pilot_005,pilot_session_01,planned,,N,center,20,,,,,,,
+pilot_006,pilot_session_01,planned,,E,center,20,,,,,,,
+pilot_007,pilot_session_01,planned,,S,center,20,,,,,,,
+pilot_008,pilot_session_01,planned,,W,center,20,,,,,,,
+pilot_009,pilot_session_01,planned,,N,left_quarter,10,,,,,,,
+pilot_010,pilot_session_01,planned,,E,left_quarter,10,,,,,,,
+pilot_011,pilot_session_01,planned,,S,left_quarter,10,,,,,,,
+pilot_012,pilot_session_01,planned,,W,left_quarter,10,,,,,,,

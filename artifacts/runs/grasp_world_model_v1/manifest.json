@@ -1,0 +1,94 @@
+{
+  "created_utc": "2026-10-06T17:22:06.915112+00:00",
+  "plan": {
+    "version": "grasp-macro-world-model-v1",
+    "frozen_before_collection_and_metrics": true,
+    "scope": "Independent exploratory extension; existing A/B/C/D results and controller unchanged",
+    "data_source": "All macro-action transition labels originate from PyBullet simulation, not human videos",
+    "sim_config": "configs/grasp_sim.json",
+    "splits": {
+      "train": {
+        "start": 40000,
+        "count": 64
+      },
+      "val": {
+        "start": 41000,
+        "count": 16
+      },
+      "test": {
+        "start": 42000,
+        "count": 32
+      }
+    },
+    "actions_per_scene": 5,
+    "offset_recipe": "First action zero offset; next four independent uniform XY offsets from [-0.03,0.03] m; Generator(SeedSequence([91371, scene_seed]))",
+    "offset_rng_seed": 91371,
+    "offset_bound_m": 0.03,
+    "state": "Initial object XY in meters; privileged during collection, external estimate at deployment",
+    "action": "Absolute grasp XY command recorded before execution; place target and skill parameters fixed",
+    "targets": [
+      "final object XY displacement in meters",
+      "qualified bilateral lift",
+      "strict task success"
+    ],
+    "model": {
+      "input": "concat(initial_xy/0.1, (command_xy-initial_xy)/0.03)",
+      "hidden": [
+        64,
+        64
+      ],
+      "activation": "relu",
+      "output": "2 displacement values scaled by 0.15 m and 2 binary logits",
+      "delta_scale_m": 0.15
+    },
+    "training": {
+      "seeds": [
+        41,
+        43,
+        47
+      ],
+      "steps": 2000,
+      "batch_size": 64,
+      "optimizer": "AdamW",
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "regression_loss": "mean squared normalized displacement error",
+      "classification_loss": "mean BCE of lift and success",
+      "regression_weight": 1.0,
+      "classification_weight": 1.0,
+      "checkpoint": "fixed final step; no model selection",
+      "device": "cpu",
+      "torch_threads": 4
+    },
+    "evaluation": {
+      "classification_threshold": 0.5,
+      "baselines": [
+        "persistence displacement=0",
+        "training mean displacement",
+        "training empirical lift and success priors"
+      ],
+      "report_all_training_seeds": true,
+      "ensemble": "mean displacements and mean sigmoid probabilities",
+      "test_used_for_tuning": false,
+      "intervals": "No iid episode confidence interval because five actions share each scene"
+    },
+    "integration_demo": {
+      "visual_model": "artifacts/runs/visual_state_v1/D_seed7/checkpoint.pt",
+      "scene_seed": 43000,
+      "command": "predicted initial XY (zero predicted offset)",
+      "model": "equal-weight ensemble of all three final world models",
+      "record_video": true,
+      "purpose": "Outcome prediction diagnostic; no new planner or altered primary evaluation"
+    }
+  },
+  "dataset_sha256": "79c5fca9683a5bf5d61da7d286ebc311988cf28b441432b7d2670301725211c2",
+  "dataset_manifest_sha256": "3b16e9e77726f3afbf9f183040cb5e540bac8dd10d61f7867933c6bcdc25c675",
+  "source_sha256": {
+    "scripts\\train_grasp_world_model.py": "0df0be2ddb51698a9e4c156dd46be237279b333587334dcdc19d9288d157bb32",
+    "src\\world_model\\numpy_model.py": "a3f15191f431411dce04605943dc3c4264514f15fbfca2895cfa418dc4f15155"
+  },
+  "input_semantics": "true initial state for training/evaluation; externally estimated state at deployment",
+  "scope": "Fixed-skill macro-action model; all transition labels are simulator generated",
+  "torch": "2.10.0+cu126",
+  "numpy": "1.26.4"
+}

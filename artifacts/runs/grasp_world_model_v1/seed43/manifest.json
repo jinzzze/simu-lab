@@ -1,0 +1,72 @@
+{
+  "seed": 43,
+  "metrics": {
+    "train": {
+      "n_transitions": 320,
+      "xy_mean_error_mm": 23.006885528564453,
+      "xy_median_error_mm": 13.65716552734375,
+      "xy_p90_error_mm": 53.9162204742432,
+      "xy_rmse_mm": 33.632667541503906,
+      "lift": {
+        "positives": 152,
+        "accuracy_at_0_5": 0.98125,
+        "brier": 0.019562985748052597,
+        "log_loss": 0.07337254285812378,
+        "auroc": 0.9964364035087719
+      },
+      "success": {
+        "positives": 150,
+        "accuracy_at_0_5": 0.975,
+        "brier": 0.02249753475189209,
+        "log_loss": 0.07903383672237396,
+        "auroc": 0.9962745098039215
+      }
+    },
+    "val": {
+      "n_transitions": 80,
+      "xy_mean_error_mm": 31.2495174407959,
+      "xy_median_error_mm": 15.561870574951172,
+      "xy_p90_error_mm": 78.28058700561526,
+      "xy_rmse_mm": 46.50594711303711,
+      "lift": {
+        "positives": 38,
+        "accuracy_at_0_5": 0.95,
+        "brier": 0.04164590314030647,
+        "log_loss": 0.13384278118610382,
+        "auroc": 0.9918546365914787
+      },
+      "success": {
+        "positives": 37,
+        "accuracy_at_0_5": 0.9625,
+        "brier": 0.03244195878505707,
+        "log_loss": 0.10495062917470932,
+        "auroc": 0.994343180389692
+      }
+    },
+    "test": {
+      "n_transitions": 160,
+      "xy_mean_error_mm": 31.63031005859375,
+      "xy_median_error_mm": 14.600842475891113,
+      "xy_p90_error_mm": 83.13044891357418,
+      "xy_rmse_mm": 50.01060104370117,
+      "lift": {
+        "positives": 72,
+        "accuracy_at_0_5": 0.95,
+        "brier": 0.04601764306426048,
+        "log_loss": 0.16630010306835175,
+        "auroc": 0.9880050505050505
+      },
+      "success": {
+        "positives": 71,
+        "accuracy_at_0_5": 0.95,
+        "brier": 0.03742584213614464,
+        "log_loss": 0.13187773525714874,
+        "auroc": 0.991612596929894
+      }
+    }
+  },
+  "steps_completed": 2000,
+  "elapsed_seconds": 1.9947030000621453,
+  "batch_sequence_sha256": "c02c9b4373753416c5d1c2be5841bccbd03912789768c1ee85d861b5d896dd6e",
+  "selection": "fixed last step, no validation/test checkpoint selection"
+}

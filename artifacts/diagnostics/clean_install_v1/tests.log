@@ -1,0 +1,46 @@
+..                                                                       [100%]
+- generated xml file: E:\HumanoidRobotLearning\artifacts\diagnostics\tests\test_diffusion_policy.xml -
+2 passed in 12.39s
+
+.........                                                                [100%]
+- generated xml file: E:\HumanoidRobotLearning\artifacts\diagnostics\tests\test_grasp_sim.xml -
+9 passed in 9.00s
+argv[0]=--background_color_red=0.9607843160629272
+argv[1]=--background_color_green=0.9607843160629272
+argv[2]=--background_color_blue=0.9607843160629272
+argv[0]=--background_color_red=0.9607843160629272
+argv[1]=--background_color_green=0.9607843160629272
+argv[2]=--background_color_blue=0.9607843160629272
+argv[0]=--background_color_red=0.9607843160629272
+argv[1]=--background_color_green=0.9607843160629272
+argv[2]=--background_color_blue=0.9607843160629272
+argv[0]=--background_color_red=0.9607843160629272
+argv[1]=--background_color_green=0.9607843160629272
+argv[2]=--background_color_blue=0.9607843160629272
+
+........                                                                 [100%]
+- generated xml file: E:\HumanoidRobotLearning\artifacts\diagnostics\tests\test_pilot_labels.xml -
+8 passed in 1.06s
+
+..                                                                       [100%]
+- generated xml file: E:\HumanoidRobotLearning\artifacts\diagnostics\tests\test_policy_environment.xml -
+2 passed in 1.57s
+argv[0]=--background_color_red=0.9607843160629272
+argv[1]=--background_color_green=0.9607843160629272
+argv[2]=--background_color_blue=0.9607843160629272
+
+.                                                                        [100%]
+- generated xml file: E:\HumanoidRobotLearning\artifacts\diagnostics\tests\test_predictor_process.xml -
+1 passed in 19.46s
+argv[0]=--background_color_red=0.9607843160629272
+argv[1]=--background_color_green=0.9607843160629272
+argv[2]=--background_color_blue=0.9607843160629272
+
+........                                                                 [100%]
+- generated xml file: E:\HumanoidRobotLearning\artifacts\diagnostics\tests\test_visual_losses.xml -
+8 passed in 6.55s
+
+.......                                                                  [100%]
+- generated xml file: E:\HumanoidRobotLearning\artifacts\diagnostics\tests\test_world_model_integrity.xml -
+7 passed in 0.41s
+

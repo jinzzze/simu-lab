@@ -1,0 +1,218 @@
+{
+  "checked_utc": "2026-10-06T00:06:06Z",
+  "received_count": 12,
+  "exact_duplicate_count": 12,
+  "total_bytes": 13756943,
+  "conclusion": "All 12 candidate originals are SHA-256-identical to the previously checked 720p/25fps pilot videos. No higher-quality alternative has arrived in this directory.",
+  "scope": "Hashed current files in both directories. Previously measured metadata and decode/vision QA apply to byte-identical files; no new vision inference was run.",
+  "unique_episode_count_across_both_directories": 12,
+  "primary_source_remains": "data/raw/pilot",
+  "phone_original_provenance_confirmed": null,
+  "previous_vision_quality_report": "artifacts/diagnostics/pilot_20261006/quality_report.json",
+  "files": [
+    {
+      "received_path": "data/raw/pilot_originals/5d81c4e3767ab92cd6898978b3330c6e.mp4",
+      "bytes": 1331132,
+      "sha256": "777231764b480dde3d9946138ec5a4989dc5b985ac899b25e3abff0ba6ed8844",
+      "exact_duplicate_of": "data/raw/pilot/5d81c4e3767ab92cd6898978b3330c6e.mp4",
+      "new_independent_episode": false,
+      "canonical_source": "data/raw/pilot/5d81c4e3767ab92cd6898978b3330c6e.mp4",
+      "decoded_shape_from_identical_previously_checked_file": [
+        720,
+        1280,
+        3
+      ],
+      "fps_from_identical_previously_checked_file": 25.0,
+      "prior_full_decode_verified": true,
+      "reuse_previous_qc": true,
+      "retained_unmodified": true
+    },
+    {
+      "received_path": "data/raw/pilot_originals/619481ad2df077adff353cb4ced816b5.mp4",
+      "bytes": 981051,
+      "sha256": "f77c2afc0208f298b03f81f9764257c33731fb5ae96c771594c32d213ae5d918",
+      "exact_duplicate_of": "data/raw/pilot/619481ad2df077adff353cb4ced816b5.mp4",
+      "new_independent_episode": false,
+      "canonical_source": "data/raw/pilot/619481ad2df077adff353cb4ced816b5.mp4",
+      "decoded_shape_from_identical_previously_checked_file": [
+        720,
+        1280,
+        3
+      ],
+      "fps_from_identical_previously_checked_file": 25.0,
+      "prior_full_decode_verified": true,
+      "reuse_previous_qc": true,
+      "retained_unmodified": true
+    },
+    {
+      "received_path": "data/raw/pilot_originals/65e9623a9250a178c285cd0411298d54.mp4",
+      "bytes": 1174910,
+      "sha256": "6813f786a2f8c57a8b607664fbe824ca8e9f83883c6d6d1ff66582314ad5ee66",
+      "exact_duplicate_of": "data/raw/pilot/65e9623a9250a178c285cd0411298d54.mp4",
+      "new_independent_episode": false,
+      "canonical_source": "data/raw/pilot/65e9623a9250a178c285cd0411298d54.mp4",
+      "decoded_shape_from_identical_previously_checked_file": [
+        720,
+        1280,
+        3
+      ],
+      "fps_from_identical_previously_checked_file": 25.0,
+      "prior_full_decode_verified": true,
+      "reuse_previous_qc": true,
+      "retained_unmodified": true
+    },
+    {
+      "received_path": "data/raw/pilot_originals/7612dcc78727731b2c3fee6aff5933e9.mp4",
+      "bytes": 1076699,
+      "sha256": "24ccfc77eefbd854285edd56e595f566007f8d31b287c2cd9bf1744726f97192",
+      "exact_duplicate_of": "data/raw/pilot/7612dcc78727731b2c3fee6aff5933e9.mp4",
+      "new_independent_episode": false,
+      "canonical_source": "data/raw/pilot/7612dcc78727731b2c3fee6aff5933e9.mp4",
+      "decoded_shape_from_identical_previously_checked_file": [
+        720,
+        1280,
+        3
+      ],
+      "fps_from_identical_previously_checked_file": 25.0,
+      "prior_full_decode_verified": true,
+      "reuse_previous_qc": true,
+      "retained_unmodified": true
+    },
+    {
+      "received_path": "data/raw/pilot_originals/7c8ce83fac51bf89c4075ae95d99d7c4.mp4",
+      "bytes": 873927,
+      "sha256": "88e1459ca56bb8d115693e62d2c737e7d7058fe627c2055b44a6e4d17e842a86",
+      "exact_duplicate_of": "data/raw/pilot/7c8ce83fac51bf89c4075ae95d99d7c4.mp4",
+      "new_independent_episode": false,
+      "canonical_source": "data/raw/pilot/7c8ce83fac51bf89c4075ae95d99d7c4.mp4",
+      "decoded_shape_from_identical_previously_checked_file": [
+        720,
+        1280,
+        3
+      ],
+      "fps_from_identical_previously_checked_file": 25.0,
+      "prior_full_decode_verified": true,
+      "reuse_previous_qc": true,
+      "retained_unmodified": true
+    },
+    {
+      "received_path": "data/raw/pilot_originals/878c0fc6b4dc2df2a699fdb493bfb76d.mp4",
+      "bytes": 766594,
+      "sha256": "738fca5dd5fee38c3082e96fa58929a3ff4aaca4bfaf28a00df39c964f618775",
+      "exact_duplicate_of": "data/raw/pilot/878c0fc6b4dc2df2a699fdb493bfb76d.mp4",
+      "new_independent_episode": false,
+      "canonical_source": "data/raw/pilot/878c0fc6b4dc2df2a699fdb493bfb76d.mp4",
+      "decoded_shape_from_identical_previously_checked_file": [
+        720,
+        1280,
+        3
+      ],
+      "fps_from_identical_previously_checked_file": 25.0,
+      "prior_full_decode_verified": true,
+      "reuse_previous_qc": true,
+      "retained_unmodified": true
+    },
+    {
+      "received_path": "data/raw/pilot_originals/8d3c7d5b823bdb9476d8d6aac4ce56bd.mp4",
+      "bytes": 1030241,
+      "sha256": "81483695ce191b6baa6149d2d770d711bc83d73fe04d96aa919c8778a6d6a5af",
+      "exact_duplicate_of": "data/raw/pilot/8d3c7d5b823bdb9476d8d6aac4ce56bd.mp4",
+      "new_independent_episode": false,
+      "canonical_source": "data/raw/pilot/8d3c7d5b823bdb9476d8d6aac4ce56bd.mp4",
+      "decoded_shape_from_identical_previously_checked_file": [
+        720,
+        1280,
+        3
+      ],
+      "fps_from_identical_previously_checked_file": 25.0,
+      "prior_full_decode_verified": true,
+      "reuse_previous_qc": true,
+      "retained_unmodified": true
+    },
+    {
+      "received_path": "data/raw/pilot_originals/973701c668b25a8098bc73a5369e978f.mp4",
+      "bytes": 1054899,
+      "sha256": "dbff39bd344b087dac1ac3f57e92fe71ff7044ffa9bbf7201821c728d08e2aae",
+      "exact_duplicate_of": "data/raw/pilot/973701c668b25a8098bc73a5369e978f.mp4",
+      "new_independent_episode": false,
+      "canonical_source": "data/raw/pilot/973701c668b25a8098bc73a5369e978f.mp4",
+      "decoded_shape_from_identical_previously_checked_file": [
+        720,
+        1280,
+        3
+      ],
+      "fps_from_identical_previously_checked_file": 25.0,
+      "prior_full_decode_verified": true,
+      "reuse_previous_qc": true,
+      "retained_unmodified": true
+    },
+    {
+      "received_path": "data/raw/pilot_originals/9c6679c3eb2fc1dc6dac4bb0978018ea.mp4",
+      "bytes": 1157614,
+      "sha256": "8ffaddf69ca6040d116b0d0d7f488ae405b37716e7bf2976ec0bf31698641b2d",
+      "exact_duplicate_of": "data/raw/pilot/9c6679c3eb2fc1dc6dac4bb0978018ea.mp4",
+      "new_independent_episode": false,
+      "canonical_source": "data/raw/pilot/9c6679c3eb2fc1dc6dac4bb0978018ea.mp4",
+      "decoded_shape_from_identical_previously_checked_file": [
+        720,
+        1280,
+        3
+      ],
+      "fps_from_identical_previously_checked_file": 25.0,
+      "prior_full_decode_verified": true,
+      "reuse_previous_qc": true,
+      "retained_unmodified": true
+    },
+    {
+      "received_path": "data/raw/pilot_originals/b99a203d08bad9c18cfd0b62b22b9291.mp4",
+      "bytes": 1177661,
+      "sha256": "6f9ba1c96ca35903897465634f99b323b635afbde21c3db04e5c7b0f229b1901",
+      "exact_duplicate_of": "data/raw/pilot/b99a203d08bad9c18cfd0b62b22b9291.mp4",
+      "new_independent_episode": false,
+      "canonical_source": "data/raw/pilot/b99a203d08bad9c18cfd0b62b22b9291.mp4",
+      "decoded_shape_from_identical_previously_checked_file": [
+        720,
+        1280,
+        3
+      ],
+      "fps_from_identical_previously_checked_file": 25.0,
+      "prior_full_decode_verified": true,
+      "reuse_previous_qc": true,
+      "retained_unmodified": true
+    },
+    {
+      "received_path": "data/raw/pilot_originals/d1969439ec5e66b0e881345687f67e96.mp4",
+      "bytes": 1205144,
+      "sha256": "782a0f67a0fafb62f942b1981d2fe7376729b87452d949ad9d04ba2cda19fba0",
+      "exact_duplicate_of": "data/raw/pilot/d1969439ec5e66b0e881345687f67e96.mp4",
+      "new_independent_episode": false,
+      "canonical_source": "data/raw/pilot/d1969439ec5e66b0e881345687f67e96.mp4",
+      "decoded_shape_from_identical_previously_checked_file": [
+        720,
+        1280,
+        3
+      ],
+      "fps_from_identical_previously_checked_file": 25.0,
+      "prior_full_decode_verified": true,
+      "reuse_previous_qc": true,
+      "retained_unmodified": true
+    },
+    {
+      "received_path": "data/raw/pilot_originals/d5d6458336fc5a2034c996d92fdf1db5.mp4",
+      "bytes": 1927071,
+      "sha256": "f3d45d8bca66ffd56d6cce419dfce6eca86b1edccd5d0044eb1ae1f58bd09196",
+      "exact_duplicate_of": "data/raw/pilot/d5d6458336fc5a2034c996d92fdf1db5.mp4",
+      "new_independent_episode": false,
+      "canonical_source": "data/raw/pilot/d5d6458336fc5a2034c996d92fdf1db5.mp4",
+      "decoded_shape_from_identical_previously_checked_file": [
+        720,
+        1280,
+        3
+      ],
+      "fps_from_identical_previously_checked_file": 25.0,
+      "prior_full_decode_verified": true,
+      "reuse_previous_qc": true,
+      "retained_unmodified": true
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "status": "completed",
+  "seed": 27,
+  "config": {
+    "version": "diffusion-policy-d-v1",
+    "scope": "User-requested independent DP-D extension; original A/B/C/D/R and world-model results unchanged. Compact from-scratch Diffusion Policy style conditional action diffusion, not an exact reproduction of published benchmarks.",
+    "method_sources": [
+      "https://diffusion-policy.cs.columbia.edu/",
+      "https://github.com/real-stanford/diffusion_policy"
+    ],
+    "visual_checkpoint": "artifacts/runs/visual_state_v1/D_seed7/checkpoint.pt",
+    "visual_input": "Initial full RGB only, frozen D seed7 XY estimator. No online true object state or future observations. Policy receives this initial estimate, robot proprioception, previous command and elapsed robot clock.",
+    "demonstration_source": "New privileged-state simulator expert trajectories from the existing physical controller; not action labels extracted from phone videos",
+    "splits": {
+      "train": {
+        "start": 50000,
+        "count": 128
+      },
+      "val": {
+        "start": 51000,
+        "count": 16
+      }
+    },
+    "evaluation": {
+      "start": 30000,
+      "count": 64,
+      "seeds": [
+        7,
+        17,
+        27
+      ],
+      "sampling_seed": 8821,
+      "record_first": true,
+      "selection": "all final EMA checkpoints; same reused development test scenes as original study; no best-seed selection",
+      "limit_steps": 320
+    },
+    "observations": [
+      "initial_visual_xy_m (2)",
+      "robot_ee_xyz_m (3)",
+      "finger_width_m (1)",
+      "previous_command_xyz_width (4)",
+      "elapsed_fraction_of_320_steps (1)"
+    ],
+    "action": "Absolute next EE XYZ setpoint after original controller step-length limit plus commanded finger width, recorded before physics step",
+    "action_dim": 4,
+    "observation_dim": 11,
+    "observation_horizon": 2,
+    "prediction_horizon": 16,
+    "execution_horizon": 8,
+    "control_dt_s": 0.04,
+    "episode_steps": 320,
+    "padding": "repeat first observation for history and final action for future; loss only on valid action indices; samples never cross episode boundaries",
+    "normalization": "training episodes only, per-dimension min/max to [-1,1], constant ranges given minimum scale 1e-6",
+    "model": {
+      "type": "compact conditional temporal U-Net with FiLM residual blocks",
+      "widths": [
+        64,
+        128
+      ],
+      "time_embedding": 64,
+      "train_diffusion_steps": 100,
+      "beta_schedule": "squared cosine capped at 0.999",
+      "prediction": "epsilon",
+      "inference": "DDIM eta=0, 20 evenly spaced denoising timesteps",
+      "ema_decay": 0.995
+    },
+    "training": {
+      "seeds": [
+        7,
+        17,
+        27
+      ],
+      "steps": 5000,
+      "batch_size": 128,
+      "optimizer": "AdamW",
+      "learning_rate": 0.0001,
+      "weight_decay": 1e-06,
+      "grad_clip": 1.0,
+      "device": "cuda",
+      "validation": "fixed 256 sequence-start samples, denoising loss and heldout action error; report only, never choose checkpoints"
+    },
+    "safety_limits": {
+      "xyz_low": [
+        -0.25,
+        -0.12,
+        0.006
+      ],
+      "xyz_high": [
+        0.16,
+        0.12,
+        0.16
+      ],
+      "width_low": 0.0,
+      "width_high": 0.065,
+      "max_ee_step_m": 0.008
+    },
+    "fairness_limits": "Same simulator physics, rendering and strict outcome scoring, but extra 128 robot demonstration trajectories and learned controller; not budget-matched auxiliary-supervision ablation. Same fixed D7 vision for all three policy training seeds. Clock-conditioned, initial-frame visual state policy; not end-to-end multi-frame image policy.",
+    "status": "plan fixed before new collection, policy training or results"
+  },
+  "started_utc": "2026-10-06T23:01:34.599580+00:00",
+  "source_sha256": {
+    "scripts\\train_diffusion_policy.py": "1e0c3537bdd3960ce34a56f879fec4ce20ea4faaf39b990e7a7079e6c66f2ce0",
+    "src\\policy\\diffusion.py": "76b8c3a32cca2d663b06132a7e047ab43ce43213f0c6bfec478bd9553e17a5b5",
+    "configs\\diffusion_policy.json": "6bb08867618226d9fea6424b714da0c82a5bd3b1c16754192e7e874e19e1e9cb",
+    "src\\perception\\training.py": "2534ad37f7a1a563897f0b47739b1121097a5eb2ef3e676034ea9776ef27f40d"
+  },
+  "dataset_manifest_sha256": "a5141d9e7a2cf2f475092dabb141cad6da5a71a116d244c49ad441de6d9d48fc",
+  "dataset_sha256": {
+    "train": "39926c5114c2be9b93d195f739e107ec19c88879d4910dd724dda0bf3edc4cbb",
+    "val": "68d9e0bca9202527ac95256f739ffe1ff78678bda54849be2cd96d9b2516304e"
+  },
+  "selection": "fixed final EMA model, no best-step selection",
+  "torch": "2.10.0+cu126",
+  "steps_completed": 5000,
+  "parameters": 374084,
+  "elapsed_seconds": 87.88657269999385,
+  "batch_sequence_sha256": "ec7d150704ec0d561c940b9769f9ac90e21340870f5d30ec9380772c3334be04",
+  "validation": {
+    "noise_mse": 0.019754253327846527,
+    "action_xyz_mean_error_mm": 11.98033332824707,
+    "action_width_mean_absolute_error_mm": 2.799182415008545,
+    "sequence_starts": 256
+  },
+  "checkpoint_sha256": "81856dc4d4621f7e22bab5cc8c9551f0bc1d3a8d12051c1d1e90c8724effcde6"
+}

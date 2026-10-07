@@ -1,0 +1,186 @@
+{
+  "scope": "Complete received inventory after the 12th file arrived. Original contact_01..11 and overview images document the earlier arrival snapshot; use filename-based annotated images for the complete batch.",
+  "count": 12,
+  "videos": [
+    {
+      "source_video": "data/raw/pilot/5d81c4e3767ab92cd6898978b3330c6e.mp4",
+      "sha256": "777231764b480dde3d9946138ec5a4989dc5b985ac899b25e3abff0ba6ed8844",
+      "bytes": 1331132,
+      "fps_reported": 25.0,
+      "frames_reported": 209,
+      "frames_decoded": 209,
+      "decoded_shape": [
+        720,
+        1280,
+        3
+      ],
+      "duration_nominal_s": 8.36,
+      "annotated_contact_sheet": "artifacts/diagnostics/pilot_20261006/5d81c4e3767ab92cd6898978b3330c6e_annotated.jpg"
+    },
+    {
+      "source_video": "data/raw/pilot/619481ad2df077adff353cb4ced816b5.mp4",
+      "sha256": "f77c2afc0208f298b03f81f9764257c33731fb5ae96c771594c32d213ae5d918",
+      "bytes": 981051,
+      "fps_reported": 25.0,
+      "frames_reported": 156,
+      "frames_decoded": 156,
+      "decoded_shape": [
+        720,
+        1280,
+        3
+      ],
+      "duration_nominal_s": 6.24,
+      "annotated_contact_sheet": "artifacts/diagnostics/pilot_20261006/619481ad2df077adff353cb4ced816b5_annotated.jpg"
+    },
+    {
+      "source_video": "data/raw/pilot/65e9623a9250a178c285cd0411298d54.mp4",
+      "sha256": "6813f786a2f8c57a8b607664fbe824ca8e9f83883c6d6d1ff66582314ad5ee66",
+      "bytes": 1174910,
+      "fps_reported": 25.0,
+      "frames_reported": 182,
+      "frames_decoded": 182,
+      "decoded_shape": [
+        720,
+        1280,
+        3
+      ],
+      "duration_nominal_s": 7.28,
+      "annotated_contact_sheet": "artifacts/diagnostics/pilot_20261006/65e9623a9250a178c285cd0411298d54_annotated.jpg"
+    },
+    {
+      "source_video": "data/raw/pilot/7612dcc78727731b2c3fee6aff5933e9.mp4",
+      "sha256": "24ccfc77eefbd854285edd56e595f566007f8d31b287c2cd9bf1744726f97192",
+      "bytes": 1076699,
+      "fps_reported": 25.0,
+      "frames_reported": 171,
+      "frames_decoded": 171,
+      "decoded_shape": [
+        720,
+        1280,
+        3
+      ],
+      "duration_nominal_s": 6.84,
+      "annotated_contact_sheet": "artifacts/diagnostics/pilot_20261006/7612dcc78727731b2c3fee6aff5933e9_annotated.jpg"
+    },
+    {
+      "source_video": "data/raw/pilot/7c8ce83fac51bf89c4075ae95d99d7c4.mp4",
+      "sha256": "88e1459ca56bb8d115693e62d2c737e7d7058fe627c2055b44a6e4d17e842a86",
+      "bytes": 873927,
+      "fps_reported": 25.0,
+      "frames_reported": 138,
+      "frames_decoded": 138,
+      "decoded_shape": [
+        720,
+        1280,
+        3
+      ],
+      "duration_nominal_s": 5.52,
+      "annotated_contact_sheet": "artifacts/diagnostics/pilot_20261006/7c8ce83fac51bf89c4075ae95d99d7c4_annotated.jpg"
+    },
+    {
+      "source_video": "data/raw/pilot/878c0fc6b4dc2df2a699fdb493bfb76d.mp4",
+      "sha256": "738fca5dd5fee38c3082e96fa58929a3ff4aaca4bfaf28a00df39c964f618775",
+      "bytes": 766594,
+      "fps_reported": 25.0,
+      "frames_reported": 119,
+      "frames_decoded": 119,
+      "decoded_shape": [
+        720,
+        1280,
+        3
+      ],
+      "duration_nominal_s": 4.76,
+      "annotated_contact_sheet": "artifacts/diagnostics/pilot_20261006/878c0fc6b4dc2df2a699fdb493bfb76d_annotated.jpg"
+    },
+    {
+      "source_video": "data/raw/pilot/8d3c7d5b823bdb9476d8d6aac4ce56bd.mp4",
+      "sha256": "81483695ce191b6baa6149d2d770d711bc83d73fe04d96aa919c8778a6d6a5af",
+      "bytes": 1030241,
+      "fps_reported": 25.0,
+      "frames_reported": 162,
+      "frames_decoded": 162,
+      "decoded_shape": [
+        720,
+        1280,
+        3
+      ],
+      "duration_nominal_s": 6.48,
+      "annotated_contact_sheet": "artifacts/diagnostics/pilot_20261006/8d3c7d5b823bdb9476d8d6aac4ce56bd_annotated.jpg"
+    },
+    {
+      "source_video": "data/raw/pilot/973701c668b25a8098bc73a5369e978f.mp4",
+      "sha256": "dbff39bd344b087dac1ac3f57e92fe71ff7044ffa9bbf7201821c728d08e2aae",
+      "bytes": 1054899,
+      "fps_reported": 25.0,
+      "frames_reported": 167,
+      "frames_decoded": 167,
+      "decoded_shape": [
+        720,
+        1280,
+        3
+      ],
+      "duration_nominal_s": 6.68,
+      "annotated_contact_sheet": "artifacts/diagnostics/pilot_20261006/973701c668b25a8098bc73a5369e978f_annotated.jpg"
+    },
+    {
+      "source_video": "data/raw/pilot/9c6679c3eb2fc1dc6dac4bb0978018ea.mp4",
+      "sha256": "8ffaddf69ca6040d116b0d0d7f488ae405b37716e7bf2976ec0bf31698641b2d",
+      "bytes": 1157614,
+      "fps_reported": 25.0,
+      "frames_reported": 180,
+      "frames_decoded": 180,
+      "decoded_shape": [
+        720,
+        1280,
+        3
+      ],
+      "duration_nominal_s": 7.2,
+      "annotated_contact_sheet": "artifacts/diagnostics/pilot_20261006/9c6679c3eb2fc1dc6dac4bb0978018ea_annotated.jpg"
+    },
+    {
+      "source_video": "data/raw/pilot/b99a203d08bad9c18cfd0b62b22b9291.mp4",
+      "sha256": "6f9ba1c96ca35903897465634f99b323b635afbde21c3db04e5c7b0f229b1901",
+      "bytes": 1177661,
+      "fps_reported": 25.0,
+      "frames_reported": 183,
+      "frames_decoded": 183,
+      "decoded_shape": [
+        720,
+        1280,
+        3
+      ],
+      "duration_nominal_s": 7.32,
+      "annotated_contact_sheet": "artifacts/diagnostics/pilot_20261006/b99a203d08bad9c18cfd0b62b22b9291_annotated.jpg"
+    },
+    {
+      "source_video": "data/raw/pilot/d1969439ec5e66b0e881345687f67e96.mp4",
+      "sha256": "782a0f67a0fafb62f942b1981d2fe7376729b87452d949ad9d04ba2cda19fba0",
+      "bytes": 1205144,
+      "fps_reported": 25.0,
+      "frames_reported": 189,
+      "frames_decoded": 189,
+      "decoded_shape": [
+        720,
+        1280,
+        3
+      ],
+      "duration_nominal_s": 7.56,
+      "annotated_contact_sheet": "artifacts/diagnostics/pilot_20261006/d1969439ec5e66b0e881345687f67e96_annotated.jpg"
+    },
+    {
+      "source_video": "data/raw/pilot/d5d6458336fc5a2034c996d92fdf1db5.mp4",
+      "sha256": "f3d45d8bca66ffd56d6cce419dfce6eca86b1edccd5d0044eb1ae1f58bd09196",
+      "bytes": 1927071,
+      "fps_reported": 25.0,
+      "frames_reported": 306,
+      "frames_decoded": 306,
+      "decoded_shape": [
+        720,
+        1280,
+        3
+      ],
+      "duration_nominal_s": 12.24,
+      "annotated_contact_sheet": "artifacts/diagnostics/pilot_20261006/d5d6458336fc5a2034c996d92fdf1db5_annotated.jpg"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+pybullet build time: Oct 21 2025 11:46:21
+DP seed=7 scene=30000 success=True completed=1/1
+{"seed": 7, "successes": 1, "n": 1}
+argv[0]=--background_color_red=0.9607843160629272
+argv[1]=--background_color_green=0.9607843160629272
+argv[2]=--background_color_blue=0.9607843160629272

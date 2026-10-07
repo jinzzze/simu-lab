@@ -1,0 +1,128 @@
+{
+  "status": "completed",
+  "started_utc": "2026-10-06T22:55:33.298470+00:00",
+  "plan": {
+    "version": "diffusion-policy-d-v1",
+    "scope": "User-requested independent DP-D extension; original A/B/C/D/R and world-model results unchanged. Compact from-scratch Diffusion Policy style conditional action diffusion, not an exact reproduction of published benchmarks.",
+    "method_sources": [
+      "https://diffusion-policy.cs.columbia.edu/",
+      "https://github.com/real-stanford/diffusion_policy"
+    ],
+    "visual_checkpoint": "artifacts/runs/visual_state_v1/D_seed7/checkpoint.pt",
+    "visual_input": "Initial full RGB only, frozen D seed7 XY estimator. No online true object state or future observations. Policy receives this initial estimate, robot proprioception, previous command and elapsed robot clock.",
+    "demonstration_source": "New privileged-state simulator expert trajectories from the existing physical controller; not action labels extracted from phone videos",
+    "splits": {
+      "train": {
+        "start": 50000,
+        "count": 128
+      },
+      "val": {
+        "start": 51000,
+        "count": 16
+      }
+    },
+    "evaluation": {
+      "start": 30000,
+      "count": 64,
+      "seeds": [
+        7,
+        17,
+        27
+      ],
+      "sampling_seed": 8821,
+      "record_first": true,
+      "selection": "all final EMA checkpoints; same reused development test scenes as original study; no best-seed selection",
+      "limit_steps": 320
+    },
+    "observations": [
+      "initial_visual_xy_m (2)",
+      "robot_ee_xyz_m (3)",
+      "finger_width_m (1)",
+      "previous_command_xyz_width (4)",
+      "elapsed_fraction_of_320_steps (1)"
+    ],
+    "action": "Absolute next EE XYZ setpoint after original controller step-length limit plus commanded finger width, recorded before physics step",
+    "action_dim": 4,
+    "observation_dim": 11,
+    "observation_horizon": 2,
+    "prediction_horizon": 16,
+    "execution_horizon": 8,
+    "control_dt_s": 0.04,
+    "episode_steps": 320,
+    "padding": "repeat first observation for history and final action for future; loss only on valid action indices; samples never cross episode boundaries",
+    "normalization": "training episodes only, per-dimension min/max to [-1,1], constant ranges given minimum scale 1e-6",
+    "model": {
+      "type": "compact conditional temporal U-Net with FiLM residual blocks",
+      "widths": [
+        64,
+        128
+      ],
+      "time_embedding": 64,
+      "train_diffusion_steps": 100,
+      "beta_schedule": "squared cosine capped at 0.999",
+      "prediction": "epsilon",
+      "inference": "DDIM eta=0, 20 evenly spaced denoising timesteps",
+      "ema_decay": 0.995
+    },
+    "training": {
+      "seeds": [
+        7,
+        17,
+        27
+      ],
+      "steps": 5000,
+      "batch_size": 128,
+      "optimizer": "AdamW",
+      "learning_rate": 0.0001,
+      "weight_decay": 1e-06,
+      "grad_clip": 1.0,
+      "device": "cuda",
+      "validation": "fixed 256 sequence-start samples, denoising loss and heldout action error; report only, never choose checkpoints"
+    },
+    "safety_limits": {
+      "xyz_low": [
+        -0.25,
+        -0.12,
+        0.006
+      ],
+      "xyz_high": [
+        0.16,
+        0.12,
+        0.16
+      ],
+      "width_low": 0.0,
+      "width_high": 0.065,
+      "max_ee_step_m": 0.008
+    },
+    "fairness_limits": "Same simulator physics, rendering and strict outcome scoring, but extra 128 robot demonstration trajectories and learned controller; not budget-matched auxiliary-supervision ablation. Same fixed D7 vision for all three policy training seeds. Clock-conditioned, initial-frame visual state policy; not end-to-end multi-frame image policy.",
+    "status": "plan fixed before new collection, policy training or results"
+  },
+  "source_sha256": {
+    "scripts\\collect_diffusion_demonstrations.py": "7a280423acda9b2efa02ee1ac9054d7ebca47830e95aa03ed5bba68565b71910",
+    "src\\policy\\environment.py": "ff1c2a3553006d586571ca7cb3c9320b80bfb82f18e18f147700161c95ebe7c1",
+    "src\\sim\\grasp_env.py": "103d93e2d444ec6fae7db2ef27e65ca80118a17ac02e162192adbd13e76f5a1a",
+    "configs\\grasp_sim.json": "fa30186703956bf40afbf42df3b8c2a29f4263419316b911a04c158e5cc1c9fa",
+    "configs\\diffusion_policy.json": "6bb08867618226d9fea6424b714da0c82a5bd3b1c16754192e7e874e19e1e9cb",
+    "src\\predictor_process.py": "06702dae727ecf8b352a0b9b9e22527490f7ec1111c4c084f3c7dab3db4d7ff8",
+    "scripts\\rgb_predictor_worker.py": "c3333260e57f47208553370423b563eaa4cdd2c85644563a1919cbf9a75ec3c7"
+  },
+  "visual_checkpoint_sha256": "0ff69564b60ddffa241e8ba392a70ce29845c635e4df3431353e4e69143e9f03",
+  "provenance": "New simulated expert commands; applicant videos only supplied upstream visual pretraining",
+  "retention": "All scripted demonstrations retained regardless of success; no outcome-based filtering",
+  "splits": {
+    "train": {
+      "episodes": 128,
+      "steps": 40960,
+      "successful_demonstrations": 128,
+      "dataset_sha256": "39926c5114c2be9b93d195f739e107ec19c88879d4910dd724dda0bf3edc4cbb",
+      "episodes_sha256": "50d65d2492d705d72a4f2c687e3718bb0539e92ac7a11ef462989bad987febb5"
+    },
+    "val": {
+      "episodes": 16,
+      "steps": 5120,
+      "successful_demonstrations": 16,
+      "dataset_sha256": "68d9e0bca9202527ac95256f739ffe1ff78678bda54849be2cd96d9b2516304e",
+      "episodes_sha256": "fa10408e347d54ac537a0e8d4e360f34bf4d17a9ea3968ada4bb09c097363698"
+    }
+  }
+}

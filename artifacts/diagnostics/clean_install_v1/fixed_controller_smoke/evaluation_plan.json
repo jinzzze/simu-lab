@@ -1,0 +1,23 @@
+{
+  "scope": "exploratory pilot-trained visual grasp evaluation; not final multi-session real-data evidence",
+  "groups": [
+    "D"
+  ],
+  "training_seeds": [
+    7
+  ],
+  "split": "test",
+  "scene_seeds": [
+    30000
+  ],
+  "sim_config_sha256": "fa30186703956bf40afbf42df3b8c2a29f4263419316b911a04c158e5cc1c9fa",
+  "sim_code_sha256": "103d93e2d444ec6fae7db2ef27e65ca80118a17ac02e162192adbd13e76f5a1a",
+  "dataset_manifest_sha256": "4a0e1c593b8e582e82d517a56358970fe7112b9bb9d55529874a6f8f21b93be0",
+  "recording_rule": "first preselected scene per group and seed, regardless of outcome",
+  "runtime_inputs": "RGB to predictor; predicted XY, known goal and robot proprioception to fixed controller",
+  "ground_truth_use": "separate label/error measurement and terminal scoring only",
+  "prediction_process": "persistent RGB-only worker; avoids conflicting native OpenMP runtimes",
+  "evaluator_sha256": "f1b16dc6e72da835d71a5845bb2790f60a30ea871bcd3b209f426c83b189ed4b",
+  "predictor_worker_sha256": "c3333260e57f47208553370423b563eaa4cdd2c85644563a1919cbf9a75ec3c7",
+  "predictor_transport_sha256": "06702dae727ecf8b352a0b9b9e22527490f7ec1111c4c084f3c7dab3db4d7ff8"
+}

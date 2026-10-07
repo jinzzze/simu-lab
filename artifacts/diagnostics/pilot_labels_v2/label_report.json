@@ -1,0 +1,488 @@
+{
+  "created_utc": "2026-10-06T02:10:15Z",
+  "scope": "development_candidate_labels_only",
+  "training_ready": false,
+  "selected_video_count": 12,
+  "config": {
+    "version": "pilot-labels-v2",
+    "scope": "development_diagnostics_only",
+    "work_polygon_nominal_board_units": [
+      [
+        40,
+        45
+      ],
+      [
+        325,
+        45
+      ],
+      [
+        325,
+        235
+      ],
+      [
+        40,
+        235
+      ]
+    ],
+    "dark_max_channel": 35,
+    "comparison_dark_max_channel": 45,
+    "morph_open_kernel": 3,
+    "min_area_ratio": 0.7,
+    "max_area_ratio": 2.2,
+    "min_solidity": 0.86,
+    "min_rectangularity": 0.68,
+    "max_rotated_aspect": 1.85,
+    "min_threshold_bbox_iou": 0.78,
+    "marker_exclusion_margin_px": 12,
+    "boundary_exclusion_margin_px": 6,
+    "max_reference_marker_center_shift_px": 12,
+    "object_size_mm": [
+      20,
+      20
+    ],
+    "assumed_print_scale": 0.96,
+    "min_hand_detection_confidence": 0.5,
+    "min_hand_presence_confidence": 0.5,
+    "num_hands": 2,
+    "note": "Thresholds selected on pilot development images only. Object candidates use current RGB and first-frame board reference, never hand landmarks or past/future object positions. Size gate is approximate and does not estimate object height. v2: stricter size support rejects regular narrow fragments; component centers are not full-object ground truth. Visible-marker corner/similarity checks also guard reference rotation/scale."
+  },
+  "config_sha256": "5ea34fe64cfcc153d10c40114020fd13a893f061da806fd1141b30679b238d71",
+  "detector_source_sha256": "358921a81aea89b5c2ba0a35df3af430a34d66698c3a5c09a3a9624f76d8cbe4",
+  "hand_model_sha256": "fbc2a30080c3c557093b5ddfc334698132eb341044ccee322ccf8bcf3607cde1",
+  "hand_settings": {
+    "num_hands": 2,
+    "min_hand_detection_confidence": 0.5,
+    "min_hand_presence_confidence": 0.5,
+    "min_tracking_confidence": 0.5
+  },
+  "hand_mode": "IMAGE independent frame inference",
+  "opencv": "4.11.0",
+  "mediapipe": "1.0.1",
+  "limits": [
+    "Candidate coverage is not localization accuracy.",
+    "Object labels and masks never use hand outputs.",
+    "No interpolation, tracking fill, future endpoints or inferred 3D object positions.",
+    "RGB retained for every frame; invalid auxiliary labels are null.",
+    "First frame anchors exclusions; visible-marker displacement gates the object branch.",
+    "Hand-hull overlap is a separate QC hint, not ground-truth occlusion.",
+    "Annotated videos are derived visualizations without audio; raw source files are unchanged."
+  ],
+  "videos": [
+    {
+      "episode_id": "pilot_777231764b48",
+      "source_video": "data/raw/pilot/5d81c4e3767ab92cd6898978b3330c6e.mp4",
+      "source_sha256": "777231764b480dde3d9946138ec5a4989dc5b985ac899b25e3abff0ba6ed8844",
+      "frame_count": 209,
+      "object_status_counts": {
+        "visible_candidate": 197,
+        "uncertain": 1,
+        "missing": 11
+      },
+      "hand_frames": 129,
+      "possible_overlap_qc_frames": 102,
+      "reference_invalid_frames": 1,
+      "annotated_video": "artifacts/diagnostics/pilot_labels_v2/5d81c4e3767ab92cd6898978b3330c6e_annotated.mp4",
+      "annotated_output_frames_verified": 209,
+      "labels": "data/processed/pilot_labels_v2/5d81c4e3767ab92cd6898978b3330c6e_labels.jsonl",
+      "contact_sheet": "artifacts/diagnostics/pilot_labels_v2/5d81c4e3767ab92cd6898978b3330c6e_review.jpg",
+      "review_frame_indices": [
+        0,
+        30,
+        59,
+        89,
+        119,
+        149,
+        178,
+        208
+      ],
+      "uncertain_review_indices": [
+        41,
+        109
+      ],
+      "hand_cache_reused": true,
+      "raw_source_unchanged": true
+    },
+    {
+      "episode_id": "pilot_f77c2afc0208",
+      "source_video": "data/raw/pilot/619481ad2df077adff353cb4ced816b5.mp4",
+      "source_sha256": "f77c2afc0208f298b03f81f9764257c33731fb5ae96c771594c32d213ae5d918",
+      "frame_count": 156,
+      "object_status_counts": {
+        "visible_candidate": 135,
+        "uncertain": 13,
+        "missing": 8
+      },
+      "hand_frames": 89,
+      "possible_overlap_qc_frames": 50,
+      "reference_invalid_frames": 13,
+      "annotated_video": "artifacts/diagnostics/pilot_labels_v2/619481ad2df077adff353cb4ced816b5_annotated.mp4",
+      "annotated_output_frames_verified": 156,
+      "labels": "data/processed/pilot_labels_v2/619481ad2df077adff353cb4ced816b5_labels.jsonl",
+      "contact_sheet": "artifacts/diagnostics/pilot_labels_v2/619481ad2df077adff353cb4ced816b5_review.jpg",
+      "review_frame_indices": [
+        0,
+        22,
+        44,
+        66,
+        89,
+        111,
+        133,
+        155
+      ],
+      "uncertain_review_indices": [
+        51,
+        76
+      ],
+      "hand_cache_reused": true,
+      "raw_source_unchanged": true
+    },
+    {
+      "episode_id": "pilot_6813f786a2f8",
+      "source_video": "data/raw/pilot/65e9623a9250a178c285cd0411298d54.mp4",
+      "source_sha256": "6813f786a2f8c57a8b607664fbe824ca8e9f83883c6d6d1ff66582314ad5ee66",
+      "frame_count": 182,
+      "object_status_counts": {
+        "visible_candidate": 161,
+        "missing": 21
+      },
+      "hand_frames": 84,
+      "possible_overlap_qc_frames": 54,
+      "reference_invalid_frames": 0,
+      "annotated_video": "artifacts/diagnostics/pilot_labels_v2/65e9623a9250a178c285cd0411298d54_annotated.mp4",
+      "annotated_output_frames_verified": 182,
+      "labels": "data/processed/pilot_labels_v2/65e9623a9250a178c285cd0411298d54_labels.jsonl",
+      "contact_sheet": "artifacts/diagnostics/pilot_labels_v2/65e9623a9250a178c285cd0411298d54_review.jpg",
+      "review_frame_indices": [
+        0,
+        26,
+        52,
+        78,
+        103,
+        129,
+        155,
+        181
+      ],
+      "uncertain_review_indices": [
+        60,
+        107
+      ],
+      "hand_cache_reused": true,
+      "raw_source_unchanged": true
+    },
+    {
+      "episode_id": "pilot_24ccfc77eefb",
+      "source_video": "data/raw/pilot/7612dcc78727731b2c3fee6aff5933e9.mp4",
+      "source_sha256": "24ccfc77eefbd854285edd56e595f566007f8d31b287c2cd9bf1744726f97192",
+      "frame_count": 171,
+      "object_status_counts": {
+        "visible_candidate": 167,
+        "missing": 4
+      },
+      "hand_frames": 64,
+      "possible_overlap_qc_frames": 47,
+      "reference_invalid_frames": 0,
+      "annotated_video": "artifacts/diagnostics/pilot_labels_v2/7612dcc78727731b2c3fee6aff5933e9_annotated.mp4",
+      "annotated_output_frames_verified": 171,
+      "labels": "data/processed/pilot_labels_v2/7612dcc78727731b2c3fee6aff5933e9_labels.jsonl",
+      "contact_sheet": "artifacts/diagnostics/pilot_labels_v2/7612dcc78727731b2c3fee6aff5933e9_review.jpg",
+      "review_frame_indices": [
+        0,
+        24,
+        49,
+        73,
+        97,
+        121,
+        146,
+        170
+      ],
+      "uncertain_review_indices": [
+        86
+      ],
+      "hand_cache_reused": true,
+      "raw_source_unchanged": true
+    },
+    {
+      "episode_id": "pilot_88e1459ca56b",
+      "source_video": "data/raw/pilot/7c8ce83fac51bf89c4075ae95d99d7c4.mp4",
+      "source_sha256": "88e1459ca56bb8d115693e62d2c737e7d7058fe627c2055b44a6e4d17e842a86",
+      "frame_count": 138,
+      "object_status_counts": {
+        "visible_candidate": 121,
+        "uncertain": 10,
+        "missing": 7
+      },
+      "hand_frames": 87,
+      "possible_overlap_qc_frames": 54,
+      "reference_invalid_frames": 10,
+      "annotated_video": "artifacts/diagnostics/pilot_labels_v2/7c8ce83fac51bf89c4075ae95d99d7c4_annotated.mp4",
+      "annotated_output_frames_verified": 138,
+      "labels": "data/processed/pilot_labels_v2/7c8ce83fac51bf89c4075ae95d99d7c4_labels.jsonl",
+      "contact_sheet": "artifacts/diagnostics/pilot_labels_v2/7c8ce83fac51bf89c4075ae95d99d7c4_review.jpg",
+      "review_frame_indices": [
+        0,
+        20,
+        39,
+        59,
+        78,
+        98,
+        117,
+        137
+      ],
+      "uncertain_review_indices": [
+        31,
+        67
+      ],
+      "hand_cache_reused": true,
+      "raw_source_unchanged": true
+    },
+    {
+      "episode_id": "pilot_738fca5dd5fe",
+      "source_video": "data/raw/pilot/878c0fc6b4dc2df2a699fdb493bfb76d.mp4",
+      "source_sha256": "738fca5dd5fee38c3082e96fa58929a3ff4aaca4bfaf28a00df39c964f618775",
+      "frame_count": 119,
+      "object_status_counts": {
+        "visible_candidate": 113,
+        "uncertain": 3,
+        "missing": 3
+      },
+      "hand_frames": 60,
+      "possible_overlap_qc_frames": 41,
+      "reference_invalid_frames": 3,
+      "annotated_video": "artifacts/diagnostics/pilot_labels_v2/878c0fc6b4dc2df2a699fdb493bfb76d_annotated.mp4",
+      "annotated_output_frames_verified": 119,
+      "labels": "data/processed/pilot_labels_v2/878c0fc6b4dc2df2a699fdb493bfb76d_labels.jsonl",
+      "contact_sheet": "artifacts/diagnostics/pilot_labels_v2/878c0fc6b4dc2df2a699fdb493bfb76d_review.jpg",
+      "review_frame_indices": [
+        0,
+        17,
+        34,
+        51,
+        67,
+        84,
+        101,
+        118
+      ],
+      "uncertain_review_indices": [
+        25,
+        60
+      ],
+      "hand_cache_reused": true,
+      "raw_source_unchanged": true
+    },
+    {
+      "episode_id": "pilot_81483695ce19",
+      "source_video": "data/raw/pilot/8d3c7d5b823bdb9476d8d6aac4ce56bd.mp4",
+      "source_sha256": "81483695ce191b6baa6149d2d770d711bc83d73fe04d96aa919c8778a6d6a5af",
+      "frame_count": 162,
+      "object_status_counts": {
+        "visible_candidate": 148,
+        "uncertain": 8,
+        "missing": 6
+      },
+      "hand_frames": 78,
+      "possible_overlap_qc_frames": 55,
+      "reference_invalid_frames": 8,
+      "annotated_video": "artifacts/diagnostics/pilot_labels_v2/8d3c7d5b823bdb9476d8d6aac4ce56bd_annotated.mp4",
+      "annotated_output_frames_verified": 162,
+      "labels": "data/processed/pilot_labels_v2/8d3c7d5b823bdb9476d8d6aac4ce56bd_labels.jsonl",
+      "contact_sheet": "artifacts/diagnostics/pilot_labels_v2/8d3c7d5b823bdb9476d8d6aac4ce56bd_review.jpg",
+      "review_frame_indices": [
+        0,
+        23,
+        46,
+        69,
+        92,
+        115,
+        138,
+        161
+      ],
+      "uncertain_review_indices": [
+        39,
+        72
+      ],
+      "hand_cache_reused": true,
+      "raw_source_unchanged": true
+    },
+    {
+      "episode_id": "pilot_dbff39bd344b",
+      "source_video": "data/raw/pilot/973701c668b25a8098bc73a5369e978f.mp4",
+      "source_sha256": "dbff39bd344b087dac1ac3f57e92fe71ff7044ffa9bbf7201821c728d08e2aae",
+      "frame_count": 167,
+      "object_status_counts": {
+        "visible_candidate": 159,
+        "missing": 8
+      },
+      "hand_frames": 101,
+      "possible_overlap_qc_frames": 74,
+      "reference_invalid_frames": 0,
+      "annotated_video": "artifacts/diagnostics/pilot_labels_v2/973701c668b25a8098bc73a5369e978f_annotated.mp4",
+      "annotated_output_frames_verified": 167,
+      "labels": "data/processed/pilot_labels_v2/973701c668b25a8098bc73a5369e978f_labels.jsonl",
+      "contact_sheet": "artifacts/diagnostics/pilot_labels_v2/973701c668b25a8098bc73a5369e978f_review.jpg",
+      "review_frame_indices": [
+        0,
+        24,
+        47,
+        71,
+        95,
+        119,
+        142,
+        166
+      ],
+      "uncertain_review_indices": [
+        106
+      ],
+      "hand_cache_reused": true,
+      "raw_source_unchanged": true
+    },
+    {
+      "episode_id": "pilot_8ffaddf69ca6",
+      "source_video": "data/raw/pilot/9c6679c3eb2fc1dc6dac4bb0978018ea.mp4",
+      "source_sha256": "8ffaddf69ca6040d116b0d0d7f488ae405b37716e7bf2976ec0bf31698641b2d",
+      "frame_count": 180,
+      "object_status_counts": {
+        "visible_candidate": 167,
+        "missing": 13
+      },
+      "hand_frames": 81,
+      "possible_overlap_qc_frames": 54,
+      "reference_invalid_frames": 0,
+      "annotated_video": "artifacts/diagnostics/pilot_labels_v2/9c6679c3eb2fc1dc6dac4bb0978018ea_annotated.mp4",
+      "annotated_output_frames_verified": 180,
+      "labels": "data/processed/pilot_labels_v2/9c6679c3eb2fc1dc6dac4bb0978018ea_labels.jsonl",
+      "contact_sheet": "artifacts/diagnostics/pilot_labels_v2/9c6679c3eb2fc1dc6dac4bb0978018ea_review.jpg",
+      "review_frame_indices": [
+        0,
+        26,
+        51,
+        77,
+        102,
+        128,
+        153,
+        179
+      ],
+      "uncertain_review_indices": [
+        100,
+        129
+      ],
+      "hand_cache_reused": true,
+      "raw_source_unchanged": true
+    },
+    {
+      "episode_id": "pilot_6f9ba1c96ca3",
+      "source_video": "data/raw/pilot/b99a203d08bad9c18cfd0b62b22b9291.mp4",
+      "source_sha256": "6f9ba1c96ca35903897465634f99b323b635afbde21c3db04e5c7b0f229b1901",
+      "frame_count": 183,
+      "object_status_counts": {
+        "visible_candidate": 174,
+        "uncertain": 3,
+        "missing": 6
+      },
+      "hand_frames": 71,
+      "possible_overlap_qc_frames": 49,
+      "reference_invalid_frames": 3,
+      "annotated_video": "artifacts/diagnostics/pilot_labels_v2/b99a203d08bad9c18cfd0b62b22b9291_annotated.mp4",
+      "annotated_output_frames_verified": 183,
+      "labels": "data/processed/pilot_labels_v2/b99a203d08bad9c18cfd0b62b22b9291_labels.jsonl",
+      "contact_sheet": "artifacts/diagnostics/pilot_labels_v2/b99a203d08bad9c18cfd0b62b22b9291_review.jpg",
+      "review_frame_indices": [
+        0,
+        26,
+        52,
+        78,
+        104,
+        130,
+        156,
+        182
+      ],
+      "uncertain_review_indices": [
+        57,
+        89
+      ],
+      "hand_cache_reused": true,
+      "raw_source_unchanged": true
+    },
+    {
+      "episode_id": "pilot_782a0f67a0fa",
+      "source_video": "data/raw/pilot/d1969439ec5e66b0e881345687f67e96.mp4",
+      "source_sha256": "782a0f67a0fafb62f942b1981d2fe7376729b87452d949ad9d04ba2cda19fba0",
+      "frame_count": 189,
+      "object_status_counts": {
+        "visible_candidate": 175,
+        "uncertain": 3,
+        "missing": 11
+      },
+      "hand_frames": 89,
+      "possible_overlap_qc_frames": 50,
+      "reference_invalid_frames": 3,
+      "annotated_video": "artifacts/diagnostics/pilot_labels_v2/d1969439ec5e66b0e881345687f67e96_annotated.mp4",
+      "annotated_output_frames_verified": 189,
+      "labels": "data/processed/pilot_labels_v2/d1969439ec5e66b0e881345687f67e96_labels.jsonl",
+      "contact_sheet": "artifacts/diagnostics/pilot_labels_v2/d1969439ec5e66b0e881345687f67e96_review.jpg",
+      "review_frame_indices": [
+        0,
+        27,
+        54,
+        81,
+        107,
+        134,
+        161,
+        188
+      ],
+      "uncertain_review_indices": [
+        69,
+        94,
+        155
+      ],
+      "hand_cache_reused": true,
+      "raw_source_unchanged": true
+    },
+    {
+      "episode_id": "pilot_f3d45d8bca66",
+      "source_video": "data/raw/pilot/d5d6458336fc5a2034c996d92fdf1db5.mp4",
+      "source_sha256": "f3d45d8bca66ffd56d6cce419dfce6eca86b1edccd5d0044eb1ae1f58bd09196",
+      "frame_count": 306,
+      "object_status_counts": {
+        "visible_candidate": 251,
+        "uncertain": 38,
+        "missing": 17
+      },
+      "hand_frames": 175,
+      "possible_overlap_qc_frames": 91,
+      "reference_invalid_frames": 38,
+      "annotated_video": "artifacts/diagnostics/pilot_labels_v2/d5d6458336fc5a2034c996d92fdf1db5_annotated.mp4",
+      "annotated_output_frames_verified": 306,
+      "labels": "data/processed/pilot_labels_v2/d5d6458336fc5a2034c996d92fdf1db5_labels.jsonl",
+      "contact_sheet": "artifacts/diagnostics/pilot_labels_v2/d5d6458336fc5a2034c996d92fdf1db5_review.jpg",
+      "review_frame_indices": [
+        0,
+        44,
+        87,
+        131,
+        174,
+        218,
+        261,
+        305
+      ],
+      "uncertain_review_indices": [
+        67,
+        112,
+        137,
+        163
+      ],
+      "hand_cache_reused": true,
+      "raw_source_unchanged": true
+    }
+  ],
+  "totals": {
+    "frames": 2162,
+    "object_status_counts": {
+      "visible_candidate": 1968,
+      "uncertain": 79,
+      "missing": 115
+    },
+    "hand_frames": 1108,
+    "candidate_fraction": 0.910268270120259,
+    "reference_invalid_frames": 79
+  }
+}

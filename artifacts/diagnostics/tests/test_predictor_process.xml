@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="19.474" timestamp="2026-10-07T10:38:15.737777+01:00" hostname="DESKTOP-K2OHB4T"><testcase classname="tests.test_predictor_process" name="test_live_simulator_rgb_matches_direct_predictor" time="18.394" /></testsuite></testsuites>

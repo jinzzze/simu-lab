@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "seconds": 5.17,
+  "opencv": "4.11.0",
+  "mediapipe": "1.0.1",
+  "aruco_roundtrip_id": 0,
+  "blank_frame_hand_count": 0,
+  "hand_model_sha256": "fbc2a30080c3c557093b5ddfc334698132eb341044ccee322ccf8bcf3607cde1",
+  "note": "Model loads and processes an image; hand accuracy on the applicant's videos is still unverified."
+}

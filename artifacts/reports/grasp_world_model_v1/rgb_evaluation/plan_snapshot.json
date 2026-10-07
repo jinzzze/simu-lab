@@ -1,0 +1,44 @@
+{
+  "plan": {
+    "version": "grasp-world-model-rgb-diagnostic-v1",
+    "scope": "Exploratory paired input diagnostic specified after the true-state world-model report and one RGB integration demo; no new training or policy evaluation",
+    "visual_checkpoint": "artifacts/runs/visual_state_v1/D_seed7/checkpoint.pt",
+    "world_model": "artifacts/runs/grasp_world_model_v1/ensemble.npz",
+    "visual_selection": "Reuse the already preselected integration model D seed 7; no selection using this diagnostic",
+    "scenes": {
+      "start": 42000,
+      "count": 32
+    },
+    "actions": "All five previously recorded absolute commands per held-out scene, unchanged",
+    "commands_source": "Privileged state plus preset offsets during original simulation collection, before execution; this diagnostic replays the recorded command values, not a policy choosing actions from RGB",
+    "input": "Freshly rendered RGB to visual estimator; estimated XY plus recorded absolute command to frozen macro-outcome predictor",
+    "checks": [
+      "all initial RGB hashes match original transition records",
+      "source and dataset/checkpoint hashes",
+      "no test labels enter RGB inference or macro-prediction",
+      "all 160 outcomes included"
+    ],
+    "metrics": [
+      "final XY error from predicted final coordinate versus recorded actual final coordinate",
+      "success and lift Brier, accuracy, AUROC",
+      "paired true-state reference",
+      "visual localization error over 32 scenes"
+    ],
+    "training_or_tuning": false,
+    "fresh_physical_executions": 0,
+    "limits": "Single visual checkpoint, same fixed-appearance test scenes, five correlated actions per scene; no policy success improvement or independent real-world generalization claim"
+  },
+  "started_utc": "2026-10-06T17:28:47.039680+00:00",
+  "visual_checkpoint_sha256": "0ff69564b60ddffa241e8ba392a70ce29845c635e4df3431353e4e69143e9f03",
+  "world_model_sha256": "486178915c723fb1da34ea2c24d98a59b1c02bbe3ed2703a3fd597347e2dab5a",
+  "records_sha256": "1417c0c4d3dd7396c878a0082440508f5ea10d089f25a465e862682d1da7dd84",
+  "source_sha256": {
+    "scripts\\evaluate_world_model_rgb.py": "e91aa168770dac8a134498ab0e55a82dc98ad15c78be7c62e1e159976deb2d4b",
+    "configs\\grasp_world_model_rgb_evaluation.json": "b45c11e05d61a01d9791693807f1531e7ef66b89d6870961ddc4aa7b1d85f9af",
+    "src\\world_model\\numpy_model.py": "a3f15191f431411dce04605943dc3c4264514f15fbfca2895cfa418dc4f15155",
+    "src\\world_model\\evaluation.py": "7f3bbfc66d5681452c810438dedee607d6e2463e5c0102b66cf7e67978c4c965",
+    "src\\predictor_process.py": "06702dae727ecf8b352a0b9b9e22527490f7ec1111c4c084f3c7dab3db4d7ff8",
+    "scripts\\rgb_predictor_worker.py": "c3333260e57f47208553370423b563eaa4cdd2c85644563a1919cbf9a75ec3c7",
+    "src\\sim\\grasp_env.py": "103d93e2d444ec6fae7db2ef27e65ca80118a17ac02e162192adbd13e76f5a1a"
+  }
+}

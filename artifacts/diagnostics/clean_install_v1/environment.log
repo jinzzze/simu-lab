@@ -1,0 +1,4 @@
+PASSED: simulation
+PASSED: cuda
+PASSED: vision
+{"all_passed": true, "report": "E:\\HumanoidRobotLearning\\artifacts\\diagnostics\\clean_install_v1\\environment\\environment.json"}

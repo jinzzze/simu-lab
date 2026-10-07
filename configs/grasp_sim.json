@@ -1,0 +1,72 @@
+{
+  "version": "grasp-prototype-v1",
+  "object_size_m": [
+    0.02,
+    0.02,
+    0.01
+  ],
+  "object_mass_kg": 0.02,
+  "object_friction": 0.8,
+  "finger_friction": 1.4,
+  "finger_force_n": 20.0,
+  "start_low_xy_m": [
+    -0.1,
+    -0.055
+  ],
+  "start_high_xy_m": [
+    -0.035,
+    0.055
+  ],
+  "start_yaw_range_rad": [
+    0.0,
+    0.0
+  ],
+  "line_x_m": 0.045,
+  "line_width_m": 0.003,
+  "place_xy_m": [
+    0.1,
+    0.0
+  ],
+  "workspace_xy_m": [
+    -0.15,
+    0.16,
+    -0.12,
+    0.12
+  ],
+  "grasp_ee_z_m": 0.008,
+  "transport_ee_z_m": 0.12,
+  "open_width_m": 0.065,
+  "closed_width_m": 0.0,
+  "max_ee_step_m": 0.008,
+  "min_lift_clearance_m": 0.015,
+  "min_lift_duration_s": 0.12,
+  "stable_duration_s": 0.5,
+  "stable_linear_speed_m_s": 0.005,
+  "stable_angular_speed_rad_s": 0.1,
+  "table_clearance_tolerance_m": 0.002,
+  "withdraw_distance_m": 0.06,
+  "upright_tolerance_deg": 20,
+  "camera_eye_m": [
+    0.0,
+    0.0,
+    1.0
+  ],
+  "camera_target_m": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "camera_up": [
+    0.0,
+    1.0,
+    0.0
+  ],
+  "camera_fov_deg": 22.0,
+  "image_size": 224,
+  "assumptions": "Mass, friction, start distribution, camera and line coordinates are prototype choices, not measured from videos. Object dimensions are user supplied.",
+  "initial_ee_xyz_m": [
+    -0.2,
+    0.0,
+    0.1
+  ]
+}

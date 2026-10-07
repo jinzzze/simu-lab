@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>手机视频到机器人抓取 · 实验报告</title>
+<style>
+:root{--ink:#172e3b;--muted:#516879;--teal:#087b80;--line:#dbe5e7;--paper:#f2f6f5}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.7 system-ui,"Microsoft YaHei",sans-serif}main{max-width:1120px;margin:auto;padding:42px 28px 70px}h1{font-size:clamp(30px,4.7vw,52px);line-height:1.18;letter-spacing:-1px;max-width:940px;margin:16px 0}h2{font-size:28px;line-height:1.3;margin:0 0 18px}h3{font-size:18px;line-height:1.4}p{max-width:940px;margin:12px 0}.kicker{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--teal);font-weight:750}.lead{font-size:20px;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:12px 24px;margin:26px 0 36px}a{color:#066c78;text-underline-offset:3px}section{margin-top:42px;scroll-margin-top:24px}.panel{background:white;border:1px solid var(--line);border-radius:14px;padding:26px;margin:22px 0}.result{border-left:5px solid var(--teal)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.stats strong{font-size:31px;display:block;line-height:1.2}.stats span,.small{color:var(--muted);font-size:14px}.stats .panel{margin:0;padding:20px}.flow{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.flow span{background:#e7f3f1;padding:9px 14px;border-radius:7px}.scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:15px}th,td{padding:12px 10px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}thead th{background:#f1f6f6}tbody th{font-weight:700}img{display:block;width:100%;height:auto;border-radius:8px;background:#fff}video{display:block;max-width:100%;width:640px;margin:18px auto;background:#14242b;border-radius:8px}.examples{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.example{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px}.example video{max-height:360px;object-fit:contain}.links{display:flex;flex-wrap:wrap;gap:10px 22px}.notice{background:#fff5e8;border:1px solid #eddbc3;padding:16px 20px;border-radius:9px}li{margin:9px 0}footer{margin-top:45px;border-top:1px solid var(--line);padding-top:20px}@media(max-width:680px){main{padding:26px 16px}.stats,.examples{grid-template-columns:1fr}.panel{padding:19px}h2{font-size:24px}table{font-size:13px}}
+</style></head><body><main>
+<header><div class="notice">提交准备：独立真实场景验证按用户要求跳过。现有数据仍为开发数据；人工标签准确率未量化。<a href="../submission_v1/index.html">English submission &amp; demo</a> · <a href="../../../docs/RELEASE_CHECKLIST_ZH.md">发布清单</a></div><div class="kicker">Humanoid Robot Learning · Local Evidence Report</div>
+<h1>视频中的手与物体，<br>能否帮助机器人抓取？</h1>
+<p class="lead">从 12 条个人手机视频，走到四组受控训练、物理抓取与动作结果预测。</p>
+<p>任务：抓起 20×20×10 mm 黑方块，放在黑线右侧，释放并撤离。模型从完整 RGB 估计位置；Panda 双指通过接触动力学抓取，没有物体附着或传送。</p>
+<nav aria-label="报告导航"><a href="#comparison">对照结果</a><a href="#failure">失败案例</a><a href="#world">世界模型</a><a href="#diffusion">Diffusion Policy</a><a href="#evidence">证据与复现</a></nav></header>
+<div class="stats"><div class="panel"><strong>12 条</strong><span>个人视频 · 86.48 秒 · 同一开发场景族</span></div><div class="panel"><strong>2,112 次</strong><span>模型控制的物理抓取 · 包含参照与追加实验</span></div><div class="panel"><strong>560 条</strong><span>独立世界模型扩展的仿真状态转换</span></div></div>
+<div class="panel result"><div class="kicker">核心发现</div><h2>联合辅助监督尚未带来成功率提升</h2>
+<p>256 张仿真适配图像时，所有组均为 192/192。缩减到 32 张后，联合组 D 为 181/192，RGB 基础组 A 为 184/192，差值 -1.56 个百分点。这个小规模探索实验不支持“加入两类标签便能提高成功率”，也不足以证明方法普遍无效或显著变差。</p></div>
+<section id="comparison"><h2>同样的视频与控制器，改变训练目标</h2>
+<div class="flow" aria-label="方法流程"><span>原始 RGB</span>→<span>共同视觉预训练 + 辅助损失</span>→<span>同预算仿真适配</span>→<span>RGB 预测 XY</span>→<span>固定抓取技能</span></div>
+<p>物体框与手关键点仅用于辅助训练；部署前丢弃两个辅助头。三种训练种子 7/17/27，每个模型测试相同的 64 个场景。每组 192 次执行不是 192 个独立环境。</p>
+<div class="panel scroll"><table><caption>实测任务成功次数与平均初始定位误差</caption><thead><tr><th>组</th><th>真实视频预训练</th><th>256 图：成功</th><th>XY / mm</th><th>32 图：成功</th><th>XY / mm</th></tr></thead><tbody><tr><th scope="row">A</th><td>RGB 基础训练</td><td>192/192</td><td>1.774</td><td>184/192</td><td>4.761</td></tr><tr><th scope="row">B</th><td>RGB + 物体框</td><td>192/192</td><td>1.790</td><td>183/192</td><td>5.117</td></tr><tr><th scope="row">C</th><td>RGB + 手关键点</td><td>192/192</td><td>1.282</td><td>184/192</td><td>4.662</td></tr><tr><th scope="row">D</th><td>RGB + 两种辅助目标</td><td>192/192</td><td>1.654</td><td>181/192</td><td>5.217</td></tr><tr><th scope="row">R</th><td>ImageNet，无个人视频预训练</td><td>192/192</td><td>1.735</td><td>182/192</td><td>5.663</td></tr></tbody></table></div>
+<img src="label_budget_comparison.png" alt="五组在256和32张仿真适配图像条件下的成功率和定位误差">
+<p>手部单独监督 C 的平均定位误差较低，但不是每个种子都更好，且没有增加任务成功次数。R 参照和 32 图条件是在看到部分开发结果后追加；32 图使用同一固定子集与已有测试场景，属于探索性诊断。</p>
+<h3>固定展示第一个测试场景</h3><p>种子 7、场景 30000，A/B/C/D 全部展示。视频为斜视演示；模型接收俯视图。此例成功不能替代完整统计。</p>
+<video controls preload="metadata" poster="first_scene_contact_sheet.jpg"><source src="first_scene_comparison.mp4" type="video/mp4"></video></section>
+<section id="failure"><h2>失败集中在少数共享场景</h2>
+<p>低数据实验的 46 次失败分布在 6 个场景，均未完成合格抬升；场景 30038、30056 在全部 15 个组别／种子组合中失败。以下按种子、场景升序固定选取每组首次失败，回放不计入新增样本。</p>
+<div class="examples"><article class="example"><h3>A · 种子 7 · 场景 30014</h3>
+<p>初始定位误差 14.11 mm；未完成合格抬升。</p>
+<video controls preload="none" poster="failure_review/A_seed7_scene30014/initial_prediction.png"><source src="failure_review/A_seed7_scene30014/failure_demo.mp4" type="video/mp4"></video>
+<p class="small"><a href="failure_review/A_seed7_scene30014/review.json">回放核对</a> · <a href="failure_review/A_seed7_scene30014/trace.json">物理轨迹</a></p></article><article class="example"><h3>B · 种子 7 · 场景 30038</h3>
+<p>初始定位误差 24.62 mm；未完成合格抬升。</p>
+<video controls preload="none" poster="failure_review/B_seed7_scene30038/initial_prediction.png"><source src="failure_review/B_seed7_scene30038/failure_demo.mp4" type="video/mp4"></video>
+<p class="small"><a href="failure_review/B_seed7_scene30038/review.json">回放核对</a> · <a href="failure_review/B_seed7_scene30038/trace.json">物理轨迹</a></p></article><article class="example"><h3>C · 种子 7 · 场景 30014</h3>
+<p>初始定位误差 14.24 mm；未完成合格抬升。</p>
+<video controls preload="none" poster="failure_review/C_seed7_scene30014/initial_prediction.png"><source src="failure_review/C_seed7_scene30014/failure_demo.mp4" type="video/mp4"></video>
+<p class="small"><a href="failure_review/C_seed7_scene30014/review.json">回放核对</a> · <a href="failure_review/C_seed7_scene30014/trace.json">物理轨迹</a></p></article><article class="example"><h3>D · 种子 7 · 场景 30014</h3>
+<p>初始定位误差 15.56 mm；未完成合格抬升。</p>
+<video controls preload="none" poster="failure_review/D_seed7_scene30014/initial_prediction.png"><source src="failure_review/D_seed7_scene30014/failure_demo.mp4" type="video/mp4"></video>
+<p class="small"><a href="failure_review/D_seed7_scene30014/review.json">回放核对</a> · <a href="failure_review/D_seed7_scene30014/trace.json">物理轨迹</a></p></article><article class="example"><h3>R · 种子 7 · 场景 30038</h3>
+<p>初始定位误差 26.30 mm；未完成合格抬升。</p>
+<video controls preload="none" poster="failure_review/R_seed7_scene30038/initial_prediction.png"><source src="failure_review/R_seed7_scene30038/failure_demo.mp4" type="video/mp4"></video>
+<p class="small"><a href="failure_review/R_seed7_scene30038/review.json">回放核对</a> · <a href="failure_review/R_seed7_scene30038/trace.json">物理轨迹</a></p></article></div></section>
+<section id="world"><h2>执行之前，预测抓取会发生什么</h2>
+<p>独立扩展的宏动作世界模型输入当前物体 XY 与绝对抓取命令，输出最终 XY、抬升和任务成功概率。它学习一次完整固定技能的结果；没有生成视频、语言策略或用于规划选动作。</p>
+<p>560 条转换全部来自仿真：训练 64×5、验证 16×5、测试 32×5。每场景一个零偏移、四个事先采样的偏移动作。三个固定训练种子等权集成，使用最终步检查点。</p>
+<div class="notice"><strong>准确率是成功／失败标签的预测准确率，不是机器人任务成功率。</strong>测试中实际成功标签为 71/160；五个动作共享同一初始场景。</div>
+<div class="panel scroll"><table><caption>160 个已有动作结果上的预测质量；误差和 Brier 越低越好</caption><thead><tr><th>预测器与输入</th><th>终点均误差 / mm</th><th>P90 / mm</th><th>成功标签准确率</th><th>Brier</th></tr></thead><tbody><tr><th scope="row">静止基线 + 训练集事件频率</th><td>90.89</td><td>190.11</td><td>55.625%</td><td>0.2475</td></tr><tr><th scope="row">训练集平均位移 + 事件频率</th><td>92.06</td><td>122.10</td><td>55.625%</td><td>0.2475</td></tr><tr><th scope="row">学习模型，真实初始 XY</th><td>28.41</td><td>80.29</td><td>95.625%</td><td>0.0365</td></tr><tr><th scope="row">学习模型，RGB 估计 XY</th><td>28.30</td><td>77.67</td><td>95.625%</td><td>0.0335</td></tr></tbody></table></div>
+<p>真实状态指标和 RGB 追加诊断分别报告。RGB 使用固定 D_seed7 编码器，32 场景初始定位平均误差 1.259 mm，所有图像哈希与原数据一致。原始命令在采集时由真值加预定偏移得到；诊断重放这些绝对命令，没有让策略选动作，也没有重新执行 160 次。</p>
+<img src="../grasp_world_model_v1/prediction_quality.png" alt="真实状态输入下的宏动作结果模型与简单基线比较">
+<h3>一个事先固定的 RGB 联动例子</h3>
+<p>新场景 43000：RGB 估计 → 保存结果预测 → 实际抓取 → 独立评分。模型在执行前没有接收物体真值；该例执行成功，终点预测误差 0.723 mm。它只展示接口闭环，不证明策略性能提升。</p>
+<video controls preload="none" poster="../grasp_world_model_v1/integration/contact_sheet.jpg"><source src="../grasp_world_model_v1/integration/rgb_world_model_demo.mp4" type="video/mp4"></video>
+<p>整体终点平均误差仍约 28 mm，P90 约 80 mm，存在明显尾部误差。固定物体、外观、目标、技能和物理参数，尚未验证多步预测、变化目标或真实机器人。</p></section>
+<section id="diffusion"><h2>追加 Diffusion Policy：从示范学习动作</h2>
+<p>固定 D_seed7 初始 RGB 定位，增加 128 条仿真专家训练轨迹与 16 条验证轨迹。扩散策略学习末端 XYZ＋夹爪序列，每次预测 16 步、执行 8 步。部署不调用原抓取阶段状态机。</p>
+<p>合计严格成功 <strong>84/192</strong>；既有相同视觉模型＋固定控制器为 64/64。新增动作监督和训练预算不同，不能视为等预算的辅助监督消融。</p>
+<div class="panel scroll"><table><thead><tr><th>策略种子</th><th>严格成功</th><th>合格抬升</th></tr></thead><tbody><tr><td>DP 7</td><td>27/64</td><td>33/64</td></tr><tr><td>DP 17</td><td>25/64</td><td>30/64</td></tr><tr><td>DP 27</td><td>32/64</td><td>39/64</td></tr></tbody></table></div>
+<img src="../diffusion_policy_v1/results.png" alt="三个扩散策略种子的物理成功率与训练损失">
+<p>这是初始 RGB 状态条件、含机器人状态和时钟的紧凑动作扩散实现；不是端到端多帧 RGB 策略，也不证明原 Diffusion Policy 方法在其他任务上的表现。</p>
+<div class="examples"><article class="example"><h3>DP 种子 7 · 首场景 30000</h3><video controls preload="none" poster="../diffusion_policy_v1/DP_seed7_contact_sheet.jpg"><source src="../../runs/diffusion_policy_grasp_v1/DP_seed7/first_scene_demo.mp4" type="video/mp4"></video></article><article class="example"><h3>DP 种子 17 · 首场景 30000</h3><video controls preload="none" poster="../diffusion_policy_v1/DP_seed17_contact_sheet.jpg"><source src="../../runs/diffusion_policy_grasp_v1/DP_seed17/first_scene_demo.mp4" type="video/mp4"></video></article><article class="example"><h3>DP 种子 27 · 首场景 30000</h3><video controls preload="none" poster="../diffusion_policy_v1/DP_seed27_contact_sheet.jpg"><source src="../../runs/diffusion_policy_grasp_v1/DP_seed27/first_scene_demo.mp4" type="video/mp4"></video></article></div><p><a href="../diffusion_policy_v1/REPORT_ZH.md">完整追加报告</a> · <a href="../diffusion_policy_v1/results.json">全部指标</a> · <a href="../../../docs/DIFFUSION_POLICY.md">实现与复现</a></p><h3>首次失败的记录动作回放</h3><p>按原场景顺序选取；回放与原结果核对，不计作新增样本。</p><ul><li><a href="../diffusion_policy_v1/failure_review/DP_seed7_scene30001/failure_demo.mp4">策略 7 首次失败：场景 30001</a> · <a href="../diffusion_policy_v1/failure_review/DP_seed7_scene30001/review.json">核对记录</a></li><li><a href="../diffusion_policy_v1/failure_review/DP_seed17_scene30001/failure_demo.mp4">策略 17 首次失败：场景 30001</a> · <a href="../diffusion_policy_v1/failure_review/DP_seed17_scene30001/review.json">核对记录</a></li><li><a href="../diffusion_policy_v1/failure_review/DP_seed27_scene30000/failure_demo.mp4">策略 27 首次失败：场景 30000</a> · <a href="../diffusion_policy_v1/failure_review/DP_seed27_scene30000/review.json">核对记录</a></li></ul></section><section id="evidence"><h2>证据、运行方法与边界</h2>
+<div class="panel"><p>主实验 2668 项来源与配对检查通过，记录完整训练日志、模型哈希、RGB 一致性和真实物理评分。Torch 推理与仿真／NumPy 验证采用独立进程，避免 Windows OpenMP 冲突。</p>
+<div class="links"><a href="../../../README.md">英文项目入口</a><a href="../../../docs/REPRODUCIBILITY.md">复现说明</a><a href="../../../docs/GRASP_WORLD_MODEL.md">世界模型实现</a><a href="../../../docs/PILOT_LABEL_REPORT.md">真实数据与标签</a></div></div>
+<div class="links"><a href="REPORT_ZH.md">主实验报告</a><a href="IMAGENET_REFERENCE_ZH.md">ImageNet 参照</a><a href="LOW_DATA_ZH.md">32 图报告</a><a href="fairness_audit.json">主实验审计</a><a href="results.json">主实验指标</a><a href="low32_results.json">32 图指标</a><a href="failure_review/summary.json">失败选择规则</a><a href="../grasp_world_model_v1/REPORT_ZH.md">世界模型报告</a><a href="../grasp_world_model_v1/rgb_evaluation/REPORT_ZH.md">RGB 预测诊断</a><a href="../grasp_world_model_v1/integration/result.json">联动原始记录</a></div>
+<ul><li>真实数据只有一个保守开发场景族；可见物体框与手部伪标签尚无密集人工准确率核验，不能把检测覆盖率当作准确率。</li><li>相机、背景、光照、方块姿态及物理参数固定。没有独立真实场景测试，三训练种子不足以支持广泛总体结论。</li><li>模型使用个人视频进行视觉预训练；世界模型的转换标签来自仿真。没有把人类手部坐标当作机器人动作。</li><li>公开仓库、数据和权重许可、另一台机器从零复现、申请资料和最终提交仍待完成。</li></ul></section>
+<footer class="small">本地实验工件 · 2026-10-07 · E:\HumanoidRobotLearning。未公开部署或提交申请。此页面从已保存 JSON 自动生成，不包含远程资源。</footer>
+</main></body></html>

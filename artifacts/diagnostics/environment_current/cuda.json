@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "seconds": 4.92,
+  "torch": "2.10.0+cu126",
+  "torchvision": "0.25.0+cu126",
+  "cuda_runtime": "12.6",
+  "gpu": "NVIDIA GeForce RTX 3080 Ti Laptop GPU",
+  "vram_gib": 16.0,
+  "resnet18_weights": "IMAGENET1K_V1",
+  "output_shape": [
+    1,
+    1000
+  ],
+  "max_matmul_error": 1.52587890625e-05,
+  "torch_cache": "E:\\HumanoidRobotLearning\\.cache\\torch"
+}

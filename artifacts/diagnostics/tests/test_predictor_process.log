@@ -1,0 +1,6 @@
+.                                                                        [100%]
+- generated xml file: E:\HumanoidRobotLearning\artifacts\diagnostics\tests\test_predictor_process.xml -
+1 passed in 19.46s
+argv[0]=--background_color_red=0.9607843160629272
+argv[1]=--background_color_green=0.9607843160629272
+argv[2]=--background_color_blue=0.9607843160629272

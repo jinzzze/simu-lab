@@ -1,0 +1,12 @@
+Looking in indexes: https://download.pytorch.org/whl/cu126
+Collecting torch==2.10.0+cu126
+  Using cached torch-2.10.0%2Bcu126-cp311-cp311-win_amd64.whl.metadata (29 kB)
+Collecting torchvision==0.25.0+cu126
+  Using cached torchvision-0.25.0%2Bcu126-cp311-cp311-win_amd64.whl.metadata (5.5 kB)
+Using cached torch-2.10.0%2Bcu126-cp311-cp311-win_amd64.whl (2589.9 MB)
+Using cached torchvision-0.25.0%2Bcu126-cp311-cp311-win_amd64.whl (8.5 MB)
+Installing collected packages: torchvision, torch
+  WARNING: The scripts torchfrtrace.exe and torchrun.exe are installed in 'E:\HumanoidRobotLearning\work\clean_env_v1\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+
+Successfully installed torch-2.10.0+cu126 torchvision-0.25.0+cu126

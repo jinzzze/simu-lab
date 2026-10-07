@@ -1,0 +1,551 @@
+{
+  "created_utc": "2026-10-06T17:22:06.915112+00:00",
+  "plan": {
+    "version": "grasp-macro-world-model-v1",
+    "frozen_before_collection_and_metrics": true,
+    "scope": "Independent exploratory extension; existing A/B/C/D results and controller unchanged",
+    "data_source": "All macro-action transition labels originate from PyBullet simulation, not human videos",
+    "sim_config": "configs/grasp_sim.json",
+    "splits": {
+      "train": {
+        "start": 40000,
+        "count": 64
+      },
+      "val": {
+        "start": 41000,
+        "count": 16
+      },
+      "test": {
+        "start": 42000,
+        "count": 32
+      }
+    },
+    "actions_per_scene": 5,
+    "offset_recipe": "First action zero offset; next four independent uniform XY offsets from [-0.03,0.03] m; Generator(SeedSequence([91371, scene_seed]))",
+    "offset_rng_seed": 91371,
+    "offset_bound_m": 0.03,
+    "state": "Initial object XY in meters; privileged during collection, external estimate at deployment",
+    "action": "Absolute grasp XY command recorded before execution; place target and skill parameters fixed",
+    "targets": [
+      "final object XY displacement in meters",
+      "qualified bilateral lift",
+      "strict task success"
+    ],
+    "model": {
+      "input": "concat(initial_xy/0.1, (command_xy-initial_xy)/0.03)",
+      "hidden": [
+        64,
+        64
+      ],
+      "activation": "relu",
+      "output": "2 displacement values scaled by 0.15 m and 2 binary logits",
+      "delta_scale_m": 0.15
+    },
+    "training": {
+      "seeds": [
+        41,
+        43,
+        47
+      ],
+      "steps": 2000,
+      "batch_size": 64,
+      "optimizer": "AdamW",
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "regression_loss": "mean squared normalized displacement error",
+      "classification_loss": "mean BCE of lift and success",
+      "regression_weight": 1.0,
+      "classification_weight": 1.0,
+      "checkpoint": "fixed final step; no model selection",
+      "device": "cpu",
+      "torch_threads": 4
+    },
+    "evaluation": {
+      "classification_threshold": 0.5,
+      "baselines": [
+        "persistence displacement=0",
+        "training mean displacement",
+        "training empirical lift and success priors"
+      ],
+      "report_all_training_seeds": true,
+      "ensemble": "mean displacements and mean sigmoid probabilities",
+      "test_used_for_tuning": false,
+      "intervals": "No iid episode confidence interval because five actions share each scene"
+    },
+    "integration_demo": {
+      "visual_model": "artifacts/runs/visual_state_v1/D_seed7/checkpoint.pt",
+      "scene_seed": 43000,
+      "command": "predicted initial XY (zero predicted offset)",
+      "model": "equal-weight ensemble of all three final world models",
+      "record_video": true,
+      "purpose": "Outcome prediction diagnostic; no new planner or altered primary evaluation"
+    }
+  },
+  "dataset_sha256": "79c5fca9683a5bf5d61da7d286ebc311988cf28b441432b7d2670301725211c2",
+  "dataset_manifest_sha256": "3b16e9e77726f3afbf9f183040cb5e540bac8dd10d61f7867933c6bcdc25c675",
+  "source_sha256": {
+    "scripts\\train_grasp_world_model.py": "0df0be2ddb51698a9e4c156dd46be237279b333587334dcdc19d9288d157bb32",
+    "src\\world_model\\numpy_model.py": "a3f15191f431411dce04605943dc3c4264514f15fbfca2895cfa418dc4f15155"
+  },
+  "input_semantics": "true initial state for training/evaluation; externally estimated state at deployment",
+  "scope": "Fixed-skill macro-action model; all transition labels are simulator generated",
+  "torch": "2.10.0+cu126",
+  "numpy": "1.26.4",
+  "per_seed": [
+    {
+      "seed": 41,
+      "metrics": {
+        "train": {
+          "n_transitions": 320,
+          "xy_mean_error_mm": 21.809659957885742,
+          "xy_median_error_mm": 11.562685012817383,
+          "xy_p90_error_mm": 55.32735977172853,
+          "xy_rmse_mm": 32.42387008666992,
+          "lift": {
+            "positives": 152,
+            "accuracy_at_0_5": 0.984375,
+            "brier": 0.019255686551332474,
+            "log_loss": 0.07193276286125183,
+            "auroc": 0.9967105263157895
+          },
+          "success": {
+            "positives": 150,
+            "accuracy_at_0_5": 0.98125,
+            "brier": 0.022525958716869354,
+            "log_loss": 0.07892768085002899,
+            "auroc": 0.9959607843137255
+          }
+        },
+        "val": {
+          "n_transitions": 80,
+          "xy_mean_error_mm": 29.29904556274414,
+          "xy_median_error_mm": 15.017950057983398,
+          "xy_p90_error_mm": 72.99997940063479,
+          "xy_rmse_mm": 43.4620246887207,
+          "lift": {
+            "positives": 38,
+            "accuracy_at_0_5": 0.95,
+            "brier": 0.040677811950445175,
+            "log_loss": 0.12101225554943085,
+            "auroc": 0.993734335839599
+          },
+          "success": {
+            "positives": 37,
+            "accuracy_at_0_5": 0.9625,
+            "brier": 0.030384892597794533,
+            "log_loss": 0.09167840331792831,
+            "auroc": 0.994343180389692
+          }
+        },
+        "test": {
+          "n_transitions": 160,
+          "xy_mean_error_mm": 29.827112197875977,
+          "xy_median_error_mm": 13.73135757446289,
+          "xy_p90_error_mm": 76.1832954406738,
+          "xy_rmse_mm": 47.6807746887207,
+          "lift": {
+            "positives": 72,
+            "accuracy_at_0_5": 0.95625,
+            "brier": 0.0428641140460968,
+            "log_loss": 0.15827146172523499,
+            "auroc": 0.9897411616161617
+          },
+          "success": {
+            "positives": 71,
+            "accuracy_at_0_5": 0.95,
+            "brier": 0.0372517928481102,
+            "log_loss": 0.13295814394950867,
+            "auroc": 0.9917708498180092
+          }
+        }
+      },
+      "steps_completed": 2000,
+      "elapsed_seconds": 2.1758974000113085,
+      "batch_sequence_sha256": "f6b8d49e0abe532f892ad51bb838c647cc86c43cb94f11e0985c9ae512a830f8",
+      "selection": "fixed last step, no validation/test checkpoint selection"
+    },
+    {
+      "seed": 43,
+      "metrics": {
+        "train": {
+          "n_transitions": 320,
+          "xy_mean_error_mm": 23.006885528564453,
+          "xy_median_error_mm": 13.65716552734375,
+          "xy_p90_error_mm": 53.9162204742432,
+          "xy_rmse_mm": 33.632667541503906,
+          "lift": {
+            "positives": 152,
+            "accuracy_at_0_5": 0.98125,
+            "brier": 0.019562985748052597,
+            "log_loss": 0.07337254285812378,
+            "auroc": 0.9964364035087719
+          },
+          "success": {
+            "positives": 150,
+            "accuracy_at_0_5": 0.975,
+            "brier": 0.02249753475189209,
+            "log_loss": 0.07903383672237396,
+            "auroc": 0.9962745098039215
+          }
+        },
+        "val": {
+          "n_transitions": 80,
+          "xy_mean_error_mm": 31.2495174407959,
+          "xy_median_error_mm": 15.561870574951172,
+          "xy_p90_error_mm": 78.28058700561526,
+          "xy_rmse_mm": 46.50594711303711,
+          "lift": {
+            "positives": 38,
+            "accuracy_at_0_5": 0.95,
+            "brier": 0.04164590314030647,
+            "log_loss": 0.13384278118610382,
+            "auroc": 0.9918546365914787
+          },
+          "success": {
+            "positives": 37,
+            "accuracy_at_0_5": 0.9625,
+            "brier": 0.03244195878505707,
+            "log_loss": 0.10495062917470932,
+            "auroc": 0.994343180389692
+          }
+        },
+        "test": {
+          "n_transitions": 160,
+          "xy_mean_error_mm": 31.63031005859375,
+          "xy_median_error_mm": 14.600842475891113,
+          "xy_p90_error_mm": 83.13044891357418,
+          "xy_rmse_mm": 50.01060104370117,
+          "lift": {
+            "positives": 72,
+            "accuracy_at_0_5": 0.95,
+            "brier": 0.04601764306426048,
+            "log_loss": 0.16630010306835175,
+            "auroc": 0.9880050505050505
+          },
+          "success": {
+            "positives": 71,
+            "accuracy_at_0_5": 0.95,
+            "brier": 0.03742584213614464,
+            "log_loss": 0.13187773525714874,
+            "auroc": 0.991612596929894
+          }
+        }
+      },
+      "steps_completed": 2000,
+      "elapsed_seconds": 1.9947030000621453,
+      "batch_sequence_sha256": "c02c9b4373753416c5d1c2be5841bccbd03912789768c1ee85d861b5d896dd6e",
+      "selection": "fixed last step, no validation/test checkpoint selection"
+    },
+    {
+      "seed": 47,
+      "metrics": {
+        "train": {
+          "n_transitions": 320,
+          "xy_mean_error_mm": 21.825815200805664,
+          "xy_median_error_mm": 12.279012680053711,
+          "xy_p90_error_mm": 55.09904861450197,
+          "xy_rmse_mm": 33.10143280029297,
+          "lift": {
+            "positives": 152,
+            "accuracy_at_0_5": 0.98125,
+            "brier": 0.0178055502474308,
+            "log_loss": 0.06442847847938538,
+            "auroc": 0.9974154135338346
+          },
+          "success": {
+            "positives": 150,
+            "accuracy_at_0_5": 0.975,
+            "brier": 0.02051752433180809,
+            "log_loss": 0.07007275521755219,
+            "auroc": 0.9971764705882353
+          }
+        },
+        "val": {
+          "n_transitions": 80,
+          "xy_mean_error_mm": 29.774677276611328,
+          "xy_median_error_mm": 14.260236740112305,
+          "xy_p90_error_mm": 78.34542160034181,
+          "xy_rmse_mm": 45.45722579956055,
+          "lift": {
+            "positives": 38,
+            "accuracy_at_0_5": 0.95,
+            "brier": 0.04320269450545311,
+            "log_loss": 0.13966521620750427,
+            "auroc": 0.9924812030075187
+          },
+          "success": {
+            "positives": 37,
+            "accuracy_at_0_5": 0.9625,
+            "brier": 0.029406901448965073,
+            "log_loss": 0.09162042289972305,
+            "auroc": 0.9968573224387178
+          }
+        },
+        "test": {
+          "n_transitions": 160,
+          "xy_mean_error_mm": 28.331363677978516,
+          "xy_median_error_mm": 13.058893203735352,
+          "xy_p90_error_mm": 80.0733024597168,
+          "xy_rmse_mm": 45.85895919799805,
+          "lift": {
+            "positives": 72,
+            "accuracy_at_0_5": 0.95625,
+            "brier": 0.04378640651702881,
+            "log_loss": 0.16937127709388733,
+            "auroc": 0.9895833333333334
+          },
+          "success": {
+            "positives": 71,
+            "accuracy_at_0_5": 0.9625,
+            "brier": 0.036270592361688614,
+            "log_loss": 0.1356450915336609,
+            "auroc": 0.9922456084823548
+          }
+        }
+      },
+      "steps_completed": 2000,
+      "elapsed_seconds": 2.033383799949661,
+      "batch_sequence_sha256": "696b7fbad9cb19cf4efc3ad1ad8d2129dab36ca3557f70de489faafe0509c314",
+      "selection": "fixed last step, no validation/test checkpoint selection"
+    }
+  ],
+  "evaluations": {
+    "train": {
+      "ensemble": {
+        "n_transitions": 320,
+        "xy_mean_error_mm": 20.757469177246094,
+        "xy_median_error_mm": 10.468547821044922,
+        "xy_p90_error_mm": 54.04050064086915,
+        "xy_rmse_mm": 32.070289611816406,
+        "lift": {
+          "positives": 152,
+          "accuracy_at_0_5": 0.98125,
+          "brier": 0.018680620938539505,
+          "log_loss": 0.06925593316555023,
+          "auroc": 0.9969454887218046
+        },
+        "success": {
+          "positives": 150,
+          "accuracy_at_0_5": 0.975,
+          "brier": 0.021627219393849373,
+          "log_loss": 0.07518644630908966,
+          "auroc": 0.9965490196078431
+        }
+      },
+      "persistence": {
+        "n_transitions": 320,
+        "xy_mean_error_mm": 96.80755147224625,
+        "xy_median_error_mm": 123.10386348314907,
+        "xy_p90_error_mm": 186.00920618954265,
+        "xy_rmse_mm": 123.58947506350951,
+        "lift": {
+          "positives": 152,
+          "accuracy_at_0_5": 0.525,
+          "brier": 0.24937498569488525,
+          "log_loss": 0.6918967366218567,
+          "auroc": 0.5
+        },
+        "success": {
+          "positives": 150,
+          "accuracy_at_0_5": 0.53125,
+          "brier": 0.2490234375,
+          "log_loss": 0.6911927461624146,
+          "auroc": 0.5
+        }
+      },
+      "train_mean_delta": {
+        "n_transitions": 320,
+        "xy_mean_error_mm": 93.03912353515625,
+        "xy_median_error_mm": 83.99224853515625,
+        "xy_p90_error_mm": 124.61353302001953,
+        "xy_rmse_mm": 95.78343200683594,
+        "lift": {
+          "positives": 152,
+          "accuracy_at_0_5": 0.525,
+          "brier": 0.24937498569488525,
+          "log_loss": 0.6918967366218567,
+          "auroc": 0.5
+        },
+        "success": {
+          "positives": 150,
+          "accuracy_at_0_5": 0.53125,
+          "brier": 0.2490234375,
+          "log_loss": 0.6911927461624146,
+          "auroc": 0.5
+        }
+      },
+      "independent_scenes": 64
+    },
+    "val": {
+      "ensemble": {
+        "n_transitions": 80,
+        "xy_mean_error_mm": 28.59271240234375,
+        "xy_median_error_mm": 12.896282196044922,
+        "xy_p90_error_mm": 74.2197410583497,
+        "xy_rmse_mm": 44.230064392089844,
+        "lift": {
+          "positives": 38,
+          "accuracy_at_0_5": 0.95,
+          "brier": 0.041646771132946014,
+          "log_loss": 0.12705445289611816,
+          "auroc": 0.9931077694235589
+        },
+        "success": {
+          "positives": 37,
+          "accuracy_at_0_5": 0.9625,
+          "brier": 0.03052995726466179,
+          "log_loss": 0.09409258514642715,
+          "auroc": 0.9949717159019484
+        }
+      },
+      "persistence": {
+        "n_transitions": 80,
+        "xy_mean_error_mm": 99.65147168681503,
+        "xy_median_error_mm": 134.5244728574816,
+        "xy_p90_error_mm": 182.43453635202735,
+        "xy_rmse_mm": 126.23144331506992,
+        "lift": {
+          "positives": 38,
+          "accuracy_at_0_5": 0.525,
+          "brier": 0.24937501549720764,
+          "log_loss": 0.6918967366218567,
+          "auroc": 0.5
+        },
+        "success": {
+          "positives": 37,
+          "accuracy_at_0_5": 0.5375,
+          "brier": 0.24863281846046448,
+          "log_loss": 0.6904104948043823,
+          "auroc": 0.5
+        }
+      },
+      "train_mean_delta": {
+        "n_transitions": 80,
+        "xy_mean_error_mm": 96.67857360839844,
+        "xy_median_error_mm": 90.36445617675781,
+        "xy_p90_error_mm": 115.49583816528323,
+        "xy_rmse_mm": 100.3635025024414,
+        "lift": {
+          "positives": 38,
+          "accuracy_at_0_5": 0.525,
+          "brier": 0.24937501549720764,
+          "log_loss": 0.6918967366218567,
+          "auroc": 0.5
+        },
+        "success": {
+          "positives": 37,
+          "accuracy_at_0_5": 0.5375,
+          "brier": 0.24863281846046448,
+          "log_loss": 0.6904104948043823,
+          "auroc": 0.5
+        }
+      },
+      "independent_scenes": 16
+    },
+    "test": {
+      "ensemble": {
+        "n_transitions": 160,
+        "xy_mean_error_mm": 28.410694122314453,
+        "xy_median_error_mm": 11.863227844238281,
+        "xy_p90_error_mm": 80.29124755859372,
+        "xy_rmse_mm": 46.98490905761719,
+        "lift": {
+          "positives": 72,
+          "accuracy_at_0_5": 0.95625,
+          "brier": 0.04369700700044632,
+          "log_loss": 0.16294442117214203,
+          "auroc": 0.9892676767676768
+        },
+        "success": {
+          "positives": 71,
+          "accuracy_at_0_5": 0.95625,
+          "brier": 0.03645777702331543,
+          "log_loss": 0.13224534690380096,
+          "auroc": 0.9920873555942396
+        }
+      },
+      "persistence": {
+        "n_transitions": 160,
+        "xy_mean_error_mm": 90.88529707451524,
+        "xy_median_error_mm": 103.1288264152133,
+        "xy_p90_error_mm": 190.11145488963837,
+        "xy_rmse_mm": 121.77055115260701,
+        "lift": {
+          "positives": 72,
+          "accuracy_at_0_5": 0.55,
+          "brier": 0.24812498688697815,
+          "log_loss": 0.6893946528434753,
+          "auroc": 0.5
+        },
+        "success": {
+          "positives": 71,
+          "accuracy_at_0_5": 0.55625,
+          "brier": 0.24746093153953552,
+          "log_loss": 0.6880637407302856,
+          "auroc": 0.5
+        }
+      },
+      "train_mean_delta": {
+        "n_transitions": 160,
+        "xy_mean_error_mm": 92.06205749511719,
+        "xy_median_error_mm": 80.95985412597656,
+        "xy_p90_error_mm": 122.1009925842285,
+        "xy_rmse_mm": 94.89225769042969,
+        "lift": {
+          "positives": 72,
+          "accuracy_at_0_5": 0.55,
+          "brier": 0.24812498688697815,
+          "log_loss": 0.6893946528434753,
+          "auroc": 0.5
+        },
+        "success": {
+          "positives": 71,
+          "accuracy_at_0_5": 0.55625,
+          "brier": 0.24746093153953552,
+          "log_loss": 0.6880637407302856,
+          "auroc": 0.5
+        }
+      },
+      "independent_scenes": 32
+    }
+  },
+  "status": "completed",
+  "export_max_delta_difference_m": 2.9802322387695312e-08,
+  "export_max_probability_difference": 1.1920928955078125e-07,
+  "ensemble_sha256": "486178915c723fb1da34ea2c24d98a59b1c02bbe3ed2703a3fd597347e2dab5a",
+  "postprocessing_source_sha256": {
+    "scripts\\report_grasp_world_model.py": "bb572abe6da8ed5d12386cf3c9d542dc49e4296cf7cf74710a2863c4958b1bd5",
+    "src\\world_model\\evaluation.py": "7f3bbfc66d5681452c810438dedee607d6e2463e5c0102b66cf7e67978c4c965",
+    "src\\world_model\\numpy_model.py": "dec163acf5972aa0037f21f14fcb021a149dd57d78023b1bb3c42be6e3bae366",
+    "src\\world_model\\integrity.py": "3189817b5c1c365dee7075a9883283ee9f3235b74abedd1eba8847db181dad17"
+  },
+  "verified_artifacts": {
+    "data/processed/grasp_world_model_v1.npz": "79c5fca9683a5bf5d61da7d286ebc311988cf28b441432b7d2670301725211c2",
+    "data/manifests/grasp_world_model_v1.json": "3b16e9e77726f3afbf9f183040cb5e540bac8dd10d61f7867933c6bcdc25c675",
+    "configs/grasp_world_model.json": "1d95a7fd0d0fd3721b6e6455cd5842f5ec550a5a112639a368a9ecd6fc6a29aa",
+    "configs/grasp_sim.json": "fa30186703956bf40afbf42df3b8c2a29f4263419316b911a04c158e5cc1c9fa",
+    "src/sim/grasp_env.py": "103d93e2d444ec6fae7db2ef27e65ca80118a17ac02e162192adbd13e76f5a1a",
+    "data/processed/grasp_world_model_v1/train.jsonl": "1e4f976ce4ef3cda7bdd4841a4c3e43da4ee41f446fbba51da84b2945216c0f1",
+    "data/processed/grasp_world_model_v1/val.jsonl": "d284e96850551cd0d540397d8099f4621e62ff685dc876490c4b0bbdb4604612",
+    "data/processed/grasp_world_model_v1/test.jsonl": "1417c0c4d3dd7396c878a0082440508f5ea10d089f25a465e862682d1da7dd84",
+    "artifacts/runs/grasp_world_model_v1/manifest.json": "13a8337ee69424ab6a7f2d20de859ff05268073a94ad8cf088ed3dcb0260726f",
+    "artifacts/runs/grasp_world_model_v1/ensemble.npz": "486178915c723fb1da34ea2c24d98a59b1c02bbe3ed2703a3fd597347e2dab5a",
+    "artifacts/runs/grasp_world_model_v1/seed41/checkpoint.pt": "9b2d35df3950bc5984d256f0bb401c690677dbf9bf7d995a14a0e3cfd1eef5e1",
+    "artifacts/runs/grasp_world_model_v1/seed41/manifest.json": "c4379e57af12c293bcd9dd04611b3a22c5dcc717e7561861cff56a8dcbdf4711",
+    "artifacts/runs/grasp_world_model_v1/seed41/losses.jsonl": "be6cdba875d16824775be8cfd5202e6caff954a8726e5a603397478fd2dd3253",
+    "artifacts/runs/grasp_world_model_v1/seed43/checkpoint.pt": "ce2424e8a349772c41855bb4d8bbb217ac5ae044270e4a802c2ce731de8a312b",
+    "artifacts/runs/grasp_world_model_v1/seed43/manifest.json": "f3fd1e070540bb91ea996c58cca136e301d9f9a19ced0ccf300d0153355a1e9a",
+    "artifacts/runs/grasp_world_model_v1/seed43/losses.jsonl": "98a864c32181222d0040d6079bf4ce058accaad4f339455e539216819b744408",
+    "artifacts/runs/grasp_world_model_v1/seed47/checkpoint.pt": "f34ab5ff4245ff4afa85673cb0c070db130a6a78902f985315feb8f988f8141a",
+    "artifacts/runs/grasp_world_model_v1/seed47/manifest.json": "a3915cb0dc70ab13f2bf818250c93701b2f54caedda6260e82bf6646726ea702",
+    "artifacts/runs/grasp_world_model_v1/seed47/losses.jsonl": "04f476b6c8c294f2b103ec230fdfd685245521c000fcffa809480325e3d23abc",
+    "artifacts/runs/grasp_world_model_v1/torch_predictions.npz": "f8170c592aff11f0c1510484fdff15ebd96442c548b7e05c6217bea759542114"
+  },
+  "recovery_note": "Saved final checkpoints re-evaluated with data and ensemble integrity checks; zero additional optimizer steps",
+  "limits": [
+    "Five actions share each initial scene: 160 test transitions represent 32 initial scenes.",
+    "Training and state-prediction evaluation use true initial XY; the separate RGB integration uses estimated state.",
+    "Fixed grasp skill, goal, object and physics; no video generation or long-horizon rollout evaluation.",
+    "Transition labels come entirely from simulation. Phone videos contribute only through the visual encoder."
+  ]
+}

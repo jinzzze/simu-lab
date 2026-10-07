@@ -1,0 +1,16 @@
+{
+  "selection": "first preregistered scene 30000, fixed training seed 7, all A/B/C/D regardless of result",
+  "frames": 119,
+  "decoded_frames": 119,
+  "fps": 12.5,
+  "duration_s": 9.52,
+  "source_lengths": [
+    119,
+    119,
+    119,
+    119
+  ],
+  "alignment": "same simulator time; shorter completed videos hold their final frame",
+  "audio": false,
+  "purpose": "qualitative illustration; aggregate metrics use all 768 episodes"
+}

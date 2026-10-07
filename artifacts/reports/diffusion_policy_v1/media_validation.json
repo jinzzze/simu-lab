@@ -1,0 +1,23 @@
+[
+  {
+    "seed": 7,
+    "scene": 30000,
+    "frames": 161,
+    "fps": 12.5,
+    "source_sha256": "fa141742602e2ff75b858e78b29473b327e203c961c23e574559514dca8a317b"
+  },
+  {
+    "seed": 17,
+    "scene": 30000,
+    "frames": 161,
+    "fps": 12.5,
+    "source_sha256": "29254e2ddd1bd5931f9f37275bd71c2061de5b5208a54d0846c2f6a8dce2e28a"
+  },
+  {
+    "seed": 27,
+    "scene": 30000,
+    "frames": 161,
+    "fps": 12.5,
+    "source_sha256": "4f5bcc79163f735cc07a92d7c6950c4934492334eff518b7444a6b478059df3e"
+  }
+]

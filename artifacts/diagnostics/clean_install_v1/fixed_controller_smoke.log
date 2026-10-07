@@ -1,0 +1,6 @@
+pybullet build time: Oct 21 2025 11:46:21
+D train_seed=7 scene=30000 success=True xy_error=0.33mm
+[{"group": "D", "training_seed": 7, "scene_seeds": [30000], "checkpoint_sha256": "0ff69564b60ddffa241e8ba392a70ce29845c635e4df3431353e4e69143e9f03", "sim_config_sha256": "fa30186703956bf40afbf42df3b8c2a29f4263419316b911a04c158e5cc1c9fa", "sim_code_sha256": "103d93e2d444ec6fae7db2ef27e65ca80118a17ac02e162192adbd13e76f5a1a", "n": 1, "successes": 1, "success_rate": 1.0, "xy_mean_error_mm": 0.3299038052190172, "xy_median_error_mm": 0.3299038052190172, "xy_p90_error_mm": 0.3299038052190172, "scope": "exploratory pilot-trained visual grasp evaluation; not final multi-session real-data evidence", "demo_is_first_scene_not_best_scene": true}]
+argv[0]=--background_color_red=0.9607843160629272
+argv[1]=--background_color_green=0.9607843160629272
+argv[2]=--background_color_blue=0.9607843160629272

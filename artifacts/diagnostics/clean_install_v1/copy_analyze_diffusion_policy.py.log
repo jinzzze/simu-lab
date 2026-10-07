@@ -1,0 +1,94 @@
+{
+  "aggregate": {
+    "successes": 84,
+    "executions": 192,
+    "success_rate": 0.4375,
+    "qualified_lifts": 102,
+    "distinct_test_scenes": 64,
+    "training_seconds_total": 257.1031107000308
+  },
+  "per_seed": [
+    {
+      "seed": 7,
+      "successes": 27,
+      "n": 64,
+      "success_rate": 0.421875,
+      "qualified_lifts": 33,
+      "validation": {
+        "noise_mse": 0.01906701549887657,
+        "action_xyz_mean_error_mm": 12.699706077575684,
+        "action_width_mean_absolute_error_mm": 3.2869515419006348,
+        "sequence_starts": 256
+      },
+      "training_seconds": 85.88992810004856,
+      "mean_chunk_inference_ms": 88.48625773407548,
+      "clipped_command_count": 0,
+      "failures_without_lift": 31,
+      "failures_after_lift": 6,
+      "terminal_flag_failures": {
+        "fully_right": 33,
+        "in_workspace": 0,
+        "on_table": 0,
+        "upright": 5,
+        "slow": 0,
+        "released": 0,
+        "withdrawn": 0
+      }
+    },
+    {
+      "seed": 17,
+      "successes": 25,
+      "n": 64,
+      "success_rate": 0.390625,
+      "qualified_lifts": 30,
+      "validation": {
+        "noise_mse": 0.019636211916804314,
+        "action_xyz_mean_error_mm": 12.454195976257324,
+        "action_width_mean_absolute_error_mm": 2.7530770301818848,
+        "sequence_starts": 256
+      },
+      "training_seconds": 83.3266098999884,
+      "mean_chunk_inference_ms": 83.40155859414153,
+      "clipped_command_count": 0,
+      "failures_without_lift": 34,
+      "failures_after_lift": 5,
+      "terminal_flag_failures": {
+        "fully_right": 35,
+        "in_workspace": 0,
+        "on_table": 2,
+        "upright": 3,
+        "slow": 2,
+        "released": 3,
+        "withdrawn": 2
+      }
+    },
+    {
+      "seed": 27,
+      "successes": 32,
+      "n": 64,
+      "success_rate": 0.5,
+      "qualified_lifts": 39,
+      "validation": {
+        "noise_mse": 0.019754253327846527,
+        "action_xyz_mean_error_mm": 11.98033332824707,
+        "action_width_mean_absolute_error_mm": 2.799182415008545,
+        "sequence_starts": 256
+      },
+      "training_seconds": 87.88657269999385,
+      "mean_chunk_inference_ms": 85.5654816810329,
+      "clipped_command_count": 0,
+      "failures_without_lift": 25,
+      "failures_after_lift": 7,
+      "terminal_flag_failures": {
+        "fully_right": 28,
+        "in_workspace": 0,
+        "on_table": 3,
+        "upright": 3,
+        "slow": 3,
+        "released": 9,
+        "withdrawn": 3
+      }
+    }
+  ],
+  "audit_checks": 847
+}

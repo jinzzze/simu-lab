@@ -1,0 +1,11 @@
+{
+  "group": "R",
+  "seed": 27,
+  "status": "initialization_only",
+  "steps_completed": 0,
+  "real_data_used": false,
+  "initial_encoder_sha256": "de620ffcedf6c2818d8b6575ad3b3fc89a41351a1588ef8c0d904defc28ebf8e",
+  "initialization": "ImageNet ResNet18 IMAGENET1K_V1; no phone-video frames",
+  "created_utc": "2026-10-06T11:07:26.669078+00:00",
+  "format_note": "visual_pretraining_v1 is the encoder checkpoint wire format only; no pretraining occurred"
+}

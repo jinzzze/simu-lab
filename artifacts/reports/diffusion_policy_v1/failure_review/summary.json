@@ -1,0 +1,227 @@
+{
+  "selection": [
+    {
+      "policy_seed": 7,
+      "scene_seed": 30001,
+      "selection": "first failure in ascending original scene order",
+      "replayed_original_commands": true,
+      "resampled_diffusion": false,
+      "replay_matches_original": true,
+      "final_position_difference_m": 0.0,
+      "original": {
+        "success": false,
+        "lifted": false,
+        "scene_seed": 30001,
+        "max_clearance_m": 0.0,
+        "max_lift_duration_s": 0.0,
+        "final_stable_duration_s": 0.0,
+        "final_flags": {
+          "fully_right": false,
+          "in_workspace": true,
+          "on_table": true,
+          "upright": true,
+          "slow": true,
+          "released": true,
+          "withdrawn": true
+        },
+        "final_object_xyz_m": [
+          -0.06689475535338597,
+          0.0464830518331772,
+          0.004989959552144661
+        ],
+        "simulated_duration_s": 12.8,
+        "diagnostic_ground_truth_only": true,
+        "object_attached_or_teleported": false,
+        "policy_seed": 7,
+        "initial_visual_xy_m": [
+          -0.07574069499969482,
+          0.038994237780570984
+        ],
+        "initial_rgb_sha256": "8112cc93c2b5614afac3412ceb5ae879ef2e7f6154cd82a5bb81134355baeae4",
+        "sampling_seed": 38822,
+        "clipped_actions": 0,
+        "inference_calls": 40,
+        "inference_mean_seconds": 0.09396552250836976,
+        "wall_seconds": 4.597636799910106,
+        "controller": "learned DDIM action chunks + shared low-level IK; no scripted stages",
+        "action_trace_sha256": "8d3287dd2ae955c3db46ab2675e72aaf49c4f18f0e0709f617b85cbbcf76418c"
+      },
+      "replay": {
+        "success": false,
+        "lifted": false,
+        "scene_seed": 30001,
+        "max_clearance_m": 0.0,
+        "max_lift_duration_s": 0.0,
+        "final_stable_duration_s": 0.0,
+        "final_flags": {
+          "fully_right": false,
+          "in_workspace": true,
+          "on_table": true,
+          "upright": true,
+          "slow": true,
+          "released": true,
+          "withdrawn": true
+        },
+        "final_object_xyz_m": [
+          -0.06689475535338597,
+          0.0464830518331772,
+          0.004989959552144661
+        ],
+        "simulated_duration_s": 12.8,
+        "diagnostic_ground_truth_only": true,
+        "object_attached_or_teleported": false
+      },
+      "relative_folder": "DP_seed7_scene30001",
+      "scope": "diagnostic replay; not an additional independent evaluation sample"
+    },
+    {
+      "policy_seed": 17,
+      "scene_seed": 30001,
+      "selection": "first failure in ascending original scene order",
+      "replayed_original_commands": true,
+      "resampled_diffusion": false,
+      "replay_matches_original": true,
+      "final_position_difference_m": 0.0,
+      "original": {
+        "success": false,
+        "lifted": false,
+        "scene_seed": 30001,
+        "max_clearance_m": 0.0,
+        "max_lift_duration_s": 0.0,
+        "final_stable_duration_s": 0.0,
+        "final_flags": {
+          "fully_right": false,
+          "in_workspace": true,
+          "on_table": true,
+          "upright": true,
+          "slow": true,
+          "released": true,
+          "withdrawn": true
+        },
+        "final_object_xyz_m": [
+          -0.07581905591018859,
+          0.04424618235042641,
+          0.004989958554570662
+        ],
+        "simulated_duration_s": 12.8,
+        "diagnostic_ground_truth_only": true,
+        "object_attached_or_teleported": false,
+        "policy_seed": 17,
+        "initial_visual_xy_m": [
+          -0.07574069499969482,
+          0.038994237780570984
+        ],
+        "initial_rgb_sha256": "8112cc93c2b5614afac3412ceb5ae879ef2e7f6154cd82a5bb81134355baeae4",
+        "sampling_seed": 38822,
+        "clipped_actions": 0,
+        "inference_calls": 40,
+        "inference_mean_seconds": 0.08341930749011225,
+        "wall_seconds": 3.9558622000040486,
+        "controller": "learned DDIM action chunks + shared low-level IK; no scripted stages",
+        "action_trace_sha256": "fab97c3e21d649e9f66ee59a84b0eeb2246892088206e7831125bbf75e155a1e"
+      },
+      "replay": {
+        "success": false,
+        "lifted": false,
+        "scene_seed": 30001,
+        "max_clearance_m": 0.0,
+        "max_lift_duration_s": 0.0,
+        "final_stable_duration_s": 0.0,
+        "final_flags": {
+          "fully_right": false,
+          "in_workspace": true,
+          "on_table": true,
+          "upright": true,
+          "slow": true,
+          "released": true,
+          "withdrawn": true
+        },
+        "final_object_xyz_m": [
+          -0.07581905591018859,
+          0.04424618235042641,
+          0.004989958554570662
+        ],
+        "simulated_duration_s": 12.8,
+        "diagnostic_ground_truth_only": true,
+        "object_attached_or_teleported": false
+      },
+      "relative_folder": "DP_seed17_scene30001",
+      "scope": "diagnostic replay; not an additional independent evaluation sample"
+    },
+    {
+      "policy_seed": 27,
+      "scene_seed": 30000,
+      "selection": "first failure in ascending original scene order",
+      "replayed_original_commands": true,
+      "resampled_diffusion": false,
+      "replay_matches_original": true,
+      "final_position_difference_m": 0.0,
+      "original": {
+        "success": false,
+        "lifted": false,
+        "scene_seed": 30000,
+        "max_clearance_m": 0.0,
+        "max_lift_duration_s": 0.0,
+        "final_stable_duration_s": 0.0,
+        "final_flags": {
+          "fully_right": false,
+          "in_workspace": true,
+          "on_table": true,
+          "upright": true,
+          "slow": true,
+          "released": true,
+          "withdrawn": true
+        },
+        "final_object_xyz_m": [
+          -0.09119076439414318,
+          0.014310450047191229,
+          0.0049898355945430205
+        ],
+        "simulated_duration_s": 12.8,
+        "diagnostic_ground_truth_only": true,
+        "object_attached_or_teleported": false,
+        "policy_seed": 27,
+        "initial_visual_xy_m": [
+          -0.0801318809390068,
+          0.012761831283569336
+        ],
+        "initial_rgb_sha256": "dc8c7b120c5d98db0e2be36858cbab9d09c7cb4896cb21c684d1d041d61f8c07",
+        "sampling_seed": 38821,
+        "clipped_actions": 0,
+        "inference_calls": 40,
+        "inference_mean_seconds": 0.10186804500990547,
+        "wall_seconds": 24.665318500017747,
+        "controller": "learned DDIM action chunks + shared low-level IK; no scripted stages",
+        "action_trace_sha256": "d56d5094903d1c3146c4ed3c5aed02fd6210f4c13f04ebf519ca3d5d61ddad11"
+      },
+      "replay": {
+        "success": false,
+        "lifted": false,
+        "scene_seed": 30000,
+        "max_clearance_m": 0.0,
+        "max_lift_duration_s": 0.0,
+        "final_stable_duration_s": 0.0,
+        "final_flags": {
+          "fully_right": false,
+          "in_workspace": true,
+          "on_table": true,
+          "upright": true,
+          "slow": true,
+          "released": true,
+          "withdrawn": true
+        },
+        "final_object_xyz_m": [
+          -0.09119076439414318,
+          0.014310450047191229,
+          0.0049898355945430205
+        ],
+        "simulated_duration_s": 12.8,
+        "diagnostic_ground_truth_only": true,
+        "object_attached_or_teleported": false
+      },
+      "relative_folder": "DP_seed27_scene30000",
+      "scope": "diagnostic replay; not an additional independent evaluation sample"
+    }
+  ],
+  "all_replays_match": true
+}

@@ -1,0 +1,70 @@
+{
+  "created_utc": "2026-10-03T00:41:50Z",
+  "project_root": "E:\\HumanoidRobotLearning",
+  "python_executable": "E:\\HumanoidRobotLearning\\.env\\python.exe",
+  "python": "3.11.16 | packaged by conda-forge | (main, Sep  1 2026, 16:24:05) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "logical_cpus": 16,
+  "ram_gib": 31.26,
+  "disk_free_gib": 229.4,
+  "packages": {
+    "numpy": "1.26.4",
+    "pybullet": "3.2.5",
+    "panda-gym": "3.0.7",
+    "gymnasium": "0.29.1",
+    "mediapipe": "1.0.1",
+    "opencv-contrib-python": "4.11.0.86",
+    "torch": "2.10.0+cu126",
+    "torchvision": "0.25.0+cu126"
+  },
+  "checks": {
+    "simulation": {
+      "status": "passed",
+      "seconds": 2.42,
+      "environment": "PandaPush-v3",
+      "pybullet_api": 202010061,
+      "frame_shape": [
+        512,
+        512,
+        3
+      ],
+      "action_shape": [
+        3
+      ],
+      "end_effector_motion_m": 0.052336197524385786,
+      "observation_keys": [
+        "observation",
+        "achieved_goal",
+        "desired_goal"
+      ],
+      "note": "Tests rendering and commanded arm motion only; no learned policy or task success claim."
+    },
+    "cuda": {
+      "status": "passed",
+      "seconds": 34.81,
+      "torch": "2.10.0+cu126",
+      "torchvision": "0.25.0+cu126",
+      "cuda_runtime": "12.6",
+      "gpu": "NVIDIA GeForce RTX 3080 Ti Laptop GPU",
+      "vram_gib": 16.0,
+      "resnet18_weights": "IMAGENET1K_V1",
+      "output_shape": [
+        1,
+        1000
+      ],
+      "max_matmul_error": 1.52587890625e-05,
+      "torch_cache": "E:\\HumanoidRobotLearning\\.cache\\torch"
+    },
+    "vision": {
+      "status": "passed",
+      "seconds": 7.7,
+      "opencv": "4.11.0",
+      "mediapipe": "1.0.1",
+      "aruco_roundtrip_id": 0,
+      "blank_frame_hand_count": 0,
+      "hand_model_sha256": "fbc2a30080c3c557093b5ddfc334698132eb341044ccee322ccf8bcf3607cde1",
+      "note": "Model loads and processes an image; hand accuracy on the applicant's videos is still unverified."
+    }
+  },
+  "all_passed": true
+}

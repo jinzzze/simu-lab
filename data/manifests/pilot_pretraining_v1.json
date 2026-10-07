@@ -1,0 +1,114 @@
+{
+  "scope": "exploratory_development_pretraining_only",
+  "samples": 438,
+  "videos": [
+    {
+      "episode_id": "pilot_777231764b48",
+      "source_video": "data/raw/pilot/5d81c4e3767ab92cd6898978b3330c6e.mp4",
+      "source_sha256": "777231764b480dde3d9946138ec5a4989dc5b985ac899b25e3abff0ba6ed8844",
+      "labels_sha256": "ee9001b567fa681c6d7e5b3aa8888eec333c32accf30194cf4ec220a8a5de19e",
+      "sample_stride": 5,
+      "exported_frames": 42
+    },
+    {
+      "episode_id": "pilot_f77c2afc0208",
+      "source_video": "data/raw/pilot/619481ad2df077adff353cb4ced816b5.mp4",
+      "source_sha256": "f77c2afc0208f298b03f81f9764257c33731fb5ae96c771594c32d213ae5d918",
+      "labels_sha256": "943cdbd2144cad09702f4f34a46274bd1b6ce0c58fad3073990e0dca93a63f96",
+      "sample_stride": 5,
+      "exported_frames": 32
+    },
+    {
+      "episode_id": "pilot_6813f786a2f8",
+      "source_video": "data/raw/pilot/65e9623a9250a178c285cd0411298d54.mp4",
+      "source_sha256": "6813f786a2f8c57a8b607664fbe824ca8e9f83883c6d6d1ff66582314ad5ee66",
+      "labels_sha256": "a7919108ae5dc55b132068b94bb62e10836f683eda16d34de406e24e0286cdac",
+      "sample_stride": 5,
+      "exported_frames": 37
+    },
+    {
+      "episode_id": "pilot_24ccfc77eefb",
+      "source_video": "data/raw/pilot/7612dcc78727731b2c3fee6aff5933e9.mp4",
+      "source_sha256": "24ccfc77eefbd854285edd56e595f566007f8d31b287c2cd9bf1744726f97192",
+      "labels_sha256": "7ff21a87d19b3e4440bc56c6361b9e780acd6e1133cd11c7526e00e1b8d9d485",
+      "sample_stride": 5,
+      "exported_frames": 35
+    },
+    {
+      "episode_id": "pilot_88e1459ca56b",
+      "source_video": "data/raw/pilot/7c8ce83fac51bf89c4075ae95d99d7c4.mp4",
+      "source_sha256": "88e1459ca56bb8d115693e62d2c737e7d7058fe627c2055b44a6e4d17e842a86",
+      "labels_sha256": "3012baf7ec768a8b3dd7630d95a4ac2f529b1e4786d80e6e24b3fc42a045b727",
+      "sample_stride": 5,
+      "exported_frames": 28
+    },
+    {
+      "episode_id": "pilot_738fca5dd5fe",
+      "source_video": "data/raw/pilot/878c0fc6b4dc2df2a699fdb493bfb76d.mp4",
+      "source_sha256": "738fca5dd5fee38c3082e96fa58929a3ff4aaca4bfaf28a00df39c964f618775",
+      "labels_sha256": "a4c11e3f66e906ca7287817d0af9402e97ad795317767d8917471f768c6ce6c3",
+      "sample_stride": 5,
+      "exported_frames": 24
+    },
+    {
+      "episode_id": "pilot_81483695ce19",
+      "source_video": "data/raw/pilot/8d3c7d5b823bdb9476d8d6aac4ce56bd.mp4",
+      "source_sha256": "81483695ce191b6baa6149d2d770d711bc83d73fe04d96aa919c8778a6d6a5af",
+      "labels_sha256": "53a536741a985dcda596bcab2314b8b9d17bc43b6c371df67f3c3409a66389c6",
+      "sample_stride": 5,
+      "exported_frames": 33
+    },
+    {
+      "episode_id": "pilot_dbff39bd344b",
+      "source_video": "data/raw/pilot/973701c668b25a8098bc73a5369e978f.mp4",
+      "source_sha256": "dbff39bd344b087dac1ac3f57e92fe71ff7044ffa9bbf7201821c728d08e2aae",
+      "labels_sha256": "0e2faae62b10eb38b7b0715ea8db47e72f467e25481ab480c125082d7d191344",
+      "sample_stride": 5,
+      "exported_frames": 34
+    },
+    {
+      "episode_id": "pilot_8ffaddf69ca6",
+      "source_video": "data/raw/pilot/9c6679c3eb2fc1dc6dac4bb0978018ea.mp4",
+      "source_sha256": "8ffaddf69ca6040d116b0d0d7f488ae405b37716e7bf2976ec0bf31698641b2d",
+      "labels_sha256": "958157e6f58489da153ac1d6b92a032e49c7abb8b9deab9496fc1985cc25b695",
+      "sample_stride": 5,
+      "exported_frames": 36
+    },
+    {
+      "episode_id": "pilot_6f9ba1c96ca3",
+      "source_video": "data/raw/pilot/b99a203d08bad9c18cfd0b62b22b9291.mp4",
+      "source_sha256": "6f9ba1c96ca35903897465634f99b323b635afbde21c3db04e5c7b0f229b1901",
+      "labels_sha256": "61c0d2aac5ee147efe28dfdf17ea090c9421a9ababb821df3a2df51b4a4cde50",
+      "sample_stride": 5,
+      "exported_frames": 37
+    },
+    {
+      "episode_id": "pilot_782a0f67a0fa",
+      "source_video": "data/raw/pilot/d1969439ec5e66b0e881345687f67e96.mp4",
+      "source_sha256": "782a0f67a0fafb62f942b1981d2fe7376729b87452d949ad9d04ba2cda19fba0",
+      "labels_sha256": "d06796554bda77aaed4867a991568ef5c0c0699c9bd2d416b3b1722ef08222f5",
+      "sample_stride": 5,
+      "exported_frames": 38
+    },
+    {
+      "episode_id": "pilot_f3d45d8bca66",
+      "source_video": "data/raw/pilot/d5d6458336fc5a2034c996d92fdf1db5.mp4",
+      "source_sha256": "f3d45d8bca66ffd56d6cce419dfce6eca86b1edccd5d0044eb1ae1f58bd09196",
+      "labels_sha256": "c18c72ea1575dc104ba35e09980bf463230fdc0db48d2433f2a243da51be267a",
+      "sample_stride": 5,
+      "exported_frames": 62
+    }
+  ],
+  "partition": "all 12 whole episodes in development family; no real held-out generalization claim",
+  "object_target_semantics": "normalized center and extent of visible dark RGB component; not amodal or 3D ground truth",
+  "object_valid_samples": 398,
+  "hand_valid_samples": 223,
+  "hand_target_semantics": "single detected hand 21 normalized xy landmarks; mask is inside-image validity, not confidence",
+  "common_rgb_preprocessing": "same full raw frame resized 224x224 for every A/B/C/D group, no object crop or annotated overlays",
+  "missing_labels": "image always retained; auxiliary loss masked independently",
+  "npz_sha256": "47509e28e150f8fa1227d891235b4ce55f9ea731e8090ed9bffdedf2209980e6",
+  "label_report_sha256": "39a22d1ac51414d8cc6a425b986a5284ef10d909cdca38e064bbf1b27858a838",
+  "review_decision_sha256": "f34468b1f01cc57e70f905d9a8255bc79b065669f8405bf7481eb9fb79326a06",
+  "duplicate_directory_excluded": "data/raw/pilot_originals",
+  "formal_training_quality_validated": false
+}

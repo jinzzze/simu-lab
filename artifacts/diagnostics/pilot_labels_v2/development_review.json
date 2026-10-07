@@ -1,0 +1,180 @@
+{
+  "created_utc": "2026-10-06T10:49:01Z",
+  "approved_use": "exploratory_development_pretraining",
+  "reviewer": "assistant visual inspection; not human ground-truth annotation",
+  "inspected_all_12_contact_sheets": true,
+  "regular_frames_inspected": 96,
+  "extra_uncertain_sheets_inspected": [
+    "65e9623a9250a178c285cd0411298d54",
+    "d5d6458336fc5a2034c996d92fdf1db5"
+  ],
+  "findings": [
+    "Reviewed accepted boxes cover the visible black block; no black-line or ArUco false object seen in the 96 regular review frames.",
+    "Labels near boundary overlap, substantial shape change or reference uncertainty are suppressed; RGB retained.",
+    "Hand landmarks appear on visible hands in reviewed frames, but no per-joint annotation accuracy was measured."
+  ],
+  "limitations": [
+    "Sparse visual audit is not dense box/keypoint ground truth or calibrated accuracy.",
+    "Object target is visible dark component bounding box, not hidden object center or 3D pose.",
+    "All this data is development; formal real-data generalization evaluation remains unavailable."
+  ],
+  "formal_training_quality_certified": false,
+  "episodes": [
+    {
+      "source": "data/raw/pilot/5d81c4e3767ab92cd6898978b3330c6e.mp4",
+      "frames": [
+        0,
+        30,
+        59,
+        89,
+        119,
+        149,
+        178,
+        208
+      ]
+    },
+    {
+      "source": "data/raw/pilot/619481ad2df077adff353cb4ced816b5.mp4",
+      "frames": [
+        0,
+        22,
+        44,
+        66,
+        89,
+        111,
+        133,
+        155
+      ]
+    },
+    {
+      "source": "data/raw/pilot/65e9623a9250a178c285cd0411298d54.mp4",
+      "frames": [
+        0,
+        26,
+        52,
+        78,
+        103,
+        129,
+        155,
+        181
+      ]
+    },
+    {
+      "source": "data/raw/pilot/7612dcc78727731b2c3fee6aff5933e9.mp4",
+      "frames": [
+        0,
+        24,
+        49,
+        73,
+        97,
+        121,
+        146,
+        170
+      ]
+    },
+    {
+      "source": "data/raw/pilot/7c8ce83fac51bf89c4075ae95d99d7c4.mp4",
+      "frames": [
+        0,
+        20,
+        39,
+        59,
+        78,
+        98,
+        117,
+        137
+      ]
+    },
+    {
+      "source": "data/raw/pilot/878c0fc6b4dc2df2a699fdb493bfb76d.mp4",
+      "frames": [
+        0,
+        17,
+        34,
+        51,
+        67,
+        84,
+        101,
+        118
+      ]
+    },
+    {
+      "source": "data/raw/pilot/8d3c7d5b823bdb9476d8d6aac4ce56bd.mp4",
+      "frames": [
+        0,
+        23,
+        46,
+        69,
+        92,
+        115,
+        138,
+        161
+      ]
+    },
+    {
+      "source": "data/raw/pilot/973701c668b25a8098bc73a5369e978f.mp4",
+      "frames": [
+        0,
+        24,
+        47,
+        71,
+        95,
+        119,
+        142,
+        166
+      ]
+    },
+    {
+      "source": "data/raw/pilot/9c6679c3eb2fc1dc6dac4bb0978018ea.mp4",
+      "frames": [
+        0,
+        26,
+        51,
+        77,
+        102,
+        128,
+        153,
+        179
+      ]
+    },
+    {
+      "source": "data/raw/pilot/b99a203d08bad9c18cfd0b62b22b9291.mp4",
+      "frames": [
+        0,
+        26,
+        52,
+        78,
+        104,
+        130,
+        156,
+        182
+      ]
+    },
+    {
+      "source": "data/raw/pilot/d1969439ec5e66b0e881345687f67e96.mp4",
+      "frames": [
+        0,
+        27,
+        54,
+        81,
+        107,
+        134,
+        161,
+        188
+      ]
+    },
+    {
+      "source": "data/raw/pilot/d5d6458336fc5a2034c996d92fdf1db5.mp4",
+      "frames": [
+        0,
+        44,
+        87,
+        131,
+        174,
+        218,
+        261,
+        305
+      ]
+    }
+  ]
+}

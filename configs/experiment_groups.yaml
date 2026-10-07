@@ -1,0 +1,12 @@
+# Loss switches only; no group-specific data or controller overrides.
+protocol_version: 0.3
+deployment_object_state: predicted_from_rgb
+shared_controller: true
+controller_backend: fixed_physical_grasp_state_machine
+shared_world_model: false
+world_model_status: historical_push_design_not_implemented_for_grasp
+groups:
+  A: {object_supervision: false, hand_supervision: false}
+  B: {object_supervision: true, hand_supervision: false}
+  C: {object_supervision: false, hand_supervision: true}
+  D: {object_supervision: true, hand_supervision: true}

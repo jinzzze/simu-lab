@@ -1,0 +1,111 @@
+{
+  "status": "passed",
+  "created_utc": "2026-10-07T09:40:36.768627+00:00",
+  "scope": "Clean package installation on the same Windows computer; not another-machine verification or full retraining",
+  "environment": "work/clean_env_v1",
+  "installation": "fresh conda prefix from explicit cached package builds; fresh pip installs from cached wheels, no site-packages clone",
+  "pip_check_passed": true,
+  "test_count": 39,
+  "suites": [
+    {
+      "suite": "test_diffusion_policy.py",
+      "returncode": 0,
+      "seconds": 13.645892200060189
+    },
+    {
+      "suite": "test_grasp_sim.py",
+      "returncode": 0,
+      "seconds": 9.654332099948078
+    },
+    {
+      "suite": "test_pilot_labels.py",
+      "returncode": 0,
+      "seconds": 1.6606285999296233
+    },
+    {
+      "suite": "test_policy_environment.py",
+      "returncode": 0,
+      "seconds": 2.445404600002803
+    },
+    {
+      "suite": "test_predictor_process.py",
+      "returncode": 0,
+      "seconds": 20.15893229993526
+    },
+    {
+      "suite": "test_visual_losses.py",
+      "returncode": 0,
+      "seconds": 7.969813099945895
+    },
+    {
+      "suite": "test_world_model_integrity.py",
+      "returncode": 0,
+      "seconds": 0.976782500045374
+    }
+  ],
+  "environment_checks_passed": true,
+  "fixed_controller_smoke": {
+    "group": "D",
+    "training_seed": 7,
+    "scene_seeds": [
+      30000
+    ],
+    "checkpoint_sha256": "0ff69564b60ddffa241e8ba392a70ce29845c635e4df3431353e4e69143e9f03",
+    "sim_config_sha256": "fa30186703956bf40afbf42df3b8c2a29f4263419316b911a04c158e5cc1c9fa",
+    "sim_code_sha256": "103d93e2d444ec6fae7db2ef27e65ca80118a17ac02e162192adbd13e76f5a1a",
+    "n": 1,
+    "successes": 1,
+    "success_rate": 1.0,
+    "xy_mean_error_mm": 0.3299038052190172,
+    "xy_median_error_mm": 0.3299038052190172,
+    "xy_p90_error_mm": 0.3299038052190172,
+    "scope": "exploratory pilot-trained visual grasp evaluation; not final multi-session real-data evidence",
+    "demo_is_first_scene_not_best_scene": true
+  },
+  "full_training_repeated": false,
+  "additional_path_tests": {
+    "passed": 2,
+    "xml": "artifacts/diagnostics/clean_install_v1/artifact_paths.xml"
+  },
+  "relocated_copy_validation": {
+    "initial_file_hash_check_passed": true,
+    "initial_checked_files": 1052,
+    "reports_recomputed": [
+      "primary",
+      "reference",
+      "low32",
+      "diffusion_policy",
+      "world_model",
+      "combined_html"
+    ],
+    "comparisons": {
+      "primary_group_metrics_exact": true,
+      "imagenet_reference.json": {
+        "reference": true,
+        "comparisons": true
+      },
+      "low32_results.json": {
+        "groups": true
+      },
+      "dp_aggregate_exact": true,
+      "world_model_evaluations_exact": true,
+      "dp_smoke_command_arrays_exact": true
+    },
+    "dp_seed7_scene30000_success": true,
+    "portability_fix": "Compare frozen source-project relative checkpoint identity plus SHA256; do not require the original absolute installation path."
+  },
+  "fresh_world_model_training_chain": {
+    "passed": true,
+    "seeds": [
+      41,
+      43,
+      47
+    ],
+    "steps_per_seed": 2000,
+    "scope": "separate implementation verification; original saved study not overwritten",
+    "test_metrics_equal_to_original": true,
+    "xy_mean_error_mm": 28.410694122314453
+  },
+  "html_visual_browser_check": "Not performed: browser security policy blocked file:// navigation. Local link checks and static video frame inspection completed; no workaround attempted.",
+  "github_creation": "Not performed: browser returned GitHub sign-in page; no credentials entered."
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "suite": "test_diffusion_policy.py",
+    "returncode": 0,
+    "seconds": 13.645892200060189
+  },
+  {
+    "suite": "test_grasp_sim.py",
+    "returncode": 0,
+    "seconds": 9.654332099948078
+  },
+  {
+    "suite": "test_pilot_labels.py",
+    "returncode": 0,
+    "seconds": 1.6606285999296233
+  },
+  {
+    "suite": "test_policy_environment.py",
+    "returncode": 0,
+    "seconds": 2.445404600002803
+  },
+  {
+    "suite": "test_predictor_process.py",
+    "returncode": 0,
+    "seconds": 20.15893229993526
+  },
+  {
+    "suite": "test_visual_losses.py",
+    "returncode": 0,
+    "seconds": 7.969813099945895
+  },
+  {
+    "suite": "test_world_model_integrity.py",
+    "returncode": 0,
+    "seconds": 0.976782500045374
+  }
+]

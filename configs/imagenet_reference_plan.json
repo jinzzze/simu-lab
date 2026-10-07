@@ -1,0 +1,14 @@
+{
+  "version": "imagenet-reference-v1",
+  "scope": "Additional exploratory diagnostic, added after some primary localization metrics were visible; not a preregistered confirmatory comparison",
+  "question": "Does personal-video pretraining add value over the same ImageNet initialization alone?",
+  "group": "R",
+  "training_seeds": [7, 17, 27],
+  "real_video_frames": 0,
+  "real_pretraining_steps": 0,
+  "adaptation": "identical to the fixed primary adaptation config: 256 scenes, 300 steps, batch 16",
+  "test_scene_seeds": "same 30000 through 30063 as primary; reused development test, not new untouched evidence",
+  "controller": "unchanged shared physical grasp state machine",
+  "selection": "all three final fixed-budget checkpoints; report regardless of outcome",
+  "primary_ABCD_protocol_changed": false
+}

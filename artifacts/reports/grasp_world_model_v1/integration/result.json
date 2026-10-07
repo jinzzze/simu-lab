@@ -1,0 +1,80 @@
+{
+  "scene_seed": 43000,
+  "state_estimate_xy_m": [
+    -0.08905583620071411,
+    0.05192261561751366
+  ],
+  "command_xy_m": [
+    -0.08905583620071411,
+    0.05192261561751366
+  ],
+  "world_model_prediction": {
+    "delta_xy_m": [
+      0.18841136991977692,
+      -0.06220794469118118
+    ],
+    "final_xy_m": [
+      0.0993555337190628,
+      -0.010285329073667526
+    ],
+    "lift_probability": 0.9992998242378235,
+    "success_probability": 0.9992260932922363
+  },
+  "rgb_sha256": "e2ca7ffbd580ecafcc41ed191e439a2d67646add21b6d2b452470d9ad64de561",
+  "visual_checkpoint_sha256": "0ff69564b60ddffa241e8ba392a70ce29845c635e4df3431353e4e69143e9f03",
+  "world_model_sha256": "486178915c723fb1da34ea2c24d98a59b1c02bbe3ed2703a3fd597347e2dab5a",
+  "ground_truth_supplied_to_model": false,
+  "recorded_before_action_execution": true,
+  "actual_outcome": {
+    "success": true,
+    "seed": 43000,
+    "estimated_xy_m": [
+      -0.08905583620071411,
+      0.05192261561751366
+    ],
+    "final_object_xyz_m": [
+      0.09976203484428037,
+      -0.010882986993621042,
+      0.00498983549861898
+    ],
+    "max_clearance_m": 0.11262517866731069,
+    "max_lift_duration_s": 3.5200000000000022,
+    "final_stable_duration_s": 1.4000000000000006,
+    "lifted": true,
+    "final_flags": {
+      "fully_right": true,
+      "in_workspace": true,
+      "on_table": true,
+      "upright": true,
+      "slow": true,
+      "released": true,
+      "withdrawn": true
+    },
+    "stages_reached": {
+      "approach": true,
+      "descend": true,
+      "close": true,
+      "lift": true,
+      "transport": true,
+      "place": true,
+      "release": true,
+      "withdraw": true
+    },
+    "simulated_duration_s": 9.6,
+    "diagnostic_ground_truth_only": true,
+    "object_attached_or_teleported": false
+  },
+  "actual_initial_xy_m": [
+    -0.08863628227942538,
+    0.05019836736643079
+  ],
+  "actual_final_xy_m": [
+    0.09976203484428037,
+    -0.010882986993621042
+  ],
+  "initial_visual_error_mm": 1.7745584025979748,
+  "final_world_model_error_mm": 0.7227988337610315,
+  "scope": "one preselected integration example; no policy improvement or calibration claim",
+  "source_sha256": "1477104166eb8e6a35161607c9488127dc8894f1908ab608c3f6e9b51432fbdd",
+  "decoded_video_frames": 121
+}

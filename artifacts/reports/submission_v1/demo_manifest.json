@@ -1,0 +1,89 @@
+{
+  "duration_seconds": 112,
+  "fps": 20,
+  "decoded_frames": 2240,
+  "all_frames_decoded": true,
+  "audio": "none; English captions",
+  "footage_speed": "original; final frame held when segment exceeds source length",
+  "selection": "first canonical real clip, preselected first simulation scenes and first seed7 failure; not best-of",
+  "sha256": "4ec91bd577309adabe454fda2e194e8734efd03075561852d9f3579656517e68",
+  "segments": [
+    {
+      "start_seconds": 0,
+      "duration_seconds": 7,
+      "kind": "card",
+      "title": "Can hand and object labels help?",
+      "source": null
+    },
+    {
+      "start_seconds": 7,
+      "duration_seconds": 9,
+      "kind": "video",
+      "title": "Personally recorded development data",
+      "source": "data/raw/pilot/5d81c4e3767ab92cd6898978b3330c6e.mp4"
+    },
+    {
+      "start_seconds": 16,
+      "duration_seconds": 9,
+      "kind": "card",
+      "title": "A shared experiment, four losses",
+      "source": null
+    },
+    {
+      "start_seconds": 25,
+      "duration_seconds": 10,
+      "kind": "video",
+      "title": "Physical grasping in PyBullet",
+      "source": "artifacts/reports/visual_ablation_v1/first_scene_comparison.mp4"
+    },
+    {
+      "start_seconds": 35,
+      "duration_seconds": 12,
+      "kind": "card",
+      "title": "The combined labels did not improve success",
+      "source": null
+    },
+    {
+      "start_seconds": 47,
+      "duration_seconds": 10,
+      "kind": "video",
+      "title": "Action-conditioned macro-outcome model",
+      "source": "artifacts/reports/grasp_world_model_v1/integration/rgb_world_model_demo.mp4"
+    },
+    {
+      "start_seconds": 57,
+      "duration_seconds": 9,
+      "kind": "card",
+      "title": "World-model prediction, not planning",
+      "source": null
+    },
+    {
+      "start_seconds": 66,
+      "duration_seconds": 13,
+      "kind": "video",
+      "title": "Compact Diffusion Policy: learned commands",
+      "source": "artifacts/runs/diffusion_policy_grasp_v1/DP_seed7/first_scene_demo.mp4"
+    },
+    {
+      "start_seconds": 79,
+      "duration_seconds": 13,
+      "kind": "video",
+      "title": "Failure evidence is retained",
+      "source": "artifacts/reports/diffusion_policy_v1/failure_review/DP_seed7_scene30001/failure_demo.mp4"
+    },
+    {
+      "start_seconds": 92,
+      "duration_seconds": 10,
+      "kind": "card",
+      "title": "DP-D: 84/192 strict successes",
+      "source": null
+    },
+    {
+      "start_seconds": 102,
+      "duration_seconds": 10,
+      "kind": "card",
+      "title": "Scope and reproducibility",
+      "source": null
+    }
+  ]
+}

@@ -1,0 +1,974 @@
+[
+  {
+    "data_path": "E:\\HumanoidRobotLearning\\data\\processed\\sim_adaptation_v1.npz",
+    "data_sha256": "48ff653f12d20a8550f1bb9ba95cc24679756d8be8ac2e51f88cb8a76a1a20ab",
+    "code_sha256": {
+      "src\\perception\\__init__.py": "fac602379e482e251ddd71dbf67bf200024de7bcc175024df8f81725b13bbb79",
+      "src\\perception\\losses.py": "987c2a687e8fe5675acc337f7a0991d8204df059e397776a0390a0b9b823c053",
+      "src\\perception\\models.py": "c090cb35d05b5fc3dd3dc033575c0cc57c3d6ab0e98afdc241ba15fdda6e6d55",
+      "src\\perception\\training.py": "2534ad37f7a1a563897f0b47739b1121097a5eb2ef3e676034ea9776ef27f40d",
+      "scripts\\train_visual_ablation.py": "8f9b34eff5562d3a79d8bd3e84194da06bfb2d2349b610e12da142190bf7ba1d",
+      "scripts\\adapt_visual_state.py": "e5fd11b0d19822360dd1c388ce6090628cbc8408d6d34623c0434ce635bbe565"
+    },
+    "config": {
+      "steps": 300,
+      "batch_size": 16,
+      "learning_rate": 0.0001,
+      "weight_decay": 0.0001,
+      "photometric_strength": 0.05,
+      "encoder_finetune": true,
+      "xy_head": "layer4 512x7x7 -> conv1x1 32 -> flatten -> linear128 -> XY",
+      "checkpoint_rule": "last fixed-budget step; test metrics evaluated only after training",
+      "prediction": "current object world XY metres from full RGB; no airborne Z or yaw"
+    },
+    "torch": "2.10.0+cu126",
+    "numpy": "1.26.4",
+    "cuda": "12.6",
+    "gpu": "NVIDIA GeForce RTX 3080 Ti Laptop GPU",
+    "kind": "visual_state_xy_v1",
+    "group": "A",
+    "seed": 7,
+    "pretraining_path": "E:\\HumanoidRobotLearning\\artifacts\\runs\\visual_pretraining_v1\\A_seed7\\checkpoint.pt",
+    "pretraining_sha256": "90abd46d8fba8a26476a5541de9ecfc4e21a8b32b9a1056985a42df245c60e8d",
+    "head_initial_sha256": "6f86303f0de666704c392c1bcb2f62753fc593a86ee800b4243dd0e17ad6bbaa",
+    "target_mean": [
+      -0.06925497949123383,
+      0.0002588987408671528
+    ],
+    "target_scale": [
+      0.018071798607707024,
+      0.032919321209192276
+    ],
+    "selection": "fixed final step; no best-checkpoint selection",
+    "runtime_inputs": "RGB only; no simulator object state",
+    "output": "XY metres",
+    "train_frames": 256,
+    "status": "completed",
+    "elapsed_seconds": 44.31375490000937,
+    "batch_sequence_sha256": "62d811c6d5248290e1bbded50bbaf344105edce443d007f2103b8ebfe3a38834",
+    "augmentation_final_rng_sha256": "095bb94dac89d638fad1e2346e40b8704b11658997871c0e38d9f7af972706b1",
+    "steps_completed": 300,
+    "final_training_loss": {
+      "step": 300,
+      "xy_scaled_smooth_l1": 0.00333177438005805,
+      "grad_norm": 0.6716198325157166
+    },
+    "metrics": {
+      "train": {
+        "n_frames": 256,
+        "n_scenes": 256,
+        "xy_mean_error_mm": 1.4312604665756226,
+        "xy_median_error_mm": 1.3023936748504639,
+        "xy_p90_error_mm": 2.341914415359497,
+        "xy_rmse_mm": 1.6037944005802274
+      },
+      "val": {
+        "n_frames": 64,
+        "n_scenes": 64,
+        "xy_mean_error_mm": 1.6689856052398682,
+        "xy_median_error_mm": 1.5981924533843994,
+        "xy_p90_error_mm": 3.1534706115722657,
+        "xy_rmse_mm": 1.9124014070257545
+      },
+      "test": {
+        "n_frames": 64,
+        "n_scenes": 64,
+        "xy_mean_error_mm": 1.4582171440124512,
+        "xy_median_error_mm": 1.3490452766418457,
+        "xy_p90_error_mm": 2.611440181732178,
+        "xy_rmse_mm": 1.6458570025861263
+      }
+    }
+  },
+  {
+    "data_path": "E:\\HumanoidRobotLearning\\data\\processed\\sim_adaptation_v1.npz",
+    "data_sha256": "48ff653f12d20a8550f1bb9ba95cc24679756d8be8ac2e51f88cb8a76a1a20ab",
+    "code_sha256": {
+      "src\\perception\\__init__.py": "fac602379e482e251ddd71dbf67bf200024de7bcc175024df8f81725b13bbb79",
+      "src\\perception\\losses.py": "987c2a687e8fe5675acc337f7a0991d8204df059e397776a0390a0b9b823c053",
+      "src\\perception\\models.py": "c090cb35d05b5fc3dd3dc033575c0cc57c3d6ab0e98afdc241ba15fdda6e6d55",
+      "src\\perception\\training.py": "2534ad37f7a1a563897f0b47739b1121097a5eb2ef3e676034ea9776ef27f40d",
+      "scripts\\train_visual_ablation.py": "8f9b34eff5562d3a79d8bd3e84194da06bfb2d2349b610e12da142190bf7ba1d",
+      "scripts\\adapt_visual_state.py": "e5fd11b0d19822360dd1c388ce6090628cbc8408d6d34623c0434ce635bbe565"
+    },
+    "config": {
+      "steps": 300,
+      "batch_size": 16,
+      "learning_rate": 0.0001,
+      "weight_decay": 0.0001,
+      "photometric_strength": 0.05,
+      "encoder_finetune": true,
+      "xy_head": "layer4 512x7x7 -> conv1x1 32 -> flatten -> linear128 -> XY",
+      "checkpoint_rule": "last fixed-budget step; test metrics evaluated only after training",
+      "prediction": "current object world XY metres from full RGB; no airborne Z or yaw"
+    },
+    "torch": "2.10.0+cu126",
+    "numpy": "1.26.4",
+    "cuda": "12.6",
+    "gpu": "NVIDIA GeForce RTX 3080 Ti Laptop GPU",
+    "kind": "visual_state_xy_v1",
+    "group": "B",
+    "seed": 7,
+    "pretraining_path": "E:\\HumanoidRobotLearning\\artifacts\\runs\\visual_pretraining_v1\\B_seed7\\checkpoint.pt",
+    "pretraining_sha256": "dedc673d728227a70f3d510314696fb46d65e7af146d2c7c09adb2ba7e996339",
+    "head_initial_sha256": "6f86303f0de666704c392c1bcb2f62753fc593a86ee800b4243dd0e17ad6bbaa",
+    "target_mean": [
+      -0.06925497949123383,
+      0.0002588987408671528
+    ],
+    "target_scale": [
+      0.018071798607707024,
+      0.032919321209192276
+    ],
+    "selection": "fixed final step; no best-checkpoint selection",
+    "runtime_inputs": "RGB only; no simulator object state",
+    "output": "XY metres",
+    "train_frames": 256,
+    "status": "completed",
+    "elapsed_seconds": 43.880050299922004,
+    "batch_sequence_sha256": "62d811c6d5248290e1bbded50bbaf344105edce443d007f2103b8ebfe3a38834",
+    "augmentation_final_rng_sha256": "095bb94dac89d638fad1e2346e40b8704b11658997871c0e38d9f7af972706b1",
+    "steps_completed": 300,
+    "final_training_loss": {
+      "step": 300,
+      "xy_scaled_smooth_l1": 0.002824078779667616,
+      "grad_norm": 0.6215893626213074
+    },
+    "metrics": {
+      "train": {
+        "n_frames": 256,
+        "n_scenes": 256,
+        "xy_mean_error_mm": 1.2036343812942505,
+        "xy_median_error_mm": 1.1480529308319092,
+        "xy_p90_error_mm": 1.9667627215385437,
+        "xy_rmse_mm": 1.3324014144018292
+      },
+      "val": {
+        "n_frames": 64,
+        "n_scenes": 64,
+        "xy_mean_error_mm": 1.5504610538482666,
+        "xy_median_error_mm": 1.5065805912017822,
+        "xy_p90_error_mm": 2.457305788993836,
+        "xy_rmse_mm": 1.7476348439231515
+      },
+      "test": {
+        "n_frames": 64,
+        "n_scenes": 64,
+        "xy_mean_error_mm": 1.5277605056762695,
+        "xy_median_error_mm": 1.5270977020263672,
+        "xy_p90_error_mm": 2.439084315299988,
+        "xy_rmse_mm": 1.6893561696633697
+      }
+    }
+  },
+  {
+    "data_path": "E:\\HumanoidRobotLearning\\data\\processed\\sim_adaptation_v1.npz",
+    "data_sha256": "48ff653f12d20a8550f1bb9ba95cc24679756d8be8ac2e51f88cb8a76a1a20ab",
+    "code_sha256": {
+      "src\\perception\\__init__.py": "fac602379e482e251ddd71dbf67bf200024de7bcc175024df8f81725b13bbb79",
+      "src\\perception\\losses.py": "987c2a687e8fe5675acc337f7a0991d8204df059e397776a0390a0b9b823c053",
+      "src\\perception\\models.py": "c090cb35d05b5fc3dd3dc033575c0cc57c3d6ab0e98afdc241ba15fdda6e6d55",
+      "src\\perception\\training.py": "2534ad37f7a1a563897f0b47739b1121097a5eb2ef3e676034ea9776ef27f40d",
+      "scripts\\train_visual_ablation.py": "8f9b34eff5562d3a79d8bd3e84194da06bfb2d2349b610e12da142190bf7ba1d",
+      "scripts\\adapt_visual_state.py": "e5fd11b0d19822360dd1c388ce6090628cbc8408d6d34623c0434ce635bbe565"
+    },
+    "config": {
+      "steps": 300,
+      "batch_size": 16,
+      "learning_rate": 0.0001,
+      "weight_decay": 0.0001,
+      "photometric_strength": 0.05,
+      "encoder_finetune": true,
+      "xy_head": "layer4 512x7x7 -> conv1x1 32 -> flatten -> linear128 -> XY",
+      "checkpoint_rule": "last fixed-budget step; test metrics evaluated only after training",
+      "prediction": "current object world XY metres from full RGB; no airborne Z or yaw"
+    },
+    "torch": "2.10.0+cu126",
+    "numpy": "1.26.4",
+    "cuda": "12.6",
+    "gpu": "NVIDIA GeForce RTX 3080 Ti Laptop GPU",
+    "kind": "visual_state_xy_v1",
+    "group": "C",
+    "seed": 7,
+    "pretraining_path": "E:\\HumanoidRobotLearning\\artifacts\\runs\\visual_pretraining_v1\\C_seed7\\checkpoint.pt",
+    "pretraining_sha256": "03ed2142d81edd114e51e37701b6b9cb72c2ee7e7da67df60fedf8e65e8079e8",
+    "head_initial_sha256": "6f86303f0de666704c392c1bcb2f62753fc593a86ee800b4243dd0e17ad6bbaa",
+    "target_mean": [
+      -0.06925497949123383,
+      0.0002588987408671528
+    ],
+    "target_scale": [
+      0.018071798607707024,
+      0.032919321209192276
+    ],
+    "selection": "fixed final step; no best-checkpoint selection",
+    "runtime_inputs": "RGB only; no simulator object state",
+    "output": "XY metres",
+    "train_frames": 256,
+    "status": "completed",
+    "elapsed_seconds": 43.5697067999281,
+    "batch_sequence_sha256": "62d811c6d5248290e1bbded50bbaf344105edce443d007f2103b8ebfe3a38834",
+    "augmentation_final_rng_sha256": "095bb94dac89d638fad1e2346e40b8704b11658997871c0e38d9f7af972706b1",
+    "steps_completed": 300,
+    "final_training_loss": {
+      "step": 300,
+      "xy_scaled_smooth_l1": 0.002874702215194702,
+      "grad_norm": 0.5659529566764832
+    },
+    "metrics": {
+      "train": {
+        "n_frames": 256,
+        "n_scenes": 256,
+        "xy_mean_error_mm": 1.3131672143936157,
+        "xy_median_error_mm": 1.2812196016311646,
+        "xy_p90_error_mm": 2.2289012670516968,
+        "xy_rmse_mm": 1.459305640310049
+      },
+      "val": {
+        "n_frames": 64,
+        "n_scenes": 64,
+        "xy_mean_error_mm": 1.4250433444976807,
+        "xy_median_error_mm": 1.4220175743103027,
+        "xy_p90_error_mm": 2.3218073129653933,
+        "xy_rmse_mm": 1.5678770141676068
+      },
+      "test": {
+        "n_frames": 64,
+        "n_scenes": 64,
+        "xy_mean_error_mm": 1.4790557622909546,
+        "xy_median_error_mm": 1.314099907875061,
+        "xy_p90_error_mm": 2.68397068977356,
+        "xy_rmse_mm": 1.7146621830761433
+      }
+    }
+  },
+  {
+    "data_path": "E:\\HumanoidRobotLearning\\data\\processed\\sim_adaptation_v1.npz",
+    "data_sha256": "48ff653f12d20a8550f1bb9ba95cc24679756d8be8ac2e51f88cb8a76a1a20ab",
+    "code_sha256": {
+      "src\\perception\\__init__.py": "fac602379e482e251ddd71dbf67bf200024de7bcc175024df8f81725b13bbb79",
+      "src\\perception\\losses.py": "987c2a687e8fe5675acc337f7a0991d8204df059e397776a0390a0b9b823c053",
+      "src\\perception\\models.py": "c090cb35d05b5fc3dd3dc033575c0cc57c3d6ab0e98afdc241ba15fdda6e6d55",
+      "src\\perception\\training.py": "2534ad37f7a1a563897f0b47739b1121097a5eb2ef3e676034ea9776ef27f40d",
+      "scripts\\train_visual_ablation.py": "8f9b34eff5562d3a79d8bd3e84194da06bfb2d2349b610e12da142190bf7ba1d",
+      "scripts\\adapt_visual_state.py": "e5fd11b0d19822360dd1c388ce6090628cbc8408d6d34623c0434ce635bbe565"
+    },
+    "config": {
+      "steps": 300,
+      "batch_size": 16,
+      "learning_rate": 0.0001,
+      "weight_decay": 0.0001,
+      "photometric_strength": 0.05,
+      "encoder_finetune": true,
+      "xy_head": "layer4 512x7x7 -> conv1x1 32 -> flatten -> linear128 -> XY",
+      "checkpoint_rule": "last fixed-budget step; test metrics evaluated only after training",
+      "prediction": "current object world XY metres from full RGB; no airborne Z or yaw"
+    },
+    "torch": "2.10.0+cu126",
+    "numpy": "1.26.4",
+    "cuda": "12.6",
+    "gpu": "NVIDIA GeForce RTX 3080 Ti Laptop GPU",
+    "kind": "visual_state_xy_v1",
+    "group": "D",
+    "seed": 7,
+    "pretraining_path": "E:\\HumanoidRobotLearning\\artifacts\\runs\\visual_pretraining_v1\\D_seed7\\checkpoint.pt",
+    "pretraining_sha256": "27a37103f02ccb4772aab4795bc187c8a2bbdeaa47069f3d2017d5ead1b16fb1",
+    "head_initial_sha256": "6f86303f0de666704c392c1bcb2f62753fc593a86ee800b4243dd0e17ad6bbaa",
+    "target_mean": [
+      -0.06925497949123383,
+      0.0002588987408671528
+    ],
+    "target_scale": [
+      0.018071798607707024,
+      0.032919321209192276
+    ],
+    "selection": "fixed final step; no best-checkpoint selection",
+    "runtime_inputs": "RGB only; no simulator object state",
+    "output": "XY metres",
+    "train_frames": 256,
+    "status": "completed",
+    "elapsed_seconds": 43.594977600034326,
+    "batch_sequence_sha256": "62d811c6d5248290e1bbded50bbaf344105edce443d007f2103b8ebfe3a38834",
+    "augmentation_final_rng_sha256": "095bb94dac89d638fad1e2346e40b8704b11658997871c0e38d9f7af972706b1",
+    "steps_completed": 300,
+    "final_training_loss": {
+      "step": 300,
+      "xy_scaled_smooth_l1": 0.0023321129847317934,
+      "grad_norm": 0.46088969707489014
+    },
+    "metrics": {
+      "train": {
+        "n_frames": 256,
+        "n_scenes": 256,
+        "xy_mean_error_mm": 1.2118366956710815,
+        "xy_median_error_mm": 1.1931867599487305,
+        "xy_p90_error_mm": 1.9334051609039307,
+        "xy_rmse_mm": 1.345582539215684
+      },
+      "val": {
+        "n_frames": 64,
+        "n_scenes": 64,
+        "xy_mean_error_mm": 1.419623851776123,
+        "xy_median_error_mm": 1.3101577758789062,
+        "xy_p90_error_mm": 2.3803939104080203,
+        "xy_rmse_mm": 1.614233711734414
+      },
+      "test": {
+        "n_frames": 64,
+        "n_scenes": 64,
+        "xy_mean_error_mm": 1.3387260437011719,
+        "xy_median_error_mm": 1.2354576587677002,
+        "xy_p90_error_mm": 2.31459710597992,
+        "xy_rmse_mm": 1.4767267275601625
+      }
+    }
+  },
+  {
+    "data_path": "E:\\HumanoidRobotLearning\\data\\processed\\sim_adaptation_v1.npz",
+    "data_sha256": "48ff653f12d20a8550f1bb9ba95cc24679756d8be8ac2e51f88cb8a76a1a20ab",
+    "code_sha256": {
+      "src\\perception\\__init__.py": "fac602379e482e251ddd71dbf67bf200024de7bcc175024df8f81725b13bbb79",
+      "src\\perception\\losses.py": "987c2a687e8fe5675acc337f7a0991d8204df059e397776a0390a0b9b823c053",
+      "src\\perception\\models.py": "c090cb35d05b5fc3dd3dc033575c0cc57c3d6ab0e98afdc241ba15fdda6e6d55",
+      "src\\perception\\training.py": "2534ad37f7a1a563897f0b47739b1121097a5eb2ef3e676034ea9776ef27f40d",
+      "scripts\\train_visual_ablation.py": "8f9b34eff5562d3a79d8bd3e84194da06bfb2d2349b610e12da142190bf7ba1d",
+      "scripts\\adapt_visual_state.py": "e5fd11b0d19822360dd1c388ce6090628cbc8408d6d34623c0434ce635bbe565"
+    },
+    "config": {
+      "steps": 300,
+      "batch_size": 16,
+      "learning_rate": 0.0001,
+      "weight_decay": 0.0001,
+      "photometric_strength": 0.05,
+      "encoder_finetune": true,
+      "xy_head": "layer4 512x7x7 -> conv1x1 32 -> flatten -> linear128 -> XY",
+      "checkpoint_rule": "last fixed-budget step; test metrics evaluated only after training",
+      "prediction": "current object world XY metres from full RGB; no airborne Z or yaw"
+    },
+    "torch": "2.10.0+cu126",
+    "numpy": "1.26.4",
+    "cuda": "12.6",
+    "gpu": "NVIDIA GeForce RTX 3080 Ti Laptop GPU",
+    "kind": "visual_state_xy_v1",
+    "group": "A",
+    "seed": 17,
+    "pretraining_path": "E:\\HumanoidRobotLearning\\artifacts\\runs\\visual_pretraining_v1\\A_seed17\\checkpoint.pt",
+    "pretraining_sha256": "33e11077008cf690f4c8f524a374bd58f0fcff336c5c37a7796f40b1c48ffab0",
+    "head_initial_sha256": "e873a5f784df09ad343de040140e8dc18e5eabcb0e95b62a8fe9ac5e84f3a212",
+    "target_mean": [
+      -0.06925497949123383,
+      0.0002588987408671528
+    ],
+    "target_scale": [
+      0.018071798607707024,
+      0.032919321209192276
+    ],
+    "selection": "fixed final step; no best-checkpoint selection",
+    "runtime_inputs": "RGB only; no simulator object state",
+    "output": "XY metres",
+    "train_frames": 256,
+    "status": "completed",
+    "elapsed_seconds": 43.911042600055225,
+    "batch_sequence_sha256": "98a12d6dc172f86d18a2a68b3648552dde35c302b19b9645b14237f9233de5aa",
+    "augmentation_final_rng_sha256": "2e0a053e162910e569446923bec6baf37befd9b6d85c2196916d38f95f911ba8",
+    "steps_completed": 300,
+    "final_training_loss": {
+      "step": 300,
+      "xy_scaled_smooth_l1": 0.0027728297282010317,
+      "grad_norm": 0.662691593170166
+    },
+    "metrics": {
+      "train": {
+        "n_frames": 256,
+        "n_scenes": 256,
+        "xy_mean_error_mm": 1.6572208404541016,
+        "xy_median_error_mm": 1.6485674381256104,
+        "xy_p90_error_mm": 2.4685949087142944,
+        "xy_rmse_mm": 1.772910705767572
+      },
+      "val": {
+        "n_frames": 64,
+        "n_scenes": 64,
+        "xy_mean_error_mm": 1.8761242628097534,
+        "xy_median_error_mm": 1.6709579229354858,
+        "xy_p90_error_mm": 3.012508749961853,
+        "xy_rmse_mm": 2.118117641657591
+      },
+      "test": {
+        "n_frames": 64,
+        "n_scenes": 64,
+        "xy_mean_error_mm": 2.048370838165283,
+        "xy_median_error_mm": 1.9962775707244873,
+        "xy_p90_error_mm": 3.2116014480590827,
+        "xy_rmse_mm": 2.2140368819236755
+      }
+    }
+  },
+  {
+    "data_path": "E:\\HumanoidRobotLearning\\data\\processed\\sim_adaptation_v1.npz",
+    "data_sha256": "48ff653f12d20a8550f1bb9ba95cc24679756d8be8ac2e51f88cb8a76a1a20ab",
+    "code_sha256": {
+      "src\\perception\\__init__.py": "fac602379e482e251ddd71dbf67bf200024de7bcc175024df8f81725b13bbb79",
+      "src\\perception\\losses.py": "987c2a687e8fe5675acc337f7a0991d8204df059e397776a0390a0b9b823c053",
+      "src\\perception\\models.py": "c090cb35d05b5fc3dd3dc033575c0cc57c3d6ab0e98afdc241ba15fdda6e6d55",
+      "src\\perception\\training.py": "2534ad37f7a1a563897f0b47739b1121097a5eb2ef3e676034ea9776ef27f40d",
+      "scripts\\train_visual_ablation.py": "8f9b34eff5562d3a79d8bd3e84194da06bfb2d2349b610e12da142190bf7ba1d",
+      "scripts\\adapt_visual_state.py": "e5fd11b0d19822360dd1c388ce6090628cbc8408d6d34623c0434ce635bbe565"
+    },
+    "config": {
+      "steps": 300,
+      "batch_size": 16,
+      "learning_rate": 0.0001,
+      "weight_decay": 0.0001,
+      "photometric_strength": 0.05,
+      "encoder_finetune": true,
+      "xy_head": "layer4 512x7x7 -> conv1x1 32 -> flatten -> linear128 -> XY",
+      "checkpoint_rule": "last fixed-budget step; test metrics evaluated only after training",
+      "prediction": "current object world XY metres from full RGB; no airborne Z or yaw"
+    },
+    "torch": "2.10.0+cu126",
+    "numpy": "1.26.4",
+    "cuda": "12.6",
+    "gpu": "NVIDIA GeForce RTX 3080 Ti Laptop GPU",
+    "kind": "visual_state_xy_v1",
+    "group": "B",
+    "seed": 17,
+    "pretraining_path": "E:\\HumanoidRobotLearning\\artifacts\\runs\\visual_pretraining_v1\\B_seed17\\checkpoint.pt",
+    "pretraining_sha256": "2d3ea900b29a3702829d0ff6fef7f1094eee5ca3a6f0faa1b04c4cbbee054049",
+    "head_initial_sha256": "e873a5f784df09ad343de040140e8dc18e5eabcb0e95b62a8fe9ac5e84f3a212",
+    "target_mean": [
+      -0.06925497949123383,
+      0.0002588987408671528
+    ],
+    "target_scale": [
+      0.018071798607707024,
+      0.032919321209192276
+    ],
+    "selection": "fixed final step; no best-checkpoint selection",
+    "runtime_inputs": "RGB only; no simulator object state",
+    "output": "XY metres",
+    "train_frames": 256,
+    "status": "completed",
+    "elapsed_seconds": 44.37138899997808,
+    "batch_sequence_sha256": "98a12d6dc172f86d18a2a68b3648552dde35c302b19b9645b14237f9233de5aa",
+    "augmentation_final_rng_sha256": "2e0a053e162910e569446923bec6baf37befd9b6d85c2196916d38f95f911ba8",
+    "steps_completed": 300,
+    "final_training_loss": {
+      "step": 300,
+      "xy_scaled_smooth_l1": 0.003419590648263693,
+      "grad_norm": 0.7816600203514099
+    },
+    "metrics": {
+      "train": {
+        "n_frames": 256,
+        "n_scenes": 256,
+        "xy_mean_error_mm": 1.5429542064666748,
+        "xy_median_error_mm": 1.5249109268188477,
+        "xy_p90_error_mm": 2.3068612813949585,
+        "xy_rmse_mm": 1.6512145521119237
+      },
+      "val": {
+        "n_frames": 64,
+        "n_scenes": 64,
+        "xy_mean_error_mm": 1.7915148735046387,
+        "xy_median_error_mm": 1.7486501932144165,
+        "xy_p90_error_mm": 2.9280941009521486,
+        "xy_rmse_mm": 1.9903213251382113
+      },
+      "test": {
+        "n_frames": 64,
+        "n_scenes": 64,
+        "xy_mean_error_mm": 1.9887346029281616,
+        "xy_median_error_mm": 2.030144453048706,
+        "xy_p90_error_mm": 3.1186260461807254,
+        "xy_rmse_mm": 2.205049619078636
+      }
+    }
+  },
+  {
+    "data_path": "E:\\HumanoidRobotLearning\\data\\processed\\sim_adaptation_v1.npz",
+    "data_sha256": "48ff653f12d20a8550f1bb9ba95cc24679756d8be8ac2e51f88cb8a76a1a20ab",
+    "code_sha256": {
+      "src\\perception\\__init__.py": "fac602379e482e251ddd71dbf67bf200024de7bcc175024df8f81725b13bbb79",
+      "src\\perception\\losses.py": "987c2a687e8fe5675acc337f7a0991d8204df059e397776a0390a0b9b823c053",
+      "src\\perception\\models.py": "c090cb35d05b5fc3dd3dc033575c0cc57c3d6ab0e98afdc241ba15fdda6e6d55",
+      "src\\perception\\training.py": "2534ad37f7a1a563897f0b47739b1121097a5eb2ef3e676034ea9776ef27f40d",
+      "scripts\\train_visual_ablation.py": "8f9b34eff5562d3a79d8bd3e84194da06bfb2d2349b610e12da142190bf7ba1d",
+      "scripts\\adapt_visual_state.py": "e5fd11b0d19822360dd1c388ce6090628cbc8408d6d34623c0434ce635bbe565"
+    },
+    "config": {
+      "steps": 300,
+      "batch_size": 16,
+      "learning_rate": 0.0001,
+      "weight_decay": 0.0001,
+      "photometric_strength": 0.05,
+      "encoder_finetune": true,
+      "xy_head": "layer4 512x7x7 -> conv1x1 32 -> flatten -> linear128 -> XY",
+      "checkpoint_rule": "last fixed-budget step; test metrics evaluated only after training",
+      "prediction": "current object world XY metres from full RGB; no airborne Z or yaw"
+    },
+    "torch": "2.10.0+cu126",
+    "numpy": "1.26.4",
+    "cuda": "12.6",
+    "gpu": "NVIDIA GeForce RTX 3080 Ti Laptop GPU",
+    "kind": "visual_state_xy_v1",
+    "group": "C",
+    "seed": 17,
+    "pretraining_path": "E:\\HumanoidRobotLearning\\artifacts\\runs\\visual_pretraining_v1\\C_seed17\\checkpoint.pt",
+    "pretraining_sha256": "2211213bc71c92497543c4d70d66153c39c9eebc673ec50a79ae41850cf2d034",
+    "head_initial_sha256": "e873a5f784df09ad343de040140e8dc18e5eabcb0e95b62a8fe9ac5e84f3a212",
+    "target_mean": [
+      -0.06925497949123383,
+      0.0002588987408671528
+    ],
+    "target_scale": [
+      0.018071798607707024,
+      0.032919321209192276
+    ],
+    "selection": "fixed final step; no best-checkpoint selection",
+    "runtime_inputs": "RGB only; no simulator object state",
+    "output": "XY metres",
+    "train_frames": 256,
+    "status": "completed",
+    "elapsed_seconds": 44.90715989994351,
+    "batch_sequence_sha256": "98a12d6dc172f86d18a2a68b3648552dde35c302b19b9645b14237f9233de5aa",
+    "augmentation_final_rng_sha256": "2e0a053e162910e569446923bec6baf37befd9b6d85c2196916d38f95f911ba8",
+    "steps_completed": 300,
+    "final_training_loss": {
+      "step": 300,
+      "xy_scaled_smooth_l1": 0.0017585675232112408,
+      "grad_norm": 0.4715014696121216
+    },
+    "metrics": {
+      "train": {
+        "n_frames": 256,
+        "n_scenes": 256,
+        "xy_mean_error_mm": 1.114629864692688,
+        "xy_median_error_mm": 0.9579523801803589,
+        "xy_p90_error_mm": 2.0485633611679077,
+        "xy_rmse_mm": 1.2952105607837439
+      },
+      "val": {
+        "n_frames": 64,
+        "n_scenes": 64,
+        "xy_mean_error_mm": 1.3219833374023438,
+        "xy_median_error_mm": 1.3447233438491821,
+        "xy_p90_error_mm": 2.276279473304749,
+        "xy_rmse_mm": 1.4975405065342784
+      },
+      "test": {
+        "n_frames": 64,
+        "n_scenes": 64,
+        "xy_mean_error_mm": 1.1629672050476074,
+        "xy_median_error_mm": 0.937224268913269,
+        "xy_p90_error_mm": 2.2937802553176887,
+        "xy_rmse_mm": 1.4082897687330842
+      }
+    }
+  },
+  {
+    "data_path": "E:\\HumanoidRobotLearning\\data\\processed\\sim_adaptation_v1.npz",
+    "data_sha256": "48ff653f12d20a8550f1bb9ba95cc24679756d8be8ac2e51f88cb8a76a1a20ab",
+    "code_sha256": {
+      "src\\perception\\__init__.py": "fac602379e482e251ddd71dbf67bf200024de7bcc175024df8f81725b13bbb79",
+      "src\\perception\\losses.py": "987c2a687e8fe5675acc337f7a0991d8204df059e397776a0390a0b9b823c053",
+      "src\\perception\\models.py": "c090cb35d05b5fc3dd3dc033575c0cc57c3d6ab0e98afdc241ba15fdda6e6d55",
+      "src\\perception\\training.py": "2534ad37f7a1a563897f0b47739b1121097a5eb2ef3e676034ea9776ef27f40d",
+      "scripts\\train_visual_ablation.py": "8f9b34eff5562d3a79d8bd3e84194da06bfb2d2349b610e12da142190bf7ba1d",
+      "scripts\\adapt_visual_state.py": "e5fd11b0d19822360dd1c388ce6090628cbc8408d6d34623c0434ce635bbe565"
+    },
+    "config": {
+      "steps": 300,
+      "batch_size": 16,
+      "learning_rate": 0.0001,
+      "weight_decay": 0.0001,
+      "photometric_strength": 0.05,
+      "encoder_finetune": true,
+      "xy_head": "layer4 512x7x7 -> conv1x1 32 -> flatten -> linear128 -> XY",
+      "checkpoint_rule": "last fixed-budget step; test metrics evaluated only after training",
+      "prediction": "current object world XY metres from full RGB; no airborne Z or yaw"
+    },
+    "torch": "2.10.0+cu126",
+    "numpy": "1.26.4",
+    "cuda": "12.6",
+    "gpu": "NVIDIA GeForce RTX 3080 Ti Laptop GPU",
+    "kind": "visual_state_xy_v1",
+    "group": "D",
+    "seed": 17,
+    "pretraining_path": "E:\\HumanoidRobotLearning\\artifacts\\runs\\visual_pretraining_v1\\D_seed17\\checkpoint.pt",
+    "pretraining_sha256": "ea5e404a9f06fb755d7c74deeee52d67440bf3a9cabd5c86b47bec01ea2dbd91",
+    "head_initial_sha256": "e873a5f784df09ad343de040140e8dc18e5eabcb0e95b62a8fe9ac5e84f3a212",
+    "target_mean": [
+      -0.06925497949123383,
+      0.0002588987408671528
+    ],
+    "target_scale": [
+      0.018071798607707024,
+      0.032919321209192276
+    ],
+    "selection": "fixed final step; no best-checkpoint selection",
+    "runtime_inputs": "RGB only; no simulator object state",
+    "output": "XY metres",
+    "train_frames": 256,
+    "status": "completed",
+    "elapsed_seconds": 57.61733770009596,
+    "batch_sequence_sha256": "98a12d6dc172f86d18a2a68b3648552dde35c302b19b9645b14237f9233de5aa",
+    "augmentation_final_rng_sha256": "2e0a053e162910e569446923bec6baf37befd9b6d85c2196916d38f95f911ba8",
+    "steps_completed": 300,
+    "final_training_loss": {
+      "step": 300,
+      "xy_scaled_smooth_l1": 0.001877346308901906,
+      "grad_norm": 0.4055080711841583
+    },
+    "metrics": {
+      "train": {
+        "n_frames": 256,
+        "n_scenes": 256,
+        "xy_mean_error_mm": 1.5780236721038818,
+        "xy_median_error_mm": 1.547778606414795,
+        "xy_p90_error_mm": 2.4818278551101685,
+        "xy_rmse_mm": 1.7444242257624865
+      },
+      "val": {
+        "n_frames": 64,
+        "n_scenes": 64,
+        "xy_mean_error_mm": 1.7167181968688965,
+        "xy_median_error_mm": 1.551762580871582,
+        "xy_p90_error_mm": 2.6966111183166506,
+        "xy_rmse_mm": 1.8838515970855951
+      },
+      "test": {
+        "n_frames": 64,
+        "n_scenes": 64,
+        "xy_mean_error_mm": 1.757552146911621,
+        "xy_median_error_mm": 1.7271158695220947,
+        "xy_p90_error_mm": 2.719163036346436,
+        "xy_rmse_mm": 1.9678473472595215
+      }
+    }
+  },
+  {
+    "data_path": "E:\\HumanoidRobotLearning\\data\\processed\\sim_adaptation_v1.npz",
+    "data_sha256": "48ff653f12d20a8550f1bb9ba95cc24679756d8be8ac2e51f88cb8a76a1a20ab",
+    "code_sha256": {
+      "src\\perception\\__init__.py": "fac602379e482e251ddd71dbf67bf200024de7bcc175024df8f81725b13bbb79",
+      "src\\perception\\losses.py": "987c2a687e8fe5675acc337f7a0991d8204df059e397776a0390a0b9b823c053",
+      "src\\perception\\models.py": "c090cb35d05b5fc3dd3dc033575c0cc57c3d6ab0e98afdc241ba15fdda6e6d55",
+      "src\\perception\\training.py": "2534ad37f7a1a563897f0b47739b1121097a5eb2ef3e676034ea9776ef27f40d",
+      "scripts\\train_visual_ablation.py": "8f9b34eff5562d3a79d8bd3e84194da06bfb2d2349b610e12da142190bf7ba1d",
+      "scripts\\adapt_visual_state.py": "e5fd11b0d19822360dd1c388ce6090628cbc8408d6d34623c0434ce635bbe565"
+    },
+    "config": {
+      "steps": 300,
+      "batch_size": 16,
+      "learning_rate": 0.0001,
+      "weight_decay": 0.0001,
+      "photometric_strength": 0.05,
+      "encoder_finetune": true,
+      "xy_head": "layer4 512x7x7 -> conv1x1 32 -> flatten -> linear128 -> XY",
+      "checkpoint_rule": "last fixed-budget step; test metrics evaluated only after training",
+      "prediction": "current object world XY metres from full RGB; no airborne Z or yaw"
+    },
+    "torch": "2.10.0+cu126",
+    "numpy": "1.26.4",
+    "cuda": "12.6",
+    "gpu": "NVIDIA GeForce RTX 3080 Ti Laptop GPU",
+    "kind": "visual_state_xy_v1",
+    "group": "A",
+    "seed": 27,
+    "pretraining_path": "E:\\HumanoidRobotLearning\\artifacts\\runs\\visual_pretraining_v1\\A_seed27\\checkpoint.pt",
+    "pretraining_sha256": "d455c10b5ef8e1ca4915db44705677a33ee01d946f5d6006d2e78a371352a31f",
+    "head_initial_sha256": "5b63fb6f32e29ea4dc8d156c3e40992270abec3039648cad7b96775de257f733",
+    "target_mean": [
+      -0.06925497949123383,
+      0.0002588987408671528
+    ],
+    "target_scale": [
+      0.018071798607707024,
+      0.032919321209192276
+    ],
+    "selection": "fixed final step; no best-checkpoint selection",
+    "runtime_inputs": "RGB only; no simulator object state",
+    "output": "XY metres",
+    "train_frames": 256,
+    "status": "completed",
+    "elapsed_seconds": 128.94068949995562,
+    "batch_sequence_sha256": "dffe6118a8e1ee6b0928ad1019f33a1defa678f07cf0109efde2f1309256b0f6",
+    "augmentation_final_rng_sha256": "96b47795a8eefdaf3065c155bcee857755fa34c5a1d73a65bbb9896136d5cb43",
+    "steps_completed": 300,
+    "final_training_loss": {
+      "step": 300,
+      "xy_scaled_smooth_l1": 0.004472219850867987,
+      "grad_norm": 0.8379737138748169
+    },
+    "metrics": {
+      "train": {
+        "n_frames": 256,
+        "n_scenes": 256,
+        "xy_mean_error_mm": 1.7902597188949585,
+        "xy_median_error_mm": 1.6909003257751465,
+        "xy_p90_error_mm": 2.7432453632354736,
+        "xy_rmse_mm": 1.9744322635233402
+      },
+      "val": {
+        "n_frames": 64,
+        "n_scenes": 64,
+        "xy_mean_error_mm": 2.3043315410614014,
+        "xy_median_error_mm": 2.1693615913391113,
+        "xy_p90_error_mm": 3.440888524055481,
+        "xy_rmse_mm": 2.510443329811096
+      },
+      "test": {
+        "n_frames": 64,
+        "n_scenes": 64,
+        "xy_mean_error_mm": 1.8147889375686646,
+        "xy_median_error_mm": 1.6945075988769531,
+        "xy_p90_error_mm": 3.1470998525619507,
+        "xy_rmse_mm": 2.0541928242892027
+      }
+    }
+  },
+  {
+    "data_path": "E:\\HumanoidRobotLearning\\data\\processed\\sim_adaptation_v1.npz",
+    "data_sha256": "48ff653f12d20a8550f1bb9ba95cc24679756d8be8ac2e51f88cb8a76a1a20ab",
+    "code_sha256": {
+      "src\\perception\\__init__.py": "fac602379e482e251ddd71dbf67bf200024de7bcc175024df8f81725b13bbb79",
+      "src\\perception\\losses.py": "987c2a687e8fe5675acc337f7a0991d8204df059e397776a0390a0b9b823c053",
+      "src\\perception\\models.py": "c090cb35d05b5fc3dd3dc033575c0cc57c3d6ab0e98afdc241ba15fdda6e6d55",
+      "src\\perception\\training.py": "2534ad37f7a1a563897f0b47739b1121097a5eb2ef3e676034ea9776ef27f40d",
+      "scripts\\train_visual_ablation.py": "8f9b34eff5562d3a79d8bd3e84194da06bfb2d2349b610e12da142190bf7ba1d",
+      "scripts\\adapt_visual_state.py": "e5fd11b0d19822360dd1c388ce6090628cbc8408d6d34623c0434ce635bbe565"
+    },
+    "config": {
+      "steps": 300,
+      "batch_size": 16,
+      "learning_rate": 0.0001,
+      "weight_decay": 0.0001,
+      "photometric_strength": 0.05,
+      "encoder_finetune": true,
+      "xy_head": "layer4 512x7x7 -> conv1x1 32 -> flatten -> linear128 -> XY",
+      "checkpoint_rule": "last fixed-budget step; test metrics evaluated only after training",
+      "prediction": "current object world XY metres from full RGB; no airborne Z or yaw"
+    },
+    "torch": "2.10.0+cu126",
+    "numpy": "1.26.4",
+    "cuda": "12.6",
+    "gpu": "NVIDIA GeForce RTX 3080 Ti Laptop GPU",
+    "kind": "visual_state_xy_v1",
+    "group": "B",
+    "seed": 27,
+    "pretraining_path": "E:\\HumanoidRobotLearning\\artifacts\\runs\\visual_pretraining_v1\\B_seed27\\checkpoint.pt",
+    "pretraining_sha256": "4ba6d7445eac9c04167b3fcfce735ebeac5704eaa3a4820f3c4956036a3d497c",
+    "head_initial_sha256": "5b63fb6f32e29ea4dc8d156c3e40992270abec3039648cad7b96775de257f733",
+    "target_mean": [
+      -0.06925497949123383,
+      0.0002588987408671528
+    ],
+    "target_scale": [
+      0.018071798607707024,
+      0.032919321209192276
+    ],
+    "selection": "fixed final step; no best-checkpoint selection",
+    "runtime_inputs": "RGB only; no simulator object state",
+    "output": "XY metres",
+    "train_frames": 256,
+    "status": "completed",
+    "elapsed_seconds": 95.90337850002106,
+    "batch_sequence_sha256": "dffe6118a8e1ee6b0928ad1019f33a1defa678f07cf0109efde2f1309256b0f6",
+    "augmentation_final_rng_sha256": "96b47795a8eefdaf3065c155bcee857755fa34c5a1d73a65bbb9896136d5cb43",
+    "steps_completed": 300,
+    "final_training_loss": {
+      "step": 300,
+      "xy_scaled_smooth_l1": 0.005521788727492094,
+      "grad_norm": 0.9000208973884583
+    },
+    "metrics": {
+      "train": {
+        "n_frames": 256,
+        "n_scenes": 256,
+        "xy_mean_error_mm": 1.6152781248092651,
+        "xy_median_error_mm": 1.5566694736480713,
+        "xy_p90_error_mm": 2.8521246910095215,
+        "xy_rmse_mm": 1.8679732456803322
+      },
+      "val": {
+        "n_frames": 64,
+        "n_scenes": 64,
+        "xy_mean_error_mm": 1.9710373878479004,
+        "xy_median_error_mm": 2.090643882751465,
+        "xy_p90_error_mm": 3.1074059009552,
+        "xy_rmse_mm": 2.155258785933256
+      },
+      "test": {
+        "n_frames": 64,
+        "n_scenes": 64,
+        "xy_mean_error_mm": 1.8530209064483643,
+        "xy_median_error_mm": 1.8559805154800415,
+        "xy_p90_error_mm": 3.1862964630126958,
+        "xy_rmse_mm": 2.0733503624796867
+      }
+    }
+  },
+  {
+    "data_path": "E:\\HumanoidRobotLearning\\data\\processed\\sim_adaptation_v1.npz",
+    "data_sha256": "48ff653f12d20a8550f1bb9ba95cc24679756d8be8ac2e51f88cb8a76a1a20ab",
+    "code_sha256": {
+      "src\\perception\\__init__.py": "fac602379e482e251ddd71dbf67bf200024de7bcc175024df8f81725b13bbb79",
+      "src\\perception\\losses.py": "987c2a687e8fe5675acc337f7a0991d8204df059e397776a0390a0b9b823c053",
+      "src\\perception\\models.py": "c090cb35d05b5fc3dd3dc033575c0cc57c3d6ab0e98afdc241ba15fdda6e6d55",
+      "src\\perception\\training.py": "2534ad37f7a1a563897f0b47739b1121097a5eb2ef3e676034ea9776ef27f40d",
+      "scripts\\train_visual_ablation.py": "8f9b34eff5562d3a79d8bd3e84194da06bfb2d2349b610e12da142190bf7ba1d",
+      "scripts\\adapt_visual_state.py": "e5fd11b0d19822360dd1c388ce6090628cbc8408d6d34623c0434ce635bbe565"
+    },
+    "config": {
+      "steps": 300,
+      "batch_size": 16,
+      "learning_rate": 0.0001,
+      "weight_decay": 0.0001,
+      "photometric_strength": 0.05,
+      "encoder_finetune": true,
+      "xy_head": "layer4 512x7x7 -> conv1x1 32 -> flatten -> linear128 -> XY",
+      "checkpoint_rule": "last fixed-budget step; test metrics evaluated only after training",
+      "prediction": "current object world XY metres from full RGB; no airborne Z or yaw"
+    },
+    "torch": "2.10.0+cu126",
+    "numpy": "1.26.4",
+    "cuda": "12.6",
+    "gpu": "NVIDIA GeForce RTX 3080 Ti Laptop GPU",
+    "kind": "visual_state_xy_v1",
+    "group": "C",
+    "seed": 27,
+    "pretraining_path": "E:\\HumanoidRobotLearning\\artifacts\\runs\\visual_pretraining_v1\\C_seed27\\checkpoint.pt",
+    "pretraining_sha256": "d0603d496d156975e080f97081a40c68e5114090a8b62fe47c450bb3910b9d22",
+    "head_initial_sha256": "5b63fb6f32e29ea4dc8d156c3e40992270abec3039648cad7b96775de257f733",
+    "target_mean": [
+      -0.06925497949123383,
+      0.0002588987408671528
+    ],
+    "target_scale": [
+      0.018071798607707024,
+      0.032919321209192276
+    ],
+    "selection": "fixed final step; no best-checkpoint selection",
+    "runtime_inputs": "RGB only; no simulator object state",
+    "output": "XY metres",
+    "train_frames": 256,
+    "status": "completed",
+    "elapsed_seconds": 86.91969579993747,
+    "batch_sequence_sha256": "dffe6118a8e1ee6b0928ad1019f33a1defa678f07cf0109efde2f1309256b0f6",
+    "augmentation_final_rng_sha256": "96b47795a8eefdaf3065c155bcee857755fa34c5a1d73a65bbb9896136d5cb43",
+    "steps_completed": 300,
+    "final_training_loss": {
+      "step": 300,
+      "xy_scaled_smooth_l1": 0.0015261718071997166,
+      "grad_norm": 0.3353213965892792
+    },
+    "metrics": {
+      "train": {
+        "n_frames": 256,
+        "n_scenes": 256,
+        "xy_mean_error_mm": 1.0712099075317383,
+        "xy_median_error_mm": 1.0000483989715576,
+        "xy_p90_error_mm": 1.7106946110725403,
+        "xy_rmse_mm": 1.222065999172628
+      },
+      "val": {
+        "n_frames": 64,
+        "n_scenes": 64,
+        "xy_mean_error_mm": 1.5599445104599,
+        "xy_median_error_mm": 1.5053672790527344,
+        "xy_p90_error_mm": 2.667013716697693,
+        "xy_rmse_mm": 1.728839473798871
+      },
+      "test": {
+        "n_frames": 64,
+        "n_scenes": 64,
+        "xy_mean_error_mm": 1.203946828842163,
+        "xy_median_error_mm": 1.073791742324829,
+        "xy_p90_error_mm": 2.029889369010925,
+        "xy_rmse_mm": 1.3670643093064427
+      }
+    }
+  },
+  {
+    "data_path": "E:\\HumanoidRobotLearning\\data\\processed\\sim_adaptation_v1.npz",
+    "data_sha256": "48ff653f12d20a8550f1bb9ba95cc24679756d8be8ac2e51f88cb8a76a1a20ab",
+    "code_sha256": {
+      "src\\perception\\__init__.py": "fac602379e482e251ddd71dbf67bf200024de7bcc175024df8f81725b13bbb79",
+      "src\\perception\\losses.py": "987c2a687e8fe5675acc337f7a0991d8204df059e397776a0390a0b9b823c053",
+      "src\\perception\\models.py": "c090cb35d05b5fc3dd3dc033575c0cc57c3d6ab0e98afdc241ba15fdda6e6d55",
+      "src\\perception\\training.py": "2534ad37f7a1a563897f0b47739b1121097a5eb2ef3e676034ea9776ef27f40d",
+      "scripts\\train_visual_ablation.py": "8f9b34eff5562d3a79d8bd3e84194da06bfb2d2349b610e12da142190bf7ba1d",
+      "scripts\\adapt_visual_state.py": "e5fd11b0d19822360dd1c388ce6090628cbc8408d6d34623c0434ce635bbe565"
+    },
+    "config": {
+      "steps": 300,
+      "batch_size": 16,
+      "learning_rate": 0.0001,
+      "weight_decay": 0.0001,
+      "photometric_strength": 0.05,
+      "encoder_finetune": true,
+      "xy_head": "layer4 512x7x7 -> conv1x1 32 -> flatten -> linear128 -> XY",
+      "checkpoint_rule": "last fixed-budget step; test metrics evaluated only after training",
+      "prediction": "current object world XY metres from full RGB; no airborne Z or yaw"
+    },
+    "torch": "2.10.0+cu126",
+    "numpy": "1.26.4",
+    "cuda": "12.6",
+    "gpu": "NVIDIA GeForce RTX 3080 Ti Laptop GPU",
+    "kind": "visual_state_xy_v1",
+    "group": "D",
+    "seed": 27,
+    "pretraining_path": "E:\\HumanoidRobotLearning\\artifacts\\runs\\visual_pretraining_v1\\D_seed27\\checkpoint.pt",
+    "pretraining_sha256": "611ffdfea56491c3049b80cc97450642a07c69ce67c5e6a3fc45314abc77f56c",
+    "head_initial_sha256": "5b63fb6f32e29ea4dc8d156c3e40992270abec3039648cad7b96775de257f733",
+    "target_mean": [
+      -0.06925497949123383,
+      0.0002588987408671528
+    ],
+    "target_scale": [
+      0.018071798607707024,
+      0.032919321209192276
+    ],
+    "selection": "fixed final step; no best-checkpoint selection",
+    "runtime_inputs": "RGB only; no simulator object state",
+    "output": "XY metres",
+    "train_frames": 256,
+    "status": "completed",
+    "elapsed_seconds": 34.108927199966274,
+    "batch_sequence_sha256": "dffe6118a8e1ee6b0928ad1019f33a1defa678f07cf0109efde2f1309256b0f6",
+    "augmentation_final_rng_sha256": "96b47795a8eefdaf3065c155bcee857755fa34c5a1d73a65bbb9896136d5cb43",
+    "steps_completed": 300,
+    "final_training_loss": {
+      "step": 300,
+      "xy_scaled_smooth_l1": 0.002636768389493227,
+      "grad_norm": 0.5980654954910278
+    },
+    "metrics": {
+      "train": {
+        "n_frames": 256,
+        "n_scenes": 256,
+        "xy_mean_error_mm": 1.70717191696167,
+        "xy_median_error_mm": 1.6852233409881592,
+        "xy_p90_error_mm": 2.779761552810669,
+        "xy_rmse_mm": 1.8861000426113605
+      },
+      "val": {
+        "n_frames": 64,
+        "n_scenes": 64,
+        "xy_mean_error_mm": 2.175828218460083,
+        "xy_median_error_mm": 2.0235085487365723,
+        "xy_p90_error_mm": 3.5119312286376956,
+        "xy_rmse_mm": 2.362811239436269
+      },
+      "test": {
+        "n_frames": 64,
+        "n_scenes": 64,
+        "xy_mean_error_mm": 1.8644068241119385,
+        "xy_median_error_mm": 1.684465765953064,
+        "xy_p90_error_mm": 3.090529704093933,
+        "xy_rmse_mm": 2.061196370050311
+      }
+    }
+  }
+]

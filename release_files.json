@@ -1759,13 +1759,13 @@
       "path": "artifacts/reports/submission_v1/demo_manifest.json",
       "archive": "source-report",
       "bytes": 2685,
-      "sha256": "8d879bff5417b8ed8fe8f1cce618633c684cf7bdcac7c01749142711905a19cc"
+      "sha256": "a55d51b87a87f36e878005c1aeb45cb7cec3594843b900b414c43bd07e39a5db"
     },
     {
       "path": "artifacts/reports/submission_v1/index.html",
       "archive": "source-report",
-      "bytes": 3961,
-      "sha256": "92c861b20c8f863ae8ef5f6809f42b376256274c35c15f2f072a97036a96e538"
+      "bytes": 4105,
+      "sha256": "d111e63cc0850bf9ceebb3aa843c505c721821ab7d460216cada23332bf4ddb6"
     },
     {
       "path": "artifacts/reports/submission_v1/qa_frame_0000.jpg",
@@ -1794,8 +1794,8 @@
     {
       "path": "artifacts/reports/submission_v1/qa_frame_2100.jpg",
       "archive": "source-report",
-      "bytes": 104860,
-      "sha256": "c3d400126c2b391c5e03d70b9698e442d8df69555227a7f5ba1b9185b5354c34"
+      "bytes": 102709,
+      "sha256": "cfc4fb489202fc4b09986905273ece6724c82506b9834cd876084bbe9f9aa318"
     },
     {
       "path": "artifacts/reports/submission_v1/slide_00.png",
@@ -1830,14 +1830,14 @@
     {
       "path": "artifacts/reports/submission_v1/slide_10.png",
       "archive": "source-report",
-      "bytes": 49927,
-      "sha256": "769ffe6e91976ef47ea6187338f5337c73f3c8e4a620d70474c0ee0a6351d003"
+      "bytes": 51268,
+      "sha256": "3643c970491297b0028fa5b799c447f92259325f4ee90e19db08868f3c88b3d4"
     },
     {
       "path": "artifacts/reports/submission_v1/submission_demo_en.mp4",
       "archive": "source-report",
-      "bytes": 3858765,
-      "sha256": "4ec91bd577309adabe454fda2e194e8734efd03075561852d9f3579656517e68"
+      "bytes": 3857585,
+      "sha256": "34113ffab6125eb29d0f5d3b7b49a9254683859f42a9c77e2e71e31bd946adfd"
     },
     {
       "path": "artifacts/reports/visual_ablation_v1/comparison.png",
@@ -3924,8 +3924,8 @@
     {
       "path": "docs/CHALLENGE_ALIGNMENT.md",
       "archive": "source-report",
-      "bytes": 6658,
-      "sha256": "9e2e38be433830c61968b66de4118cbbdca2637acb47594b45933a4289e01536"
+      "bytes": 6556,
+      "sha256": "804b686455b9d856c4f35e6bcd0130ed5acc864a4d20ad72c2650b77d9aaaff7"
     },
     {
       "path": "docs/CHALLENGE_VERIFIED_20261007.md",
@@ -3954,8 +3954,8 @@
     {
       "path": "docs/ENVIRONMENT.md",
       "archive": "source-report",
-      "bytes": 5674,
-      "sha256": "2526eab5caa8cbf8e0ab601d31ad5aa94fd4278bfb4dece42cb0b78579af11d9"
+      "bytes": 5712,
+      "sha256": "f6329d39506d89ba9c506911ee0d0f233ef86429482597613699a3f1627de84b"
     },
     {
       "path": "docs/GRASP_SIM_REPORT.md",
@@ -4026,8 +4026,8 @@
     {
       "path": "docs/REPRODUCIBILITY.md",
       "archive": "source-report",
-      "bytes": 10419,
-      "sha256": "267834dccf786d455b6c56e92a1465d7f1389a89a54e5f2a3021b390fa6ea30c"
+      "bytes": 10512,
+      "sha256": "37e5f0c3fcedff1092243a540e2b36e03dd935876956220588349db17001f5cc"
     },
     {
       "path": "docs/SUBMISSION_EN.md",
@@ -4050,8 +4050,8 @@
     {
       "path": "README.md",
       "archive": "source-report",
-      "bytes": 14923,
-      "sha256": "f0a4079eaf7015499d19f8d265fdd781d2d7d1516476b17d172610e5842b77ef"
+      "bytes": 15043,
+      "sha256": "d84dc2f7b775821cff699de611458d2f54cbe772d447c2572c76432bc829ae3b"
     },
     {
       "path": "requirements.txt",
@@ -4104,8 +4104,8 @@
     {
       "path": "scripts/build_submission_demo.py",
       "archive": "source-report",
-      "bytes": 6265,
-      "sha256": "ac61e33097b19f44e4c370965ec5a19317a3aea1eb356b69a6aa65548cc32fb7"
+      "bytes": 6256,
+      "sha256": "af28374991148c75409432cb39f185d4dfdbecab2e5519355e5f70106e19a8af"
     },
     {
       "path": "scripts/check_environment.py",

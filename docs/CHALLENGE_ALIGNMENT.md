@@ -27,7 +27,7 @@ The original A/B/C/D/R experiment still uses a fixed grasp state machine and fra
 
 Independent real recording sessions, dense pseudo-label accuracy annotation, stronger action-aware world-model baselines, broader RGB uncertainty evaluation, new camera/object/physics distributions and real robot testing remain open. The completed RGB batch diagnostic uses one previously selected visual checkpoint and replays commands originally constructed using true simulator state plus fixed offsets. It is not an RGB policy choosing actions, and the small metric differences do not show that estimated state is superior to true state.
 
-A public GitHub repository, code/data release licensing, public input and weight availability, a clean installation on another machine, and final application submission remain incomplete. Raw recordings and large outputs are currently local and ignored by Git; a public code repository alone would not reproduce these specific results. Publication must also check that linked videos and required inputs are actually accessible. No personal applicant details or public project URLs have been fabricated.
+The public repository and versioned input/checkpoint downloads are provided at jinzzze/simu-lab. A clean installation on a different machine, a blanket code/data reuse license and final application submission remain open. Personal applicant details have not been fabricated. Public distribution of all original recordings and checkpoints was explicitly approved.
 
 ## Review entry points
 
@@ -42,7 +42,7 @@ These are evidence and release boundaries for the current project, not a claim t
 
 ## Release preparation update (2026-10-07)
 
-Independent real-scene validation is deferred by the applicant. Local source/report and input/checkpoint release candidates, an English application draft, a 112-second captioned demonstration and a 48-frame blinded development-label review are prepared. Human box/keypoint accuracy is not yet measured. Same-host clean installation passes the recorded checks; publication, final license/data permissions, applicant identity and the actual application remain pending. See [release checklist](RELEASE_CHECKLIST_ZH.md) and [archive reproduction](RELEASE_REPRODUCTION.md).
+Independent real-scene validation is deferred by the applicant. Local source/report and input/checkpoint release candidates, an English application draft, a 112-second captioned demonstration and a 48-frame blinded development-label review are prepared. Human box/keypoint accuracy is not yet measured. Same-host clean installation passes the recorded checks. All materials have been approved for public distribution; final license selection, applicant identity and the actual application remain pending. See [release checklist](RELEASE_CHECKLIST_ZH.md) and [archive reproduction](RELEASE_REPRODUCTION.md).
 
 
 ## Public release addendum

@@ -68,7 +68,7 @@ Conda 需先可用；按本机安装位置调用实际可执行文件。PyBullet
 
 ## Release preparation update (2026-10-07)
 
-Independent real-scene validation is deferred by the applicant. Local source/report and input/checkpoint release candidates, an English application draft, a 112-second captioned demonstration and a 48-frame blinded development-label review are prepared. Human box/keypoint accuracy is not yet measured. Same-host clean installation passes the recorded checks; publication, final license/data permissions, applicant identity and the actual application remain pending. See [release checklist](RELEASE_CHECKLIST_ZH.md) and [archive reproduction](RELEASE_REPRODUCTION.md).
+Independent real-scene validation is deferred by the applicant. Local source/report and input/checkpoint release candidates, an English application draft, a 112-second captioned demonstration and a 48-frame blinded development-label review are prepared. Human box/keypoint accuracy is not yet measured. Same-host clean installation passes the recorded checks. All materials have been approved for public distribution; final license selection, applicant identity and the actual application remain pending. See [release checklist](RELEASE_CHECKLIST_ZH.md) and [archive reproduction](RELEASE_REPRODUCTION.md).
 
 
 ## Public release addendum

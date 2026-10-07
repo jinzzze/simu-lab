@@ -31,7 +31,7 @@ Read `docs/PILOT_LABEL_REPORT.md` before interpreting pseudo labels. `scripts/in
 
 The current pilot has one conservative real development scene family. Adjacent frames, copies, annotations and re-encodings must not be assigned independent real train/test identities. The duplicate `pilot_originals` directory is not extra data. Sparse visual approval is for exploratory development only, not certified label accuracy.
 
-Human videos were personally supplied by the applicant. No public download is currently available; code alone cannot reproduce these specific results without the exact local input data. Do not substitute synthetic images and present their outcomes as the personal-data experiment. Raw video publication and data licensing remain applicant decisions.
+Human videos were personally supplied by the applicant and their public distribution was explicitly authorized. Download the exact input/checkpoint archive from release v1.0.0; code alone is insufficient to recreate these results. Do not substitute synthetic images and present their outcomes as the personal-data experiment. A license for downstream reuse remains separate from permission to distribute.
 
 ## Environment
 
@@ -90,7 +90,7 @@ See [DP-D scope and commands](DIFFUSION_POLICY.md). Recompute its report with `.
 
 ## Release preparation update (2026-10-07)
 
-Independent real-scene validation is deferred by the applicant. Local source/report and input/checkpoint release candidates, an English application draft, a 112-second captioned demonstration and a 48-frame blinded development-label review are prepared. Human box/keypoint accuracy is not yet measured. Same-host clean installation passes the recorded checks; publication, final license/data permissions, applicant identity and the actual application remain pending. See [release checklist](RELEASE_CHECKLIST_ZH.md) and [archive reproduction](RELEASE_REPRODUCTION.md).
+Independent real-scene validation is deferred by the applicant. Local source/report and input/checkpoint release candidates, an English application draft, a 112-second captioned demonstration and a 48-frame blinded development-label review are prepared. Human box/keypoint accuracy is not yet measured. Same-host clean installation passes the recorded checks. All materials have been approved for public distribution; final license selection, applicant identity and the actual application remain pending. See [release checklist](RELEASE_CHECKLIST_ZH.md) and [archive reproduction](RELEASE_REPRODUCTION.md).
 
 
 ## Public release addendum

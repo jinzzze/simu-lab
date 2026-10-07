@@ -30,7 +30,7 @@ def main():
       ('video','Compact Diffusion Policy: learned commands',13,'artifacts/runs/diffusion_policy_grasp_v1/DP_seed7/first_scene_demo.mp4','Seed 7 / first scene 30000. Additional simulated expert action supervision.'),
       ('video','Failure evidence is retained',13,'artifacts/reports/diffusion_policy_v1/failure_review/DP_seed7_scene30001/failure_demo.mp4','First failed scene for seed 7. Replay of stored commands; no resampling.'),
       ('card','DP-D: 84/192 strict successes',10,['Seeds 7 / 17 / 27: 27/64, 25/64, 32/64.','90 failures without qualified lift; 18 after qualified lift.','Same frozen D7 initial vision; extra action data and different budgets. This is not a matched algorithm ablation.']),
-      ('card','Scope and reproducibility',10,['Source, all-seed results, checksums, failure traces and checkpoints are prepared for review.','New independent real recordings are deferred. Human label accuracy and real-robot transfer remain unmeasured.','Local release candidate for jinzzze/simu-lab; publication pending.'])]
+      ('card','Scope and reproducibility',10,['Source, all-seed results, checksums, failure traces and checkpoints are prepared for review.','New independent real recordings are deferred. Human label accuracy and real-robot transfer remain unmeasured.','Repository: github.com/jinzzze/simu-lab / release v1.0.0.'])]
     writer=imageio_ffmpeg.write_frames(str(OUT/'submission_demo_en.mp4'),(1280,720),fps=20,codec='libx264',quality=7,macro_block_size=1,output_params=['-movflags','+faststart'])
     writer.send(None);timeline=[];t=0
     try:

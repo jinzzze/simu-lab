@@ -6,7 +6,7 @@
   "audio": "none; English captions",
   "footage_speed": "original; final frame held when segment exceeds source length",
   "selection": "first canonical real clip, preselected first simulation scenes and first seed7 failure; not best-of",
-  "sha256": "4ec91bd577309adabe454fda2e194e8734efd03075561852d9f3579656517e68",
+  "sha256": "34113ffab6125eb29d0f5d3b7b49a9254683859f42a9c77e2e71e31bd946adfd",
   "segments": [
     {
       "start_seconds": 0,

@@ -113,7 +113,7 @@ The 32-image extension is defined by `configs/low_data_plan.json`; its source is
 
 ## What worked and what did not
 
-- The complete personal-video → trained encoder → RGB localization → physical grasp path runs. Primary provenance/pairing checks pass, including rendered-image identity and online/offline prediction agreement. The recorded 26 core tests passed using isolated processes.
+- The complete personal-video → trained encoder → RGB localization → physical grasp path runs. Primary provenance/pairing checks pass, including rendered-image identity and online/offline prediction agreement. The release verification passed 39 tests in an independently installed environment, using isolated processes.
 - The 256-image benchmark is too easy to distinguish task success; even ImageNet without personal-video pretraining succeeds on all tested scenes.
 - Reducing simulation supervision to 32 images reveals failures and larger localization errors, but does not support the combined-supervision hypothesis. All 46 low-data failures lack a qualified lift; example replays are preserved separately from aggregate evidence.
 - The Windows Torch and Panda/Bullet stacks conflict when loaded together (two OpenMP runtimes). A persistent isolated predictor process fixes integration; only RGB bytes enter it. Tests use separate processes. Unsafe duplicate-runtime suppression is not used.
@@ -125,6 +125,6 @@ This is a small pilot with one conservative real development scene family. There
 
 The reported four-group experiment uses real data for visual learning. The independent macro-action extension supplies a trained outcome model from simulation, with true-state and one-checkpoint RGB diagnostics. There is still no VLA, demonstrated world-model planning benefit or broad dynamics generalization. The separate DP extension learns actions from additional simulated robot demonstrations. Its transition labels do not come from the personal videos.
 
-Raw phone videos, derived NPZs, large weights and the environment remain local and are excluded from Git. Without those exact inputs, the code alone cannot recreate this particular experiment. No public data download, code license, public repository or application submission is asserted. These remain applicant-owned release steps. See the [challenge alignment and delivery gaps](docs/CHALLENGE_ALIGNMENT.md).
+Raw phone videos, derived NPZs and large weights are distributed separately in the v1.0.0 Release rather than Git history. The installed environment is not distributed; use the recorded installation locks. Public distribution of all recorded inputs and checkpoints was approved by the applicant. No blanket source/data/model license has been granted, and the actual job application remains unsubmitted. See the [challenge alignment and delivery gaps](docs/CHALLENGE_ALIGNMENT.md).
 
 [Current task](docs/CURRENT_TASK.md) · [Data and labels](docs/PILOT_LABEL_REPORT.md) · [Training implementation](docs/VISUAL_TRAINING.md) · [Original challenge](https://jobs.ashbyhq.com/humanoid/e1a2a9de-ad23-4632-9d93-ee50fd41a221)

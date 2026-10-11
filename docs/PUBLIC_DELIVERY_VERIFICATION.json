@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "created_utc": "2026-10-11T02:53:17.489974+00:00",
+  "release_url": "https://github.com/jinzzze/simu-lab/releases/tag/v1.1.0",
+  "commit": "042f9757aaa5f6151e889e06a2ed15a94a55f64b",
+  "anonymous_asset_checks": [
+    {
+      "asset": "evidence_walkthrough.mp4",
+      "anonymous_head": 200,
+      "server_sha256_matches": true
+    },
+    {
+      "asset": "SHA256SUMS.txt",
+      "anonymous_head": 200,
+      "server_sha256_matches": true
+    },
+    {
+      "asset": "simu-lab-v1.1.0-evidence.zip",
+      "anonymous_head": 200,
+      "server_sha256_matches": true
+    },
+    {
+      "asset": "simu-lab-v1.1.0-replay.zip",
+      "anonymous_head": 200,
+      "server_sha256_matches": true
+    },
+    {
+      "asset": "VERIFICATION.json",
+      "anonymous_head": 200,
+      "server_sha256_matches": true
+    }
+  ],
+  "downloaded_and_hashed": [
+    "SHA256SUMS.txt",
+    "VERIFICATION.json",
+    "simu-lab-v1.1.0-replay.zip",
+    "evidence_walkthrough.mp4"
+  ],
+  "full_evidence_zip_check": "All file hashes verified locally; public HEAD and GitHub server SHA-256 verified. Full ZIP not downloaded again.",
+  "replays": [
+    {
+      "condition": "geometry_only_24",
+      "arrays_identical": true,
+      "scoring_identical": true,
+      "strict_success": false,
+      "frames": 193
+    },
+    {
+      "condition": "video_timing_24",
+      "arrays_identical": true,
+      "scoring_identical": true,
+      "strict_success": false,
+      "frames": 193
+    }
+  ],
+  "public_source_files_matched": 965,
+  "scope": "Anonymous public retrieval and actual same-host replays with existing independent runtime; no fresh installation, new benchmark or retraining.",
+  "application_submitted": false
+}

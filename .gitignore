@@ -16,3 +16,15 @@ artifacts/runs/
 
 artifacts/release_candidate*/
 *.zip
+
+# Generated four-goal outputs: frozen audited files already tracked remain versioned.
+*.pt
+*.pth
+*.ckpt
+*.task
+*.npz
+experiments/**/data/raw/
+experiments/**/data/processed/
+experiments/**/artifacts/models/
+experiments/**/artifacts/evaluation/
+experiments/**/artifacts/replays/

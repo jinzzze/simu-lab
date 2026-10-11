@@ -53,6 +53,8 @@ Start with [the quick replay guide](docs/QUICKSTART.md). The small replay ZIP co
 
 The tested runtime is Windows, Python 3.11, CUDA-enabled PyTorch 2.10.0 and conda-forge PyBullet. Current inference requires an NVIDIA CUDA GPU. Torch and Bullet run in separate processes. Two fixed cases were reproduced with identical input/action arrays and scoring traces from a relocated archive using an existing independent environment on the same host. This does not establish another-machine compatibility or full-training determinism. Both fixed development cases fail strict placement; matching the recorded failure is a valid reproduction.
 
+[Anonymous public-download verification](docs/PUBLIC_DELIVERY_VERIFICATION.json) confirms that the published replay package reproduced both fixed cases on the same host and that all 965 files at the v1.1.0 source tag matched the reviewed checkout.
+
 [Environment and exact commands](docs/QUICKSTART.md) · [Fresh training workspace](docs/TRAINING.md) · [Machine-readable results](experiments/personal_video_timing_v4/artifacts/results_v1/results.json)
 
 ## Earlier experiments, kept separate

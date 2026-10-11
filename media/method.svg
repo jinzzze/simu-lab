@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="540" viewBox="0 0 1280 540" role="img" aria-labelledby="title desc">
+<title id="title">The personal-video training and execution pipeline</title><desc id="desc">Offline personal profiles shape simulated demonstrations used to train a recurrent policy. Online the trained policy acts on the current camera image, robot state, goal and previous command. Simulator truth is reserved for scoring.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#536779"/></marker></defs>
+<rect width="1280" height="540" fill="#ffffff"/>
+<g font-family="Segoe UI,Arial,sans-serif" fill="#172638">
+<text x="28" y="38" font-size="25" font-weight="600">Training: personal video shapes the demonstrations</text>
+<rect x="28" y="65" width="362" height="143" rx="8" fill="#e8f3f2"/>
+<rect x="458" y="65" width="362" height="143" rx="8" fill="#f0f4f7"/>
+<rect x="888" y="65" width="364" height="143" rx="8" fill="#f0f4f7"/>
+<text x="48" y="102" font-size="22" font-weight="600">24 personal clips</text>
+<text x="48" y="138" font-size="20">Both groups: target geometry</text>
+<text x="48" y="169" font-size="20">Video group: timing + image progress</text>
+<text x="478" y="102" font-size="22" font-weight="600">Simulated teacher</text>
+<text x="478" y="138" font-size="20">Execute 24 robot demonstrations</text>
+<text x="478" y="169" font-size="20">Record images and robot commands</text>
+<text x="908" y="102" font-size="22" font-weight="600">Learn from the demonstrations</text>
+<text x="908" y="138" font-size="20">Same CNN–GRU in both groups</text>
+<text x="908" y="169" font-size="20">Three seeds, fixed training budget</text>
+<path d="M 399 140 H 448 M 829 140 H 878" stroke="#536779" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="28" y="273" font-size="25" font-weight="600">Execution: observe, act, observe again</text>
+<rect x="28" y="300" width="362" height="138" rx="8" fill="#f0f4f7"/>
+<rect x="458" y="300" width="362" height="138" rx="8" fill="#e8f3f2"/>
+<rect x="888" y="300" width="364" height="138" rx="8" fill="#f0f4f7"/>
+<text x="48" y="337" font-size="22" font-weight="600">Current observations</text>
+<text x="48" y="373" font-size="20">Simulated RGB + robot state</text>
+<text x="48" y="404" font-size="20">Requested goal + previous command</text>
+<text x="478" y="337" font-size="22" font-weight="600">Trained recurrent policy</text>
+<text x="478" y="373" font-size="20">Uses current input and past memory</text>
+<text x="478" y="404" font-size="20">Predicts movement and gripper width</text>
+<text x="908" y="337" font-size="22" font-weight="600">Contact-based execution</text>
+<text x="908" y="373" font-size="20">Shared motion limits and physics</text>
+<text x="908" y="404" font-size="20">Score lift, release and stable placement</text>
+<path d="M 399 374 H 448 M 829 374 H 878" stroke="#536779" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 1070 214 V 231 H 640 V 290" fill="none" stroke="#536779" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 1070 444 V 469 H 210 V 444" fill="none" stroke="#536779" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="28" y="520" font-size="18" fill="#536779">The deployed learner receives neither the human trajectory nor the simulator's true object position.</text>
+</g></svg>

@@ -1,8 +1,12 @@
-# Replay the frozen personal-video experiment
+# Quickstart: run the four-goal policy
 
 These commands target the **v1.1.0 four-goal experiment**, not the older black-line task. Run PowerShell from your chosen project directory; no particular drive letter is required.
 
-## 1. Download one evidence package
+[Documentation](README.md) · [Method](METHOD.md) · [Troubleshooting](REPRODUCTION.md)
+
+The default path below uses the 12.8 MB replay ZIP. For the earlier transfer task, use the [simple-task guide](SIMPLE_TASK_REPRODUCTION.md).
+
+## 1. Download the replay package
 
 From [release v1.1.0](https://github.com/jinzzze/simu-lab/releases/tag/v1.1.0), download `SHA256SUMS.txt` and either:
 

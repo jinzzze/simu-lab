@@ -1,14 +1,12 @@
-> Current submission scope (2026-10-10): experiments are frozen. Only publication, reproduction fixes and documentation polish are authorized. Preserve all recorded model/configuration/result bytes; no new training or benchmarks. Paths are relative to the checkout. The older study rules below retain their historical scope.
-
 # Project development rules
 
-- Work in this repository on E:. Derive paths from the repository root; do not create project datasets, models, environments, logs or caches under the old C: workspace.
-- Read `docs/PROJECT_PLAN.md` before changing the research protocol. Current study is the A/B/C/D auxiliary-supervision comparison, not an unspecified VLA project.
-- In PowerShell, dot-source `scripts/Enter-Project.ps1` and use `.env/python.exe`. PyBullet is managed by conda-forge; do not replace it with a PyPI source build.
-- Keep raw RGB, episode splits and controller identical across the four primary groups. Human hand labels are training-only auxiliary targets. The current grasp prototype uses a shared fixed physical state machine; the old push world model is historical. Read docs/AUTONOMOUS_DEVELOPMENT_PROTOCOL.md for this recorded revision.
-- On this Windows environment, run scripts/run_tests.py: Torch and Panda/Bullet native OpenMP runtimes must use separate processes. Use src/predictor_process.py for live RGB inference in the simulator. Never suppress duplicate-runtime errors with KMP_DUPLICATE_LIB_OK.
-- True simulator object state may be used for training labels, scoring and explicit oracle diagnostics, never to correct primary-group runtime perception or contact planning.
-- Split by complete episode/session before deriving frames or labels. Keep future outcomes out of current inputs and use pre-recorded commands for action labels.
-- Distinguish smoke checks, synthetic fixtures, planned sample counts and measured research results. Never fabricate success rates or claim uncollected data exists.
-- Keep large videos, model weights and environment folders out of Git. Preserve data provenance and record external model versions and hashes.
-- The applicant must personally collect the required real data. Synthetic or third-party images may test tooling but do not satisfy that requirement.
+- Current scope: English presentation, navigation and reproduction fixes. Experiments are frozen. Preserve model, configuration, machine-readable result and frozen executable bytes; do not start new training or benchmarks.
+- The project progresses from simple transfer and visual learning to learned four-goal control. Read `docs/OVERVIEW.md`, `docs/EXPERIMENTS.md` and `docs/CODE_MAP.md` before making structural changes.
+- Work in the E: project checkout. Derive runtime paths from the repository root. Keep large recordings, checkpoints, environments, logs and caches out of the old C: workspace and Git.
+- Use the released package matching the experiment. The current main branch is a reader-facing source/documentation view; frozen release packages have their own manifests.
+- On Windows, dot-source `scripts/Enter-Project.ps1` and use the project environment. PyBullet is managed by conda-forge. Torch and Bullet inference/physics must use separate processes. Do not use `KMP_DUPLICATE_LIB_OK`.
+- Keep training-only information out of runtime policy inputs. Simulator truth is allowed for labels, scoring and identified oracle diagnostics, not online correction of primary policies.
+- Split by whole episode before deriving frames. Keep future outcomes out of current observations; robot action labels come from pre-recorded executed commands.
+- Report every declared seed and failure. Distinguish smoke checks, replay checks, predictions and measured policy success. Do not pool results across task settings or budgets.
+- Personal recordings come from the author. Credit Codex assistance accurately. Synthetic data and third-party images do not satisfy personal-data collection.
+- Current reader-facing documents and figures use English. Original development records remain linked at immutable commits. Never rewrite frozen evidence merely to update historical status fields.

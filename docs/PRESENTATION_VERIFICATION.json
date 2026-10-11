@@ -1,0 +1,50 @@
+{
+  "checked_at_utc": "2026-10-11T19:21:41.408201+00:00",
+  "scope": "English presentation update; no training, new benchmark samples or changes to frozen release assets.",
+  "baseline_commit": "d85568fd077ec68fd4df5c1149903090df63e25d",
+  "documentation": {
+    "local_links": 185,
+    "broken_links": [],
+    "non_english_markdown": [],
+    "control_characters": [],
+    "modified_frozen_files": []
+  },
+  "html": {
+    "html_local_links_checked": 16,
+    "missing_html_links": []
+  },
+  "frozen_original_files_sha256_checked": 912,
+  "replay_package": {
+    "files_checked": 61,
+    "passed": true
+  },
+  "four_goal_replays": [
+    {
+      "condition": "geometry_only_24",
+      "arrays_identical": true,
+      "scoring_identical": true,
+      "strict_success": false,
+      "video_frames": 193
+    },
+    {
+      "condition": "video_timing_24",
+      "arrays_identical": true,
+      "scoring_identical": true,
+      "strict_success": false,
+      "video_frames": 193
+    }
+  ],
+  "simple_transfer_replay": {
+    "group": "D",
+    "training_seed": 7,
+    "scene_seeds": [
+      30000
+    ],
+    "checkpoint_sha256": "0ff69564b60ddffa241e8ba392a70ce29845c635e4df3431353e4e69143e9f03",
+    "n": 1,
+    "successes": 1,
+    "xy_mean_error_mm": 0.3299038052190172
+  },
+  "execution_scope": "Same-host fixed-case execution using the existing independently installed environment. No fresh installation, full retraining or new benchmark.",
+  "interpretation": "Exact replay reproduces reference behavior; both four-goal cases fail strict placement. The single successful simple-transfer execution is a smoke check, not a new success-rate estimate."
+}

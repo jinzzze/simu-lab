@@ -1,22 +1,5 @@
-# 初始图像重合与敏感性检查
+# Initial-image overlap
 
-训练、验证、测试的随机种子互不相同，但 4 个测试任务的初始 RGB 与已有训练/验证图像完全相同，涉及 2 个测试物理起点。随机种子不同不保证渲染像素独立。
+Four test-task initial images match training/development pixels. Post-hoc exclusion gives 5/84 versus 8/84; excluding all goals for the two affected starts gives 4/72 versus 7/72. Original results remain 7/96 versus 11/96.
 
-以下两种排除规则都是发现重合后的补充分析。原始 264 次执行和原始结果全部保留；没有补跑、替换或挑选新场景。
-
-|范围|共同几何|额外视频时序/进度|每组物理起点数|
-|---|---:|---:|---:|
-|原始全部测试|7/96 (7.3%)|11/96 (11.5%)|8|
-|排除 4 个相同图像任务|5/84 (6.0%)|8/84 (9.5%)|8|
-|排除 2 个相关物理起点的所有目标|4/72 (5.6%)|7/72 (9.7%)|6|
-
-|测试任务|重合来源|用途|评分位置与来源初态差距|
-|---|---|---|---:|
-|P3_G1_r1|shared_validation_920008|val|0.074 mm|
-|P3_G2_r1|geometry_only_24_910013|train|1.257 mm|
-|P3_G3_r1|shared_validation_920008|val|0.074 mm|
-|P4_G4_r2|geometry_only_24_910003|train|0.312 mm|
-
-坐标距离仅用于检查：测试位置取第一次命令后的评分记录，来源位置取初态；不把它解释成定位误差。
-
-当前证据不支持“完全未见初始图像”的主张。排除后样本更小，各模型种子与目标之间仍共享物理起点；不由这些数值推断统计显著性。
+Read the [English study guide](../../../../docs/EXPERIMENTS.md) for the comparison, evidence and limitations. The [original narrative record](https://github.com/jinzzze/simu-lab/blob/d85568fd077ec68fd4df5c1149903090df63e25d/experiments/personal_video_timing_v4/artifacts/initial_overlap_audit_v1/REPORT_ZH.md) is preserved at the pre-restructure commit. Machine-readable results and frozen executable sources are unchanged.

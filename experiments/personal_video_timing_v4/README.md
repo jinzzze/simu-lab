@@ -1,6 +1,6 @@
-> Release navigation: [v1.1.0 downloads](https://github.com/jinzzze/simu-lab/releases/tag/v1.1.0) · [Quick replay](../../docs/QUICKSTART.md). Experimental status/provenance below records the original run; the release does not retrain or alter it.
+# Four-goal placement: personal-video timing
 
-# Personal-video timing ablation
+[Project progression](../../docs/OVERVIEW.md) · [Method](../../docs/METHOD.md) · [All experiments](../../docs/EXPERIMENTS.md) · [Run a policy](../../docs/QUICKSTART.md)
 
 This study tests whether coarse transfer timing and image progress from the applicant's videos help a learned simulated pick-and-place policy beyond the videos' shared goal geometry. Both conditions cover the same 12 P/G combinations with 24 paired robot demonstrations. The four cyclic combinations P1–G2, P2–G3, P3–G4 and P4–G1 are withheld from training.
 
@@ -20,7 +20,7 @@ Each learner uses the same v6 recurrent BC architecture, initialization, paired 
 
 Completed: 60 teacher trajectories, six trained models, 72 validation and 192 test executions, all-seed audits, and actual fixed-case reproduction. The test counts are **7/96 for shared geometry and 11/96 with video timing/progress**; held-out combinations are 1/24 and 2/24. This small observed difference does not establish a reliable or statistically significant improvement. Overall success is low and most failures lack a qualified lift.
 
-Four initial test-task images repeat training/development pixels despite disjoint scene seeds. Post-hoc exclusion gives 5/84 versus 8/84; excluding all goals for the two affected physical starts gives 4/72 versus 7/72. The original results are retained. See [full results and budget](RESULTS_EN.md), [overlap sensitivity](artifacts/initial_overlap_audit_v1/REPORT_ZH.md), [Chinese progress](PROGRESS_ZH.md), and the [92-second evidence walkthrough](https://github.com/jinzzze/simu-lab/releases/download/v1.1.0/evidence_walkthrough.mp4).
+Four initial test-task images repeat training/development pixels despite disjoint scene seeds. Post-hoc exclusion gives 5/84 versus 8/84; excluding all goals for the two affected physical starts gives 4/72 versus 7/72. The original results are retained. See [full results and budget](RESULTS_EN.md), [overlap sensitivity](artifacts/initial_overlap_audit_v1/REPORT_ZH.md), [study summary](PROGRESS_ZH.md), and the [92-second evidence walkthrough](https://github.com/jinzzze/simu-lab/releases/download/v1.1.0/evidence_walkthrough.mp4).
 
 ![Method](artifacts/figures/method_v1/method.png)
 
@@ -32,7 +32,7 @@ Teacher collection, training and evaluation each save manifests, SHA-256 provena
 
 The test suite has 32 tasks over eight physical initial positions, repeated for three policy seeds. It is not 96 independent environments per condition. X03 was previously inspected for administrative naming/QC at the applicant's request. A separate frozen label-coverage check was run only after all checkpoints were fixed: 2,637/3,205 frames (82.3%) have object candidates. This is coverage, not accuracy or robot success. No X03 information updates these policies. See [the separate X03 report](../cross_goal_composition_v3/artifacts/reports/X03_frozen_labels_v1/REPORT_ZH.md).
 
-Two fixed development cases reproduced with exactly matching input/action arrays and scoring traces, including from a relocated directory with a previously independently installed environment. This is a same-host replay check, not full retraining or another-machine validation. [Exact commands and scope](REPRODUCTION_ZH.md) · [Portable receipt](receipts/portable_replay_v1/receipt.json) · [Application narrative draft](../../docs/SUBMISSION_EN.md).
+Two fixed development cases reproduced with exactly matching input/action arrays and scoring traces, including from a relocated directory with a previously independently installed environment. This is a same-host replay check, not full retraining or another-machine validation. [Exact commands and scope](REPRODUCTION_ZH.md) · [Portable receipt](receipts/portable_replay_v1/receipt.json).
 
 ## Reproduce or train
 

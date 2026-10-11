@@ -1,17 +1,5 @@
-# 训练预算与配对审计
+# Training-budget audit
 
-六个模型均完成2500次更新；24条轨迹均实际被采样，未遗漏第17–24条。两组每个P和G各出现6次。
-三个种子的完整初始权重、轨迹采样序列和实际增强参数序列分别配对一致。
+Both conditions use three seeds and 2,500 updates with paired initialization, sampling and augmentation. Different trajectory lengths produce different valid-action target counts and compute. Full budgets are in RESULTS_EN.md.
 
-| 条件 | 种子 | 更新数 | 轨迹抽样次数 | 有效动作目标数 | 训练秒数 |
-|---|---:|---:|---:|---:|---:|
-| geometry_only_24 | 7 | 2500 | 5000 | 1339946 | 132.6 |
-| geometry_only_24 | 17 | 2500 | 5000 | 1341501 | 126.4 |
-| geometry_only_24 | 27 | 2500 | 5000 | 1340914 | 125.3 |
-| video_timing_24 | 7 | 2500 | 5000 | 1372197 | 128.2 |
-| video_timing_24 | 17 | 2500 | 5000 | 1375003 | 123.0 |
-| video_timing_24 | 27 | 2500 | 5000 | 1373828 | 125.1 |
-
-有效目标数按日志抽样次数×每条真实长度复算，和训练记录一致。不同轨迹长度造成帧数及计算量差异，不能称为完全等算力。
-
-[完整审计收据](receipt.json)
+Read the [English study guide](../../../../docs/METHOD.md) for the comparison, evidence and limitations. The [original narrative record](https://github.com/jinzzze/simu-lab/blob/d85568fd077ec68fd4df5c1149903090df63e25d/experiments/personal_video_timing_v4/artifacts/training_audit_v1/REPORT_ZH.md) is preserved at the pre-restructure commit. Machine-readable results and frozen executable sources are unchanged.

@@ -1,0 +1,29 @@
+{
+  "description": "Recorded source frames for task-preview.png; no generated robot imagery.",
+  "frames": [
+    {
+      "label": "Personal recording",
+      "source": "experiments/cross_goal_composition_v3/data/raw/X01_train/train_P1_G3_01.mp4",
+      "source_sha256": "d3f02c10ac0c2c921ee032c5e1d1e7f67f099de00437f82b00fdd5843954426a",
+      "frame": 83,
+      "total_frames": 240,
+      "fps": 29.87551867219917
+    },
+    {
+      "label": "1  Simple transfer",
+      "source": "artifacts/runs/visual_grasp_v1/D_seed7/first_scene_demo.mp4",
+      "source_sha256": "f4068dbde4f57e9115072af3fbb8ccc3cfd7409a9b00f9c429ad41bf19526f09",
+      "frame": 82,
+      "total_frames": 119,
+      "fps": 12.5
+    },
+    {
+      "label": "2  Four-goal placement",
+      "source": "experiments/personal_video_timing_v4/artifacts/evaluation/test/video_timing_24_seed7/first_predeclared_case.mp4",
+      "source_sha256": "4165f609cd5ec8755ee6ffca606fdf8f680668da8ef685c619ac1b11273689b5",
+      "frame": 134,
+      "total_frames": 193,
+      "fps": 12.5
+    }
+  ]
+}

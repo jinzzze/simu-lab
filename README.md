@@ -1,77 +1,64 @@
-# simu-lab · Personal video for robot learning
+# simu-lab
 
-An exploratory study of how personally recorded phone videos can contribute to robot perception, state prediction and goal-conditioned control in a contact-based Panda simulation.
+### Learning robot manipulation from personal video
 
-**Latest experiment:** two recurrent policies share the same video-derived goal geometry and robot demonstration budget; one also uses coarse timing and image progress from the personal videos to shape its training demonstrations. Strict test success is **7/96 versus 11/96**. Overall success is low, and this small observed difference does not establish a reliable improvement.
+Can a few phone recordings help a robot learn to pick up and place a block? This project follows that question from a simple transfer task to a task with four start locations and four specified goals. All robot experiments run in a contact-based Panda simulation.
 
-[Watch the 92-second walkthrough](https://github.com/jinzzze/simu-lab/releases/download/v1.1.0/evidence_walkthrough.mp4) · [Quick replay](docs/QUICKSTART.md) · [Full results](experiments/personal_video_timing_v4/RESULTS_EN.md) · [Release downloads](https://github.com/jinzzze/simu-lab/releases/tag/v1.1.0)
+[Overview](docs/OVERVIEW.md) · [Experiments](docs/EXPERIMENTS.md) · [Run a policy](docs/QUICKSTART.md) · [Data & models](docs/DATA_MODEL_CARD.md) · [Downloads](https://github.com/jinzzze/simu-lab/releases/tag/v1.1.0)
 
-![Task, personal-data intervention and policy](experiments/personal_video_timing_v4/artifacts/figures/method_v1/method.png)
+[![Personal recording, simple transfer and four-goal placement](media/task-preview.png)](https://github.com/jinzzze/simu-lab/releases/download/v1.1.0/evidence_walkthrough.mp4)
 
-## Task and personal data
+*Recorded human demonstration and simulated robot executions. [Watch the 92-second walkthrough](https://github.com/jinzzze/simu-lab/releases/download/v1.1.0/evidence_walkthrough.mp4). These are illustrative frames; measured performance is reported below.*
 
-The applicant recorded moving a black block from four red source positions P1–P4 to four blue target centers G1–G4. The measured grids are 100 × 130 mm, separated by a 130 mm edge-to-edge gap. The simulator uses an engineered tabletop mapping; this is not calibrated real-robot registration.
+## From seeing the block to choosing the next move
 
-At the start of each robot episode, the desired target XY is supplied explicitly. At every control step, the learned CNN–GRU receives **current RGB, robot proprioception, that goal and the previous command**. It predicts the next robot command. It does not receive object ground truth, a scripted phase, an external clock or a human trajectory at deployment.
+The first task asked the robot to lift a block and place it beyond a line. A learned visual model estimated the block's position; a fixed controller carried out the grasp. This made it possible to study what the personal videos contributed to perception.
 
-Strict success requires lifting, release, withdrawal and stable placement of the **entire object footprint inside the prescribed 40 mm goal square**. Merely crossing the separator is insufficient. Grasping uses simulated contact forces; the object is never attached to or teleported with the gripper.
+The next experiments explored skill-outcome prediction and learned robot commands. The task then expanded to four starts and four goals: the policy had to use the requested destination and place the entire block inside a 40 mm square. The final comparison tested whether video-derived transport timing and image progress helped beyond the goal geometry already shared by both groups.
 
-The latest comparison uses 24 personal training clips: eight preselected S01 recordings and all 16 X01 recordings. X02 has 12 development clips; X03 has 16 held-out clips, processed separately after the policies were frozen. These are recording blocks from the same scene family, not broad real-world diversity. [Data and model card](docs/DATA_MODEL_CARD.md)
+![Research progression from visual learning to goal-conditioned control](media/study-progression.svg)
 
-## What the video contributes
+Each stage asks a different question. The outcome predictor is a supporting study, not a planner used by the four-goal policy. [Read the study progression](docs/OVERVIEW.md).
 
-| | Shared geometry | Geometry + video timing/progress |
+## How the video is used
+
+In the latest study, 24 personal training clips supply target locations. One condition also uses their coarse transport duration and two-dimensional image progress to shape robot demonstrations in simulation. The learner imitates the robot commands actually executed in those demonstrations.
+
+![Video information shapes offline demonstrations; the policy acts on current observations](media/method.svg)
+
+At execution time, the policy receives the current simulated camera image, robot state, requested goal and previous command. It predicts the next gripper movement and opening. A recurrent model carries information from previous steps. [Method and information boundaries](docs/METHOD.md).
+
+## What the experiments found
+
+| Question | Measured result | What it tells us |
 |---|---|---|
-| Personal training sources | Same 24 clips | Same 24 clips |
-| Target geometry | First-frame blue target centers | Identical geometry |
-| Teacher transport | Ordinary transport schedule | Matching clip's coarse transfer duration and dimensionless image progress |
-| Robot demonstrations | 24, covering 12 P/G combinations | 24, with paired initial scenes and the same 12 combinations |
-| Learner and selection | CNN–GRU, seeds 7/17/27, 2,500 updates each, final EMA | Same architecture, paired initialization/sampling/augmentation and update count |
+| Do hand and object targets improve the visual model? | With 32 simulation adaptation images: RGB-only **184/192**, combined targets **181/192** successful transfers | No measured success advantage from the combined targets |
+| Can a model predict a fixed skill's outcome? | Mean endpoint error **28.41 mm**, versus **90.89 mm** for a no-motion baseline | Useful prediction on this simulated distribution; planning benefit was not tested |
+| Does video timing help the four-goal learner? | Shared geometry **7/96**; added timing/progress **11/96** strict placements | A small observed difference; overall success is low and a reliable benefit is not established |
 
-Video constraints change the executed teacher commands, which become robot action labels. They are **not recovered human 3D actions**. Invalid image labels remain masked; MediaPipe hand candidates are used for inspection, not as an extra input or loss in this comparison. Teacher failures are retained. Different trajectory lengths mean the comparison does not have equal frame targets or equal compute. [Intervention evidence](experiments/personal_video_timing_v4/artifacts/intervention_audit_v1/REPORT_EN.md)
+The tasks, controllers and data budgets differ across rows. The [experiment guide](docs/EXPERIMENTS.md) includes the learned-action and goal-coverage studies, all model seeds and links to the underlying results.
 
-## Results and failures
+Grasping is the main bottleneck in the latest study: **75/96** and **69/96** runs did not achieve a qualified lift. Its 96 executions per condition reuse eight physical starts across goals and three model seeds. Four initial test-task images also repeat training/development pixels; [the full results](experiments/personal_video_timing_v4/RESULTS_EN.md) retain the original scores and report exclusions separately.
 
-| Frozen test category | Shared geometry | + Video timing/progress |
-|---|---:|---:|
-| Same-number pairs | 0/24 | 3/24 |
-| Seen cross-goal pairs | 6/48 | 6/48 |
-| Held-out pairs | 1/24 | 2/24 |
-| **All pairs** | **7/96 (7.3%)** | **11/96 (11.5%)** |
+## Run the recorded policy
 
-Held-out pairs are P1–G2, P2–G3, P3–G4 and P4–G1. Each condition runs 32 tasks with three policy seeds, sharing **eight physical initial positions**; 96 is an execution count, not a count of independent environments. In total, the study contains 60 teacher trajectories, six trained models, 72 validation executions and 192 test executions.
+Start with the [quick replay guide](docs/QUICKSTART.md). It runs two frozen development cases and compares their observations, actions and scores with the recorded traces.
 
-Most failures occur before a qualified lift: 75/96 and 69/96 executions respectively. Both teachers lift successfully in 24/24 attempts, so the bottleneck is the learned closed-loop policy. The walkthrough includes the predeclared first test case for both groups; its successful video-policy rollout is not representative of the overall success rate.
+- **Runtime:** Windows, Conda and an NVIDIA CUDA GPU; Python 3.11.
+- **Download:** the **12.8 MB replay ZIP** for the two cases, or the **1.80 GB evidence ZIP** for all six models and the current study's inputs and traces. A source clone alone does not contain the weights.
+- **Expected result:** both reference cases fail strict placement. A successful replay check reproduces that recorded behavior.
 
-Four initial test-task images match training/development pixels despite disjoint seeds. Excluding these tasks gives **5/84 versus 8/84**; excluding all goals for the two affected physical starts gives **4/72 versus 7/72**. These post-hoc sensitivity checks retain the original results and add no executions. [All seeds, budgets and overlap details](experiments/personal_video_timing_v4/RESULTS_EN.md)
+| I want to… | Start here |
+|---|---|
+| Understand the project | [Overview](docs/OVERVIEW.md) |
+| Run an existing policy | [Quickstart](docs/QUICKSTART.md) |
+| Repeat training | [Training guide](docs/TRAINING.md) |
+| Revisit the simple task | [Stage 1 reproduction](docs/SIMPLE_TASK_REPRODUCTION.md) |
+| Inspect every result | [Experiments](docs/EXPERIMENTS.md) and [evidence index](docs/EVIDENCE.md) |
+| Find the implementation | [Code map](docs/CODE_MAP.md) |
 
-![All-seed results and limitations](experiments/personal_video_timing_v4/artifacts/figures/personal_timing_v2/results.png)
+## Scope and credits
 
-## Reproduce the evidence
+This is a small simulation study. There is no real-robot evaluation or language-conditioned policy. The recordings share a limited scene family, and the extracted image labels do not recover human metric 3D actions. Exact replay was checked on the original Windows host with an independently installed environment; another-machine compatibility and full-retraining determinism remain unverified.
 
-Start with [the quick replay guide](docs/QUICKSTART.md). The small replay ZIP contains two seed-7 checkpoints and fixed development-case references; the full evidence ZIP adds all six models, personal input videos, processed labels, teacher trajectories, evaluation traces and frozen source snapshots. Large files are Release assets, not Git objects. Each ZIP has a file manifest; `SHA256SUMS.txt` checks the downloads.
-
-The tested runtime is Windows, Python 3.11, CUDA-enabled PyTorch 2.10.0 and conda-forge PyBullet. Current inference requires an NVIDIA CUDA GPU. Torch and Bullet run in separate processes. Two fixed cases were reproduced with identical input/action arrays and scoring traces from a relocated archive using an existing independent environment on the same host. This does not establish another-machine compatibility or full-training determinism. Both fixed development cases fail strict placement; matching the recorded failure is a valid reproduction.
-
-[Anonymous public-download verification](docs/PUBLIC_DELIVERY_VERIFICATION.json) confirms that the published replay package reproduced both fixed cases on the same host and that all 965 files at the v1.1.0 source tag matched the reviewed checkout.
-
-[Environment and exact commands](docs/QUICKSTART.md) · [Fresh training workspace](docs/TRAINING.md) · [Machine-readable results](experiments/personal_video_timing_v4/artifacts/results_v1/results.json)
-
-## Earlier experiments, kept separate
-
-These studies ask different questions and use different controllers, data budgets and success criteria. Their rates must not be pooled with the latest task.
-
-| Study | Measured result | Interpretation |
-|---|---|---|
-| Real-video visual auxiliary supervision | With 32 simulation adaptation images: RGB-only 184/192, combined hand/object targets 181/192 | No measured combined-target success advantage; fixed grasp controller |
-| Action-conditioned fixed-skill state prediction | Learned ensemble endpoint error 28.41 mm vs 90.89 mm zero-displacement baseline; outcome labels correct in 153/160 transitions | Predicts skill outcomes from simulation transitions; 153/160 is classification accuracy, not robot success; planning benefit was not evaluated |
-| Compact Diffusion Policy | 84/192 strict placements | Additional 128 simulated training trajectories and a different control budget; not a matched comparison with the visual ablation |
-| [Four-goal coverage comparison](experiments/cross_goal_composition_v3/COVERAGE_REPORT_EN.md) | Same-number training 22/96 vs 12-combination training 15/96; held-out 0/24 vs 2/24 | Equal demonstration counts did not yield an overall gain; shared S01 geometry, without new video timing |
-
-[Earlier methods and full reports](README_v1.0.0.md) · [State-prediction model](docs/GRASP_WORLD_MODEL.md) · [Original v1.0.0 data and checkpoints](https://github.com/jinzzze/simu-lab/releases/tag/v1.0.0)
-
-## Scope and provenance
-
-All policy execution reported here is simulation-only. There is no real-robot evaluation, language-conditioned VLA, validated human metric 3D motion recovery or demonstrated world-model planning gain. Candidate label coverage is not label accuracy. X03 was previously viewed for applicant-requested naming/QC; it is not claimed never viewed.
-
-The applicant personally supplied the recordings. Codex assisted with implementation, execution, candidate-label inspection and writing. The release preserves source/configuration hashes, failed trials and declared information boundaries. Public distribution of the recordings and derived models is authorized; no blanket source/data/model license has been granted. Third-party terms remain separate. [Source notices](THIRD_PARTY_NOTICES.md) · [Challenge alignment](docs/CHALLENGE_ALIGNMENT.md)
+The author collected the personal recordings and confirmed the task layout. Codex assisted with implementation, experiment execution, candidate-label inspection and writing. Recordings and project checkpoints are public with permission; no blanket source/data/model reuse license has been granted. See [data provenance](docs/DATA_MODEL_CARD.md) and [third-party notices](THIRD_PARTY_NOTICES.md).

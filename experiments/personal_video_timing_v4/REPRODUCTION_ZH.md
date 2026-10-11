@@ -1,5 +1,5 @@
-# 当前复现入口
+# Replay and training
 
-请从 [英文快速复现](../../docs/QUICKSTART.md)开始：下载快速回放包或完整证据包，校验文件、安装环境，再执行两组固定案例。脚本会比较全部输入/动作与评分轨迹；回放结果均为严格放置失败，复现通过不代表任务成功。
+Run the two fixed development cases using the current English quickstart. Both recorded cases fail strict placement; an exact replay reproduces that outcome.
 
-训练请使用[新工作目录说明](../../docs/TRAINING.md)，保留冻结配置，不覆盖既有结果。当前仅验证同一台机器上的独立目录/已有独立环境；未声称另一台机器或完整重训的确定性。
+Read the [English study guide](../../docs/QUICKSTART.md) for the comparison, evidence and limitations. The [original narrative record](https://github.com/jinzzze/simu-lab/blob/d85568fd077ec68fd4df5c1149903090df63e25d/experiments/personal_video_timing_v4/REPRODUCTION_ZH.md) is preserved at the pre-restructure commit. Machine-readable results and frozen executable sources are unchanged.

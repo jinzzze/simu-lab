@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="390" viewBox="0 0 1280 390" role="img" aria-labelledby="title desc">
+<title id="title">Study progression</title><desc id="desc">Visual learning on a simple transfer task leads to studying learned commands and then specified-goal placement. Outcome prediction is a supporting branch, not the four-goal planner.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#536779"/></marker></defs>
+<rect width="1280" height="390" fill="#ffffff"/>
+<g font-family="Segoe UI,Arial,sans-serif" fill="#172638">
+<text x="28" y="40" font-size="26" font-weight="600">A harder control problem at each stage</text>
+<rect x="28" y="72" width="364" height="156" rx="8" fill="#f0f4f7"/>
+<rect x="458" y="72" width="364" height="156" rx="8" fill="#f0f4f7"/>
+<rect x="888" y="72" width="364" height="156" rx="8" fill="#e8f3f2"/>
+<text x="48" y="108" font-size="22" font-weight="600">1. Learn to locate the block</text>
+<text x="48" y="146" font-size="20">Personal-video visual training</text>
+<text x="48" y="176" font-size="20">A fixed controller executes the grasp</text>
+<text x="48" y="207" font-size="18" fill="#536779">Task: place beyond a line</text>
+<text x="478" y="108" font-size="22" font-weight="600">2. Learn the robot commands</text>
+<text x="478" y="146" font-size="20">Imitate simulated demonstrations</text>
+<text x="478" y="176" font-size="20">The model produces the actions</text>
+<text x="478" y="207" font-size="18" fill="#536779">Task: the same simple transfer</text>
+<text x="908" y="108" font-size="22" font-weight="600">3. Act on a specified goal</text>
+<text x="908" y="146" font-size="20">Four starts, four destinations</text>
+<text x="908" y="176" font-size="20">Test video timing and progress</text>
+<text x="908" y="207" font-size="18" fill="#536779">Task: place fully inside a goal square</text>
+<path d="M 400 150 H 448 M 830 150 H 878" stroke="#536779" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 210 232 V 270" stroke="#536779" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="28" y="278" width="794" height="56" rx="8" fill="#f6f7f8"/>
+<text x="48" y="313" font-size="19">Supporting study: predict a fixed skill's outcome; planning was not evaluated.</text>
+<text x="28" y="372" font-size="18" fill="#536779">Each stage has its own task, controller and data budget. Success rates are interpreted within each study.</text>
+</g></svg>

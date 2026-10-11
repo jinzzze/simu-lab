@@ -6,6 +6,10 @@ Can a few phone recordings help a robot learn to pick up and place a block? This
 
 [Overview](docs/OVERVIEW.md) · [Experiments](docs/EXPERIMENTS.md) · [Run a policy](docs/QUICKSTART.md) · [Data & models](docs/DATA_MODEL_CARD.md) · [Downloads](https://github.com/jinzzze/simu-lab/releases/tag/v1.1.0)
 
+[![Personal recording, simple transfer and four-goal placement](media/task-preview.png)](https://github.com/jinzzze/simu-lab/releases/download/v1.1.0/evidence_walkthrough.mp4)
+
+*Recorded human demonstration and simulated robot executions. [Watch the 92-second walkthrough](https://github.com/jinzzze/simu-lab/releases/download/v1.1.0/evidence_walkthrough.mp4). These are illustrative frames; measured performance is reported below.*
+
 ## The two tasks
 
 ### Task 1 · Simple transfer
@@ -21,8 +25,6 @@ Start at one of P1–P4 and move the block to the specified goal, G1–G4. The s
 ![Task 2: transfer from one of four start positions to a specified goal, with the full block footprint inside its target square](media/task-2-four-goal.png)
 
 The second task adds a specified destination and a tighter placement requirement. Both diagrams show task layouts, not measured trajectories; they are not to scale.
-
-[Watch the 92-second walkthrough](https://github.com/jinzzze/simu-lab/releases/download/v1.1.0/evidence_walkthrough.mp4) · [See recorded human and robot scenes](media/task-preview.png)
 
 ## From seeing the block to choosing the next move
 

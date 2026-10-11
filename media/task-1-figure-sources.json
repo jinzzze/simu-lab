@@ -1,0 +1,123 @@
+{
+  "description": "Plots of frozen Task 1 training arrays and recorded robot success counts; no new labels, training or evaluation.",
+  "sample_selection": "First sample in NPZ order with a valid object box and all 21 hand landmarks inside the image.",
+  "sample_index": 8,
+  "episode_id": "pilot_777231764b48",
+  "frame_index": 40,
+  "source_video": "data/raw/pilot/5d81c4e3767ab92cd6898978b3330c6e.mp4",
+  "dataset_sha256": "47509e28e150f8fa1227d891235b4ce55f9ea731e8090ed9bffdedf2209980e6",
+  "object_target_cx_cy_w_h_normalized": [
+    0.46484375,
+    0.2847222089767456,
+    0.04531250149011612,
+    0.07777778059244156
+  ],
+  "hand_targets_xy_normalized": [
+    [
+      0.7457090020179749,
+      0.7070157527923584
+    ],
+    [
+      0.6488890647888184,
+      0.6414027214050293
+    ],
+    [
+      0.5900647640228271,
+      0.540330171585083
+    ],
+    [
+      0.5515347123146057,
+      0.4628814160823822
+    ],
+    [
+      0.5191214680671692,
+      0.4093313217163086
+    ],
+    [
+      0.6892808079719543,
+      0.34275636076927185
+    ],
+    [
+      0.6443445086479187,
+      0.2328389286994934
+    ],
+    [
+      0.6083831787109375,
+      0.23588761687278748
+    ],
+    [
+      0.5823740363121033,
+      0.25767844915390015
+    ],
+    [
+      0.7345346808433533,
+      0.3569909632205963
+    ],
+    [
+      0.6866183876991272,
+      0.2308778166770935
+    ],
+    [
+      0.6420061588287354,
+      0.25441867113113403
+    ],
+    [
+      0.6153821349143982,
+      0.294471800327301
+    ],
+    [
+      0.7620388269424438,
+      0.3924936056137085
+    ],
+    [
+      0.7203723788261414,
+      0.29069995880126953
+    ],
+    [
+      0.6784986853599548,
+      0.2981894612312317
+    ],
+    [
+      0.6504073143005371,
+      0.32839784026145935
+    ],
+    [
+      0.7783327102661133,
+      0.4367520809173584
+    ],
+    [
+      0.7479164600372314,
+      0.36336714029312134
+    ],
+    [
+      0.7128525376319885,
+      0.3529873192310333
+    ],
+    [
+      0.6847947239875793,
+      0.36779749393463135
+    ]
+  ],
+  "plot_counts": {
+    "256 adaptation images": {
+      "A": 192,
+      "B": 192,
+      "C": 192,
+      "D": 192,
+      "R": 192
+    },
+    "32 adaptation images": {
+      "A": 184,
+      "B": 183,
+      "C": 184,
+      "D": 181,
+      "R": 182
+    }
+  },
+  "result_sources": {
+    "results.json": "844afcef2c29cf9ec699aebe8d0b5f70ff73c808acc273d7b3925e77d8fcd12e",
+    "low32_results.json": "a7527fc85e58d090a8ee644967fc096f34abe7bbdc49a01bf74f8434c5b5672a",
+    "imagenet_reference.json": "dc5544c6aa13dc5b12c1a472c74648ef950864fb6a0dc6a4f0f4970e95907ffe"
+  },
+  "limits": "Candidate labels are not independently validated ground truth. Example selection illustrates available targets, not detection accuracy."
+}

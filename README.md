@@ -36,7 +36,23 @@ The next experiments explored skill-outcome prediction and learned robot command
 
 Each stage asks a different question. The outcome predictor is a supporting study, not a planner used by the four-goal policy. [Read the study progression](docs/OVERVIEW.md).
 
-## How the video is used
+## Task 1: learning from object boxes and hand positions
+
+The simple-transfer study asks whether knowing **where the object is** and **where the hand is** helps a visual model learn from personal video. Twelve phone clips supply 438 shared pretraining frames. The example below plots the actual stored targets for one of those frames.
+
+![One recorded training frame shown as raw RGB, with a green object box, and with 21 yellow hand landmarks](media/task-1-supervision.png)
+
+The box describes the visible object region; the hand target contains 21 two-dimensional landmarks. These are automatically generated candidate labels, with unmeasured annotation accuracy. Missing labels are masked independently. The overlays are for illustration: every model receives the same unannotated RGB images. This is hand-position supervision, not gesture classification or recovery of human 3D actions.
+
+**A** uses RGB consistency alone; **B** adds the object-box target; **C** adds hand keypoints; **D** adds both. **R** is an ImageNet-only reference that skips personal-video pretraining. All groups then adapt to simulated images, estimate the block's XY position and use the same fixed grasp controller.
+
+![Task 1 success counts for A, B, C, D and R: all 192 of 192 with 256 adaptation images; 184, 183, 184, 181 and 182 of 192 with 32 images](media/task-1-results.png)
+
+With **256 adaptation images**, every group reaches **192/192** successful transfers. With **32 images**, A/B/C/D/R score **184/183/184/181/182 out of 192**. Adding both targets did not improve task success in this pilot. The smaller-data follow-up reuses the same scenes and is exploratory; these small differences do not establish a reliable benefit or degradation.
+
+[Full Task 1 report](docs/studies/SIMPLE_TRANSFER.md) · [Localization-error comparison](artifacts/reports/visual_ablation_v1/comparison.png) · [Original label-review examples](artifacts/diagnostics/pilot_labels_v2/619481ad2df077adff353cb4ced816b5_review.jpg) · [Figure sources](media/task-1-figure-sources.json)
+
+## Task 2: how the video is used
 
 In the latest study, 24 personal training clips supply target locations. One condition also uses their coarse transport duration and two-dimensional image progress to shape robot demonstrations in simulation. The learner imitates the robot commands actually executed in those demonstrations.
 

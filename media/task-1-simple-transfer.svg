@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="468" viewBox="0 0 880 468" role="img" aria-labelledby="title desc">
+<title id="title">Task 1: simple transfer across a black line</title>
+<desc id="desc">A small block starts to the left of a black line. Grasp it, lift and carry it across the line, then place, release and withdraw. Success requires the whole block to remain beyond the line after release.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#087c98"/></marker></defs>
+<rect width="880" height="468" fill="#f7fcfd"/>
+<path d="M 0 .5 H 880" stroke="#087c98"/>
+<g font-family="Arial,Helvetica,sans-serif" fill="#102f3f">
+<text x="40" y="46" font-size="29" font-weight="700">Task 1: simple transfer</text>
+<text x="40" y="82" font-size="18" fill="#526875">Pick up the block and place it beyond the black line</text>
+<rect x="65" y="145" width="740" height="230" fill="#edf4f7" stroke="#98aab4" stroke-width="1.4"/>
+<rect x="508" y="145" width="297" height="230" fill="#e8f3f3"/>
+<path d="M 505 145 V 375" stroke="#18252c" stroke-width="5"/>
+<text x="505" y="129" text-anchor="middle" font-size="18" fill="#526875">Black line</text>
+<text x="174" y="184" font-size="21" font-weight="700" fill="#cc5948">Start</text>
+<text x="578" y="184" font-size="21" font-weight="700" fill="#007cae">Beyond the line</text>
+<rect x="180" y="258" width="40" height="40" fill="#20272b"/>
+<rect x="641" y="258" width="40" height="40" fill="none" stroke="#007cae" stroke-width="2" stroke-dasharray="6 4"/>
+<path d="M 236 271 C 337 209 513 209 624 271" fill="none" stroke="#087c98" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="400" y="215" text-anchor="middle" font-size="19" font-weight="700">Lift and carry</text>
+<text x="200" y="338" text-anchor="middle" font-size="17">20 × 20 × 10 mm block</text>
+<text x="657" y="338" text-anchor="middle" font-size="17">Place and release</text>
+<text x="71" y="418" font-size="24" font-weight="700">Grasp → lift → place → release → withdraw</text>
+<text x="71" y="457" font-size="17">Strict success: the whole block stays beyond the line after release and withdrawal.</text>
+</g></svg>

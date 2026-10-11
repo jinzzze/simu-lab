@@ -1,0 +1,27 @@
+{
+  "version": "cross_goal_rgb_candidates_v1",
+  "scope": "train/development only",
+  "dark_max_channel": 90,
+  "comparison_dark_max_channel": 105,
+  "morph_open_kernel": 3,
+  "min_area_ratio": 0.7,
+  "max_area_ratio": 2.2,
+  "min_solidity": 0.86,
+  "min_rectangularity": 0.68,
+  "max_rotated_aspect": 1.85,
+  "min_threshold_bbox_iou": 0.78,
+  "marker_exclusion_margin_px": 12,
+  "boundary_exclusion_margin_px": 6,
+  "max_reference_marker_center_shift_px": 12,
+  "object_size_mm": [
+    20,
+    20
+  ],
+  "assumed_print_scale": 1.0,
+  "min_hand_detection_confidence": 0.5,
+  "min_hand_presence_confidence": 0.5,
+  "num_hands": 2,
+  "note": "Missing remains missing; conservative RGB candidates, not amodal, physical XYZ, actions or success.",
+  "threshold_selection": "X01/train first frames only; fixed before X02",
+  "reference_shift_rule": "12 pixels at width 1280, scaled linearly by image width"
+}

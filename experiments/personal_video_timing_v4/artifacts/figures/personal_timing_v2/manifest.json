@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-10-10T20:24:46.177178+00:00",
+  "results_sha256": "170c966236acd76542a07f552ad1b7778cd9d0e3c9600a3176deadbb960f4d2f",
+  "outputs": {
+    "CAPTION_EN.md": "bec463a9b552b50f4c8813810ffe956d4291fc549d23ec0b80980cc02d9a4292",
+    "results.png": "8893437689593aa9e442b6b742b69bd902f62d46b8596ad5c69b0e9e066f0fbd",
+    "results.svg": "be616382ff0dd00b4b51630d039fcb8226cfca266f9e6b8a05619538bcf31db8"
+  },
+  "code_sha256": "c80befafb387bb6de2538ce53d5fbf82e1b266c264eb91c7bcdafb5ace3062e1"
+}

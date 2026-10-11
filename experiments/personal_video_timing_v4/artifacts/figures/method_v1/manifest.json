@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-10-10T15:36:30.846391+00:00",
+  "study_sha256": "98943033deedd46e8b7bef53e784dc7b8fe340b3834cadcf25adfbd4fa216918",
+  "code_sha256": "f8e5eece33389f27fa86b74439267f7f77cf41c2ebeaf23dbce2a96f9fcaed5c",
+  "scope": "Method diagram; schematic point placement, no measured performance",
+  "outputs": {
+    "method.png": "276a3a6c3a98f97ff01bd42cedf78c798cf6dc050966403af35f92ac9100b901",
+    "method.svg": "d2ca9385f91e670fdbd50427ec32027957518e2c1b2c058ec56630e1a958a5e7"
+  }
+}

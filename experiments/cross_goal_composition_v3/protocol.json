@@ -1,0 +1,153 @@
+{
+  "revision": "cross-goal-composition-v3",
+  "created_utc": "2026-10-08T21:29:40.844759+00:00",
+  "authorization": "Applicant authorized work independent of new recordings; collection list and point numbering agreed in chat.",
+  "numbering": "Each board: top-left1, top-right2, bottom-left3, bottom-right4; red P board left, blue G board right in landscape view.",
+  "dimensions_mm": {
+    "grid_width": 100,
+    "grid_height": 130,
+    "nearest_grid_edge_gap": 130,
+    "grid_center_gap": 230
+  },
+  "training_pairs": [
+    [
+      "P1",
+      "G1"
+    ],
+    [
+      "P1",
+      "G3"
+    ],
+    [
+      "P1",
+      "G4"
+    ],
+    [
+      "P2",
+      "G1"
+    ],
+    [
+      "P2",
+      "G2"
+    ],
+    [
+      "P2",
+      "G4"
+    ],
+    [
+      "P3",
+      "G1"
+    ],
+    [
+      "P3",
+      "G2"
+    ],
+    [
+      "P3",
+      "G3"
+    ],
+    [
+      "P4",
+      "G2"
+    ],
+    [
+      "P4",
+      "G3"
+    ],
+    [
+      "P4",
+      "G4"
+    ]
+  ],
+  "heldout_pairs": [
+    [
+      "P1",
+      "G2"
+    ],
+    [
+      "P2",
+      "G3"
+    ],
+    [
+      "P3",
+      "G4"
+    ],
+    [
+      "P4",
+      "G1"
+    ]
+  ],
+  "paired_controls": [
+    [
+      "P1",
+      "G1"
+    ],
+    [
+      "P2",
+      "G2"
+    ],
+    [
+      "P3",
+      "G3"
+    ],
+    [
+      "P4",
+      "G4"
+    ]
+  ],
+  "previous_personal_data": {
+    "experiment": "../paired_two_board_v2",
+    "session": "S01",
+    "split": "train",
+    "received": 16,
+    "role": "Shared target geometry is available; new cross-pair timing data is pending. Original raw files remain in v2."
+  },
+  "new_sessions": [
+    {
+      "session_id": "X01",
+      "split": "train",
+      "folder": "X01_train",
+      "count": 16,
+      "recipe": "8 new training combinations, 2 attempts each"
+    },
+    {
+      "session_id": "X02",
+      "split": "val",
+      "folder": "X02_val",
+      "count": 12,
+      "recipe": "12 training-covered combinations, 1 new attempt each"
+    },
+    {
+      "session_id": "X03",
+      "split": "test",
+      "folder": "X03_test",
+      "count": 16,
+      "recipe": "4 held-out combinations x3, plus 4 paired controls x1"
+    }
+  ],
+  "planned_new_clips": 44,
+  "received_new_clips": 0,
+  "split_rules": [
+    "Assign complete real recording sessions before extraction; derivatives inherit split.",
+    "Held-out P/G pairs prohibited in every new training source, including synthetic robot demonstrations and human timing profiles.",
+    "X03 sealed from model/threshold selection; analyze only after model and scoring freeze.",
+    "Prior v6 all16-pair diagnostic is development evidence; new tests require fresh scene IDs and no selection on test outcomes.",
+    "Video clips are applicant demonstrations, not robot success trials.",
+    "Retain failed attempts; technical exclusions require recorded reasons."
+  ],
+  "success": "Same strict virtual40mm footprint/lift/release/withdraw/stability criterion as v2; uncertain human labels remain uncertain.",
+  "missing": [
+    "all44 new recordings",
+    "actual capture timestamps",
+    "applicant outcome adjudication",
+    "real board-to-robot registration"
+  ],
+  "legacy_source_sha256": {
+    "protocol.json": "58ba7251cd0844c4dc6212d6e1e8890299390f38a699a8fea49d4acce7d8972c",
+    "capture_checklist.csv": "c31eadc7bc9b00e769b2f06286e2b0978324198068e815036d961c360e737ecd",
+    "goal_catalog.json": "a05239007434d36fe77be5873c0ac07a4298797423bcee7a74aa043c2f91aaee",
+    "layout_measurements.json": "cb8af9e5b749ea58525bf3aeff60a40b85475d03e3569056c395c3cb783575f6",
+    "configs/sim_task_v1.json": "01543541e226b2b8249cd5b1cf499d7a029987f9f00e10bbbd7e0f1830777ff3",
+    "configs/sim_physics_v1.json": "a82835f7779600b73f90f21562cdae374a2ff367e6de047b85338475c3935ec5"
+  }
+}

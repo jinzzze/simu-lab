@@ -1,0 +1,107 @@
+{
+  "status": "passed",
+  "created_utc": "2026-10-10T15:48:03.081943+00:00",
+  "runs": [
+    {
+      "condition": "geometry_only_24",
+      "seed": 7,
+      "parameters": 227268,
+      "updates": 2500,
+      "episode_draws": 5000,
+      "minimum_episode_draws": 179,
+      "supervised_action_targets": 1339946,
+      "wall_s": 132.60772300002282,
+      "manifest_sha256": "77211793ba74fbf6c88285d7e0d7f0444067a2f81e1c496150a2407bad1b1edc"
+    },
+    {
+      "condition": "geometry_only_24",
+      "seed": 17,
+      "parameters": 227268,
+      "updates": 2500,
+      "episode_draws": 5000,
+      "minimum_episode_draws": 171,
+      "supervised_action_targets": 1341501,
+      "wall_s": 126.41424479999114,
+      "manifest_sha256": "b8f19c319ca75aef34fc9cb8f6a72aaafaf83aa62f4d7d7ae2c78ef85dbd9e5e"
+    },
+    {
+      "condition": "geometry_only_24",
+      "seed": 27,
+      "parameters": 227268,
+      "updates": 2500,
+      "episode_draws": 5000,
+      "minimum_episode_draws": 183,
+      "supervised_action_targets": 1340914,
+      "wall_s": 125.34862109998357,
+      "manifest_sha256": "7a946c0daea59252d9d1aaafab0b21635db8034f4bf4902494a894b9a245610f"
+    },
+    {
+      "condition": "video_timing_24",
+      "seed": 7,
+      "parameters": 227268,
+      "updates": 2500,
+      "episode_draws": 5000,
+      "minimum_episode_draws": 179,
+      "supervised_action_targets": 1372197,
+      "wall_s": 128.1580721999926,
+      "manifest_sha256": "7fd98f0b087361672947927a486e517152354e7763d1555be53233024a6d4dbc"
+    },
+    {
+      "condition": "video_timing_24",
+      "seed": 17,
+      "parameters": 227268,
+      "updates": 2500,
+      "episode_draws": 5000,
+      "minimum_episode_draws": 171,
+      "supervised_action_targets": 1375003,
+      "wall_s": 122.99633829999948,
+      "manifest_sha256": "fb3b7b92776083677ecf555e0cf88cf1121de6ad8dc16dfa66cf83376934cbb2"
+    },
+    {
+      "condition": "video_timing_24",
+      "seed": 27,
+      "parameters": 227268,
+      "updates": 2500,
+      "episode_draws": 5000,
+      "minimum_episode_draws": 183,
+      "supervised_action_targets": 1373828,
+      "wall_s": 125.14904200000456,
+      "manifest_sha256": "40cded7e5170b30200cfb1c6df5c132414f82fc1ba359f977bc55a7478874870"
+    }
+  ],
+  "paired_checks": [
+    {
+      "seed": 7,
+      "initial_weights_matched": true,
+      "sampled_episode_indices_matched": true,
+      "augmentation_parameters_matched": true,
+      "target_counts": [
+        1339946,
+        1372197
+      ]
+    },
+    {
+      "seed": 17,
+      "initial_weights_matched": true,
+      "sampled_episode_indices_matched": true,
+      "augmentation_parameters_matched": true,
+      "target_counts": [
+        1341501,
+        1375003
+      ]
+    },
+    {
+      "seed": 27,
+      "initial_weights_matched": true,
+      "sampled_episode_indices_matched": true,
+      "augmentation_parameters_matched": true,
+      "target_counts": [
+        1340914,
+        1373828
+      ]
+    }
+  ],
+  "all24_episodes_sampled": true,
+  "code_sha256": "2a55ab9f9a30dab6c38e31717fc04faffcd63f8a4dd8db3f30dbede2c5b68e0e",
+  "scope": "Matched models, updates, episode samples and augmentations. Frame-target counts and measured compute differ with trajectory length; no equal-compute claim."
+}

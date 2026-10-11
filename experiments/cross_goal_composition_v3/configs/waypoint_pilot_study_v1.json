@@ -1,0 +1,113 @@
+{
+  "revision": "requested_waypoint_development_v1",
+  "created_utc": "2026-10-09T01:25:59.026980+00:00",
+  "scope": "Development only; no held-out test in this pilot",
+  "hypothesis": "BC of near-EE safety-limited commands may be brittle under accumulated state errors. Learn the teacher's pre-limit waypoint instead; keep observed histories, architecture, physical limits and scorer.",
+  "changed_variable": "Target actions: teacher pre-limit XYZ+width requests instead of effective safety-limited XYZ+width commands",
+  "unchanged": [
+    "same24 coverage teacher RGB/robot/goal/previous-effective-command histories",
+    "same initial weights and sampling recipe",
+    "same causal CNN-GRU and goal-relative XY decoding",
+    "same loss scales,2500updates,EMA,augmentation",
+    "same runtime8mm limiter and384-step horizon"
+  ],
+  "condition": "waypoint_24",
+  "pilot_seed": 7,
+  "additional_seeds": [
+    17,
+    27
+  ],
+  "gate": "After all12 developer cases for seed7: expand only if at least6 strict successes and8 qualified lifts. Keep all failures and failed proposals.",
+  "validation_cases": [
+    {
+      "case_id": "P1_G1_dev",
+      "scene_seed": 71000,
+      "start_id": "P1",
+      "goal_id": "G1",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P1_G3_dev",
+      "scene_seed": 71001,
+      "start_id": "P1",
+      "goal_id": "G3",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P1_G4_dev",
+      "scene_seed": 71002,
+      "start_id": "P1",
+      "goal_id": "G4",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P2_G1_dev",
+      "scene_seed": 71003,
+      "start_id": "P2",
+      "goal_id": "G1",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P2_G2_dev",
+      "scene_seed": 71004,
+      "start_id": "P2",
+      "goal_id": "G2",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P2_G4_dev",
+      "scene_seed": 71005,
+      "start_id": "P2",
+      "goal_id": "G4",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P3_G1_dev",
+      "scene_seed": 71006,
+      "start_id": "P3",
+      "goal_id": "G1",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P3_G2_dev",
+      "scene_seed": 71007,
+      "start_id": "P3",
+      "goal_id": "G2",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P3_G3_dev",
+      "scene_seed": 71008,
+      "start_id": "P3",
+      "goal_id": "G3",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P4_G2_dev",
+      "scene_seed": 71009,
+      "start_id": "P4",
+      "goal_id": "G2",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P4_G3_dev",
+      "scene_seed": 71010,
+      "start_id": "P4",
+      "goal_id": "G3",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P4_G4_dev",
+      "scene_seed": 71011,
+      "start_id": "P4",
+      "goal_id": "G4",
+      "heldout_pair": false
+    }
+  ],
+  "jitter_m": 0.003,
+  "teacher_label_provenance": "Re-execute original initial-XY teacher without image capture; compare every effective command, pre-action vector and full scoring trace to original. Store actual pre-limit requests as new BC targets; no observed outcomes define labels.",
+  "runtime_contract": "No oracle phase, target object pose or teacher actions supplied online; model predicts requests, same safety limiter executes.",
+  "source_index_sha256": "15be5215fedd3cbe0d2e61be249429a8f16425ad9affa35b073a1aa936c68a5a",
+  "primary_study_sha256": "962b82992fcd60e58301bb0615190685c050cfcf5cba4ce548f1aa621ef446d6",
+  "evaluation_scope": "Known developer cases reused for architecture development. Primary72000-series results not used for checkpoint/seed selection; a future confirmation requires a separately frozen fresh scene list."
+}

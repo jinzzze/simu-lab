@@ -1,0 +1,556 @@
+{
+  "revision": "personal_video_timing_v1",
+  "created_utc": "2026-10-10T15:19:45.699723+00:00",
+  "status": "frozen_before_robot_collection_training_and_test",
+  "research_question": "Does adding personal coarse timing/image progress improve closed-loop control beyond shared personal geometry, with equal coverage and robot demo count?",
+  "conditions": [
+    "geometry_only_24",
+    "video_timing_24"
+  ],
+  "seeds": [
+    7,
+    17,
+    27
+  ],
+  "train_cases": [
+    {
+      "scene_seed": 910000,
+      "start_id": "P1",
+      "goal_id": "G1",
+      "human_episode_id": "S01_E01"
+    },
+    {
+      "scene_seed": 910001,
+      "start_id": "P2",
+      "goal_id": "G2",
+      "human_episode_id": "S01_E02"
+    },
+    {
+      "scene_seed": 910002,
+      "start_id": "P3",
+      "goal_id": "G3",
+      "human_episode_id": "S01_E03"
+    },
+    {
+      "scene_seed": 910003,
+      "start_id": "P4",
+      "goal_id": "G4",
+      "human_episode_id": "S01_E04"
+    },
+    {
+      "scene_seed": 910004,
+      "start_id": "P1",
+      "goal_id": "G1",
+      "human_episode_id": "S01_E05"
+    },
+    {
+      "scene_seed": 910005,
+      "start_id": "P2",
+      "goal_id": "G2",
+      "human_episode_id": "S01_E06"
+    },
+    {
+      "scene_seed": 910006,
+      "start_id": "P3",
+      "goal_id": "G3",
+      "human_episode_id": "S01_E07"
+    },
+    {
+      "scene_seed": 910007,
+      "start_id": "P4",
+      "goal_id": "G4",
+      "human_episode_id": "S01_E08"
+    },
+    {
+      "scene_seed": 910008,
+      "start_id": "P1",
+      "goal_id": "G3",
+      "human_episode_id": "X01_E01"
+    },
+    {
+      "scene_seed": 910009,
+      "start_id": "P1",
+      "goal_id": "G4",
+      "human_episode_id": "X01_E02"
+    },
+    {
+      "scene_seed": 910010,
+      "start_id": "P2",
+      "goal_id": "G1",
+      "human_episode_id": "X01_E03"
+    },
+    {
+      "scene_seed": 910011,
+      "start_id": "P2",
+      "goal_id": "G4",
+      "human_episode_id": "X01_E04"
+    },
+    {
+      "scene_seed": 910012,
+      "start_id": "P3",
+      "goal_id": "G1",
+      "human_episode_id": "X01_E05"
+    },
+    {
+      "scene_seed": 910013,
+      "start_id": "P3",
+      "goal_id": "G2",
+      "human_episode_id": "X01_E06"
+    },
+    {
+      "scene_seed": 910014,
+      "start_id": "P4",
+      "goal_id": "G2",
+      "human_episode_id": "X01_E07"
+    },
+    {
+      "scene_seed": 910015,
+      "start_id": "P4",
+      "goal_id": "G3",
+      "human_episode_id": "X01_E08"
+    },
+    {
+      "scene_seed": 910016,
+      "start_id": "P1",
+      "goal_id": "G3",
+      "human_episode_id": "X01_E09"
+    },
+    {
+      "scene_seed": 910017,
+      "start_id": "P1",
+      "goal_id": "G4",
+      "human_episode_id": "X01_E10"
+    },
+    {
+      "scene_seed": 910018,
+      "start_id": "P2",
+      "goal_id": "G1",
+      "human_episode_id": "X01_E11"
+    },
+    {
+      "scene_seed": 910019,
+      "start_id": "P2",
+      "goal_id": "G4",
+      "human_episode_id": "X01_E12"
+    },
+    {
+      "scene_seed": 910020,
+      "start_id": "P3",
+      "goal_id": "G1",
+      "human_episode_id": "X01_E13"
+    },
+    {
+      "scene_seed": 910021,
+      "start_id": "P3",
+      "goal_id": "G2",
+      "human_episode_id": "X01_E14"
+    },
+    {
+      "scene_seed": 910022,
+      "start_id": "P4",
+      "goal_id": "G2",
+      "human_episode_id": "X01_E15"
+    },
+    {
+      "scene_seed": 910023,
+      "start_id": "P4",
+      "goal_id": "G3",
+      "human_episode_id": "X01_E16"
+    }
+  ],
+  "validation_cases": [
+    {
+      "case_id": "P1_G1_dev",
+      "scene_seed": 920000,
+      "start_id": "P1",
+      "goal_id": "G1",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P1_G3_dev",
+      "scene_seed": 920001,
+      "start_id": "P1",
+      "goal_id": "G3",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P1_G4_dev",
+      "scene_seed": 920002,
+      "start_id": "P1",
+      "goal_id": "G4",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P2_G1_dev",
+      "scene_seed": 920003,
+      "start_id": "P2",
+      "goal_id": "G1",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P2_G2_dev",
+      "scene_seed": 920004,
+      "start_id": "P2",
+      "goal_id": "G2",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P2_G4_dev",
+      "scene_seed": 920005,
+      "start_id": "P2",
+      "goal_id": "G4",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P3_G1_dev",
+      "scene_seed": 920006,
+      "start_id": "P3",
+      "goal_id": "G1",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P3_G2_dev",
+      "scene_seed": 920007,
+      "start_id": "P3",
+      "goal_id": "G2",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P3_G3_dev",
+      "scene_seed": 920008,
+      "start_id": "P3",
+      "goal_id": "G3",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P4_G2_dev",
+      "scene_seed": 920009,
+      "start_id": "P4",
+      "goal_id": "G2",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P4_G3_dev",
+      "scene_seed": 920010,
+      "start_id": "P4",
+      "goal_id": "G3",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P4_G4_dev",
+      "scene_seed": 920011,
+      "start_id": "P4",
+      "goal_id": "G4",
+      "heldout_pair": false
+    }
+  ],
+  "test_cases": [
+    {
+      "case_id": "P1_G1_r1",
+      "scene_seed": 930000,
+      "start_id": "P1",
+      "goal_id": "G1",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P1_G2_r1",
+      "scene_seed": 930000,
+      "start_id": "P1",
+      "goal_id": "G2",
+      "heldout_pair": true
+    },
+    {
+      "case_id": "P1_G3_r1",
+      "scene_seed": 930000,
+      "start_id": "P1",
+      "goal_id": "G3",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P1_G4_r1",
+      "scene_seed": 930000,
+      "start_id": "P1",
+      "goal_id": "G4",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P2_G1_r1",
+      "scene_seed": 930001,
+      "start_id": "P2",
+      "goal_id": "G1",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P2_G2_r1",
+      "scene_seed": 930001,
+      "start_id": "P2",
+      "goal_id": "G2",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P2_G3_r1",
+      "scene_seed": 930001,
+      "start_id": "P2",
+      "goal_id": "G3",
+      "heldout_pair": true
+    },
+    {
+      "case_id": "P2_G4_r1",
+      "scene_seed": 930001,
+      "start_id": "P2",
+      "goal_id": "G4",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P3_G1_r1",
+      "scene_seed": 930002,
+      "start_id": "P3",
+      "goal_id": "G1",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P3_G2_r1",
+      "scene_seed": 930002,
+      "start_id": "P3",
+      "goal_id": "G2",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P3_G3_r1",
+      "scene_seed": 930002,
+      "start_id": "P3",
+      "goal_id": "G3",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P3_G4_r1",
+      "scene_seed": 930002,
+      "start_id": "P3",
+      "goal_id": "G4",
+      "heldout_pair": true
+    },
+    {
+      "case_id": "P4_G1_r1",
+      "scene_seed": 930003,
+      "start_id": "P4",
+      "goal_id": "G1",
+      "heldout_pair": true
+    },
+    {
+      "case_id": "P4_G2_r1",
+      "scene_seed": 930003,
+      "start_id": "P4",
+      "goal_id": "G2",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P4_G3_r1",
+      "scene_seed": 930003,
+      "start_id": "P4",
+      "goal_id": "G3",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P4_G4_r1",
+      "scene_seed": 930003,
+      "start_id": "P4",
+      "goal_id": "G4",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P1_G1_r2",
+      "scene_seed": 930004,
+      "start_id": "P1",
+      "goal_id": "G1",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P1_G2_r2",
+      "scene_seed": 930004,
+      "start_id": "P1",
+      "goal_id": "G2",
+      "heldout_pair": true
+    },
+    {
+      "case_id": "P1_G3_r2",
+      "scene_seed": 930004,
+      "start_id": "P1",
+      "goal_id": "G3",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P1_G4_r2",
+      "scene_seed": 930004,
+      "start_id": "P1",
+      "goal_id": "G4",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P2_G1_r2",
+      "scene_seed": 930005,
+      "start_id": "P2",
+      "goal_id": "G1",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P2_G2_r2",
+      "scene_seed": 930005,
+      "start_id": "P2",
+      "goal_id": "G2",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P2_G3_r2",
+      "scene_seed": 930005,
+      "start_id": "P2",
+      "goal_id": "G3",
+      "heldout_pair": true
+    },
+    {
+      "case_id": "P2_G4_r2",
+      "scene_seed": 930005,
+      "start_id": "P2",
+      "goal_id": "G4",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P3_G1_r2",
+      "scene_seed": 930006,
+      "start_id": "P3",
+      "goal_id": "G1",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P3_G2_r2",
+      "scene_seed": 930006,
+      "start_id": "P3",
+      "goal_id": "G2",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P3_G3_r2",
+      "scene_seed": 930006,
+      "start_id": "P3",
+      "goal_id": "G3",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P3_G4_r2",
+      "scene_seed": 930006,
+      "start_id": "P3",
+      "goal_id": "G4",
+      "heldout_pair": true
+    },
+    {
+      "case_id": "P4_G1_r2",
+      "scene_seed": 930007,
+      "start_id": "P4",
+      "goal_id": "G1",
+      "heldout_pair": true
+    },
+    {
+      "case_id": "P4_G2_r2",
+      "scene_seed": 930007,
+      "start_id": "P4",
+      "goal_id": "G2",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P4_G3_r2",
+      "scene_seed": 930007,
+      "start_id": "P4",
+      "goal_id": "G3",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P4_G4_r2",
+      "scene_seed": 930007,
+      "start_id": "P4",
+      "goal_id": "G4",
+      "heldout_pair": false
+    }
+  ],
+  "training_pairs": [
+    [
+      "P1",
+      "G1"
+    ],
+    [
+      "P1",
+      "G3"
+    ],
+    [
+      "P1",
+      "G4"
+    ],
+    [
+      "P2",
+      "G1"
+    ],
+    [
+      "P2",
+      "G2"
+    ],
+    [
+      "P2",
+      "G4"
+    ],
+    [
+      "P3",
+      "G1"
+    ],
+    [
+      "P3",
+      "G2"
+    ],
+    [
+      "P3",
+      "G3"
+    ],
+    [
+      "P4",
+      "G2"
+    ],
+    [
+      "P4",
+      "G3"
+    ],
+    [
+      "P4",
+      "G4"
+    ]
+  ],
+  "heldout_pairs": [
+    [
+      "P1",
+      "G2"
+    ],
+    [
+      "P2",
+      "G3"
+    ],
+    [
+      "P3",
+      "G4"
+    ],
+    [
+      "P4",
+      "G1"
+    ]
+  ],
+  "jitter_m": 0.003,
+  "human_profiles_sha256": "b6d5125a5a34e3db8f5ee6de91af3b87be0a46fea0ed26f29d7323530d76e305",
+  "geometry_sha256": "f3ea3b0099e33bd932ae7c3c7c28defd4a8092e177603544515dac7ec4e81f22",
+  "teacher": "same legacy initial-XY teacher; profile None versus matched personal timing/progress during transport only",
+  "collection_gate": "Each group: all24 qualified lifts and >=20/24 strict successes; retain failures, no replacement or relaxed gate.",
+  "selection": "same v6 learner, all3 fixed-final EMA models,2500 updates. Report all development cases and all fresh test cases; no best seed/checkpoint selection.",
+  "budget": "24 robot demonstrations each, exact paired scene/P/G/initial RGB, model init, sampling, augmentation, updates. Lengths/frame targets/compute may differ.",
+  "information_boundary": "current RGB +12D robot/preprovided goal/past command only; no runtime object truth, clock, phase, or human profile",
+  "fresh_test_scope": "32 tasks over8 physical object starts, repeated for3 model seeds; same simulator family, not96 independent environments",
+  "limitations": [
+    "Prior coverage and S01 timing results informed this design: exploratory new comparison.",
+    "Personal labels are RGB candidates and Codex coarse visual brackets, not human-annotated physical actions.",
+    "X03 previously viewed for naming/QC; no X03 trajectory extraction, tuning or training in this study.",
+    "This comparison tests coarse timing+progress, not a pure timing or pure progress intervention."
+  ]
+}

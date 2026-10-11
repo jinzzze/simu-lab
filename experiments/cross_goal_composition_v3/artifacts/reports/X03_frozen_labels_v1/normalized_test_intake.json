@@ -1,0 +1,232 @@
+{
+  "session": "X03",
+  "split": "test",
+  "recordings": [
+    {
+      "episode_id": "X03_T09",
+      "session_id": "X03",
+      "split": "test",
+      "relative_video_path": "data/raw/X03_test/test_P1_G1_01.mp4",
+      "sha256": "f365fa9c269139aa5f4169e10168670a0313337c6c382f2a74a5f298e4a59d3f",
+      "intended_start_id": "P1",
+      "intended_goal_id": "G1",
+      "label_origin": "User-confirmed naming mapping; original command sheet unavailable",
+      "qc": {
+        "fps": 29.85781990521327,
+        "decoded_frames": 210
+      }
+    },
+    {
+      "episode_id": "X03_T04",
+      "session_id": "X03",
+      "split": "test",
+      "relative_video_path": "data/raw/X03_test/test_P1_G2_01.mp4",
+      "sha256": "9095bb2aa0d594261b8237883faad79c96a65a7ae7bd45a0a9b094712b69f7cc",
+      "intended_start_id": "P1",
+      "intended_goal_id": "G2",
+      "label_origin": "User-confirmed naming mapping; original command sheet unavailable",
+      "qc": {
+        "fps": 29.85781990521327,
+        "decoded_frames": 210
+      }
+    },
+    {
+      "episode_id": "X03_T06",
+      "session_id": "X03",
+      "split": "test",
+      "relative_video_path": "data/raw/X03_test/test_P1_G2_02.mp4",
+      "sha256": "7266d31164bab846b59317b5f4bd1ef7987225c3d1e630fae1fb13994d7d3632",
+      "intended_start_id": "P1",
+      "intended_goal_id": "G2",
+      "label_origin": "User-confirmed naming mapping; original command sheet unavailable",
+      "qc": {
+        "fps": 29.85781990521327,
+        "decoded_frames": 210
+      }
+    },
+    {
+      "episode_id": "X03_T15",
+      "session_id": "X03",
+      "split": "test",
+      "relative_video_path": "data/raw/X03_test/test_P1_G2_03.mp4",
+      "sha256": "5bb22746e19ba16171c02fc1c978c453380b48d9f57943c0c1beb876888aeac1",
+      "intended_start_id": "P1",
+      "intended_goal_id": "G2",
+      "label_origin": "User-confirmed naming mapping; original command sheet unavailable",
+      "qc": {
+        "fps": 29.85781990521327,
+        "decoded_frames": 210
+      }
+    },
+    {
+      "episode_id": "X03_T08",
+      "session_id": "X03",
+      "split": "test",
+      "relative_video_path": "data/raw/X03_test/test_P2_G2_01.mp4",
+      "sha256": "280bd45c32ff391a575f0489e462be9659e643f79ccafc238565fdb206c9cb2a",
+      "intended_start_id": "P2",
+      "intended_goal_id": "G2",
+      "label_origin": "User-confirmed naming mapping; original command sheet unavailable",
+      "qc": {
+        "fps": 29.85781990521327,
+        "decoded_frames": 210
+      }
+    },
+    {
+      "episode_id": "X03_T01",
+      "session_id": "X03",
+      "split": "test",
+      "relative_video_path": "data/raw/X03_test/test_P2_G3_01.mp4",
+      "sha256": "cd45ec4ddc32a0d92391aaf87c1bb3ed4cac4c8fe21667ddf03f32b2c35d31aa",
+      "intended_start_id": "P2",
+      "intended_goal_id": "G3",
+      "label_origin": "User-confirmed naming mapping; original command sheet unavailable",
+      "qc": {
+        "fps": 29.85781990521327,
+        "decoded_frames": 210
+      }
+    },
+    {
+      "episode_id": "X03_T02",
+      "session_id": "X03",
+      "split": "test",
+      "relative_video_path": "data/raw/X03_test/test_P2_G3_02.mp4",
+      "sha256": "4cf4f3b1d5ec4c51fc7b3b0ede4b3fb1e84dfa203b0b8a53c6b1403a92da7c78",
+      "intended_start_id": "P2",
+      "intended_goal_id": "G3",
+      "label_origin": "User-confirmed naming mapping; original command sheet unavailable",
+      "qc": {
+        "fps": 29.85781990521327,
+        "decoded_frames": 210
+      }
+    },
+    {
+      "episode_id": "X03_T10",
+      "session_id": "X03",
+      "split": "test",
+      "relative_video_path": "data/raw/X03_test/test_P2_G3_03.mp4",
+      "sha256": "2f632d3fd9986f6234450946d9f91180b0f925b6d207f395b008affa65ae1a6d",
+      "intended_start_id": "P2",
+      "intended_goal_id": "G3",
+      "label_origin": "User-confirmed naming mapping; original command sheet unavailable",
+      "qc": {
+        "fps": 29.834254143646408,
+        "decoded_frames": 180
+      }
+    },
+    {
+      "episode_id": "X03_T16",
+      "session_id": "X03",
+      "split": "test",
+      "relative_video_path": "data/raw/X03_test/test_P3_G3_01.mp4",
+      "sha256": "ddbfdd11be68c8547d9258b8da613d62414b291b8bdc3d460f5ec09653e4aef4",
+      "intended_start_id": "P3",
+      "intended_goal_id": "G3",
+      "label_origin": "User-confirmed naming mapping; original command sheet unavailable",
+      "qc": {
+        "fps": 29.834254143646408,
+        "decoded_frames": 180
+      }
+    },
+    {
+      "episode_id": "X03_T07",
+      "session_id": "X03",
+      "split": "test",
+      "relative_video_path": "data/raw/X03_test/test_P3_G4_01.mp4",
+      "sha256": "53433f0282c0011a38a35da520e31336a64006fce3a7e6aaf74f54e9f99b126a",
+      "intended_start_id": "P3",
+      "intended_goal_id": "G4",
+      "label_origin": "User-confirmed naming mapping; original command sheet unavailable",
+      "qc": {
+        "fps": 29.85781990521327,
+        "decoded_frames": 210
+      }
+    },
+    {
+      "episode_id": "X03_T12",
+      "session_id": "X03",
+      "split": "test",
+      "relative_video_path": "data/raw/X03_test/test_P3_G4_02.mp4",
+      "sha256": "ff91da59434fc632ed258a70b446ae24fd6bac708106dc3a4e0a900b2b983467",
+      "intended_start_id": "P3",
+      "intended_goal_id": "G4",
+      "label_origin": "User-confirmed naming mapping; original command sheet unavailable",
+      "qc": {
+        "fps": 29.834254143646408,
+        "decoded_frames": 180
+      }
+    },
+    {
+      "episode_id": "X03_T14",
+      "session_id": "X03",
+      "split": "test",
+      "relative_video_path": "data/raw/X03_test/test_P3_G4_03.mp4",
+      "sha256": "60726e3f5ab021fac43dc22363efe215b1c2a377901ce265d484a45f6debc239",
+      "intended_start_id": "P3",
+      "intended_goal_id": "G4",
+      "label_origin": "User-confirmed naming mapping; original command sheet unavailable",
+      "qc": {
+        "fps": 29.85781990521327,
+        "decoded_frames": 210
+      }
+    },
+    {
+      "episode_id": "X03_T05",
+      "session_id": "X03",
+      "split": "test",
+      "relative_video_path": "data/raw/X03_test/test_P4_G1_01.mp4",
+      "sha256": "16eba00bfdbb194ff0d37755a974ac3fa1f5066c1eb1d5baea2d34fbc526ecd8",
+      "intended_start_id": "P4",
+      "intended_goal_id": "G1",
+      "label_origin": "User-confirmed naming mapping; original command sheet unavailable",
+      "qc": {
+        "fps": 29.85781990521327,
+        "decoded_frames": 210
+      }
+    },
+    {
+      "episode_id": "X03_T11",
+      "session_id": "X03",
+      "split": "test",
+      "relative_video_path": "data/raw/X03_test/test_P4_G1_02.mp4",
+      "sha256": "a29a5fc97e626225697cb70522c4ea5adf57b6ce891731c963d2db62e9f8efc7",
+      "intended_start_id": "P4",
+      "intended_goal_id": "G1",
+      "label_origin": "User-confirmed naming mapping; original command sheet unavailable",
+      "qc": {
+        "fps": 29.834254143646408,
+        "decoded_frames": 180
+      }
+    },
+    {
+      "episode_id": "X03_T13",
+      "session_id": "X03",
+      "split": "test",
+      "relative_video_path": "data/raw/X03_test/test_P4_G1_03.mp4",
+      "sha256": "f053914ed513fc5d2f75addd1759357af8d2f81f38422f84c8a5e79320722410",
+      "intended_start_id": "P4",
+      "intended_goal_id": "G1",
+      "label_origin": "User-confirmed naming mapping; original command sheet unavailable",
+      "qc": {
+        "fps": 29.0,
+        "decoded_frames": 205
+      }
+    },
+    {
+      "episode_id": "X03_T03",
+      "session_id": "X03",
+      "split": "test",
+      "relative_video_path": "data/raw/X03_test/test_P4_G4_01.mp4",
+      "sha256": "89bac57a9070121e9203e3759a69a3278f0b3f92800af4ff006c537825bb0c5c",
+      "intended_start_id": "P4",
+      "intended_goal_id": "G4",
+      "label_origin": "User-confirmed naming mapping; original command sheet unavailable",
+      "qc": {
+        "fps": 29.834254143646408,
+        "decoded_frames": 180
+      }
+    }
+  ],
+  "historical_naming_qc_access": true,
+  "training_allowed": false
+}

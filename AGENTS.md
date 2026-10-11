@@ -1,3 +1,5 @@
+> Current submission scope (2026-10-10): experiments are frozen. Only publication, reproduction fixes and documentation polish are authorized. Preserve all recorded model/configuration/result bytes; no new training or benchmarks. Paths are relative to the checkout. The older study rules below retain their historical scope.
+
 # Project development rules
 
 - Work in this repository on E:. Derive paths from the repository root; do not create project datasets, models, environments, logs or caches under the old C: workspace.

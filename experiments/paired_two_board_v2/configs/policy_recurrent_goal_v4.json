@@ -1,0 +1,129 @@
+{
+  "revision": "paired_recurrent_goal_policy_v4",
+  "kind": "paired_goal_relative_recurrent_bc_v4",
+  "scope": "exploratory matched simulation-only versus offline video-guided robot imitation; not human 3D recovery or original A/B/C/D ablation",
+  "training_index": "artifacts/reports/paired_robot_demos_v1/training_index.json",
+  "dataset_manifest": "artifacts/reports/paired_robot_demos_v1/manifest.json",
+  "dataset_manifest_sha256": "417822e57a895701019c3b538b5436ea1cd3a31688023cdbe8569689f6ba2d73",
+  "conditions": [
+    "simulation_only",
+    "video_guided"
+  ],
+  "image_size": 128,
+  "observation_horizon": 1,
+  "prediction_horizon": 1,
+  "execution_horizon": 1,
+  "vector_dim": 12,
+  "action_dim": 4,
+  "normalization": "same engineering observation ranges; action XY goal offsets scale450/180mm, absolute Z center83mm scale77mm, width center/scale32.5mm; no heldout statistics",
+  "model": {
+    "rgb_encoder": "three stride-2 5x5 CNNs, GroupNorm/SiLU, spatial 4x4 pooling, 64D feature",
+    "widths": [
+      64,
+      128
+    ],
+    "time_embedding": 64,
+    "train_diffusion_steps": 100,
+    "inference_steps": 20,
+    "ema_decay": 0.995,
+    "pretrained_weights": null,
+    "initialization": "same full model initial weights for paired seed",
+    "type": "same 128D causal GRU and 4D tanh head; output goal-relative absolute XY, absolute Z and width",
+    "hidden_dim": 128
+  },
+  "augmentation": {
+    "brightness": 0.04,
+    "contrast": 0.04,
+    "geometry": false,
+    "paired_history_consistent": true
+  },
+  "training": {
+    "seeds": [
+      7,
+      17,
+      27
+    ],
+    "steps": 2500,
+    "batch_size": 2,
+    "device": "cuda",
+    "learning_rate": 0.0003,
+    "weight_decay": 1e-06,
+    "grad_clip": 1.0,
+    "optimizer": "AdamW",
+    "sampling": "uniform whole episodes; all valid timestep targets; zero hidden state per episode",
+    "selection": "all fixed final EMA checkpoints; validation reporting only, no best seed or checkpoint",
+    "objective": "masked MSE on normalized goal-relative absolute XY, absolute Z and desired width",
+    "budget_comparison": "same architecture, whole episode stream, training steps and data as v3; paired equal budgets within v4; changed coordinate scales/loss weights make this exploratory action-parameterization refinement"
+  },
+  "evaluation": {
+    "episode_steps": 384,
+    "sampling_seed": 8821,
+    "validation": {
+      "start": 61000,
+      "count": 8,
+      "purpose": "closed-loop development check on shared validation scene IDs"
+    },
+    "suites": {
+      "nominal": {
+        "start": 65000,
+        "count": 16,
+        "jitter_m": 0.003
+      },
+      "appearance": {
+        "start": 65100,
+        "count": 8,
+        "jitter_m": 0.003,
+        "object_rgba": [
+          0.08,
+          0.08,
+          0.08,
+          1.0
+        ],
+        "table_rgba": [
+          0.78,
+          0.83,
+          0.87,
+          1.0
+        ]
+      },
+      "wider_start": {
+        "start": 65200,
+        "count": 8,
+        "jitter_m": 0.012
+      }
+    },
+    "diagnostics": {
+      "blank_rgb": {
+        "start": 65300,
+        "count": 4,
+        "seeds": [
+          7
+        ]
+      },
+      "swapped_goal_vector": {
+        "start": 65400,
+        "count": 4,
+        "seeds": [
+          7
+        ]
+      }
+    },
+    "scoring": "same strict designated-goal physics; fixed horizon, scorer does not terminate/repair policy",
+    "goals": "pairs cycled P1G1 through P4G4; not arbitrary/unseen goal claims",
+    "main_suite_gate": "run shared 8-scene validation for all six models first; if either condition has zero successes across all three seeds, retain failure and leave independent suites unexecuted while diagnosing a new revision"
+  },
+  "collaboration_skipped": [
+    "S02/S03/S04 applicant recordings",
+    "human strict footprint outcome adjudication",
+    "real board-to-robot registration",
+    "actual capture timestamps",
+    "external publication and application submission"
+  ],
+  "created_utc": "2026-10-08T15:13:15.558259+00:00",
+  "status": "frozen before policy training or evaluation",
+  "action_representation": "goal_relative_xy_absolute_z_width",
+  "action_semantics": "teacher effective absolute command XY minus preprovided goal XY; Z and width absolute; runtime adds numeric goal XY to model XY offset, never current EE or object truth",
+  "revision_reason": "v3 fixed-seed7 first-four development smoke qualified two lifts but zero successes, with first placement center52.4mm off goal; test whether absolute goal-anchored targets reduce cumulative delta drift",
+  "hypothesis_status": "unverified; v3 full validation still running when this refinement is frozen",
+  "memory": "learned recurrent hidden state is updated from past/current inputs; it can encode temporal information, but no absolute clock or expert phase is supplied"
+}

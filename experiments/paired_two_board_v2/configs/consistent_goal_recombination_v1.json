@@ -1,0 +1,139 @@
+{
+  "revision": "consistent_goal_recombination_v1",
+  "created_utc": "2026-10-08T17:08:20.756354+00:00",
+  "policy_config": "configs/policy_recurrent_goal_rgbaug_v6.json",
+  "policy_config_sha256": "adac0bc8cd7bf658f468512c8732d4ecee7a5d5368fbbefe06e0fc739ccc55c2",
+  "policy_revision": "paired_recurrent_goal_rgbaug_v6",
+  "cases": [
+    {
+      "case_id": "P1_G1",
+      "start_id": "P1",
+      "goal_id": "G1",
+      "scene_seed": 68000,
+      "seen_pair": true
+    },
+    {
+      "case_id": "P1_G2",
+      "start_id": "P1",
+      "goal_id": "G2",
+      "scene_seed": 68000,
+      "seen_pair": false
+    },
+    {
+      "case_id": "P1_G3",
+      "start_id": "P1",
+      "goal_id": "G3",
+      "scene_seed": 68000,
+      "seen_pair": false
+    },
+    {
+      "case_id": "P1_G4",
+      "start_id": "P1",
+      "goal_id": "G4",
+      "scene_seed": 68000,
+      "seen_pair": false
+    },
+    {
+      "case_id": "P2_G1",
+      "start_id": "P2",
+      "goal_id": "G1",
+      "scene_seed": 68001,
+      "seen_pair": false
+    },
+    {
+      "case_id": "P2_G2",
+      "start_id": "P2",
+      "goal_id": "G2",
+      "scene_seed": 68001,
+      "seen_pair": true
+    },
+    {
+      "case_id": "P2_G3",
+      "start_id": "P2",
+      "goal_id": "G3",
+      "scene_seed": 68001,
+      "seen_pair": false
+    },
+    {
+      "case_id": "P2_G4",
+      "start_id": "P2",
+      "goal_id": "G4",
+      "scene_seed": 68001,
+      "seen_pair": false
+    },
+    {
+      "case_id": "P3_G1",
+      "start_id": "P3",
+      "goal_id": "G1",
+      "scene_seed": 68002,
+      "seen_pair": false
+    },
+    {
+      "case_id": "P3_G2",
+      "start_id": "P3",
+      "goal_id": "G2",
+      "scene_seed": 68002,
+      "seen_pair": false
+    },
+    {
+      "case_id": "P3_G3",
+      "start_id": "P3",
+      "goal_id": "G3",
+      "scene_seed": 68002,
+      "seen_pair": true
+    },
+    {
+      "case_id": "P3_G4",
+      "start_id": "P3",
+      "goal_id": "G4",
+      "scene_seed": 68002,
+      "seen_pair": false
+    },
+    {
+      "case_id": "P4_G1",
+      "start_id": "P4",
+      "goal_id": "G1",
+      "scene_seed": 68003,
+      "seen_pair": false
+    },
+    {
+      "case_id": "P4_G2",
+      "start_id": "P4",
+      "goal_id": "G2",
+      "scene_seed": 68003,
+      "seen_pair": false
+    },
+    {
+      "case_id": "P4_G3",
+      "start_id": "P4",
+      "goal_id": "G3",
+      "scene_seed": 68003,
+      "seen_pair": false
+    },
+    {
+      "case_id": "P4_G4",
+      "start_id": "P4",
+      "goal_id": "G4",
+      "scene_seed": 68003,
+      "seen_pair": true
+    }
+  ],
+  "conditions": [
+    "simulation_only",
+    "video_guided"
+  ],
+  "policy_seeds": [
+    7,
+    17,
+    27
+  ],
+  "jitter_m": 0.003,
+  "steps": 384,
+  "no_new_training_or_selection": true,
+  "primary_results_unchanged": true,
+  "scene_selection": "four new initial-object seeds, one per P; all16 target/start combinations, no outcome filtering",
+  "target_input": "set before reset/render; numerical goal and RGB highlight agree; scorer uses that same prescribed goal",
+  "sample_scope": "16 tasks share4 object-start poses; seen4 versus unseen12 pairings; all3 fixed model seeds; simulation diagnostic, not arbitrary continuous-goal or real-world evidence",
+  "oracle": "all16 same task cases, fixed physical teacher using privileged INITIAL object XY only, no online position repair; feasibility diagnostic, never mixed into learned scores",
+  "execution_order": "wait for full frozen v6 primary/input suites to finish, then run diagnostic with unchanged checkpoints"
+}

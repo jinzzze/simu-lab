@@ -1,22 +1,36 @@
 # Data and model card
 
-## Personal development data
+## Latest four-goal study (v1.1.0)
 
-12 canonical phone videos, 2,162 frames / 86.48 seconds, 1280 × 720 at 25 fps. The block is 20 × 20 × 10 mm. The printed nominal 50 mm ruler measured 48 mm; planar calibration assumes uniform 0.96 scaling. All videos belong to one conservative development scene family. Actual independent recording sessions are unknown. Duplicate copies are not extra data. Independent real-scene validation was deferred by the applicant on 2026-10-07 because new filming was unavailable.
+The applicant personally recorded moving a block between two paper grids. Red P1–P4 are sources and blue G1–G4 are target centers. The measured grids are 100 × 130 mm with a 130 mm edge-to-edge gap. Camera/scene geometry is only approximately mapped to simulation; airborne metric 3D motion and true physical contact labels are unknown.
 
-The shared pretraining export contains 438 RGB frames, 398 accepted object targets and 223 frames with accepted hand targets. Object labels are visible dark-component boxes, not amodal boxes or true 3D centres. Hand labels are MediaPipe estimates. Confidence masks are not accuracy measurements. Existing assistant visual review inspected 96 regular frames and extra uncertain examples. A new deterministic 48-frame blinded annotation set is prepared; independent human boxes and per-joint accuracy remain unmeasured. No accuracy number is invented for these labels.
+| Recording block | Collected clips | Use in latest study |
+|---|---:|---|
+| S01 | 16 same-number clips | First two predeclared repeats per pair, eight clips total, used for training |
+| X01 | 16 cross-goal clips | All sixteen used for training |
+| X02 | 12 clips | Development of video labels; robot-policy validation uses a separate fixed simulation suite |
+| X03 | 16 clips | Separate frozen video candidate-coverage check after all policies were fixed; no policy training or tuning |
 
-## Models and supervision
+The v1.1.0 full package supplies the **52 raw clips referenced by this study**: selected S01 eight plus new X01/X02/X03 forty-four. It does not silently count unselected S01 clips as training data. Earlier twelve-video visual experiments are distributed in v1.0.0.
 
-| Component | Training inputs and targets | Evaluation and limitation |
-|---|---|---|
-| A/B/C/D visual transfer | Shared real RGB; optional pseudo boxes and hand points; then supervised simulated XY | Fixed controller, 64 shared simulated test scenes; no new real-scene test |
-| R reference | ImageNet initialization and simulated XY only | Additional post-hoc diagnostic |
-| Macro-outcome ensemble | Simulator initial XY and absolute command; displacement and event labels | 160 transitions share 32 scenes; predictions do not choose actions |
-| DP-D | 128 simulated training and 16 validation expert trajectories; frozen D7 initial RGB estimate | 84/192; additional action supervision; 2 rendered-image collisions across train/validation and evaluation; exclusion sensitivity 80/186 |
+The applicant reported X01 on 9 October around 20:00 London time, X02 about half an hour later with a small viewpoint change, and X03 about one hour later with another viewpoint change. The reference point for the last interval is ambiguous (approximately 21:00–21:30); no exact timestamp is invented. The recordings share a scene family and are not broad independent environments.
 
-All visual auxiliary heads are discarded at runtime. Simulator truth is used for collection labels, error measurement and scoring; it is not supplied to runtime perception or the learned action policy. The DP policy has no online object visual feedback after its initial estimate. Success counts should not be confused with the world model's success/failure classification accuracy.
+Object candidates and hand candidates are generated independently; invalid labels are masked. Coarse visible event brackets were inspected with Codex assistance, not independently annotated physical events. X03 object candidate coverage is 2,637/3,205 frames (82.3%), **not detection accuracy or task success**. X03 was previously viewed for applicant-requested naming/QC. No claim of a never-viewed real test set is made.
 
-## Access and intended use
+## Learning and information boundaries
 
-Research prototype for a local application challenge. No real-robot deployment or broad scene robustness is established. The applicant authorized public distribution of all 12 original videos, processed inputs and trained checkpoints on 2026-10-07. These are provided in the versioned GitHub Release alongside checksums. Media, data and derived weights require their own release decision; a source-code license does not automatically cover them. External base weights remain fetched from their original sources and verified by SHA256.
+Twenty-four training video profiles provide first-frame target geometry for both conditions. One condition additionally uses matching coarse transfer time and dimensionless image progress to shape teacher transport. Teacher actions are actual executed robot commands from contact-based simulation. Personal profiles are not available to the deployed learner.
+
+Each CNN–GRU policy receives current RGB and 12-dimensional robot/goal/previous-command features. The goal is supplied before an episode; runtime object truth, expert phase and external time are excluded. Simulator truth is used for training labels, scoring and explicitly identified diagnostics. Three fixed seeds and final EMA checkpoints are retained for each condition, including failed trajectories and executions.
+
+Strict test scores are 7/96 and 11/96 over 32 tasks and three model seeds, reusing eight physical starts. Four initial test-task images repeat training/development pixels; exclusions are reported separately. There is no statistically established benefit, real-robot transfer result or language policy. See [all results](../experiments/personal_video_timing_v4/RESULTS_EN.md).
+
+## Distribution and provenance
+
+Personal videos, derived data and trained checkpoints are authorized for public distribution. No blanket source, data or model license has been granted. Third-party software retains its own terms; the pretrained MediaPipe and ImageNet model binaries are omitted and fetched separately from upstream with hashes. See [third-party notices](../THIRD_PARTY_NOTICES.md).
+
+Frozen source/configuration manifests, per-episode input/action arrays, scoring traces and checkpoint hashes accompany the full package. `PACKAGE_MANIFEST.json` and `SHA256SUMS.txt` verify files and ZIP downloads. Timestamps/status fields in frozen experimental manifests record their original stage; later publication does not rewrite those records.
+
+The applicant supplied the recordings; Codex assisted with coding, execution, candidate-label inspection and writing. This is research evidence with known limitations, not a production robot policy.
+
+The [v1.0.0 data/model card](DATA_MODEL_CARD_v1.0.0.md) documents the earlier visual, state-prediction and diffusion experiments separately.

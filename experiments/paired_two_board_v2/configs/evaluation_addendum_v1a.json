@@ -1,0 +1,17 @@
+{
+  "frozen_utc": "2026-10-08T14:21:19.491742+00:00",
+  "policy_config_sha256": "cd4e6d5b907171395ca1eabb7134e56f96e1cbcc71c9c490b1fad030bd494a2b",
+  "diagnostic_controls": {
+    "blank_rgb_control": "same seeds 62300-62303 and sampling seeds as blank_rgb, unmodified RGB",
+    "swapped_goal_vector_control": "same seeds 62400-62403 and sampling seeds as swapped_goal_vector, unmodified goal vector"
+  },
+  "scope": "seed7 per condition only; diagnostic input corruption, not arbitrary-goal generalization or model selection",
+  "swapped_goal_warning": "scoring and original image target remain prescribed Gi; only numeric target input is corrupted to next Gi; conflicting inputs intentionally test sensitivity",
+  "no_real_test_data": "S03/S04 uncollected; all rollouts simulator-only",
+  "cooperation_skipped": [
+    "additional applicant recordings",
+    "physical table-to-robot registration",
+    "capture timestamps",
+    "strict human footprint adjudication"
+  ]
+}

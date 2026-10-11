@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "created_utc": "2026-10-10T17:52:03.291028+00:00",
+  "checks": [
+    {
+      "condition": "geometry_only_24",
+      "returncode": 0,
+      "all_arrays_identical": true,
+      "full_scoring_trace_identical": true,
+      "success": false,
+      "case": "P1_G1_dev",
+      "video_frames_verified": 193
+    },
+    {
+      "condition": "video_timing_24",
+      "returncode": 0,
+      "all_arrays_identical": true,
+      "full_scoring_trace_identical": true,
+      "success": false,
+      "case": "P1_G1_dev",
+      "video_frames_verified": 193
+    }
+  ],
+  "source_files": 52,
+  "suite": "validation",
+  "capsule": "work\\personal_timing_replay_capsule_v1",
+  "runtime": "work\\clean_env_v1",
+  "scope": "Actual two-case replay from relocated source using an independently installed Oct7 prefix on the same Windows host. Not a fresh installation today, another-machine check or full retraining.",
+  "capsule_manifest_sha256": "58e3959aaff1bccc37fece488fc5eb6a95fc5e5743da0c52aa8850b3b89ed241"
+}

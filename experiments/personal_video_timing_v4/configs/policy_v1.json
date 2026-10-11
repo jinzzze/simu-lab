@@ -1,0 +1,87 @@
+{
+  "revision": "personal-video-timing-bc-v1",
+  "kind": "paired_goal_relative_recurrent_bc_v4",
+  "scope": "Does adding personal coarse timing/image progress improve closed-loop control beyond shared personal geometry, with equal coverage and robot demo count?",
+  "training_index": "artifacts/robot_demos_v1/training_index.json",
+  "dataset_manifest": "artifacts/robot_demos_v1/manifest.json",
+  "dataset_manifest_sha256": null,
+  "conditions": [
+    "geometry_only_24",
+    "video_timing_24"
+  ],
+  "image_size": 128,
+  "observation_horizon": 1,
+  "prediction_horizon": 1,
+  "execution_horizon": 1,
+  "vector_dim": 12,
+  "action_dim": 4,
+  "normalization": "same engineering observation ranges; action XY goal offsets scale450/180mm, absolute Z center83mm scale77mm, width center/scale32.5mm; no heldout statistics",
+  "model": {
+    "rgb_encoder": "three stride-2 5x5 CNNs, GroupNorm/SiLU, spatial 4x4 pooling, 64D feature",
+    "widths": [
+      64,
+      128
+    ],
+    "time_embedding": 64,
+    "train_diffusion_steps": 100,
+    "inference_steps": 20,
+    "ema_decay": 0.995,
+    "pretrained_weights": null,
+    "initialization": "same full model initial weights for paired seed",
+    "type": "same v4 causal128D GRU and goal-relative absolute target decoder; checkpoint architecture kind unchanged",
+    "hidden_dim": 128
+  },
+  "augmentation": {
+    "brightness": 0.12,
+    "contrast": 0.2,
+    "geometry": false,
+    "paired_history_consistent": true,
+    "channel_gain_halfwidth": 0.25,
+    "transform": "episode-consistent ((RGB-.5)*contrast+.5+brightness)*per-channel gain, clamp0..1; no geometry, mask, object labels or future-derived parameters"
+  },
+  "training": {
+    "seeds": [
+      7,
+      17,
+      27
+    ],
+    "steps": 2500,
+    "batch_size": 2,
+    "device": "cuda",
+    "learning_rate": 0.0003,
+    "weight_decay": 1e-06,
+    "grad_clip": 1.0,
+    "optimizer": "AdamW",
+    "sampling": "uniform whole episodes; all valid timestep targets; zero hidden state per episode",
+    "selection": "all fixed final EMA checkpoints; validation reporting only, no best seed or checkpoint",
+    "objective": "per-episode masked coordinate-weighted MSE; XYZ share77mm physical error unit, width retains twice its original normalized weight",
+    "budget_comparison": "24 robot demonstrations each, exact paired scene/P/G/initial RGB, model init, sampling, augmentation, updates. Lengths/frame targets/compute may differ.",
+    "coordinate_loss_weights": [
+      34.154157530780914,
+      5.464665204924945,
+      1.0,
+      2.0
+    ],
+    "episodes_per_condition": 24
+  },
+  "evaluation": {
+    "episode_steps": 384,
+    "sampling_seed": 8821,
+    "scoring": "unchanged strict v2",
+    "case_source": "configs/study_v1.json",
+    "selection": "all final models; no selection on validation/test"
+  },
+  "collaboration_skipped": [
+    "independent human annotation/physical XYZ validation",
+    "public release/application submission"
+  ],
+  "created_utc": "2026-10-10T15:19:45.725070+00:00",
+  "status": "frozen before policy training or evaluation",
+  "action_representation": "goal_relative_xy_absolute_z_width",
+  "action_semantics": "teacher effective absolute command XY minus preprovided goal XY; Z and width absolute; runtime adds numeric goal XY to model XY offset, never current EE or object truth",
+  "revision_reason": "Does adding personal coarse timing/image progress improve closed-loop control beyond shared personal geometry, with equal coverage and robot demo count?",
+  "hypothesis_status": "exploratory new personal-data comparison; fresh robot seeds; all seeds retained",
+  "memory": "learned recurrent hidden state is updated from past/current inputs; it can encode temporal information, but no absolute clock or expert phase is supplied",
+  "evaluation_script": "evaluate.py",
+  "study_sha256": "98943033deedd46e8b7bef53e784dc7b8fe340b3834cadcf25adfbd4fa216918"
+}

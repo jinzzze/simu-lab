@@ -1,0 +1,165 @@
+{
+  "version": "paired-sim-task-v1",
+  "scope": "independent four-goal simulator + oracle expert demonstration preparation; not learned-policy results",
+  "physics_config": "configs/sim_physics_v1.json",
+  "goal_region_side_m": 0.04,
+  "board_grid_width_m": 0.1,
+  "board_grid_height_m": 0.13,
+  "horizontal_grid_edge_gap_m": 0.13,
+  "source_grid_top_left_xy_m": [
+    -0.12,
+    0.065
+  ],
+  "target_grid_top_left_xy_m": [
+    0.11,
+    0.065
+  ],
+  "layout_assumptions": "Simulated grids share top edge; x right, y up. Real vertical alignment/rotation and robot registration remain unknown.",
+  "starts": {
+    "P1": {
+      "xy_m": [
+        -0.095,
+        0.04
+      ],
+      "source": "engineering grid anchor, not real object XYZ"
+    },
+    "P2": {
+      "xy_m": [
+        -0.045,
+        0.04
+      ],
+      "source": "engineering grid anchor, not real object XYZ"
+    },
+    "P3": {
+      "xy_m": [
+        -0.095,
+        -0.039999999999999994
+      ],
+      "source": "engineering grid anchor, not real object XYZ"
+    },
+    "P4": {
+      "xy_m": [
+        -0.045,
+        -0.039999999999999994
+      ],
+      "source": "engineering grid anchor, not real object XYZ"
+    }
+  },
+  "goals": {
+    "G1": {
+      "xy_m": [
+        0.13444860712482276,
+        0.04010213481851922
+      ],
+      "human_grid_center_mm": [
+        24.448607124822765,
+        24.897865181480782
+      ],
+      "source": "mean S01 pre-action blue centers mapped into engineering-aligned SIM grid"
+    },
+    "G2": {
+      "xy_m": [
+        0.18518942826714752,
+        0.0400455130626129
+      ],
+      "human_grid_center_mm": [
+        75.18942826714753,
+        24.954486937387102
+      ],
+      "source": "mean S01 pre-action blue centers mapped into engineering-aligned SIM grid"
+    },
+    "G3": {
+      "xy_m": [
+        0.1336232548151656,
+        -0.03940246073050502
+      ],
+      "human_grid_center_mm": [
+        23.623254815165602,
+        104.40246073050503
+      ],
+      "source": "mean S01 pre-action blue centers mapped into engineering-aligned SIM grid"
+    },
+    "G4": {
+      "xy_m": [
+        0.1846100585212153,
+        -0.0397818353379087
+      ],
+      "human_grid_center_mm": [
+        74.61005852121528,
+        104.7818353379087
+      ],
+      "source": "mean S01 pre-action blue centers mapped into engineering-aligned SIM grid"
+    }
+  },
+  "start_jitter_halfwidth_m": 0.003,
+  "observation": {
+    "rgb": "current overhead RGB, uint8 224x224x3",
+    "vector_fields": [
+      "ee_xyz_m (3)",
+      "finger_width_m (1)",
+      "goal_xy_m (2)",
+      "goal_minus_ee_xy_m (2)",
+      "past_effective_command_xyz_width (4)"
+    ],
+    "vector_dim": 12,
+    "excluded": [
+      "absolute clock",
+      "current/future object truth",
+      "expert stage",
+      "future RGB",
+      "human event profile"
+    ],
+    "timing": "goal chosen by scheduler before reset/capture and constant through episode"
+  },
+  "action": {
+    "fields": [
+      "ee_x_m",
+      "ee_y_m",
+      "ee_z_m",
+      "finger_width_m"
+    ],
+    "dimension": 4,
+    "semantics": "effective next absolute command after workspace/width/EE-step limits; observation/action recorded BEFORE physics"
+  },
+  "safety_limits": {
+    "xyz_low": [
+      -0.24,
+      -0.12,
+      0.006
+    ],
+    "xyz_high": [
+      0.235,
+      0.12,
+      0.16
+    ],
+    "width_low": 0.0,
+    "width_high": 0.065,
+    "max_ee_step_m": 0.008
+  },
+  "collection": {
+    "train_scene_start": 60000,
+    "val_scene_start": 61000,
+    "val_per_goal": 2,
+    "conditions": [
+      "simulation_only",
+      "video_guided"
+    ],
+    "train_per_condition": 16,
+    "retention": "all attempts, successes and failures; no outcome filtering",
+    "human_source_session": "S01/train only",
+    "max_episode_steps": 512,
+    "paired_matching": [
+      "scene seeds",
+      "initial full RGB",
+      "goal IDs/XY",
+      "physics",
+      "safety limits",
+      "demo count"
+    ],
+    "video_contribution": "transport duration and monotone image-progress proxy from valid RGB components inside visually reviewed coarse transport/placement intervals",
+    "video_limit": "not physical metric retargeting: missing human labels stay null; desired robot path/height is engineered, actual action labels come from simulator execution"
+  },
+  "default_expert": "fixed physical grasp/lift/straight transport/place/release/withdraw controller; privileged INITIAL XY for teacher only",
+  "deployment_status": "goal-conditioned RGB/proprio action interface implemented; no new learned policy trained",
+  "human_reference": "S01_calibration_v2 pre-action blue centers; per-clip intended goal never inferred from actual final object"
+}

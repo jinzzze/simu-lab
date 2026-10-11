@@ -1,0 +1,89 @@
+{
+  "revision": "cross_goal_coverage_bc_v1",
+  "kind": "paired_goal_relative_recurrent_bc_v4",
+  "scope": "Does training coverage across12 combinations improve held-out combinations, with fixed24 executed teacher episodes per condition?",
+  "training_index": "artifacts/robot_demos_v1/training_index.json",
+  "dataset_manifest": "artifacts/robot_demos_v1/manifest.json",
+  "dataset_manifest_sha256": null,
+  "conditions": [
+    "paired_24",
+    "coverage_24"
+  ],
+  "image_size": 128,
+  "observation_horizon": 1,
+  "prediction_horizon": 1,
+  "execution_horizon": 1,
+  "vector_dim": 12,
+  "action_dim": 4,
+  "normalization": "same engineering observation ranges; action XY goal offsets scale450/180mm, absolute Z center83mm scale77mm, width center/scale32.5mm; no heldout statistics",
+  "model": {
+    "rgb_encoder": "three stride-2 5x5 CNNs, GroupNorm/SiLU, spatial 4x4 pooling, 64D feature",
+    "widths": [
+      64,
+      128
+    ],
+    "time_embedding": 64,
+    "train_diffusion_steps": 100,
+    "inference_steps": 20,
+    "ema_decay": 0.995,
+    "pretrained_weights": null,
+    "initialization": "same full model initial weights for paired seed",
+    "type": "same v4 causal128D GRU and goal-relative absolute target decoder; checkpoint architecture kind unchanged",
+    "hidden_dim": 128
+  },
+  "augmentation": {
+    "brightness": 0.12,
+    "contrast": 0.2,
+    "geometry": false,
+    "paired_history_consistent": true,
+    "channel_gain_halfwidth": 0.25,
+    "transform": "episode-consistent ((RGB-.5)*contrast+.5+brightness)*per-channel gain, clamp0..1; no geometry, mask, object labels or future-derived parameters"
+  },
+  "training": {
+    "seeds": [
+      7,
+      17,
+      27
+    ],
+    "steps": 2500,
+    "batch_size": 2,
+    "device": "cuda",
+    "learning_rate": 0.0003,
+    "weight_decay": 1e-06,
+    "grad_clip": 1.0,
+    "optimizer": "AdamW",
+    "sampling": "uniform whole episodes; all valid timestep targets; zero hidden state per episode",
+    "selection": "all fixed final EMA checkpoints; validation reporting only, no best seed or checkpoint",
+    "objective": "per-episode masked coordinate-weighted MSE; XYZ share77mm physical error unit, width retains twice its original normalized weight",
+    "budget_comparison": "Same24 episodes, paired physical initial scenes, model/init/sampling/augmentation/2500updates; trajectory lengths differ so total frame targets and compute can differ.",
+    "coordinate_loss_weights": [
+      34.154157530780914,
+      5.464665204924945,
+      1.0,
+      2.0
+    ],
+    "episodes_per_condition": 24
+  },
+  "evaluation": {
+    "episode_steps": 384,
+    "sampling_seed": 8821,
+    "scoring": "unchanged strict v2",
+    "case_source": "configs/study_v1.json",
+    "selection": "all final models; no selection on validation/test"
+  },
+  "collaboration_skipped": [
+    "X01/X02/X03 uncollected applicant recordings",
+    "new-video comparison",
+    "capture dates and human labels",
+    "external publication/application"
+  ],
+  "created_utc": "2026-10-08T21:33:38.675286+00:00",
+  "status": "frozen before policy training or evaluation",
+  "action_representation": "goal_relative_xy_absolute_z_width",
+  "action_semantics": "teacher effective absolute command XY minus preprovided goal XY; Z and width absolute; runtime adds numeric goal XY to model XY offset, never current EE or object truth",
+  "revision_reason": "Matched24-episode paired-only versus12-pair coverage. No added personal timing; retain v6 learner/loss/augmentation/horizon.",
+  "hypothesis_status": "exploratory robustness revision informed by earlier appearance-suite failures; fresh scene seeds and one newly frozen color combination; no outcome-based checkpoint/seed selection",
+  "memory": "learned recurrent hidden state is updated from past/current inputs; it can encode temporal information, but no absolute clock or expert phase is supplied",
+  "evaluation_script": "evaluate.py",
+  "study_sha256": "962b82992fcd60e58301bb0615190685c050cfcf5cba4ce548f1aa621ef446d6"
+}

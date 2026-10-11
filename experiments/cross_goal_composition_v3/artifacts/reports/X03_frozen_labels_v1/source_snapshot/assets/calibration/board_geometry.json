@@ -1,0 +1,80 @@
+{
+  "board_id": "pilot-a4-diagonal-2-v1",
+  "expected_marker_ids": [
+    0,
+    2
+  ],
+  "dictionary": "DICT_4X4_50",
+  "page_mm": [
+    210,
+    297
+  ],
+  "marker_side_mm": 30,
+  "origin": "page top-left",
+  "axes": "x right, y down; z=0 is the printed board plane",
+  "corner_order": "top-left, top-right, bottom-right, bottom-left",
+  "preview_pixels_per_mm": 8,
+  "ruler_mm": 50,
+  "markers": [
+    {
+      "id": 0,
+      "corners_mm": [
+        [
+          15,
+          25
+        ],
+        [
+          45,
+          25
+        ],
+        [
+          45,
+          55
+        ],
+        [
+          15,
+          55
+        ]
+      ]
+    },
+    {
+      "id": 2,
+      "corners_mm": [
+        [
+          165,
+          220
+        ],
+        [
+          195,
+          220
+        ],
+        [
+          195,
+          250
+        ],
+        [
+          165,
+          250
+        ]
+      ]
+    }
+  ],
+  "verification": {
+    "detected_ids": [
+      0,
+      2
+    ],
+    "max_corner_error_mm": 0.1767766952966369,
+    "scope": "synthetic raster only; printed scale and phone footage not yet validated",
+    "rendered_svg_detected_ids": [
+      0,
+      2
+    ],
+    "rendered_svg_shape": [
+      2339,
+      1654,
+      3
+    ],
+    "preview_file": "pilot_board_2markers_preview.png"
+  }
+}

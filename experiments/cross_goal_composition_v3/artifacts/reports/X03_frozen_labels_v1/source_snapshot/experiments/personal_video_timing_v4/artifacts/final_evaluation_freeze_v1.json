@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-10-10T16:03:26.791508+00:00",
+  "selection": "All three fixed-final EMA seeds per condition; no development-outcome selection",
+  "checkpoints": {
+    "geometry_only_24_seed7": "0b51347dff338eadbf57c54d705db691d25bf4f3facf9b9686d239a105f4ea12",
+    "geometry_only_24_seed17": "d37c23b5f4c9f632c1c28b854ba72d18793bdb049c1c74f471bba0447764f117",
+    "geometry_only_24_seed27": "48e5a784ba6546383ffae8e9f6775894529c77dafb089301c01ede95e1b1e906",
+    "video_timing_24_seed7": "0cc43603f5ca36372bbeeb4e9e09d9997034340ff63eb496c1fb2a9c0504820d",
+    "video_timing_24_seed17": "dd124fb6296d87e3e72a31ed11d75723489028196073c511896e7f9f44622942",
+    "video_timing_24_seed27": "ca8b5b63cec2c13c5df5ad96bd992499bb2d074c72dafb60cbc1a5e4ce82a52f"
+  },
+  "study_sha256": "98943033deedd46e8b7bef53e784dc7b8fe340b3834cadcf25adfbd4fa216918",
+  "policy_sha256": "ec5678378ed87d759b863012a715be50e2355b077c88a4d880b7273293ad1f26"
+}

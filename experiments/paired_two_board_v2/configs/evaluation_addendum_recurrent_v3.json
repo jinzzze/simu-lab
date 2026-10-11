@@ -1,0 +1,13 @@
+{
+  "frozen_utc": "2026-10-08T14:56:47.916101+00:00",
+  "config_sha256": "bd4906c4eaf20c1175b0aed7798be1ab79f12e69e5b2f658a71937e42a9a37c4",
+  "diagnostic_controls": "same scenes and initial images with unmodified RGB/goal inputs; seed7 per condition",
+  "goal_corruption_scope": "conflicting numeric input and original image/scoring target, not an arbitrary-goal benchmark",
+  "cooperation_skipped": [
+    "S02/S03/S04 applicant recordings",
+    "human strict footprint outcome adjudication",
+    "real board-to-robot registration",
+    "actual capture timestamps",
+    "external publication and application submission"
+  ]
+}

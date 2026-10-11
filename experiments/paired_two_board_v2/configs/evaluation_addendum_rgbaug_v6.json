@@ -1,0 +1,63 @@
+{
+  "frozen_utc": "2026-10-08T16:45:30.730951+00:00",
+  "config_sha256": "adac0bc8cd7bf658f468512c8732d4ecee7a5d5368fbbefe06e0fc739ccc55c2",
+  "development_scope": "shared old8 validation scenes reused; exploratory method development",
+  "new_scenes": {
+    "nominal": {
+      "start": 67000,
+      "count": 16,
+      "jitter_m": 0.003
+    },
+    "appearance": {
+      "start": 67100,
+      "count": 8,
+      "jitter_m": 0.003,
+      "object_rgba": [
+        0.08,
+        0.08,
+        0.08,
+        1.0
+      ],
+      "table_rgba": [
+        0.78,
+        0.83,
+        0.87,
+        1.0
+      ],
+      "scope": "known color-shift family from v5 failure; new scene IDs, not an unseen appearance family"
+    },
+    "wider_start": {
+      "start": 67200,
+      "count": 8,
+      "jitter_m": 0.012
+    },
+    "novel_appearance": {
+      "start": 67120,
+      "count": 8,
+      "jitter_m": 0.003,
+      "object_rgba": [
+        0.04,
+        0.04,
+        0.04,
+        1.0
+      ],
+      "table_rgba": [
+        0.85,
+        0.8,
+        0.75,
+        1.0
+      ],
+      "scope": "new warm table color combination frozen before v6 training/evaluation; limited appearance shift only"
+    }
+  },
+  "known_appearance_scope": "earlier color shift informed augmentation development; nominal/known-shift/new-warm-shift/wider scenes frozen before training",
+  "diagnostic_controls": "same scenes and initial RGB, original numerical goal, fixed seed7 each condition",
+  "goal_corruption_scope": "conflicting vector/decoder versus original RGB/scoring goal, not new-goal benchmark",
+  "cooperation_skipped": [
+    "S02/S03/S04 applicant recordings",
+    "human strict footprint outcome adjudication",
+    "real board-to-robot registration",
+    "actual capture timestamps",
+    "external publication and application submission"
+  ]
+}

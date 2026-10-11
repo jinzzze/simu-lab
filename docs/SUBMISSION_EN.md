@@ -1,29 +1,17 @@
-# Submission draft — simu-lab
+# Project description — applicant review draft
 
-Applicant: **[ENGLISH NAME REQUIRED]**  
-GitHub account: **jinzzze**  
-Repository: **https://github.com/jinzzze/simu-lab**
+I built a reproducible tabletop robot-learning study using personally recorded phone videos and a contact-based Panda simulation. The current task is goal-conditioned pick-and-place between four source and four target locations. Success requires a qualified lift, release, withdrawal and stable placement of the entire block footprint inside a 40 mm goal square.
 
-Recorded artifacts: **https://github.com/jinzzze/simu-lab/releases/tag/v1.0.0**  
-Challenge: https://jobs.ashbyhq.com/humanoid/e1a2a9de-ad23-4632-9d93-ee50fd41a221
+The latest experiment uses 24 personal training clips: eight earlier same-number demonstrations and 16 new cross-goal demonstrations. Additional X02 and X03 recording blocks are reserved for development and held-out video checks. I recorded them on the same day with small camera-angle changes; they are not diverse independent environments. Video processing retains missing object labels and produces coarse transfer-time and dimensionless image-progress constraints, without claiming recovered human 3D actions.
 
-## Short application description
+I froze a controlled comparison between shared video-derived goal geometry and the same geometry plus video-derived transport timing/progress. Each group has 24 physically executed robot demonstrations covering the same 12 source–goal combinations. Four combinations are withheld. Both groups use the same small CNN–GRU, paired initializations, sampling and augmentations, 2,500 updates, and all three fixed-final EMA checkpoints. Trajectory lengths differ, so this is not an equal-frame or equal-compute comparison. Robot action supervision is recorded from simulation commands. The learned policy receives current RGB, robot proprioception, the preprovided goal and the previous command; simulator object truth and scripted phases are excluded at deployment.
 
-I investigated whether object and hand supervision extracted from personally collected phone videos improves robot learning in simulation. My dataset contains 12 overhead videos of picking up a small black block and placing it beyond a line. A controlled A/B/C/D study compares RGB consistency pretraining with object-box, hand-keypoint and combined auxiliary losses. All groups share frames, initialization, batches, training budgets, simulation splits and a contact-based Panda grasp controller.
+Across the frozen simulation test tasks, shared geometry scored 7/96 strict successes and additional video timing/progress scored 11/96. The observed pooled difference is +4.2 percentage points. Held-out combinations scored 1/24 versus 2/24. Each group has 32 tasks repeated for three model seeds, reusing eight physical initial positions. I report all seeds and failed cases; these counts do not establish statistical significance or broad real-world transfer. The personal-data intervention demonstrably changes the training command labels, which is separate from whether it improves policy performance.
 
-The result is negative: combined supervision did not improve success. At 256 simulation adaptation images all groups achieved 192/192 executions; an exploratory 32-image follow-up gave RGB-only 184/192 and combined supervision 181/192. These executions reuse 64 initial scenes across three training seeds. I also implemented an action-conditioned macro-outcome world model and a separate compact Diffusion Policy extension. The world model obtained 28.41 mm mean endpoint error and 153/160 correct outcome labels on 32 held-out simulated initial scenes. The learned action policy achieved 84/192 strict grasp successes using additional simulated expert trajectories.
+An audit found four initial test-task images identical to training/development images, involving two physical starts despite disjoint random seeds. The original outcomes are retained. Post-hoc exclusion of the four tasks gives 5/84 versus 8/84; excluding every goal associated with the two affected starts gives 4/72 versus 7/72. These are descriptive sensitivity checks, not a replacement test or independent confirmation.
 
-The deliverable includes source code, data lineage, all-seed results, failure examples, checkpoints and reproduction instructions published as versioned repository and release artifacts. There is no claimed improvement in real-world generalization, no real-robot evaluation and no VLA. New independent real recordings are deferred. I used Codex assistance for implementation, experiments and documentation; the personal recordings were supplied by me. I will verify the materials and authorship statements before submission.
+Earlier experiments are preserved separately: a visual auxiliary-supervision ablation, an action-conditioned fixed-skill outcome predictor, and a compact Diffusion Policy extension. Their controllers, data budgets and tasks differ from this experiment, so their success rates are not pooled. The project does not claim language-conditioned VLA training, evaluated world-model planning or real-robot validation.
 
-## Technical choices to discuss
+The versioned deliverable includes frozen source/configuration snapshots, raw-data and checkpoint hashes, causal input/action traces, scientific figures, failure diagnostics and executable fixed-case reproduction commands. The earlier study is preserved in release v1.0.0; the current four-goal evidence is organized in [release v1.1.0](https://github.com/jinzzze/simu-lab/releases/tag/v1.1.0). I used Codex assistance for implementation, experiment execution, candidate-label inspection and writing. I personally supplied the recordings and will review the claims and explain the technical decisions before submission.
 
-- Keep human-hand targets as auxiliary perception supervision; do not invent human-to-robot joint action labels from monocular videos.
-- Separate Torch inference from physics processes to avoid the observed Windows OpenMP conflict.
-- Score real contact, sustained lift, release, full boundary clearance and stability; no attachment or object teleportation.
-- Retain negative results, post-hoc study status, all seeds and first-scene/failure selection rules.
-- Use the world model for outcome prediction only; no planning improvement was measured.
-- Describe DP-D as a compact implementation using initial estimated XY, robot state and time, not an official benchmark reproduction or end-to-end image-history policy.
-
-## Before pasting into the application
-
-Fill the applicant name and real public repository/release/demo URLs. The official page was verified in a browser on 2026-10-07: deadline Friday 9 October 2026, 23:59 BST; a public GitHub repository is required. The current application fields are name, email, CV/resume, education, GitHub repository URL and UK work authorization status. Supply these personally; this project description is supporting README material, not a currently observed separate form field. Public URLs must be opened while logged out after publishing. Do not replace pending URLs with guessed links or claim the challenge has accepted this submission.
+Applicant identity, education, CV and UK work-authorization details remain for the applicant to provide accurately. This document has not been submitted to the employer.

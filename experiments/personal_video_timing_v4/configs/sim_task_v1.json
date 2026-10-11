@@ -1,0 +1,155 @@
+{
+  "version": "personal-timing-shared-geometry-v1",
+  "scope": "Shared simulation geometry for personal-video timing ablation",
+  "physics_config": "configs/sim_physics_v1.json",
+  "goal_region_side_m": 0.04,
+  "board_grid_width_m": 0.1,
+  "board_grid_height_m": 0.13,
+  "horizontal_grid_edge_gap_m": 0.13,
+  "source_grid_top_left_xy_m": [
+    -0.12,
+    0.065
+  ],
+  "target_grid_top_left_xy_m": [
+    0.11,
+    0.065
+  ],
+  "layout_assumptions": "Simulated grids share top edge; x right, y up. Real vertical alignment/rotation and robot registration remain unknown.",
+  "starts": {
+    "P1": {
+      "xy_m": [
+        -0.095,
+        0.04
+      ],
+      "source": "engineering grid anchor, not real object XYZ"
+    },
+    "P2": {
+      "xy_m": [
+        -0.045,
+        0.04
+      ],
+      "source": "engineering grid anchor, not real object XYZ"
+    },
+    "P3": {
+      "xy_m": [
+        -0.095,
+        -0.039999999999999994
+      ],
+      "source": "engineering grid anchor, not real object XYZ"
+    },
+    "P4": {
+      "xy_m": [
+        -0.045,
+        -0.039999999999999994
+      ],
+      "source": "engineering grid anchor, not real object XYZ"
+    }
+  },
+  "goals": {
+    "G1": {
+      "xy_m": [
+        0.13511151644178956,
+        0.040283704923456544
+      ],
+      "human_grid_center_mm": [
+        25.111516441789565,
+        24.716295076543457
+      ],
+      "source": "mean first-frame blue centers in the SAME selected 24 TRAIN clips; engineering-aligned sim grid"
+    },
+    "G2": {
+      "xy_m": [
+        0.18542206270538425,
+        0.040085033554848
+      ],
+      "human_grid_center_mm": [
+        75.42206270538425,
+        24.914966445152
+      ],
+      "source": "mean first-frame blue centers in the SAME selected 24 TRAIN clips; engineering-aligned sim grid"
+    },
+    "G3": {
+      "xy_m": [
+        0.13471747975097234,
+        -0.04020318857557795
+      ],
+      "human_grid_center_mm": [
+        24.71747975097235,
+        105.20318857557795
+      ],
+      "source": "mean first-frame blue centers in the SAME selected 24 TRAIN clips; engineering-aligned sim grid"
+    },
+    "G4": {
+      "xy_m": [
+        0.1851146964203627,
+        -0.039955320917962764
+      ],
+      "human_grid_center_mm": [
+        75.11469642036272,
+        104.95532091796277
+      ],
+      "source": "mean first-frame blue centers in the SAME selected 24 TRAIN clips; engineering-aligned sim grid"
+    }
+  },
+  "start_jitter_halfwidth_m": 0.003,
+  "observation": {
+    "rgb": "current overhead RGB, uint8 224x224x3",
+    "vector_fields": [
+      "ee_xyz_m (3)",
+      "finger_width_m (1)",
+      "goal_xy_m (2)",
+      "goal_minus_ee_xy_m (2)",
+      "past_effective_command_xyz_width (4)"
+    ],
+    "vector_dim": 12,
+    "excluded": [
+      "absolute clock",
+      "current/future object truth",
+      "expert stage",
+      "future RGB",
+      "human event profile"
+    ],
+    "timing": "goal chosen by scheduler before reset/capture and constant through episode"
+  },
+  "action": {
+    "fields": [
+      "ee_x_m",
+      "ee_y_m",
+      "ee_z_m",
+      "finger_width_m"
+    ],
+    "dimension": 4,
+    "semantics": "effective next absolute command after workspace/width/EE-step limits; observation/action recorded BEFORE physics"
+  },
+  "safety_limits": {
+    "xyz_low": [
+      -0.24,
+      -0.12,
+      0.006
+    ],
+    "xyz_high": [
+      0.235,
+      0.12,
+      0.16
+    ],
+    "width_low": 0.0,
+    "width_high": 0.065,
+    "max_ee_step_m": 0.008
+  },
+  "collection": {
+    "train_per_condition": 24,
+    "conditions": [
+      "geometry_only_24",
+      "video_timing_24"
+    ],
+    "retention": "all attempts including failures",
+    "human_sessions": [
+      "S01",
+      "X01"
+    ],
+    "video_limit": "timing and dimensionless image progress only; robot XYZ/width labels from executed sim commands"
+  },
+  "default_expert": "fixed physical grasp/lift/straight transport/place/release/withdraw controller; privileged INITIAL XY for teacher only",
+  "deployment_status": "new models not yet trained",
+  "human_reference": "S01 selected8 + X01 all16 pre-action calibration. No X02/X03 geometry."
+}

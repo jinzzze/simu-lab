@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="864pt" height="518.4pt" viewBox="0 0 864 518.4" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-10T16:36:28.511855</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 518.4 
+L 864 518.4 
+L 864 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 66.201081 194.983784 
+L 159.606486 194.983784 
+L 159.606486 73.556757 
+L 66.201081 73.556757 
+z
+" clip-path="url(#p1e064fced0)" style="fill: #f7f9fa; stroke: #9aa6ad; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 86.75027 106.715676 
+L 92.354595 106.715676 
+L 92.354595 101.111351 
+L 86.75027 101.111351 
+z
+" clip-path="url(#p1e064fced0)" style="fill: #c8524c"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 133.452973 106.715676 
+L 139.057297 106.715676 
+L 139.057297 101.111351 
+L 133.452973 101.111351 
+z
+" clip-path="url(#p1e064fced0)" style="fill: #c8524c"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 86.75027 167.429189 
+L 92.354595 167.429189 
+L 92.354595 161.824865 
+L 86.75027 161.824865 
+z
+" clip-path="url(#p1e064fced0)" style="fill: #c8524c"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 133.452973 167.429189 
+L 139.057297 167.429189 
+L 139.057297 161.824865 
+L 133.452973 161.824865 
+z
+" clip-path="url(#p1e064fced0)" style="fill: #c8524c"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 281.033514 194.983784 
+L 374.438919 194.983784 
+L 374.438919 73.556757 
+L 281.033514 73.556757 
+z
+" clip-path="url(#p1e064fced0)" style="fill: #f7f9fa; stroke: #9aa6ad; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 301.582703 106.715676 
+L 307.187027 106.715676 
+L 307.187027 101.111351 
+L 301.582703 101.111351 
+z
+" clip-path="url(#p1e064fced0)" style="fill: #187cbe"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 348.285405 106.715676 
+L 353.88973 106.715676 
+L 353.88973 101.111351 
+L 348.285405 101.111351 
+z
+" clip-path="url(#p1e064fced0)" style="fill: #187cbe"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 301.582703 167.429189 
+L 307.187027 167.429189 
+L 307.187027 161.824865 
+L 301.582703 161.824865 
+z
+" clip-path="url(#p1e064fced0)" style="fill: #187cbe"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 348.285405 167.429189 
+L 353.88973 167.429189 
+L 353.88973 161.824865 
+L 348.285405 161.824865 
+z
+" clip-path="url(#p1e064fced0)" style="fill: #187cbe"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 332.406486 183.308108 
+L 369.768649 183.308108 
+L 369.768649 145.945946 
+L 332.406486 145.945946 
+L 332.406486 183.308108 
+z
+" clip-path="url(#p1e064fced0)" style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #187cbe; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'Arial'; text-anchor: middle; fill: #c8524c" x="89.552432" y="96.441081" transform="rotate(-0 89.552432 96.441081)">P1</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'Arial'; text-anchor: middle; fill: #c8524c" x="136.255135" y="96.441081" transform="rotate(-0 136.255135 96.441081)">P2</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'Arial'; text-anchor: middle; fill: #c8524c" x="89.552432" y="157.154595" transform="rotate(-0 89.552432 157.154595)">P3</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'Arial'; text-anchor: middle; fill: #c8524c" x="136.255135" y="157.154595" transform="rotate(-0 136.255135 157.154595)">P4</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'Arial'; text-anchor: middle; fill: #187cbe" x="304.384865" y="96.441081" transform="rotate(-0 304.384865 96.441081)">G1</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'Arial'; text-anchor: middle; fill: #187cbe" x="351.087568" y="96.441081" transform="rotate(-0 351.087568 96.441081)">G2</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'Arial'; text-anchor: middle; fill: #187cbe" x="304.384865" y="157.154595" transform="rotate(-0 304.384865 157.154595)">G3</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'Arial'; text-anchor: middle; fill: #187cbe" x="351.087568" y="157.154595" transform="rotate(-0 351.087568 157.154595)">G4</text>
+   </g>
+   <g id="patch_13">
+    <path d="M 162.721871 134.27027 
+Q 220.318204 134.27027 277.914537 134.27027 
+" style="fill: none; stroke: #64727a; stroke-linecap: round"/>
+    <path d="M 166.721871 136.27027 
+L 162.721871 134.27027 
+L 166.721871 132.27027 
+" style="fill: none; stroke: #64727a; stroke-linecap: round"/>
+    <path d="M 273.914537 132.27027 
+L 277.914537 134.27027 
+L 273.914537 136.27027 
+" style="fill: none; stroke: #64727a; stroke-linecap: round"/>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 9px; font-family: 'Arial'; text-anchor: middle; fill: #64727a" x="220.32" y="125.863784" transform="rotate(-0 220.32 125.863784)">13 cm gap</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 9px; font-family: 'Arial'; text-anchor: middle" x="112.903784" y="208.994595" transform="rotate(-0 112.903784 208.994595)">10 × 13 cm</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 9px; font-family: 'Arial'; text-anchor: middle" x="327.736216" y="208.994595" transform="rotate(-0 327.736216 208.994595)">10 × 13 cm</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'Arial'; text-anchor: start" x="56.860541" y="52.073514" transform="rotate(-0 56.860541 52.073514)">a   Prescribed start and goal</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 8px; font-family: 'Arial'; text-anchor: middle; fill: #64727a" x="220.32" y="178.170811" transform="rotate(-0 220.32 178.170811)">Schematic</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'Arial'; text-anchor: start" x="432" y="56.29824" transform="rotate(-0 432 56.29824)">b   Causal deployment and strict scoring</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Arial'; text-anchor: start; fill: #324b59" x="432" y="90.04608" transform="rotate(-0 432 90.04608)">Given before execution</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 9px; font-family: 'Arial'; text-anchor: start" x="432" y="111.313601" transform="rotate(-0 432 111.313601)">Goal XY, corresponding to the selected G1–G4</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Arial'; text-anchor: start; fill: #324b59" x="432" y="125.40096" transform="rotate(-0 432 125.40096)">Policy input at each step</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 9px; font-family: 'Arial'; text-anchor: start" x="432" y="146.668481" transform="rotate(-0 432 146.668481)">Current RGB + robot state + goal + previous command</text>
+   </g>
+   <g id="text_19">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Arial'; text-anchor: start; fill: #324b59" x="432" y="160.75584" transform="rotate(-0 432 160.75584)">Learned output</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 9px; font-family: 'Arial'; text-anchor: start" x="432" y="182.023361" transform="rotate(-0 432 182.023361)">Goal-relative XY, absolute Z and gripper width</text>
+   </g>
+   <g id="text_21">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Arial'; text-anchor: start; fill: #324b59" x="432" y="196.11072" transform="rotate(-0 432 196.11072)">Success criterion</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 9px; font-family: 'Arial'" transform="translate(432 217.430975)">Lift, release, withdrawal and stable full-footprint</text>
+    <text style="font-size: 9px; font-family: 'Arial'" transform="translate(432 227.894618)">placement in a 40 mm target square</text>
+   </g>
+  </g>
+  <g id="axes_3">
+   <g id="patch_14">
+    <path d="M 52.24608 418.45248 
+L 222.07392 418.45248 
+Q 233.86752 418.45248 233.86752 415.34208 
+L 233.86752 295.90272 
+Q 233.86752 292.79232 222.07392 292.79232 
+L 52.24608 292.79232 
+Q 40.45248 292.79232 40.45248 295.90272 
+L 40.45248 415.34208 
+Q 40.45248 418.45248 52.24608 418.45248 
+z
+" clip-path="url(#p7a6ebdf501)" style="fill: #f0f4f6; stroke: #a6b4bc; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 295.98048 350.02368 
+L 512.98272 350.02368 
+Q 524.77632 350.02368 524.77632 346.91328 
+L 524.77632 287.60832 
+Q 524.77632 284.49792 512.98272 284.49792 
+L 295.98048 284.49792 
+Q 284.18688 284.49792 284.18688 287.60832 
+L 284.18688 346.91328 
+Q 284.18688 350.02368 295.98048 350.02368 
+z
+" clip-path="url(#p7a6ebdf501)" style="fill: #f0f4f6; stroke: #a6b4bc; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 295.98048 439.18848 
+L 512.98272 439.18848 
+Q 524.77632 439.18848 524.77632 436.07808 
+L 524.77632 376.77312 
+Q 524.77632 373.66272 512.98272 373.66272 
+L 295.98048 373.66272 
+Q 284.18688 373.66272 284.18688 376.77312 
+L 284.18688 436.07808 
+Q 284.18688 439.18848 295.98048 439.18848 
+z
+" clip-path="url(#p7a6ebdf501)" style="fill: #e7f4f4; stroke: #408d9b; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 602.61408 418.45248 
+L 811.75392 418.45248 
+Q 823.54752 418.45248 823.54752 415.34208 
+L 823.54752 295.90272 
+Q 823.54752 292.79232 811.75392 292.79232 
+L 602.61408 292.79232 
+Q 590.82048 292.79232 590.82048 295.90272 
+L 590.82048 415.34208 
+Q 590.82048 418.45248 602.61408 418.45248 
+z
+" clip-path="url(#p7a6ebdf501)" style="fill: #f0f4f6; stroke: #a6b4bc; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 229.556157 325.257019 
+Q 255.095942 321.408009 279.419622 317.742274 
+" clip-path="url(#p7a6ebdf501)" style="fill: none; stroke: #596b75; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 274.740902 316.222543 
+L 279.419622 317.742274 
+L 275.396606 320.573411 
+z
+" clip-path="url(#p7a6ebdf501)" style="fill: #596b75; stroke: #596b75; stroke-width: 1.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 229.448663 386.394553 
+Q 255.095355 396.057357 279.591184 405.286555 
+" clip-path="url(#p7a6ebdf501)" style="fill: none; stroke: #007d96; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 276.24939 401.676512 
+L 279.591184 405.286555 
+L 274.698073 405.793965 
+z
+" clip-path="url(#p7a6ebdf501)" style="fill: #007d96; stroke: #007d96; stroke-width: 1.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 528.295205 317.70997 
+Q 557.798753 324.518482 586.10396 331.050452 
+" clip-path="url(#p7a6ebdf501)" style="fill: none; stroke: #596b75; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 582.311329 327.91741 
+L 586.10396 331.050452 
+L 581.321947 332.204731 
+z
+" clip-path="url(#p7a6ebdf501)" style="fill: #596b75; stroke: #596b75; stroke-width: 1.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_21">
+    <path d="M 528.226102 405.74482 
+Q 557.796619 395.021446 586.210973 384.717339 
+" clip-path="url(#p7a6ebdf501)" style="fill: none; stroke: #007d96; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 581.324547 384.14915 
+L 586.210973 384.717339 
+L 582.824566 388.285567 
+z
+" clip-path="url(#p7a6ebdf501)" style="fill: #007d96; stroke: #007d96; stroke-width: 1.1; stroke-linecap: round"/>
+   </g>
+   <g id="text_23">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'Arial'; text-anchor: start" x="38.88" y="250.9056" transform="rotate(-0 38.88 250.9056)">c   Paired training intervention</text>
+   </g>
+   <g id="text_24">
+    <text style="font-weight: 700; font-size: 9.2px; font-family: 'Arial'; text-anchor: start" x="56.17728" y="316.701052" transform="rotate(-0 56.17728 316.701052)">24 personal training clips</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 8.7px; font-family: 'Arial'" transform="translate(56.17728 341.785376)">S01: 8 same-number clips</text>
+    <text style="font-size: 8.7px; font-family: 'Arial'" transform="translate(56.17728 352.961648)">X01: 16 cross-goal clips</text>
+    <text style="font-size: 8.7px; font-family: 'Arial'" transform="translate(56.17728 362.017974)"/>
+    <text style="font-size: 8.7px; font-family: 'Arial'" transform="translate(56.17728 375.536449)">First-frame goal geometry</text>
+    <text style="font-size: 8.7px; font-family: 'Arial'" transform="translate(56.17728 386.803798)">Coarse time + 2D progress</text>
+    <text style="font-size: 8.7px; font-family: 'Arial'" transform="translate(56.17728 398.018132)">Explicit missing-label masks</text>
+   </g>
+   <g id="text_26">
+    <text style="font-weight: 700; font-size: 9.2px; font-family: 'Arial'; text-anchor: start" x="299.91168" y="308.406652" transform="rotate(-0 299.91168 308.406652)">Shared geometry</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 8.7px; font-family: 'Arial'" transform="translate(299.91168 334.264461)">24 simulated teacher rollouts</text>
+    <text style="font-size: 8.7px; font-family: 'Arial'" transform="translate(299.91168 344.707349)">Standard transport timing</text>
+   </g>
+   <g id="text_28">
+    <text style="font-weight: 700; font-size: 9.2px; font-family: 'Arial'; text-anchor: start" x="299.91168" y="397.571452" transform="rotate(-0 299.91168 397.571452)">+ Personal timing / progress</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 8.7px; font-family: 'Arial'" transform="translate(299.91168 422.6048)">Same 24 initial scenes and goals</text>
+    <text style="font-size: 8.7px; font-family: 'Arial'" transform="translate(299.91168 433.819134)">Video guides transport commands</text>
+   </g>
+   <g id="text_30">
+    <text style="font-weight: 700; font-size: 9.2px; font-family: 'Arial'; text-anchor: start" x="606.54528" y="316.701052" transform="rotate(-0 606.54528 316.701052)">Identical CNN–GRU learners</text>
+   </g>
+   <g id="text_31">
+    <text style="font-size: 8.7px; font-family: 'Arial'" transform="translate(606.54528 341.785376)">12 P/G pairs × 2 demonstrations</text>
+    <text style="font-size: 8.7px; font-family: 'Arial'" transform="translate(606.54528 353.052726)">2,500 updates × 3 fixed seeds</text>
+    <text style="font-size: 8.7px; font-family: 'Arial'" transform="translate(606.54528 364.320076)">Current RGB + 12D input</text>
+    <text style="font-size: 8.7px; font-family: 'Arial'" transform="translate(606.54528 375.783175)">Final EMA; all seeds retained</text>
+    <text style="font-size: 8.7px; font-family: 'Arial'" transform="translate(606.54528 384.552673)"/>
+    <text style="font-size: 8.7px; font-family: 'Arial'" transform="translate(606.54528 398.031046)">X02: label development only</text>
+    <text style="font-size: 8.7px; font-family: 'Arial'" transform="translate(606.54528 409.298396)">X03: no training contribution</text>
+   </g>
+   <g id="text_32">
+    <text style="font-size: 8px; font-family: 'Arial'; text-anchor: middle; fill: #4c606b" x="408.4128" y="364.9536" transform="rotate(-0 408.4128 364.9536)">Only intervention: transport timing + progress</text>
+   </g>
+  </g>
+  <g id="text_33">
+   <text style="font-size: 8.5px; font-family: 'Arial'; text-anchor: start; fill: #52636d" x="47.52" y="500.256" transform="rotate(-0 47.52 500.256)">Robot action labels come from executed simulation commands. Human metric actions are not recovered. Runtime object truth is used only for scoring.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p1e064fced0">
+   <rect x="47.52" y="45.535135" width="345.6" height="168.12973"/>
+  </clipPath>
+  <clipPath id="p7a6ebdf501">
+   <rect x="38.88" y="259.2" width="786.24" height="207.36"/>
+  </clipPath>
+ </defs>
+</svg>

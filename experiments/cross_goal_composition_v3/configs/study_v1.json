@@ -1,0 +1,567 @@
+{
+  "revision": "coverage_only_v1",
+  "created_utc": "2026-10-08T21:33:38.673285+00:00",
+  "status": "frozen_before_new_data_training_and_test",
+  "research_question": "Does training coverage across12 combinations improve held-out combinations, with fixed24 executed teacher episodes per condition?",
+  "conditions": [
+    "paired_24",
+    "coverage_24"
+  ],
+  "seeds": [
+    7,
+    17,
+    27
+  ],
+  "train_cases": [
+    {
+      "scene_seed": 70000,
+      "start_id": "P1",
+      "paired_goal_id": "G1",
+      "coverage_goal_id": "G1"
+    },
+    {
+      "scene_seed": 70001,
+      "start_id": "P2",
+      "paired_goal_id": "G2",
+      "coverage_goal_id": "G1"
+    },
+    {
+      "scene_seed": 70002,
+      "start_id": "P3",
+      "paired_goal_id": "G3",
+      "coverage_goal_id": "G1"
+    },
+    {
+      "scene_seed": 70003,
+      "start_id": "P4",
+      "paired_goal_id": "G4",
+      "coverage_goal_id": "G2"
+    },
+    {
+      "scene_seed": 70004,
+      "start_id": "P1",
+      "paired_goal_id": "G1",
+      "coverage_goal_id": "G3"
+    },
+    {
+      "scene_seed": 70005,
+      "start_id": "P2",
+      "paired_goal_id": "G2",
+      "coverage_goal_id": "G2"
+    },
+    {
+      "scene_seed": 70006,
+      "start_id": "P3",
+      "paired_goal_id": "G3",
+      "coverage_goal_id": "G2"
+    },
+    {
+      "scene_seed": 70007,
+      "start_id": "P4",
+      "paired_goal_id": "G4",
+      "coverage_goal_id": "G3"
+    },
+    {
+      "scene_seed": 70008,
+      "start_id": "P1",
+      "paired_goal_id": "G1",
+      "coverage_goal_id": "G4"
+    },
+    {
+      "scene_seed": 70009,
+      "start_id": "P2",
+      "paired_goal_id": "G2",
+      "coverage_goal_id": "G4"
+    },
+    {
+      "scene_seed": 70010,
+      "start_id": "P3",
+      "paired_goal_id": "G3",
+      "coverage_goal_id": "G3"
+    },
+    {
+      "scene_seed": 70011,
+      "start_id": "P4",
+      "paired_goal_id": "G4",
+      "coverage_goal_id": "G4"
+    },
+    {
+      "scene_seed": 70012,
+      "start_id": "P1",
+      "paired_goal_id": "G1",
+      "coverage_goal_id": "G1"
+    },
+    {
+      "scene_seed": 70013,
+      "start_id": "P2",
+      "paired_goal_id": "G2",
+      "coverage_goal_id": "G1"
+    },
+    {
+      "scene_seed": 70014,
+      "start_id": "P3",
+      "paired_goal_id": "G3",
+      "coverage_goal_id": "G1"
+    },
+    {
+      "scene_seed": 70015,
+      "start_id": "P4",
+      "paired_goal_id": "G4",
+      "coverage_goal_id": "G2"
+    },
+    {
+      "scene_seed": 70016,
+      "start_id": "P1",
+      "paired_goal_id": "G1",
+      "coverage_goal_id": "G3"
+    },
+    {
+      "scene_seed": 70017,
+      "start_id": "P2",
+      "paired_goal_id": "G2",
+      "coverage_goal_id": "G2"
+    },
+    {
+      "scene_seed": 70018,
+      "start_id": "P3",
+      "paired_goal_id": "G3",
+      "coverage_goal_id": "G2"
+    },
+    {
+      "scene_seed": 70019,
+      "start_id": "P4",
+      "paired_goal_id": "G4",
+      "coverage_goal_id": "G3"
+    },
+    {
+      "scene_seed": 70020,
+      "start_id": "P1",
+      "paired_goal_id": "G1",
+      "coverage_goal_id": "G4"
+    },
+    {
+      "scene_seed": 70021,
+      "start_id": "P2",
+      "paired_goal_id": "G2",
+      "coverage_goal_id": "G4"
+    },
+    {
+      "scene_seed": 70022,
+      "start_id": "P3",
+      "paired_goal_id": "G3",
+      "coverage_goal_id": "G3"
+    },
+    {
+      "scene_seed": 70023,
+      "start_id": "P4",
+      "paired_goal_id": "G4",
+      "coverage_goal_id": "G4"
+    }
+  ],
+  "validation_cases": [
+    {
+      "case_id": "P1_G1_dev",
+      "scene_seed": 71000,
+      "start_id": "P1",
+      "goal_id": "G1",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P1_G3_dev",
+      "scene_seed": 71001,
+      "start_id": "P1",
+      "goal_id": "G3",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P1_G4_dev",
+      "scene_seed": 71002,
+      "start_id": "P1",
+      "goal_id": "G4",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P2_G1_dev",
+      "scene_seed": 71003,
+      "start_id": "P2",
+      "goal_id": "G1",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P2_G2_dev",
+      "scene_seed": 71004,
+      "start_id": "P2",
+      "goal_id": "G2",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P2_G4_dev",
+      "scene_seed": 71005,
+      "start_id": "P2",
+      "goal_id": "G4",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P3_G1_dev",
+      "scene_seed": 71006,
+      "start_id": "P3",
+      "goal_id": "G1",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P3_G2_dev",
+      "scene_seed": 71007,
+      "start_id": "P3",
+      "goal_id": "G2",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P3_G3_dev",
+      "scene_seed": 71008,
+      "start_id": "P3",
+      "goal_id": "G3",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P4_G2_dev",
+      "scene_seed": 71009,
+      "start_id": "P4",
+      "goal_id": "G2",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P4_G3_dev",
+      "scene_seed": 71010,
+      "start_id": "P4",
+      "goal_id": "G3",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P4_G4_dev",
+      "scene_seed": 71011,
+      "start_id": "P4",
+      "goal_id": "G4",
+      "heldout_pair": false
+    }
+  ],
+  "test_cases": [
+    {
+      "case_id": "P1_G1_r1",
+      "scene_seed": 72000,
+      "start_id": "P1",
+      "goal_id": "G1",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P1_G2_r1",
+      "scene_seed": 72000,
+      "start_id": "P1",
+      "goal_id": "G2",
+      "heldout_pair": true
+    },
+    {
+      "case_id": "P1_G3_r1",
+      "scene_seed": 72000,
+      "start_id": "P1",
+      "goal_id": "G3",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P1_G4_r1",
+      "scene_seed": 72000,
+      "start_id": "P1",
+      "goal_id": "G4",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P2_G1_r1",
+      "scene_seed": 72001,
+      "start_id": "P2",
+      "goal_id": "G1",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P2_G2_r1",
+      "scene_seed": 72001,
+      "start_id": "P2",
+      "goal_id": "G2",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P2_G3_r1",
+      "scene_seed": 72001,
+      "start_id": "P2",
+      "goal_id": "G3",
+      "heldout_pair": true
+    },
+    {
+      "case_id": "P2_G4_r1",
+      "scene_seed": 72001,
+      "start_id": "P2",
+      "goal_id": "G4",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P3_G1_r1",
+      "scene_seed": 72002,
+      "start_id": "P3",
+      "goal_id": "G1",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P3_G2_r1",
+      "scene_seed": 72002,
+      "start_id": "P3",
+      "goal_id": "G2",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P3_G3_r1",
+      "scene_seed": 72002,
+      "start_id": "P3",
+      "goal_id": "G3",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P3_G4_r1",
+      "scene_seed": 72002,
+      "start_id": "P3",
+      "goal_id": "G4",
+      "heldout_pair": true
+    },
+    {
+      "case_id": "P4_G1_r1",
+      "scene_seed": 72003,
+      "start_id": "P4",
+      "goal_id": "G1",
+      "heldout_pair": true
+    },
+    {
+      "case_id": "P4_G2_r1",
+      "scene_seed": 72003,
+      "start_id": "P4",
+      "goal_id": "G2",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P4_G3_r1",
+      "scene_seed": 72003,
+      "start_id": "P4",
+      "goal_id": "G3",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P4_G4_r1",
+      "scene_seed": 72003,
+      "start_id": "P4",
+      "goal_id": "G4",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P1_G1_r2",
+      "scene_seed": 72004,
+      "start_id": "P1",
+      "goal_id": "G1",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P1_G2_r2",
+      "scene_seed": 72004,
+      "start_id": "P1",
+      "goal_id": "G2",
+      "heldout_pair": true
+    },
+    {
+      "case_id": "P1_G3_r2",
+      "scene_seed": 72004,
+      "start_id": "P1",
+      "goal_id": "G3",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P1_G4_r2",
+      "scene_seed": 72004,
+      "start_id": "P1",
+      "goal_id": "G4",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P2_G1_r2",
+      "scene_seed": 72005,
+      "start_id": "P2",
+      "goal_id": "G1",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P2_G2_r2",
+      "scene_seed": 72005,
+      "start_id": "P2",
+      "goal_id": "G2",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P2_G3_r2",
+      "scene_seed": 72005,
+      "start_id": "P2",
+      "goal_id": "G3",
+      "heldout_pair": true
+    },
+    {
+      "case_id": "P2_G4_r2",
+      "scene_seed": 72005,
+      "start_id": "P2",
+      "goal_id": "G4",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P3_G1_r2",
+      "scene_seed": 72006,
+      "start_id": "P3",
+      "goal_id": "G1",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P3_G2_r2",
+      "scene_seed": 72006,
+      "start_id": "P3",
+      "goal_id": "G2",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P3_G3_r2",
+      "scene_seed": 72006,
+      "start_id": "P3",
+      "goal_id": "G3",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P3_G4_r2",
+      "scene_seed": 72006,
+      "start_id": "P3",
+      "goal_id": "G4",
+      "heldout_pair": true
+    },
+    {
+      "case_id": "P4_G1_r2",
+      "scene_seed": 72007,
+      "start_id": "P4",
+      "goal_id": "G1",
+      "heldout_pair": true
+    },
+    {
+      "case_id": "P4_G2_r2",
+      "scene_seed": 72007,
+      "start_id": "P4",
+      "goal_id": "G2",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P4_G3_r2",
+      "scene_seed": 72007,
+      "start_id": "P4",
+      "goal_id": "G3",
+      "heldout_pair": false
+    },
+    {
+      "case_id": "P4_G4_r2",
+      "scene_seed": 72007,
+      "start_id": "P4",
+      "goal_id": "G4",
+      "heldout_pair": false
+    }
+  ],
+  "training_pair_rule": [
+    [
+      "P1",
+      "G1"
+    ],
+    [
+      "P1",
+      "G3"
+    ],
+    [
+      "P1",
+      "G4"
+    ],
+    [
+      "P2",
+      "G1"
+    ],
+    [
+      "P2",
+      "G2"
+    ],
+    [
+      "P2",
+      "G4"
+    ],
+    [
+      "P3",
+      "G1"
+    ],
+    [
+      "P3",
+      "G2"
+    ],
+    [
+      "P3",
+      "G3"
+    ],
+    [
+      "P4",
+      "G2"
+    ],
+    [
+      "P4",
+      "G3"
+    ],
+    [
+      "P4",
+      "G4"
+    ]
+  ],
+  "heldout_pairs": [
+    [
+      "P1",
+      "G2"
+    ],
+    [
+      "P2",
+      "G3"
+    ],
+    [
+      "P3",
+      "G4"
+    ],
+    [
+      "P4",
+      "G1"
+    ]
+  ],
+  "jitter_m": 0.003,
+  "teacher": "unchanged v2 initial-XY privileged execute_expert(profile=None)",
+  "teacher_development": {
+    "legacy": {
+      "n": 12,
+      "successes": 11,
+      "lifts": 12,
+      "max_steps": 290
+    },
+    "rejected_quintic": {
+      "n": 12,
+      "successes": 10,
+      "lifts": 12,
+      "max_steps": 358
+    },
+    "reason": "Smooth transport failed its predeclared gate; retain legacy teacher to isolate training coverage. All attempts including failures retained.",
+    "probe_sha256": "201763dcca4149f4e6b9d06e704447d9d15d090df2c2efa17a4703326389f6ca"
+  },
+  "collection_gate": "Both groups must have24 qualified lifts and at least20 strict successes out of24; all failures remain in BC dataset. No test or held-out teacher collection.",
+  "information_boundary": "Current RGB/12D robot-goal-past-command vector only; no online object truth, expert phase or external clock. Goal numeric/RGB/scorer agree.",
+  "personal_data": "Both conditions share existing S01 pre-action goal geometry. No new videos or transport profiles used; this is a coverage experiment, not a personal-video-benefit claim.",
+  "selection": "All3 final EMA checkpoints,2500 updates; no checkpoint or seed selection; development reporting then frozen32-case test regardless of comparative direction.",
+  "budget": "Same24 episodes, paired physical initial scenes, model/init/sampling/augmentation/2500updates; trajectory lengths differ so total frame targets and compute can differ.",
+  "sample_scope": "Test32 tasks reuse8 physical object starts across goals and3 training seeds; not96 independent environments per condition.",
+  "legacy_configuration_sha256": "adac0bc8cd7bf658f468512c8732d4ecee7a5d5368fbbefe06e0fc739ccc55c2",
+  "capture_protocol_sha256": "4047b7bd27a07cf88f818de5c49d489d11c4a44262db5d1e0fa6e7930dd11331"
+}

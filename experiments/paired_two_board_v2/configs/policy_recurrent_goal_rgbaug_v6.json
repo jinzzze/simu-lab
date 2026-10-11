@@ -1,0 +1,157 @@
+{
+  "revision": "paired_recurrent_goal_rgbaug_v6",
+  "kind": "paired_goal_relative_recurrent_bc_v4",
+  "scope": "exploratory matched simulation-only versus offline video-guided robot imitation; not human 3D recovery or original A/B/C/D ablation",
+  "training_index": "artifacts/reports/paired_robot_demos_v1/training_index.json",
+  "dataset_manifest": "artifacts/reports/paired_robot_demos_v1/manifest.json",
+  "dataset_manifest_sha256": "417822e57a895701019c3b538b5436ea1cd3a31688023cdbe8569689f6ba2d73",
+  "conditions": [
+    "simulation_only",
+    "video_guided"
+  ],
+  "image_size": 128,
+  "observation_horizon": 1,
+  "prediction_horizon": 1,
+  "execution_horizon": 1,
+  "vector_dim": 12,
+  "action_dim": 4,
+  "normalization": "same engineering observation ranges; action XY goal offsets scale450/180mm, absolute Z center83mm scale77mm, width center/scale32.5mm; no heldout statistics",
+  "model": {
+    "rgb_encoder": "three stride-2 5x5 CNNs, GroupNorm/SiLU, spatial 4x4 pooling, 64D feature",
+    "widths": [
+      64,
+      128
+    ],
+    "time_embedding": 64,
+    "train_diffusion_steps": 100,
+    "inference_steps": 20,
+    "ema_decay": 0.995,
+    "pretrained_weights": null,
+    "initialization": "same full model initial weights for paired seed",
+    "type": "same v4 causal128D GRU and goal-relative absolute target decoder; checkpoint architecture kind unchanged",
+    "hidden_dim": 128
+  },
+  "augmentation": {
+    "brightness": 0.12,
+    "contrast": 0.2,
+    "geometry": false,
+    "paired_history_consistent": true,
+    "channel_gain_halfwidth": 0.25,
+    "transform": "episode-consistent ((RGB-.5)*contrast+.5+brightness)*per-channel gain, clamp0..1; no geometry, mask, object labels or future-derived parameters"
+  },
+  "training": {
+    "seeds": [
+      7,
+      17,
+      27
+    ],
+    "steps": 2500,
+    "batch_size": 2,
+    "device": "cuda",
+    "learning_rate": 0.0003,
+    "weight_decay": 1e-06,
+    "grad_clip": 1.0,
+    "optimizer": "AdamW",
+    "sampling": "uniform whole episodes; all valid timestep targets; zero hidden state per episode",
+    "selection": "all fixed final EMA checkpoints; validation reporting only, no best seed or checkpoint",
+    "objective": "per-episode masked coordinate-weighted MSE; XYZ share77mm physical error unit, width retains twice its original normalized weight",
+    "budget_comparison": "same v5 architecture, labels, normalizer, coordinate loss, initialization, episode stream, 2500updates; only the RGB augmentation recipe changes; actual frame/compute counts recorded",
+    "coordinate_loss_weights": [
+      34.154157530780914,
+      5.464665204924945,
+      1.0,
+      2.0
+    ]
+  },
+  "evaluation": {
+    "episode_steps": 384,
+    "sampling_seed": 8821,
+    "validation": {
+      "start": 61000,
+      "count": 8,
+      "purpose": "closed-loop development check on shared validation scene IDs"
+    },
+    "suites": {
+      "nominal": {
+        "start": 67000,
+        "count": 16,
+        "jitter_m": 0.003
+      },
+      "appearance": {
+        "start": 67100,
+        "count": 8,
+        "jitter_m": 0.003,
+        "object_rgba": [
+          0.08,
+          0.08,
+          0.08,
+          1.0
+        ],
+        "table_rgba": [
+          0.78,
+          0.83,
+          0.87,
+          1.0
+        ],
+        "scope": "known color-shift family from v5 failure; new scene IDs, not an unseen appearance family"
+      },
+      "wider_start": {
+        "start": 67200,
+        "count": 8,
+        "jitter_m": 0.012
+      },
+      "novel_appearance": {
+        "start": 67120,
+        "count": 8,
+        "jitter_m": 0.003,
+        "object_rgba": [
+          0.04,
+          0.04,
+          0.04,
+          1.0
+        ],
+        "table_rgba": [
+          0.85,
+          0.8,
+          0.75,
+          1.0
+        ],
+        "scope": "new warm table color combination frozen before v6 training/evaluation; limited appearance shift only"
+      }
+    },
+    "diagnostics": {
+      "blank_rgb": {
+        "start": 67300,
+        "count": 4,
+        "seeds": [
+          7
+        ]
+      },
+      "swapped_goal_vector": {
+        "start": 67400,
+        "count": 4,
+        "seeds": [
+          7
+        ]
+      }
+    },
+    "scoring": "same strict designated-goal physics; fixed horizon, scorer does not terminate/repair policy",
+    "goals": "pairs cycled P1G1 through P4G4; not arbitrary/unseen goal claims",
+    "main_suite_gate": "run shared 8-scene validation for all six models first; if either condition has zero successes across all three seeds, retain failure and leave independent suites unexecuted while diagnosing a new revision"
+  },
+  "collaboration_skipped": [
+    "S02/S03/S04 applicant recordings",
+    "human strict footprint outcome adjudication",
+    "real board-to-robot registration",
+    "actual capture timestamps",
+    "external publication and application submission"
+  ],
+  "created_utc": "2026-10-08T16:45:30.730951+00:00",
+  "status": "frozen before policy training or evaluation",
+  "action_representation": "goal_relative_xy_absolute_z_width",
+  "action_semantics": "teacher effective absolute command XY minus preprovided goal XY; Z and width absolute; runtime adds numeric goal XY to model XY offset, never current EE or object truth",
+  "revision_reason": "v5 retained appearance failures0/24 in both conditions; test stronger episode-consistent RGB color/brightness/contrast augmentation, same learner/data/loss/update budget",
+  "hypothesis_status": "exploratory robustness revision informed by earlier appearance-suite failures; fresh scene seeds and one newly frozen color combination; no outcome-based checkpoint/seed selection",
+  "memory": "learned recurrent hidden state is updated from past/current inputs; it can encode temporal information, but no absolute clock or expert phase is supplied",
+  "evaluation_script": "evaluate_paired_recurrent_rgbaug_policy.py"
+}

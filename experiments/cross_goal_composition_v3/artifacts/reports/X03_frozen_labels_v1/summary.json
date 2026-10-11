@@ -1,0 +1,3129 @@
+{
+  "status": "completed",
+  "created_utc": "2026-10-10T20:24:42.548844+00:00",
+  "session_id": "X03",
+  "split": "test",
+  "source_hashes": {
+    "experiments/cross_goal_composition_v3/extract_recordings.py": "0b254de12aa3206b06940d6be004ac8921848a64611242098224d96c53fbbe9f",
+    "experiments/paired_two_board_v2/extract_s01_trajectories.py": "115de00edca4621dffbda6a42fe2875dbd2c4c1b25b2d0565c0cb45b556f2ffa",
+    "experiments/paired_two_board_v2/prepare_s01_calibration.py": "cfd5215a48da0c897c6e894d87a4dd755c01fff97b7a7205af53c91630324d0a",
+    "experiments/cross_goal_composition_v3/calibrate_recordings.py": "08940acae4e62a98dbc1b856a8896fe4d88a556d3473ee5d0e6eb37a2446a53a",
+    "src/data/pilot_labels.py": "358921a81aea89b5c2ba0a35df3af430a34d66698c3a5c09a3a9624f76d8cbe4",
+    "artifacts/models/hand_landmarker.task": "fbc2a30080c3c557093b5ddfc334698132eb341044ccee322ccf8bcf3607cde1",
+    "experiments/cross_goal_composition_v3/evaluate_x03_frozen.py": "df6ce61eda3b10500218b84c1774adf0b0aed966db69bd5ea6c74ff42dc88ad0",
+    "assets/calibration/board_geometry.json": "4ec56f711e6e96e2b3116aa5740b1488f2628b62d7b11afe6c4c2e0b697795e6",
+    "experiments/personal_video_timing_v4/artifacts/final_evaluation_freeze_v1.json": "1260592ed93d6050a4cf4f5ca985409aa8b6f1b1257ff0c6e388cde7e52ef334"
+  },
+  "config": {
+    "version": "cross_goal_rgb_candidates_v1",
+    "scope": "train/development only",
+    "dark_max_channel": 90,
+    "comparison_dark_max_channel": 105,
+    "morph_open_kernel": 3,
+    "min_area_ratio": 0.7,
+    "max_area_ratio": 2.2,
+    "min_solidity": 0.86,
+    "min_rectangularity": 0.68,
+    "max_rotated_aspect": 1.85,
+    "min_threshold_bbox_iou": 0.78,
+    "marker_exclusion_margin_px": 12,
+    "boundary_exclusion_margin_px": 6,
+    "max_reference_marker_center_shift_px": 12,
+    "object_size_mm": [
+      20,
+      20
+    ],
+    "assumed_print_scale": 1.0,
+    "min_hand_detection_confidence": 0.5,
+    "min_hand_presence_confidence": 0.5,
+    "num_hands": 2,
+    "note": "Missing remains missing; conservative RGB candidates, not amodal, physical XYZ, actions or success.",
+    "threshold_selection": "X01/train first frames only; fixed before X02",
+    "reference_shift_rule": "12 pixels at width 1280, scaled linearly by image width"
+  },
+  "model_freeze_sha256": "1260592ed93d6050a4cf4f5ca985409aa8b6f1b1257ff0c6e388cde7e52ef334",
+  "received_clips": 16,
+  "processed_clips": 16,
+  "received_frames": 3205,
+  "processed_frames": 3205,
+  "visible_object_frames": 2637,
+  "coverage_over_all_received_frames": 0.822776911076443,
+  "reference_invalid_frames": 188,
+  "episodes": [
+    {
+      "episode_id": "X03_T09",
+      "session_id": "X03",
+      "split": "test",
+      "source_sha256": "f365fa9c269139aa5f4169e10168670a0313337c6c382f2a74a5f298e4a59d3f",
+      "frames": 210,
+      "object_status_counts": {
+        "visible_candidate": 148,
+        "uncertain": 13,
+        "missing": 49
+      },
+      "hand_frames": 97,
+      "reference_invalid_frames": 13,
+      "review_frame_indices": [
+        0,
+        9,
+        18,
+        27,
+        36,
+        45,
+        54,
+        63,
+        72,
+        81,
+        90,
+        99,
+        109,
+        118,
+        127,
+        136,
+        145,
+        154,
+        163,
+        172,
+        181,
+        190,
+        199,
+        209
+      ],
+      "uncertain_review_indices": [
+        45,
+        75,
+        83,
+        91,
+        99,
+        107,
+        115,
+        123,
+        133
+      ],
+      "event_review_indices": [
+        53,
+        55,
+        58,
+        61,
+        62,
+        64,
+        67,
+        69,
+        76,
+        79,
+        81,
+        83,
+        84,
+        87,
+        90,
+        91,
+        93,
+        121,
+        125,
+        129,
+        131,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        141,
+        142,
+        143,
+        145
+      ],
+      "event_proposals": [
+        {
+          "name": "contact",
+          "frame_interval": [
+            58,
+            62
+          ],
+          "time_interval_s": [
+            1.9425396825396826,
+            2.0765079365079364
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first 2D hand-hull/object-bbox overlap; not proof of touch",
+          "not_robot_action": true
+        },
+        {
+          "name": "lift",
+          "frame_interval": [
+            60,
+            86
+          ],
+          "time_interval_s": [
+            2.0095238095238095,
+            2.8803174603174604
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "broad contact-to-first-image-motion search interval only; 3D lift onset/height not measured",
+          "not_robot_action": true
+        },
+        {
+          "name": "transport",
+          "frame_interval": [
+            84,
+            88
+          ],
+          "time_interval_s": [
+            2.8133333333333335,
+            2.9473015873015873
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first object image displacement above14px from pre-action visible center",
+          "not_robot_action": true
+        },
+        {
+          "name": "placement",
+          "frame_interval": [
+            126,
+            138
+          ],
+          "time_interval_s": [
+            4.22,
+            4.621904761904762
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "target-board stationary 12-frame candidate; contact with table not measured",
+          "not_robot_action": true
+        },
+        {
+          "name": "release",
+          "frame_interval": [
+            138,
+            138
+          ],
+          "time_interval_s": [
+            4.621904761904762,
+            4.621904761904762
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "transition toward no detected 2D overlap; detector absence cannot establish physical release",
+          "not_robot_action": true
+        },
+        {
+          "name": "withdraw",
+          "frame_interval": [
+            136,
+            140
+          ],
+          "time_interval_s": [
+            4.554920634920635,
+            4.688888888888889
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first three-frame run without detected hand overlap; hand detection failure remains possible",
+          "not_robot_action": true
+        }
+      ],
+      "annotated_output_frames_verified": 210,
+      "strict_success": null,
+      "files": {
+        "data/processed/X03_frozen_labels_v1/X03_T09.frames.jsonl": "449943790175cf881bc431f829b025eff49d74a88a1f00d6cbdf6feb7aea1ada",
+        "data/processed/X03_frozen_labels_v1/X03_T09.events.json": "9ac8da7ef7d7a52b632bc36945fd89c1fb3da0f22306e5c27d18b04d50b87ee1",
+        "artifacts/reports/X03_frozen_labels_v1/X03_T09_annotated.mp4": "a2d8941c7493892da23ea9da3284dea4a6a24bbe6d94ddcaef6fd592bfb15757",
+        "artifacts/reports/X03_frozen_labels_v1/X03_T09_review.jpg": "59bc938bc7e75350caae52235509ea0b45616a30ba526783bef83a6676e694f8"
+      },
+      "calibration_sha256": "e1ead40f164704812f4d188dcda2dbc6ae50cebc70396a57b3d20c21e0d284a3",
+      "visible_object_frames": 148,
+      "max_fit_rms_px": 0.9418406309515956,
+      "max_endpoint_drift_px": 1.6761512525073565
+    },
+    {
+      "episode_id": "X03_T04",
+      "session_id": "X03",
+      "split": "test",
+      "source_sha256": "9095bb2aa0d594261b8237883faad79c96a65a7ae7bd45a0a9b094712b69f7cc",
+      "frames": 210,
+      "object_status_counts": {
+        "visible_candidate": 178,
+        "uncertain": 12,
+        "missing": 20
+      },
+      "hand_frames": 104,
+      "reference_invalid_frames": 12,
+      "review_frame_indices": [
+        0,
+        9,
+        18,
+        27,
+        36,
+        45,
+        54,
+        63,
+        72,
+        81,
+        90,
+        99,
+        109,
+        118,
+        127,
+        136,
+        145,
+        154,
+        163,
+        172,
+        181,
+        190,
+        199,
+        209
+      ],
+      "uncertain_review_indices": [
+        44,
+        88,
+        96,
+        106,
+        114,
+        122,
+        137
+      ],
+      "event_review_indices": [
+        53,
+        55,
+        58,
+        61,
+        62,
+        64,
+        67,
+        69,
+        77,
+        80,
+        82,
+        84,
+        85,
+        88,
+        91,
+        92,
+        94,
+        107,
+        111,
+        115,
+        119,
+        120,
+        123,
+        124,
+        128,
+        129,
+        131,
+        133,
+        136,
+        138,
+        139,
+        142,
+        143,
+        145
+      ],
+      "event_proposals": [
+        {
+          "name": "contact",
+          "frame_interval": [
+            58,
+            62
+          ],
+          "time_interval_s": [
+            1.9425396825396826,
+            2.0765079365079364
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first 2D hand-hull/object-bbox overlap; not proof of touch",
+          "not_robot_action": true
+        },
+        {
+          "name": "lift",
+          "frame_interval": [
+            60,
+            87
+          ],
+          "time_interval_s": [
+            2.0095238095238095,
+            2.913809523809524
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "broad contact-to-first-image-motion search interval only; 3D lift onset/height not measured",
+          "not_robot_action": true
+        },
+        {
+          "name": "transport",
+          "frame_interval": [
+            85,
+            89
+          ],
+          "time_interval_s": [
+            2.846825396825397,
+            2.9807936507936508
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first object image displacement above14px from pre-action visible center",
+          "not_robot_action": true
+        },
+        {
+          "name": "placement",
+          "frame_interval": [
+            112,
+            124
+          ],
+          "time_interval_s": [
+            3.7511111111111113,
+            4.153015873015873
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "target-board stationary 12-frame candidate; contact with table not measured",
+          "not_robot_action": true
+        },
+        {
+          "name": "release",
+          "frame_interval": [
+            124,
+            138
+          ],
+          "time_interval_s": [
+            4.153015873015873,
+            4.621904761904762
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "transition toward no detected 2D overlap; detector absence cannot establish physical release",
+          "not_robot_action": true
+        },
+        {
+          "name": "withdraw",
+          "frame_interval": [
+            136,
+            140
+          ],
+          "time_interval_s": [
+            4.554920634920635,
+            4.688888888888889
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first three-frame run without detected hand overlap; hand detection failure remains possible",
+          "not_robot_action": true
+        }
+      ],
+      "annotated_output_frames_verified": 210,
+      "strict_success": null,
+      "files": {
+        "data/processed/X03_frozen_labels_v1/X03_T04.frames.jsonl": "b15eabaab5ce5be91712029bddcf897dc0bd8dbc76d2b6d0a3c171f08f70f99e",
+        "data/processed/X03_frozen_labels_v1/X03_T04.events.json": "f6a128da051797b455309dec8d8aca2f22617350936268a4c595c40cd2a54a4d",
+        "artifacts/reports/X03_frozen_labels_v1/X03_T04_annotated.mp4": "94e895c19392c124c4be923a8cce5725bf7c4cf1a948ba10bdd0088e54384cab",
+        "artifacts/reports/X03_frozen_labels_v1/X03_T04_review.jpg": "d82f36458fe23cdb8c9d4685498d48872e947205ca3382a26b61003ea3f7ca17"
+      },
+      "calibration_sha256": "9c9afc596c16f0edb2d958d549231d684cfa7fb4ed7de908a83e691c1f4c0bc2",
+      "visible_object_frames": 178,
+      "max_fit_rms_px": 0.841843768642644,
+      "max_endpoint_drift_px": 1.458019875389957
+    },
+    {
+      "episode_id": "X03_T06",
+      "session_id": "X03",
+      "split": "test",
+      "source_sha256": "7266d31164bab846b59317b5f4bd1ef7987225c3d1e630fae1fb13994d7d3632",
+      "frames": 210,
+      "object_status_counts": {
+        "visible_candidate": 120,
+        "uncertain": 22,
+        "missing": 68
+      },
+      "hand_frames": 128,
+      "reference_invalid_frames": 22,
+      "review_frame_indices": [
+        0,
+        9,
+        18,
+        27,
+        36,
+        45,
+        54,
+        63,
+        72,
+        81,
+        90,
+        99,
+        109,
+        118,
+        127,
+        136,
+        145,
+        154,
+        163,
+        172,
+        181,
+        190,
+        199,
+        209
+      ],
+      "uncertain_review_indices": [
+        41,
+        49,
+        59,
+        67,
+        82,
+        90,
+        98,
+        106,
+        116,
+        124,
+        132,
+        140
+      ],
+      "event_review_indices": [
+        62,
+        64,
+        67,
+        70,
+        73,
+        76,
+        82,
+        84,
+        87,
+        88,
+        90,
+        93,
+        94,
+        96,
+        147,
+        151,
+        155,
+        157,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        167,
+        168,
+        169,
+        171
+      ],
+      "event_proposals": [
+        {
+          "name": "contact",
+          "frame_interval": [
+            67,
+            71
+          ],
+          "time_interval_s": [
+            2.243968253968254,
+            2.377936507936508
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first 2D hand-hull/object-bbox overlap; not proof of touch",
+          "not_robot_action": true
+        },
+        {
+          "name": "lift",
+          "frame_interval": [
+            69,
+            89
+          ],
+          "time_interval_s": [
+            2.310952380952381,
+            2.9807936507936508
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "broad contact-to-first-image-motion search interval only; 3D lift onset/height not measured",
+          "not_robot_action": true
+        },
+        {
+          "name": "transport",
+          "frame_interval": [
+            87,
+            91
+          ],
+          "time_interval_s": [
+            2.913809523809524,
+            3.0477777777777777
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first object image displacement above14px from pre-action visible center",
+          "not_robot_action": true
+        },
+        {
+          "name": "placement",
+          "frame_interval": [
+            152,
+            164
+          ],
+          "time_interval_s": [
+            5.090793650793651,
+            5.492698412698413
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "target-board stationary 12-frame candidate; contact with table not measured",
+          "not_robot_action": true
+        },
+        {
+          "name": "release",
+          "frame_interval": [
+            164,
+            164
+          ],
+          "time_interval_s": [
+            5.492698412698413,
+            5.492698412698413
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "transition toward no detected 2D overlap; detector absence cannot establish physical release",
+          "not_robot_action": true
+        },
+        {
+          "name": "withdraw",
+          "frame_interval": [
+            162,
+            166
+          ],
+          "time_interval_s": [
+            5.425714285714286,
+            5.55968253968254
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first three-frame run without detected hand overlap; hand detection failure remains possible",
+          "not_robot_action": true
+        }
+      ],
+      "annotated_output_frames_verified": 210,
+      "strict_success": null,
+      "files": {
+        "data/processed/X03_frozen_labels_v1/X03_T06.frames.jsonl": "80d70f4a73b5bb4f046fcac50e79020e28a708384a549559e485eb8569aef048",
+        "data/processed/X03_frozen_labels_v1/X03_T06.events.json": "963ec4ba4bc0a0145144ca17ccab72674eda564d4f52532b4050b8e7974ddee0",
+        "artifacts/reports/X03_frozen_labels_v1/X03_T06_annotated.mp4": "53bfbdbc13726a14e6674e172ee45c60fd58e59ff651ae1ef34549edd2f64626",
+        "artifacts/reports/X03_frozen_labels_v1/X03_T06_review.jpg": "2f3e5dca916cf8d4b98ca9edb18188e46ef115de5c30871132b56a317151b047"
+      },
+      "calibration_sha256": "bc0c51398e1802512c4adb245cc2ce4283ab80843607e6077e11b4259567ce60",
+      "visible_object_frames": 120,
+      "max_fit_rms_px": 1.0346362674671907,
+      "max_endpoint_drift_px": 2.4553031819701086
+    },
+    {
+      "episode_id": "X03_T15",
+      "session_id": "X03",
+      "split": "test",
+      "source_sha256": "5bb22746e19ba16171c02fc1c978c453380b48d9f57943c0c1beb876888aeac1",
+      "frames": 210,
+      "object_status_counts": {
+        "visible_candidate": 139,
+        "uncertain": 27,
+        "missing": 44
+      },
+      "hand_frames": 92,
+      "reference_invalid_frames": 27,
+      "review_frame_indices": [
+        0,
+        9,
+        18,
+        27,
+        36,
+        45,
+        54,
+        63,
+        72,
+        81,
+        90,
+        99,
+        109,
+        118,
+        127,
+        136,
+        145,
+        154,
+        163,
+        172,
+        181,
+        190,
+        199,
+        209
+      ],
+      "uncertain_review_indices": [
+        42,
+        50,
+        59,
+        67,
+        75,
+        83,
+        91,
+        99,
+        107,
+        115,
+        123
+      ],
+      "event_review_indices": [
+        61,
+        63,
+        66,
+        67,
+        69,
+        72,
+        74,
+        75,
+        76,
+        79,
+        81,
+        82,
+        85,
+        86,
+        88,
+        109,
+        113,
+        117,
+        121,
+        122,
+        124,
+        126,
+        128,
+        130,
+        131,
+        132,
+        133,
+        136,
+        139,
+        140,
+        142
+      ],
+      "event_proposals": [
+        {
+          "name": "contact",
+          "frame_interval": [
+            66,
+            70
+          ],
+          "time_interval_s": [
+            2.2104761904761907,
+            2.3444444444444446
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first 2D hand-hull/object-bbox overlap; not proof of touch",
+          "not_robot_action": true
+        },
+        {
+          "name": "lift",
+          "frame_interval": [
+            68,
+            81
+          ],
+          "time_interval_s": [
+            2.2774603174603176,
+            2.712857142857143
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "broad contact-to-first-image-motion search interval only; 3D lift onset/height not measured",
+          "not_robot_action": true
+        },
+        {
+          "name": "transport",
+          "frame_interval": [
+            79,
+            83
+          ],
+          "time_interval_s": [
+            2.645873015873016,
+            2.77984126984127
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first object image displacement above14px from pre-action visible center",
+          "not_robot_action": true
+        },
+        {
+          "name": "placement",
+          "frame_interval": [
+            114,
+            126
+          ],
+          "time_interval_s": [
+            3.818095238095238,
+            4.22
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "target-board stationary 12-frame candidate; contact with table not measured",
+          "not_robot_action": true
+        },
+        {
+          "name": "release",
+          "frame_interval": [
+            126,
+            135
+          ],
+          "time_interval_s": [
+            4.22,
+            4.521428571428571
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "transition toward no detected 2D overlap; detector absence cannot establish physical release",
+          "not_robot_action": true
+        },
+        {
+          "name": "withdraw",
+          "frame_interval": [
+            133,
+            137
+          ],
+          "time_interval_s": [
+            4.454444444444444,
+            4.588412698412698
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first three-frame run without detected hand overlap; hand detection failure remains possible",
+          "not_robot_action": true
+        }
+      ],
+      "annotated_output_frames_verified": 210,
+      "strict_success": null,
+      "files": {
+        "data/processed/X03_frozen_labels_v1/X03_T15.frames.jsonl": "a757794205a20193d33611e50b10996b68b33dbc5528146640178249a004d5b8",
+        "data/processed/X03_frozen_labels_v1/X03_T15.events.json": "b151d6cb32476aeba17e0376cca85c30c59045e439d4330f22ec136b99824e5e",
+        "artifacts/reports/X03_frozen_labels_v1/X03_T15_annotated.mp4": "fca2718def488c3e718b2499854622ffed1028cebaf4c9b4962c76954cbd1644",
+        "artifacts/reports/X03_frozen_labels_v1/X03_T15_review.jpg": "ab4a178221bf3ccfd6f08ef988092ffd86324e304c5a9752b004f1c0bac536cd"
+      },
+      "calibration_sha256": "d9cb52033d57bce1b31870f0e2de312b6685cb7697768da9f9db95206a45f9d1",
+      "visible_object_frames": 139,
+      "max_fit_rms_px": 0.8241268091790033,
+      "max_endpoint_drift_px": 2.7998938506443873
+    },
+    {
+      "episode_id": "X03_T08",
+      "session_id": "X03",
+      "split": "test",
+      "source_sha256": "280bd45c32ff391a575f0489e462be9659e643f79ccafc238565fdb206c9cb2a",
+      "frames": 210,
+      "object_status_counts": {
+        "visible_candidate": 160,
+        "uncertain": 19,
+        "missing": 31
+      },
+      "hand_frames": 103,
+      "reference_invalid_frames": 19,
+      "review_frame_indices": [
+        0,
+        9,
+        18,
+        27,
+        36,
+        45,
+        54,
+        63,
+        72,
+        81,
+        90,
+        99,
+        109,
+        118,
+        127,
+        136,
+        145,
+        154,
+        163,
+        172,
+        181,
+        190,
+        199,
+        209
+      ],
+      "uncertain_review_indices": [
+        37,
+        45,
+        76,
+        84,
+        92,
+        100,
+        108,
+        116
+      ],
+      "event_review_indices": [
+        42,
+        44,
+        47,
+        50,
+        53,
+        56,
+        59,
+        75,
+        90,
+        100,
+        104,
+        106,
+        108,
+        110,
+        112,
+        113,
+        115,
+        116,
+        117,
+        118,
+        120,
+        121,
+        122,
+        124,
+        125,
+        127,
+        129,
+        130,
+        133,
+        134,
+        136
+      ],
+      "event_proposals": [
+        {
+          "name": "contact",
+          "frame_interval": [
+            47,
+            51
+          ],
+          "time_interval_s": [
+            1.5741269841269843,
+            1.708095238095238
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first 2D hand-hull/object-bbox overlap; not proof of touch",
+          "not_robot_action": true
+        },
+        {
+          "name": "lift",
+          "frame_interval": [
+            49,
+            117
+          ],
+          "time_interval_s": [
+            1.6411111111111112,
+            3.9185714285714286
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "broad contact-to-first-image-motion search interval only; 3D lift onset/height not measured",
+          "not_robot_action": true
+        },
+        {
+          "name": "transport",
+          "frame_interval": [
+            115,
+            119
+          ],
+          "time_interval_s": [
+            3.8515873015873017,
+            3.9855555555555555
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first object image displacement above14px from pre-action visible center",
+          "not_robot_action": true
+        },
+        {
+          "name": "placement",
+          "frame_interval": [
+            105,
+            117
+          ],
+          "time_interval_s": [
+            3.5166666666666666,
+            3.9185714285714286
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "target-board stationary 12-frame candidate; contact with table not measured",
+          "not_robot_action": true
+        },
+        {
+          "name": "release",
+          "frame_interval": [
+            117,
+            129
+          ],
+          "time_interval_s": [
+            3.9185714285714286,
+            4.320476190476191
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "transition toward no detected 2D overlap; detector absence cannot establish physical release",
+          "not_robot_action": true
+        },
+        {
+          "name": "withdraw",
+          "frame_interval": [
+            127,
+            131
+          ],
+          "time_interval_s": [
+            4.253492063492064,
+            4.3874603174603175
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first three-frame run without detected hand overlap; hand detection failure remains possible",
+          "not_robot_action": true
+        }
+      ],
+      "annotated_output_frames_verified": 210,
+      "strict_success": null,
+      "files": {
+        "data/processed/X03_frozen_labels_v1/X03_T08.frames.jsonl": "992ee4157b5edd613312894ff2088cd3c2b3c00e7b2bec1a1fcc1f6be884c425",
+        "data/processed/X03_frozen_labels_v1/X03_T08.events.json": "a7c9766b72504d5bfc2d196724207761570ca385b716ab321c7039eff2e29bfa",
+        "artifacts/reports/X03_frozen_labels_v1/X03_T08_annotated.mp4": "b641ce8088a02a57b62c1b9dc2bf6f73af0f55df1099cbb57d0268945883abcb",
+        "artifacts/reports/X03_frozen_labels_v1/X03_T08_review.jpg": "77c966b448dd685e3127feecd53deb6216239f680c6d6ecc26c54c1da83e59da"
+      },
+      "calibration_sha256": "f047c9880b6711d10cec4ab8e2696403b02028d3ef200837e2ffae6360100075",
+      "visible_object_frames": 160,
+      "max_fit_rms_px": 0.7477584440679698,
+      "max_endpoint_drift_px": 2.668853782315758
+    },
+    {
+      "episode_id": "X03_T01",
+      "session_id": "X03",
+      "split": "test",
+      "source_sha256": "cd45ec4ddc32a0d92391aaf87c1bb3ed4cac4c8fe21667ddf03f32b2c35d31aa",
+      "frames": 210,
+      "object_status_counts": {
+        "visible_candidate": 160,
+        "uncertain": 14,
+        "missing": 36
+      },
+      "hand_frames": 83,
+      "reference_invalid_frames": 14,
+      "review_frame_indices": [
+        0,
+        9,
+        18,
+        27,
+        36,
+        45,
+        54,
+        63,
+        72,
+        81,
+        90,
+        99,
+        109,
+        118,
+        127,
+        136,
+        145,
+        154,
+        163,
+        172,
+        181,
+        190,
+        199,
+        209
+      ],
+      "uncertain_review_indices": [
+        43,
+        51,
+        65,
+        73,
+        81,
+        89,
+        97,
+        105,
+        114
+      ],
+      "event_review_indices": [
+        45,
+        47,
+        50,
+        52,
+        53,
+        56,
+        58,
+        59,
+        63,
+        65,
+        68,
+        69,
+        71,
+        74,
+        75,
+        77,
+        100,
+        104,
+        108,
+        110,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        120,
+        121,
+        122,
+        124
+      ],
+      "event_proposals": [
+        {
+          "name": "contact",
+          "frame_interval": [
+            50,
+            54
+          ],
+          "time_interval_s": [
+            1.6746031746031746,
+            1.8085714285714287
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first 2D hand-hull/object-bbox overlap; not proof of touch",
+          "not_robot_action": true
+        },
+        {
+          "name": "lift",
+          "frame_interval": [
+            52,
+            70
+          ],
+          "time_interval_s": [
+            1.7415873015873016,
+            2.3444444444444446
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "broad contact-to-first-image-motion search interval only; 3D lift onset/height not measured",
+          "not_robot_action": true
+        },
+        {
+          "name": "transport",
+          "frame_interval": [
+            68,
+            72
+          ],
+          "time_interval_s": [
+            2.2774603174603176,
+            2.4114285714285715
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first object image displacement above14px from pre-action visible center",
+          "not_robot_action": true
+        },
+        {
+          "name": "placement",
+          "frame_interval": [
+            105,
+            117
+          ],
+          "time_interval_s": [
+            3.5166666666666666,
+            3.9185714285714286
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "target-board stationary 12-frame candidate; contact with table not measured",
+          "not_robot_action": true
+        },
+        {
+          "name": "release",
+          "frame_interval": [
+            117,
+            117
+          ],
+          "time_interval_s": [
+            3.9185714285714286,
+            3.9185714285714286
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "transition toward no detected 2D overlap; detector absence cannot establish physical release",
+          "not_robot_action": true
+        },
+        {
+          "name": "withdraw",
+          "frame_interval": [
+            115,
+            119
+          ],
+          "time_interval_s": [
+            3.8515873015873017,
+            3.9855555555555555
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first three-frame run without detected hand overlap; hand detection failure remains possible",
+          "not_robot_action": true
+        }
+      ],
+      "annotated_output_frames_verified": 210,
+      "strict_success": null,
+      "files": {
+        "data/processed/X03_frozen_labels_v1/X03_T01.frames.jsonl": "6e6e7e79f7d640b630345dadee0ff69dce7064d347656b2b6e9a264b4ca5d167",
+        "data/processed/X03_frozen_labels_v1/X03_T01.events.json": "8f400eff5bda32c866059f2627b19379aa369960ebdaebe291e346b8e8fe6a4c",
+        "artifacts/reports/X03_frozen_labels_v1/X03_T01_annotated.mp4": "d2bc75d1b710a309dfb7b37b6e79d038fc727510254337741c830151b52d67f7",
+        "artifacts/reports/X03_frozen_labels_v1/X03_T01_review.jpg": "928bf091a3d8293917be8c9f2c25c26c1eac900928688dfda84b1f0a187a2fc2"
+      },
+      "calibration_sha256": "8f05a6404031e1ac1c6c243946a2bec21175fbe9d457117ac606e94c57aa1b31",
+      "visible_object_frames": 160,
+      "max_fit_rms_px": 0.7401251275813405,
+      "max_endpoint_drift_px": 2.1393958897827616
+    },
+    {
+      "episode_id": "X03_T02",
+      "session_id": "X03",
+      "split": "test",
+      "source_sha256": "4cf4f3b1d5ec4c51fc7b3b0ede4b3fb1e84dfa203b0b8a53c6b1403a92da7c78",
+      "frames": 210,
+      "object_status_counts": {
+        "visible_candidate": 158,
+        "uncertain": 20,
+        "missing": 32
+      },
+      "hand_frames": 94,
+      "reference_invalid_frames": 20,
+      "review_frame_indices": [
+        0,
+        9,
+        18,
+        27,
+        36,
+        45,
+        54,
+        63,
+        72,
+        81,
+        90,
+        99,
+        109,
+        118,
+        127,
+        136,
+        145,
+        154,
+        163,
+        172,
+        181,
+        190,
+        199,
+        209
+      ],
+      "uncertain_review_indices": [
+        48,
+        56,
+        74,
+        85,
+        93,
+        101,
+        109,
+        129
+      ],
+      "event_review_indices": [
+        57,
+        59,
+        62,
+        64,
+        65,
+        68,
+        69,
+        71,
+        73,
+        74,
+        75,
+        78,
+        79,
+        81,
+        84,
+        85,
+        87,
+        95,
+        99,
+        103,
+        107,
+        108,
+        112,
+        113,
+        117,
+        119,
+        125,
+        127,
+        130,
+        131,
+        133,
+        136,
+        137,
+        139
+      ],
+      "event_proposals": [
+        {
+          "name": "contact",
+          "frame_interval": [
+            62,
+            66
+          ],
+          "time_interval_s": [
+            2.0765079365079364,
+            2.2104761904761907
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first 2D hand-hull/object-bbox overlap; not proof of touch",
+          "not_robot_action": true
+        },
+        {
+          "name": "lift",
+          "frame_interval": [
+            64,
+            80
+          ],
+          "time_interval_s": [
+            2.143492063492064,
+            2.6793650793650796
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "broad contact-to-first-image-motion search interval only; 3D lift onset/height not measured",
+          "not_robot_action": true
+        },
+        {
+          "name": "transport",
+          "frame_interval": [
+            78,
+            82
+          ],
+          "time_interval_s": [
+            2.6123809523809527,
+            2.7463492063492065
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first object image displacement above14px from pre-action visible center",
+          "not_robot_action": true
+        },
+        {
+          "name": "placement",
+          "frame_interval": [
+            100,
+            112
+          ],
+          "time_interval_s": [
+            3.3492063492063493,
+            3.7511111111111113
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "target-board stationary 12-frame candidate; contact with table not measured",
+          "not_robot_action": true
+        },
+        {
+          "name": "release",
+          "frame_interval": [
+            112,
+            132
+          ],
+          "time_interval_s": [
+            3.7511111111111113,
+            4.420952380952381
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "transition toward no detected 2D overlap; detector absence cannot establish physical release",
+          "not_robot_action": true
+        },
+        {
+          "name": "withdraw",
+          "frame_interval": [
+            130,
+            134
+          ],
+          "time_interval_s": [
+            4.3539682539682545,
+            4.487936507936508
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first three-frame run without detected hand overlap; hand detection failure remains possible",
+          "not_robot_action": true
+        }
+      ],
+      "annotated_output_frames_verified": 210,
+      "strict_success": null,
+      "files": {
+        "data/processed/X03_frozen_labels_v1/X03_T02.frames.jsonl": "451252fc2dd1d9bdf07d822a13dc92cd223d025f47a91723964ef0fa01797a52",
+        "data/processed/X03_frozen_labels_v1/X03_T02.events.json": "fef76174f1b0b183cca4c220dc4f2368d5a6b0204ad3f8f576623d097e4b73ea",
+        "artifacts/reports/X03_frozen_labels_v1/X03_T02_annotated.mp4": "4e7e5290198a6945c83d81f87d09f6e7fa7e8723da9fdb64d44f83a1469a4fe1",
+        "artifacts/reports/X03_frozen_labels_v1/X03_T02_review.jpg": "bf04c1676023de99283b25c922b3221e12902b963d483a07a6fddf7729ea6731"
+      },
+      "calibration_sha256": "598844ff2cf2952e3611c472b824dc97d0e83f30b884e929f28f0bc422f91f96",
+      "visible_object_frames": 158,
+      "max_fit_rms_px": 0.7567070931770132,
+      "max_endpoint_drift_px": 3.701189834067825
+    },
+    {
+      "episode_id": "X03_T10",
+      "session_id": "X03",
+      "split": "test",
+      "source_sha256": "2f632d3fd9986f6234450946d9f91180b0f925b6d207f395b008affa65ae1a6d",
+      "frames": 180,
+      "object_status_counts": {
+        "visible_candidate": 151,
+        "uncertain": 21,
+        "missing": 8
+      },
+      "hand_frames": 89,
+      "reference_invalid_frames": 21,
+      "review_frame_indices": [
+        0,
+        7,
+        15,
+        23,
+        31,
+        38,
+        46,
+        54,
+        62,
+        70,
+        77,
+        85,
+        93,
+        101,
+        108,
+        116,
+        124,
+        132,
+        140,
+        147,
+        155,
+        163,
+        171,
+        179
+      ],
+      "uncertain_review_indices": [
+        28,
+        36,
+        44,
+        69,
+        77
+      ],
+      "event_review_indices": [
+        38,
+        40,
+        43,
+        46,
+        49,
+        52,
+        58,
+        60,
+        63,
+        64,
+        66,
+        69,
+        70,
+        72,
+        82,
+        86,
+        90,
+        94,
+        95,
+        98,
+        99,
+        103,
+        104,
+        106,
+        108,
+        111,
+        113,
+        114,
+        117,
+        118,
+        120
+      ],
+      "event_proposals": [
+        {
+          "name": "contact",
+          "frame_interval": [
+            43,
+            47
+          ],
+          "time_interval_s": [
+            1.4412962962962963,
+            1.5753703703703703
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first 2D hand-hull/object-bbox overlap; not proof of touch",
+          "not_robot_action": true
+        },
+        {
+          "name": "lift",
+          "frame_interval": [
+            45,
+            65
+          ],
+          "time_interval_s": [
+            1.5083333333333333,
+            2.178703703703704
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "broad contact-to-first-image-motion search interval only; 3D lift onset/height not measured",
+          "not_robot_action": true
+        },
+        {
+          "name": "transport",
+          "frame_interval": [
+            63,
+            67
+          ],
+          "time_interval_s": [
+            2.111666666666667,
+            2.245740740740741
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first object image displacement above14px from pre-action visible center",
+          "not_robot_action": true
+        },
+        {
+          "name": "placement",
+          "frame_interval": [
+            87,
+            99
+          ],
+          "time_interval_s": [
+            2.9161111111111113,
+            3.3183333333333334
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "target-board stationary 12-frame candidate; contact with table not measured",
+          "not_robot_action": true
+        },
+        {
+          "name": "release",
+          "frame_interval": [
+            99,
+            113
+          ],
+          "time_interval_s": [
+            3.3183333333333334,
+            3.787592592592593
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "transition toward no detected 2D overlap; detector absence cannot establish physical release",
+          "not_robot_action": true
+        },
+        {
+          "name": "withdraw",
+          "frame_interval": [
+            111,
+            115
+          ],
+          "time_interval_s": [
+            3.720555555555556,
+            3.85462962962963
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first three-frame run without detected hand overlap; hand detection failure remains possible",
+          "not_robot_action": true
+        }
+      ],
+      "annotated_output_frames_verified": 180,
+      "strict_success": null,
+      "files": {
+        "data/processed/X03_frozen_labels_v1/X03_T10.frames.jsonl": "147802241045f3214daa90251bebfd5344372b7b09e6b003ef5247d5ced1e168",
+        "data/processed/X03_frozen_labels_v1/X03_T10.events.json": "00c5a775b955248a9de862981ad7c5219b8f43d4a0649a3fb0162ce5881ac9f2",
+        "artifacts/reports/X03_frozen_labels_v1/X03_T10_annotated.mp4": "6464d5c903ad59af0d943a3f1f6c55b619eb7780313ab15b6eb4baaae8ace11c",
+        "artifacts/reports/X03_frozen_labels_v1/X03_T10_review.jpg": "11e98d42cd0238ab3975cc018dee482268c19d96552758e957ebd6d024433f8d"
+      },
+      "calibration_sha256": "b1fce47f9282277c8f5d94c663d9b756d2a16948c4a189c00c47843bb07c06e1",
+      "visible_object_frames": 151,
+      "max_fit_rms_px": 0.892676615719398,
+      "max_endpoint_drift_px": 3.2934770131745728
+    },
+    {
+      "episode_id": "X03_T16",
+      "session_id": "X03",
+      "split": "test",
+      "source_sha256": "ddbfdd11be68c8547d9258b8da613d62414b291b8bdc3d460f5ec09653e4aef4",
+      "frames": 180,
+      "object_status_counts": {
+        "missing": 8,
+        "visible_candidate": 161,
+        "uncertain": 11
+      },
+      "hand_frames": 91,
+      "reference_invalid_frames": 11,
+      "review_frame_indices": [
+        0,
+        7,
+        15,
+        23,
+        31,
+        38,
+        46,
+        54,
+        62,
+        70,
+        77,
+        85,
+        93,
+        101,
+        108,
+        116,
+        124,
+        132,
+        140,
+        147,
+        155,
+        163,
+        171,
+        179
+      ],
+      "uncertain_review_indices": [
+        0,
+        28,
+        37,
+        63,
+        71,
+        82,
+        115
+      ],
+      "event_review_indices": [
+        35,
+        37,
+        40,
+        42,
+        43,
+        46,
+        47,
+        49,
+        52,
+        53,
+        54,
+        57,
+        58,
+        60,
+        63,
+        64,
+        66,
+        78,
+        82,
+        86,
+        90,
+        91,
+        95,
+        100,
+        103,
+        105,
+        108,
+        110,
+        111,
+        114,
+        115,
+        117
+      ],
+      "event_proposals": [
+        {
+          "name": "contact",
+          "frame_interval": [
+            40,
+            44
+          ],
+          "time_interval_s": [
+            1.3407407407407408,
+            1.4748148148148148
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first 2D hand-hull/object-bbox overlap; not proof of touch",
+          "not_robot_action": true
+        },
+        {
+          "name": "lift",
+          "frame_interval": [
+            42,
+            59
+          ],
+          "time_interval_s": [
+            1.4077777777777778,
+            1.9775925925925926
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "broad contact-to-first-image-motion search interval only; 3D lift onset/height not measured",
+          "not_robot_action": true
+        },
+        {
+          "name": "transport",
+          "frame_interval": [
+            57,
+            61
+          ],
+          "time_interval_s": [
+            1.9105555555555556,
+            2.04462962962963
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first object image displacement above14px from pre-action visible center",
+          "not_robot_action": true
+        },
+        {
+          "name": "placement",
+          "frame_interval": [
+            83,
+            95
+          ],
+          "time_interval_s": [
+            2.7820370370370373,
+            3.1842592592592593
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "target-board stationary 12-frame candidate; contact with table not measured",
+          "not_robot_action": true
+        },
+        {
+          "name": "release",
+          "frame_interval": [
+            95,
+            110
+          ],
+          "time_interval_s": [
+            3.1842592592592593,
+            3.687037037037037
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "transition toward no detected 2D overlap; detector absence cannot establish physical release",
+          "not_robot_action": true
+        },
+        {
+          "name": "withdraw",
+          "frame_interval": [
+            108,
+            112
+          ],
+          "time_interval_s": [
+            3.62,
+            3.754074074074074
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first three-frame run without detected hand overlap; hand detection failure remains possible",
+          "not_robot_action": true
+        }
+      ],
+      "annotated_output_frames_verified": 180,
+      "strict_success": null,
+      "files": {
+        "data/processed/X03_frozen_labels_v1/X03_T16.frames.jsonl": "b9c11d11085005ce64ef016943345277849c80f14eebe0bb4d88ff12b126f4fe",
+        "data/processed/X03_frozen_labels_v1/X03_T16.events.json": "6c71c53a4d2599d9376edfe20067725fe9e3347da3dcbae5c2bb8c49ab36469d",
+        "artifacts/reports/X03_frozen_labels_v1/X03_T16_annotated.mp4": "e6e3c381397946145556bf7c510b7abbe67e382ee7b345cf0905451379afb280",
+        "artifacts/reports/X03_frozen_labels_v1/X03_T16_review.jpg": "873d1d94d0befde7b10d646ce21570586e160ae59e49021b1f191dac33148f6c"
+      },
+      "calibration_sha256": "507721495f3206f2c6e8cb09e2d196188cb85d6244220f7b01940bce349310c9",
+      "visible_object_frames": 161,
+      "max_fit_rms_px": 0.892676615719398,
+      "max_endpoint_drift_px": 1.306705270148823
+    },
+    {
+      "episode_id": "X03_T07",
+      "session_id": "X03",
+      "split": "test",
+      "source_sha256": "53433f0282c0011a38a35da520e31336a64006fce3a7e6aaf74f54e9f99b126a",
+      "frames": 210,
+      "object_status_counts": {
+        "visible_candidate": 204,
+        "missing": 6
+      },
+      "hand_frames": 77,
+      "reference_invalid_frames": 0,
+      "review_frame_indices": [
+        0,
+        9,
+        18,
+        27,
+        36,
+        45,
+        54,
+        63,
+        72,
+        81,
+        90,
+        99,
+        109,
+        118,
+        127,
+        136,
+        145,
+        154,
+        163,
+        172,
+        181,
+        190,
+        199,
+        209
+      ],
+      "uncertain_review_indices": [
+        84,
+        101,
+        109
+      ],
+      "event_review_indices": [
+        50,
+        52,
+        55,
+        57,
+        58,
+        61,
+        63,
+        64,
+        69,
+        71,
+        74,
+        75,
+        77,
+        80,
+        81,
+        83,
+        93,
+        97,
+        101,
+        105,
+        106,
+        108,
+        110,
+        112,
+        114,
+        115,
+        116,
+        117,
+        120,
+        123,
+        124,
+        126
+      ],
+      "event_proposals": [
+        {
+          "name": "contact",
+          "frame_interval": [
+            55,
+            59
+          ],
+          "time_interval_s": [
+            1.8420634920634922,
+            1.976031746031746
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first 2D hand-hull/object-bbox overlap; not proof of touch",
+          "not_robot_action": true
+        },
+        {
+          "name": "lift",
+          "frame_interval": [
+            57,
+            76
+          ],
+          "time_interval_s": [
+            1.909047619047619,
+            2.5453968253968253
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "broad contact-to-first-image-motion search interval only; 3D lift onset/height not measured",
+          "not_robot_action": true
+        },
+        {
+          "name": "transport",
+          "frame_interval": [
+            74,
+            78
+          ],
+          "time_interval_s": [
+            2.4784126984126984,
+            2.6123809523809527
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first object image displacement above14px from pre-action visible center",
+          "not_robot_action": true
+        },
+        {
+          "name": "placement",
+          "frame_interval": [
+            98,
+            110
+          ],
+          "time_interval_s": [
+            3.2822222222222224,
+            3.6841269841269844
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "target-board stationary 12-frame candidate; contact with table not measured",
+          "not_robot_action": true
+        },
+        {
+          "name": "release",
+          "frame_interval": [
+            110,
+            119
+          ],
+          "time_interval_s": [
+            3.6841269841269844,
+            3.9855555555555555
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "transition toward no detected 2D overlap; detector absence cannot establish physical release",
+          "not_robot_action": true
+        },
+        {
+          "name": "withdraw",
+          "frame_interval": [
+            117,
+            121
+          ],
+          "time_interval_s": [
+            3.9185714285714286,
+            4.052539682539683
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first three-frame run without detected hand overlap; hand detection failure remains possible",
+          "not_robot_action": true
+        }
+      ],
+      "annotated_output_frames_verified": 210,
+      "strict_success": null,
+      "files": {
+        "data/processed/X03_frozen_labels_v1/X03_T07.frames.jsonl": "6b2c42e4623dcb6d5566c3423414964ffcde67a7f9df8389f7124b99129e5329",
+        "data/processed/X03_frozen_labels_v1/X03_T07.events.json": "d14fb1b03633b804c94a3a224f8d09d3bbdbe32dac3ff912d73b8c0ba92c7ae1",
+        "artifacts/reports/X03_frozen_labels_v1/X03_T07_annotated.mp4": "350984039676eac4a62d1026fa2fe749d8c9e874ea51c0c15f57a26942ff5793",
+        "artifacts/reports/X03_frozen_labels_v1/X03_T07_review.jpg": "410c0bdeb8fad3decaad70c480865925dd1b58c472a28a0fa3f109e144159c18"
+      },
+      "calibration_sha256": "b4dcf5fc60f8730e8e7337edbf900a5bd630b581ea0826d20a69a59621efb70c",
+      "visible_object_frames": 204,
+      "max_fit_rms_px": 0.9032751512574374,
+      "max_endpoint_drift_px": 3.612859212416335
+    },
+    {
+      "episode_id": "X03_T12",
+      "session_id": "X03",
+      "split": "test",
+      "source_sha256": "ff91da59434fc632ed258a70b446ae24fd6bac708106dc3a4e0a900b2b983467",
+      "frames": 180,
+      "object_status_counts": {
+        "visible_candidate": 176,
+        "missing": 4
+      },
+      "hand_frames": 90,
+      "reference_invalid_frames": 0,
+      "review_frame_indices": [
+        0,
+        7,
+        15,
+        23,
+        31,
+        38,
+        46,
+        54,
+        62,
+        70,
+        77,
+        85,
+        93,
+        101,
+        108,
+        116,
+        124,
+        132,
+        140,
+        147,
+        155,
+        163,
+        171,
+        179
+      ],
+      "uncertain_review_indices": [
+        82,
+        99
+      ],
+      "event_review_indices": [
+        44,
+        46,
+        49,
+        52,
+        55,
+        58,
+        65,
+        66,
+        68,
+        71,
+        74,
+        77,
+        78,
+        80,
+        86,
+        90,
+        94,
+        98,
+        99,
+        103,
+        108,
+        109,
+        115,
+        117,
+        120,
+        121,
+        123,
+        126,
+        127,
+        129
+      ],
+      "event_proposals": [
+        {
+          "name": "contact",
+          "frame_interval": [
+            49,
+            53
+          ],
+          "time_interval_s": [
+            1.6424074074074075,
+            1.7764814814814816
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first 2D hand-hull/object-bbox overlap; not proof of touch",
+          "not_robot_action": true
+        },
+        {
+          "name": "lift",
+          "frame_interval": [
+            51,
+            73
+          ],
+          "time_interval_s": [
+            1.7094444444444445,
+            2.446851851851852
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "broad contact-to-first-image-motion search interval only; 3D lift onset/height not measured",
+          "not_robot_action": true
+        },
+        {
+          "name": "transport",
+          "frame_interval": [
+            71,
+            75
+          ],
+          "time_interval_s": [
+            2.379814814814815,
+            2.513888888888889
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first object image displacement above14px from pre-action visible center",
+          "not_robot_action": true
+        },
+        {
+          "name": "placement",
+          "frame_interval": [
+            91,
+            103
+          ],
+          "time_interval_s": [
+            3.0501851851851853,
+            3.4524074074074074
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "target-board stationary 12-frame candidate; contact with table not measured",
+          "not_robot_action": true
+        },
+        {
+          "name": "release",
+          "frame_interval": [
+            103,
+            122
+          ],
+          "time_interval_s": [
+            3.4524074074074074,
+            4.08925925925926
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "transition toward no detected 2D overlap; detector absence cannot establish physical release",
+          "not_robot_action": true
+        },
+        {
+          "name": "withdraw",
+          "frame_interval": [
+            120,
+            124
+          ],
+          "time_interval_s": [
+            4.022222222222222,
+            4.156296296296296
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first three-frame run without detected hand overlap; hand detection failure remains possible",
+          "not_robot_action": true
+        }
+      ],
+      "annotated_output_frames_verified": 180,
+      "strict_success": null,
+      "files": {
+        "data/processed/X03_frozen_labels_v1/X03_T12.frames.jsonl": "1b14ab313a3377fbc13667eed268ce6f8797720635d4c4d2a0c987f60d1e62a8",
+        "data/processed/X03_frozen_labels_v1/X03_T12.events.json": "3723aa320308eb34c48148dd6f99c397a7de37ea73931c69b831b10f72177143",
+        "artifacts/reports/X03_frozen_labels_v1/X03_T12_annotated.mp4": "8ce8f30ae8685673d83acee23b03289137ee2f281663a1b22a98f128a8d54c48",
+        "artifacts/reports/X03_frozen_labels_v1/X03_T12_review.jpg": "b93e21a2e011af4ee180b76dbf48115d7591a0ce1107208e8241f63715f098d3"
+      },
+      "calibration_sha256": "35ff874bdb1a3883612710d78a554d12322c6dd811f85437e0372e08b6bec3f7",
+      "visible_object_frames": 176,
+      "max_fit_rms_px": 0.8956934496382499,
+      "max_endpoint_drift_px": 2.6823996723508152
+    },
+    {
+      "episode_id": "X03_T14",
+      "session_id": "X03",
+      "split": "test",
+      "source_sha256": "60726e3f5ab021fac43dc22363efe215b1c2a377901ce265d484a45f6debc239",
+      "frames": 210,
+      "object_status_counts": {
+        "visible_candidate": 208,
+        "missing": 2
+      },
+      "hand_frames": 77,
+      "reference_invalid_frames": 0,
+      "review_frame_indices": [
+        0,
+        9,
+        18,
+        27,
+        36,
+        45,
+        54,
+        63,
+        72,
+        81,
+        90,
+        99,
+        109,
+        118,
+        127,
+        136,
+        145,
+        154,
+        163,
+        172,
+        181,
+        190,
+        199,
+        209
+      ],
+      "uncertain_review_indices": [
+        89
+      ],
+      "event_review_indices": [
+        55,
+        57,
+        60,
+        62,
+        63,
+        66,
+        67,
+        69,
+        71,
+        72,
+        73,
+        76,
+        77,
+        79,
+        82,
+        83,
+        85,
+        90,
+        94,
+        98,
+        100,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        110,
+        111,
+        112,
+        114
+      ],
+      "event_proposals": [
+        {
+          "name": "contact",
+          "frame_interval": [
+            60,
+            64
+          ],
+          "time_interval_s": [
+            2.0095238095238095,
+            2.143492063492064
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first 2D hand-hull/object-bbox overlap; not proof of touch",
+          "not_robot_action": true
+        },
+        {
+          "name": "lift",
+          "frame_interval": [
+            62,
+            78
+          ],
+          "time_interval_s": [
+            2.0765079365079364,
+            2.6123809523809527
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "broad contact-to-first-image-motion search interval only; 3D lift onset/height not measured",
+          "not_robot_action": true
+        },
+        {
+          "name": "transport",
+          "frame_interval": [
+            76,
+            80
+          ],
+          "time_interval_s": [
+            2.5453968253968253,
+            2.6793650793650796
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first object image displacement above14px from pre-action visible center",
+          "not_robot_action": true
+        },
+        {
+          "name": "placement",
+          "frame_interval": [
+            95,
+            107
+          ],
+          "time_interval_s": [
+            3.181746031746032,
+            3.583650793650794
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "target-board stationary 12-frame candidate; contact with table not measured",
+          "not_robot_action": true
+        },
+        {
+          "name": "release",
+          "frame_interval": [
+            107,
+            107
+          ],
+          "time_interval_s": [
+            3.583650793650794,
+            3.583650793650794
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "transition toward no detected 2D overlap; detector absence cannot establish physical release",
+          "not_robot_action": true
+        },
+        {
+          "name": "withdraw",
+          "frame_interval": [
+            105,
+            109
+          ],
+          "time_interval_s": [
+            3.5166666666666666,
+            3.650634920634921
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first three-frame run without detected hand overlap; hand detection failure remains possible",
+          "not_robot_action": true
+        }
+      ],
+      "annotated_output_frames_verified": 210,
+      "strict_success": null,
+      "files": {
+        "data/processed/X03_frozen_labels_v1/X03_T14.frames.jsonl": "901853c3b9cf9ca036aca2ab64ec0be33e41a072f727b901691c82ca74083122",
+        "data/processed/X03_frozen_labels_v1/X03_T14.events.json": "cd0a19af899e0bc8b1a0ccf48c681cce8753fd5d2db93fd40e7042db243d4c9d",
+        "artifacts/reports/X03_frozen_labels_v1/X03_T14_annotated.mp4": "5f7f819e058031afecd92a5ba020588c7fd13a741c6a7926bbbff57b88b2eece",
+        "artifacts/reports/X03_frozen_labels_v1/X03_T14_review.jpg": "1f63cfbc5f6e320a42c1cca55e10fd5f797fce6d3ead27842b8212af691199de"
+      },
+      "calibration_sha256": "7ecbcf6550e8c5bd266146036cf05b93b4889a5c6d515c82875c78ead9441983",
+      "visible_object_frames": 208,
+      "max_fit_rms_px": 0.8085795041906804,
+      "max_endpoint_drift_px": 1.8400381010618816
+    },
+    {
+      "episode_id": "X03_T05",
+      "session_id": "X03",
+      "split": "test",
+      "source_sha256": "16eba00bfdbb194ff0d37755a974ac3fa1f5066c1eb1d5baea2d34fbc526ecd8",
+      "frames": 210,
+      "object_status_counts": {
+        "visible_candidate": 183,
+        "uncertain": 11,
+        "missing": 16
+      },
+      "hand_frames": 89,
+      "reference_invalid_frames": 11,
+      "review_frame_indices": [
+        0,
+        9,
+        18,
+        27,
+        36,
+        45,
+        54,
+        63,
+        72,
+        81,
+        90,
+        99,
+        109,
+        118,
+        127,
+        136,
+        145,
+        154,
+        163,
+        172,
+        181,
+        190,
+        199,
+        209
+      ],
+      "uncertain_review_indices": [
+        35,
+        73,
+        81,
+        89,
+        98,
+        106
+      ],
+      "event_review_indices": [
+        46,
+        48,
+        51,
+        53,
+        54,
+        57,
+        59,
+        60,
+        65,
+        67,
+        70,
+        71,
+        73,
+        76,
+        77,
+        79,
+        95,
+        99,
+        103,
+        107,
+        108,
+        110,
+        111,
+        112,
+        113,
+        116,
+        117,
+        119,
+        122,
+        123,
+        125
+      ],
+      "event_proposals": [
+        {
+          "name": "contact",
+          "frame_interval": [
+            51,
+            55
+          ],
+          "time_interval_s": [
+            1.708095238095238,
+            1.8420634920634922
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first 2D hand-hull/object-bbox overlap; not proof of touch",
+          "not_robot_action": true
+        },
+        {
+          "name": "lift",
+          "frame_interval": [
+            53,
+            72
+          ],
+          "time_interval_s": [
+            1.7750793650793653,
+            2.4114285714285715
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "broad contact-to-first-image-motion search interval only; 3D lift onset/height not measured",
+          "not_robot_action": true
+        },
+        {
+          "name": "transport",
+          "frame_interval": [
+            70,
+            74
+          ],
+          "time_interval_s": [
+            2.3444444444444446,
+            2.4784126984126984
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first object image displacement above14px from pre-action visible center",
+          "not_robot_action": true
+        },
+        {
+          "name": "placement",
+          "frame_interval": [
+            100,
+            112
+          ],
+          "time_interval_s": [
+            3.3492063492063493,
+            3.7511111111111113
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "target-board stationary 12-frame candidate; contact with table not measured",
+          "not_robot_action": true
+        },
+        {
+          "name": "release",
+          "frame_interval": [
+            112,
+            118
+          ],
+          "time_interval_s": [
+            3.7511111111111113,
+            3.952063492063492
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "transition toward no detected 2D overlap; detector absence cannot establish physical release",
+          "not_robot_action": true
+        },
+        {
+          "name": "withdraw",
+          "frame_interval": [
+            116,
+            120
+          ],
+          "time_interval_s": [
+            3.885079365079365,
+            4.019047619047619
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first three-frame run without detected hand overlap; hand detection failure remains possible",
+          "not_robot_action": true
+        }
+      ],
+      "annotated_output_frames_verified": 210,
+      "strict_success": null,
+      "files": {
+        "data/processed/X03_frozen_labels_v1/X03_T05.frames.jsonl": "982465d29221e2e752eea4085c907112318f1a64f23d2d9e2878252d3475ef13",
+        "data/processed/X03_frozen_labels_v1/X03_T05.events.json": "18a45b424493fff089e9afd952bcf095c7c8fc535f69e3fa25520d5971c69dcd",
+        "artifacts/reports/X03_frozen_labels_v1/X03_T05_annotated.mp4": "d8f5d54491aba2f3e1c0b9bf30f95919d5d6237d306c9b644e7aeb3ebf4546c8",
+        "artifacts/reports/X03_frozen_labels_v1/X03_T05_review.jpg": "ccb0599b306f17b5370c643fe5a5d97bf27ee591da5be98aa07d1ecef084b9c8"
+      },
+      "calibration_sha256": "5780c686de0921b6b188b73f4cb1a7c934980998e92f7cfeab58864d4df9dd6c",
+      "visible_object_frames": 183,
+      "max_fit_rms_px": 0.7477584440679698,
+      "max_endpoint_drift_px": 2.3296334037413637
+    },
+    {
+      "episode_id": "X03_T11",
+      "session_id": "X03",
+      "split": "test",
+      "source_sha256": "a29a5fc97e626225697cb70522c4ea5adf57b6ce891731c963d2db62e9f8efc7",
+      "frames": 180,
+      "object_status_counts": {
+        "visible_candidate": 154,
+        "uncertain": 9,
+        "missing": 17
+      },
+      "hand_frames": 89,
+      "reference_invalid_frames": 9,
+      "review_frame_indices": [
+        0,
+        7,
+        15,
+        23,
+        31,
+        38,
+        46,
+        54,
+        62,
+        70,
+        77,
+        85,
+        93,
+        101,
+        108,
+        116,
+        124,
+        132,
+        140,
+        147,
+        155,
+        163,
+        171,
+        179
+      ],
+      "uncertain_review_indices": [
+        35,
+        43,
+        69,
+        77,
+        91,
+        99
+      ],
+      "event_review_indices": [
+        40,
+        42,
+        45,
+        47,
+        48,
+        51,
+        52,
+        54,
+        56,
+        57,
+        58,
+        61,
+        62,
+        64,
+        67,
+        68,
+        70,
+        85,
+        89,
+        93,
+        97,
+        98,
+        100,
+        102,
+        103,
+        104,
+        107,
+        110,
+        113,
+        114,
+        116
+      ],
+      "event_proposals": [
+        {
+          "name": "contact",
+          "frame_interval": [
+            45,
+            49
+          ],
+          "time_interval_s": [
+            1.5083333333333333,
+            1.6424074074074075
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first 2D hand-hull/object-bbox overlap; not proof of touch",
+          "not_robot_action": true
+        },
+        {
+          "name": "lift",
+          "frame_interval": [
+            47,
+            63
+          ],
+          "time_interval_s": [
+            1.5753703703703703,
+            2.111666666666667
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "broad contact-to-first-image-motion search interval only; 3D lift onset/height not measured",
+          "not_robot_action": true
+        },
+        {
+          "name": "transport",
+          "frame_interval": [
+            61,
+            65
+          ],
+          "time_interval_s": [
+            2.04462962962963,
+            2.178703703703704
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first object image displacement above14px from pre-action visible center",
+          "not_robot_action": true
+        },
+        {
+          "name": "placement",
+          "frame_interval": [
+            90,
+            102
+          ],
+          "time_interval_s": [
+            3.0166666666666666,
+            3.418888888888889
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "target-board stationary 12-frame candidate; contact with table not measured",
+          "not_robot_action": true
+        },
+        {
+          "name": "release",
+          "frame_interval": [
+            102,
+            109
+          ],
+          "time_interval_s": [
+            3.418888888888889,
+            3.6535185185185184
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "transition toward no detected 2D overlap; detector absence cannot establish physical release",
+          "not_robot_action": true
+        },
+        {
+          "name": "withdraw",
+          "frame_interval": [
+            107,
+            111
+          ],
+          "time_interval_s": [
+            3.5864814814814814,
+            3.720555555555556
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first three-frame run without detected hand overlap; hand detection failure remains possible",
+          "not_robot_action": true
+        }
+      ],
+      "annotated_output_frames_verified": 180,
+      "strict_success": null,
+      "files": {
+        "data/processed/X03_frozen_labels_v1/X03_T11.frames.jsonl": "b7a7df9647917bc38554b6fe2a05ae627a0e6008393945273e73eaa5faf736fa",
+        "data/processed/X03_frozen_labels_v1/X03_T11.events.json": "fa3d67c973ccd6e1b564d1c07b83c957a82ee473e82006ab43595337b99128c2",
+        "artifacts/reports/X03_frozen_labels_v1/X03_T11_annotated.mp4": "f5fed5f2fadd6bc187062e12ae008d788d47e20fe5390d1e449d1b529e62de24",
+        "artifacts/reports/X03_frozen_labels_v1/X03_T11_review.jpg": "3a1e0d8c382fc852ff5036c1ece921a7af27d6ce3a8d55c38591cc52b8119b0a"
+      },
+      "calibration_sha256": "202c66a5f3357874943641ba86611440eebba4508d02ee793128e736bc06f04e",
+      "visible_object_frames": 154,
+      "max_fit_rms_px": 0.9205831488526646,
+      "max_endpoint_drift_px": 2.6825938241936216
+    },
+    {
+      "episode_id": "X03_T13",
+      "session_id": "X03",
+      "split": "test",
+      "source_sha256": "f053914ed513fc5d2f75addd1759357af8d2f81f38422f84c8a5e79320722410",
+      "frames": 205,
+      "object_status_counts": {
+        "visible_candidate": 172,
+        "missing": 24,
+        "uncertain": 9
+      },
+      "hand_frames": 85,
+      "reference_invalid_frames": 9,
+      "review_frame_indices": [
+        0,
+        8,
+        17,
+        26,
+        35,
+        44,
+        53,
+        62,
+        70,
+        79,
+        88,
+        97,
+        106,
+        115,
+        124,
+        133,
+        141,
+        150,
+        159,
+        168,
+        177,
+        186,
+        195,
+        204
+      ],
+      "uncertain_review_indices": [
+        61,
+        86,
+        94,
+        102,
+        110
+      ],
+      "event_review_indices": [
+        58,
+        60,
+        63,
+        65,
+        66,
+        69,
+        70,
+        72,
+        73,
+        75,
+        78,
+        80,
+        81,
+        84,
+        85,
+        87,
+        98,
+        102,
+        106,
+        110,
+        111,
+        113,
+        114,
+        115,
+        116,
+        119,
+        120,
+        122,
+        125,
+        126,
+        128
+      ],
+      "event_proposals": [
+        {
+          "name": "contact",
+          "frame_interval": [
+            63,
+            67
+          ],
+          "time_interval_s": [
+            2.1724137931034484,
+            2.310344827586207
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first 2D hand-hull/object-bbox overlap; not proof of touch",
+          "not_robot_action": true
+        },
+        {
+          "name": "lift",
+          "frame_interval": [
+            65,
+            80
+          ],
+          "time_interval_s": [
+            2.2413793103448274,
+            2.7586206896551726
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "broad contact-to-first-image-motion search interval only; 3D lift onset/height not measured",
+          "not_robot_action": true
+        },
+        {
+          "name": "transport",
+          "frame_interval": [
+            78,
+            82
+          ],
+          "time_interval_s": [
+            2.689655172413793,
+            2.8275862068965516
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first object image displacement above14px from pre-action visible center",
+          "not_robot_action": true
+        },
+        {
+          "name": "placement",
+          "frame_interval": [
+            103,
+            115
+          ],
+          "time_interval_s": [
+            3.5517241379310347,
+            3.9655172413793105
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "target-board stationary 12-frame candidate; contact with table not measured",
+          "not_robot_action": true
+        },
+        {
+          "name": "release",
+          "frame_interval": [
+            115,
+            121
+          ],
+          "time_interval_s": [
+            3.9655172413793105,
+            4.172413793103448
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "transition toward no detected 2D overlap; detector absence cannot establish physical release",
+          "not_robot_action": true
+        },
+        {
+          "name": "withdraw",
+          "frame_interval": [
+            119,
+            123
+          ],
+          "time_interval_s": [
+            4.103448275862069,
+            4.241379310344827
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first three-frame run without detected hand overlap; hand detection failure remains possible",
+          "not_robot_action": true
+        }
+      ],
+      "annotated_output_frames_verified": 205,
+      "strict_success": null,
+      "files": {
+        "data/processed/X03_frozen_labels_v1/X03_T13.frames.jsonl": "5c54c5647364bf7dc8f04fbf85591761e2830d6d2fb944f376db15d0e2e32708",
+        "data/processed/X03_frozen_labels_v1/X03_T13.events.json": "128496ace2bb7daccb616231cab13fa2624085af262d9dc085ba5d9091c37875",
+        "artifacts/reports/X03_frozen_labels_v1/X03_T13_annotated.mp4": "34100ae3accc49c935c95ce2a4ee57298f8a86faf4e06e07a27f0a3391d2122a",
+        "artifacts/reports/X03_frozen_labels_v1/X03_T13_review.jpg": "ec77386f27fef57844e44efd9f8f5ef2916e22832b58b4b8e95fab0b6ea6898b"
+      },
+      "calibration_sha256": "f095b96d8ccb9d0f1f33435f34a0478df418e53e987f721935b81fe231663d27",
+      "visible_object_frames": 172,
+      "max_fit_rms_px": 1.1045613713941895,
+      "max_endpoint_drift_px": 2.687194062808686
+    },
+    {
+      "episode_id": "X03_T03",
+      "session_id": "X03",
+      "split": "test",
+      "source_sha256": "89bac57a9070121e9203e3759a69a3278f0b3f92800af4ff006c537825bb0c5c",
+      "frames": 180,
+      "object_status_counts": {
+        "missing": 15,
+        "visible_candidate": 165
+      },
+      "hand_frames": 86,
+      "reference_invalid_frames": 0,
+      "review_frame_indices": [
+        0,
+        7,
+        15,
+        23,
+        31,
+        38,
+        46,
+        54,
+        62,
+        70,
+        77,
+        85,
+        93,
+        101,
+        108,
+        116,
+        124,
+        132,
+        140,
+        147,
+        155,
+        163,
+        171,
+        179
+      ],
+      "uncertain_review_indices": [
+        0,
+        9,
+        44,
+        75,
+        120
+      ],
+      "event_review_indices": [
+        42,
+        44,
+        47,
+        49,
+        50,
+        53,
+        55,
+        56,
+        60,
+        62,
+        65,
+        66,
+        68,
+        71,
+        72,
+        74,
+        79,
+        83,
+        87,
+        91,
+        92,
+        96,
+        101,
+        106,
+        107,
+        108,
+        111,
+        112,
+        114,
+        117,
+        118,
+        120
+      ],
+      "event_proposals": [
+        {
+          "name": "contact",
+          "frame_interval": [
+            47,
+            51
+          ],
+          "time_interval_s": [
+            1.5753703703703703,
+            1.7094444444444445
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first 2D hand-hull/object-bbox overlap; not proof of touch",
+          "not_robot_action": true
+        },
+        {
+          "name": "lift",
+          "frame_interval": [
+            49,
+            67
+          ],
+          "time_interval_s": [
+            1.6424074074074075,
+            2.245740740740741
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "broad contact-to-first-image-motion search interval only; 3D lift onset/height not measured",
+          "not_robot_action": true
+        },
+        {
+          "name": "transport",
+          "frame_interval": [
+            65,
+            69
+          ],
+          "time_interval_s": [
+            2.178703703703704,
+            2.312777777777778
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first object image displacement above14px from pre-action visible center",
+          "not_robot_action": true
+        },
+        {
+          "name": "placement",
+          "frame_interval": [
+            84,
+            96
+          ],
+          "time_interval_s": [
+            2.8155555555555556,
+            3.217777777777778
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "target-board stationary 12-frame candidate; contact with table not measured",
+          "not_robot_action": true
+        },
+        {
+          "name": "release",
+          "frame_interval": [
+            96,
+            113
+          ],
+          "time_interval_s": [
+            3.217777777777778,
+            3.787592592592593
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "transition toward no detected 2D overlap; detector absence cannot establish physical release",
+          "not_robot_action": true
+        },
+        {
+          "name": "withdraw",
+          "frame_interval": [
+            111,
+            115
+          ],
+          "time_interval_s": [
+            3.720555555555556,
+            3.85462962962963
+          ],
+          "annotation_source": "pseudolabel",
+          "visibility": "uncertain",
+          "review_status": "needs_visual_review",
+          "method": "first three-frame run without detected hand overlap; hand detection failure remains possible",
+          "not_robot_action": true
+        }
+      ],
+      "annotated_output_frames_verified": 180,
+      "strict_success": null,
+      "files": {
+        "data/processed/X03_frozen_labels_v1/X03_T03.frames.jsonl": "42146636acb9244e15f9706be3fa013da0e6f0148759d1f9e95a42ab11dbb11b",
+        "data/processed/X03_frozen_labels_v1/X03_T03.events.json": "f72cf9a5140024b7cf912e1c07ccb4c6918f94c0eed14fb1bf112a6c4d3edebf",
+        "artifacts/reports/X03_frozen_labels_v1/X03_T03_annotated.mp4": "dd1cc475655df92c8cb7466e16ba8276c4a23e4ea3970e0b74f92a73fc2cfa34",
+        "artifacts/reports/X03_frozen_labels_v1/X03_T03_review.jpg": "d23bdb58102c521c3d180ad1efb123a3716723ba3ed7732e6de21e2a7ba0c568"
+      },
+      "calibration_sha256": "c42197e6516f9a19f27635efbe57397453e78f57d7d35abae012a6d48179008e",
+      "visible_object_frames": 165,
+      "max_fit_rms_px": 0.892676615719398,
+      "max_endpoint_drift_px": 2.1846934838869423
+    }
+  ],
+  "errors": [],
+  "elapsed_s": 181.7960000000021,
+  "training_or_tuning_performed": false,
+  "prior_naming_qc_access": true,
+  "physical_success_labels": 0,
+  "independent_accuracy_measured": false,
+  "scope": "Separate frozen candidate-coverage audit after all policy checkpoints are fixed. No recipe retuning or train-profile modification. Events remain unreviewed."
+}

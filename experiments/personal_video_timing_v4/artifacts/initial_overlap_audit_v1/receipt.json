@@ -1,0 +1,270 @@
+{
+  "status": "completed",
+  "created_utc": "2026-10-10T20:22:55.378602+00:00",
+  "primary_results_sha256": "170c966236acd76542a07f552ad1b7778cd9d0e3c9600a3176deadbb960f4d2f",
+  "exact_pixel_matches": [
+    {
+      "test_case": "P3_G1_r1",
+      "test_scene_seed": 930002,
+      "reference_episode": "shared_validation_920008",
+      "reference_split": "val",
+      "initial_rgb_sha256": "05a7bfe40a933bafdc4d1415ce838fd86dab63dbc9165125f0aa21155f5c8f18",
+      "xy_distance_from_reference_mm": 0.0740390639146623,
+      "metric_note": "Test scoring pose after first action versus reference pre-action pose; diagnostic only"
+    },
+    {
+      "test_case": "P3_G2_r1",
+      "test_scene_seed": 930002,
+      "reference_episode": "geometry_only_24_910013",
+      "reference_split": "train",
+      "initial_rgb_sha256": "9cfac2d35cf8ff1f6d4a7c302b6e1f046adea46b8c6e6e319dc34eda89f46d93",
+      "xy_distance_from_reference_mm": 1.2567019334176572,
+      "metric_note": "Test scoring pose after first action versus reference pre-action pose; diagnostic only"
+    },
+    {
+      "test_case": "P3_G3_r1",
+      "test_scene_seed": 930002,
+      "reference_episode": "shared_validation_920008",
+      "reference_split": "val",
+      "initial_rgb_sha256": "05a7bfe40a933bafdc4d1415ce838fd86dab63dbc9165125f0aa21155f5c8f18",
+      "xy_distance_from_reference_mm": 0.0740390639146623,
+      "metric_note": "Test scoring pose after first action versus reference pre-action pose; diagnostic only"
+    },
+    {
+      "test_case": "P4_G4_r2",
+      "test_scene_seed": 930007,
+      "reference_episode": "geometry_only_24_910003",
+      "reference_split": "train",
+      "initial_rgb_sha256": "f246e2408a2e69a7ace4135e2a9c8ea39a7a90c2df749ee8e94331d31893216c",
+      "xy_distance_from_reference_mm": 0.31175895119265634,
+      "metric_note": "Test scoring pose after first action versus reference pre-action pose; diagnostic only"
+    }
+  ],
+  "excluded_case_ids": [
+    "P3_G1_r1",
+    "P3_G2_r1",
+    "P3_G3_r1",
+    "P4_G4_r2"
+  ],
+  "affected_scene_seeds": [
+    930002,
+    930007
+  ],
+  "summaries": {
+    "all_predeclared": {
+      "geometry_only_24": {
+        "all": {
+          "executions": 96,
+          "successes": 7,
+          "lifts": 21,
+          "physical_starts": 8
+        },
+        "heldout": {
+          "executions": 24,
+          "successes": 1,
+          "lifts": 3,
+          "physical_starts": 8
+        },
+        "per_seed": {
+          "7": {
+            "executions": 32,
+            "successes": 2,
+            "lifts": 6,
+            "physical_starts": 8
+          },
+          "17": {
+            "executions": 32,
+            "successes": 2,
+            "lifts": 2,
+            "physical_starts": 8
+          },
+          "27": {
+            "executions": 32,
+            "successes": 3,
+            "lifts": 13,
+            "physical_starts": 8
+          }
+        }
+      },
+      "video_timing_24": {
+        "all": {
+          "executions": 96,
+          "successes": 11,
+          "lifts": 27,
+          "physical_starts": 8
+        },
+        "heldout": {
+          "executions": 24,
+          "successes": 2,
+          "lifts": 2,
+          "physical_starts": 8
+        },
+        "per_seed": {
+          "7": {
+            "executions": 32,
+            "successes": 5,
+            "lifts": 9,
+            "physical_starts": 8
+          },
+          "17": {
+            "executions": 32,
+            "successes": 2,
+            "lifts": 4,
+            "physical_starts": 8
+          },
+          "27": {
+            "executions": 32,
+            "successes": 4,
+            "lifts": 14,
+            "physical_starts": 8
+          }
+        }
+      }
+    },
+    "exclude_4_matching_task_images": {
+      "geometry_only_24": {
+        "all": {
+          "executions": 84,
+          "successes": 5,
+          "lifts": 17,
+          "physical_starts": 8
+        },
+        "heldout": {
+          "executions": 24,
+          "successes": 1,
+          "lifts": 3,
+          "physical_starts": 8
+        },
+        "per_seed": {
+          "7": {
+            "executions": 28,
+            "successes": 1,
+            "lifts": 5,
+            "physical_starts": 8
+          },
+          "17": {
+            "executions": 28,
+            "successes": 1,
+            "lifts": 1,
+            "physical_starts": 8
+          },
+          "27": {
+            "executions": 28,
+            "successes": 3,
+            "lifts": 11,
+            "physical_starts": 8
+          }
+        }
+      },
+      "video_timing_24": {
+        "all": {
+          "executions": 84,
+          "successes": 8,
+          "lifts": 20,
+          "physical_starts": 8
+        },
+        "heldout": {
+          "executions": 24,
+          "successes": 2,
+          "lifts": 2,
+          "physical_starts": 8
+        },
+        "per_seed": {
+          "7": {
+            "executions": 28,
+            "successes": 3,
+            "lifts": 6,
+            "physical_starts": 8
+          },
+          "17": {
+            "executions": 28,
+            "successes": 1,
+            "lifts": 3,
+            "physical_starts": 8
+          },
+          "27": {
+            "executions": 28,
+            "successes": 4,
+            "lifts": 11,
+            "physical_starts": 8
+          }
+        }
+      }
+    },
+    "exclude_all_goals_for_2_affected_starts": {
+      "geometry_only_24": {
+        "all": {
+          "executions": 72,
+          "successes": 4,
+          "lifts": 15,
+          "physical_starts": 6
+        },
+        "heldout": {
+          "executions": 18,
+          "successes": 0,
+          "lifts": 1,
+          "physical_starts": 6
+        },
+        "per_seed": {
+          "7": {
+            "executions": 24,
+            "successes": 1,
+            "lifts": 4,
+            "physical_starts": 6
+          },
+          "17": {
+            "executions": 24,
+            "successes": 1,
+            "lifts": 1,
+            "physical_starts": 6
+          },
+          "27": {
+            "executions": 24,
+            "successes": 2,
+            "lifts": 10,
+            "physical_starts": 6
+          }
+        }
+      },
+      "video_timing_24": {
+        "all": {
+          "executions": 72,
+          "successes": 7,
+          "lifts": 19,
+          "physical_starts": 6
+        },
+        "heldout": {
+          "executions": 18,
+          "successes": 1,
+          "lifts": 1,
+          "physical_starts": 6
+        },
+        "per_seed": {
+          "7": {
+            "executions": 24,
+            "successes": 3,
+            "lifts": 6,
+            "physical_starts": 6
+          },
+          "17": {
+            "executions": 24,
+            "successes": 1,
+            "lifts": 3,
+            "physical_starts": 6
+          },
+          "27": {
+            "executions": 24,
+            "successes": 3,
+            "lifts": 10,
+            "physical_starts": 6
+          }
+        }
+      }
+    }
+  },
+  "policy_runs_added": 0,
+  "primary_results_modified": false,
+  "post_hoc": true,
+  "code_sha256": "a5a898fcfa826a118dc96f79a7106349448a8753fb65c4a37bd364a371cca894",
+  "scope": "Descriptive duplicate-pixel sensitivity, not a replacement benchmark or new independent confirmation. Scene seeds are disjoint but rendered pixels can repeat."
+}

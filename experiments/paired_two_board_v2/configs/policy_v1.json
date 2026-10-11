@@ -1,0 +1,119 @@
+{
+  "revision": "paired_image_policy_v1",
+  "kind": "paired_goal_image_diffusion_v1",
+  "scope": "exploratory matched simulation-only versus offline video-guided robot imitation; not human 3D recovery or original A/B/C/D ablation",
+  "training_index": "artifacts/reports/paired_robot_demos_v1/training_index.json",
+  "dataset_manifest": "artifacts/reports/paired_robot_demos_v1/manifest.json",
+  "dataset_manifest_sha256": "417822e57a895701019c3b538b5436ea1cd3a31688023cdbe8569689f6ba2d73",
+  "conditions": [
+    "simulation_only",
+    "video_guided"
+  ],
+  "image_size": 128,
+  "observation_horizon": 2,
+  "prediction_horizon": 16,
+  "execution_horizon": 4,
+  "vector_dim": 12,
+  "action_dim": 4,
+  "normalization": "fixed shared physical ranges from sim_task_v1; no heldout data statistics",
+  "model": {
+    "rgb_encoder": "three stride-2 5x5 CNNs, GroupNorm/SiLU, spatial 4x4 pooling, 64D feature",
+    "widths": [
+      64,
+      128
+    ],
+    "time_embedding": 64,
+    "train_diffusion_steps": 100,
+    "inference_steps": 20,
+    "ema_decay": 0.995,
+    "pretrained_weights": null,
+    "initialization": "same full model initial weights for paired seed"
+  },
+  "augmentation": {
+    "brightness": 0.04,
+    "contrast": 0.04,
+    "geometry": false,
+    "paired_history_consistent": true
+  },
+  "training": {
+    "seeds": [
+      7,
+      17,
+      27
+    ],
+    "steps": 6000,
+    "batch_size": 64,
+    "device": "cuda",
+    "learning_rate": 0.0001,
+    "weight_decay": 1e-06,
+    "grad_clip": 1.0,
+    "optimizer": "AdamW",
+    "sampling": "same episode/fraction stream across conditions, each episode uniformly weighted",
+    "selection": "all fixed final EMA checkpoints; validation reporting only, no best seed or checkpoint"
+  },
+  "evaluation": {
+    "episode_steps": 384,
+    "sampling_seed": 8821,
+    "validation": {
+      "start": 61000,
+      "count": 8,
+      "purpose": "closed-loop development check on shared validation scene IDs"
+    },
+    "suites": {
+      "nominal": {
+        "start": 62000,
+        "count": 16,
+        "jitter_m": 0.003
+      },
+      "appearance": {
+        "start": 62100,
+        "count": 8,
+        "jitter_m": 0.003,
+        "object_rgba": [
+          0.08,
+          0.08,
+          0.08,
+          1.0
+        ],
+        "table_rgba": [
+          0.78,
+          0.83,
+          0.87,
+          1.0
+        ]
+      },
+      "wider_start": {
+        "start": 62200,
+        "count": 8,
+        "jitter_m": 0.012
+      }
+    },
+    "diagnostics": {
+      "blank_rgb": {
+        "start": 62300,
+        "count": 4,
+        "seeds": [
+          7
+        ]
+      },
+      "swapped_goal_vector": {
+        "start": 62400,
+        "count": 4,
+        "seeds": [
+          7
+        ]
+      }
+    },
+    "scoring": "same strict designated-goal physics; fixed horizon, scorer does not terminate/repair policy",
+    "goals": "pairs cycled P1G1 through P4G4; not arbitrary/unseen goal claims"
+  },
+  "collaboration_skipped": [
+    "S02/S03/S04 applicant recordings",
+    "human strict footprint outcome adjudication",
+    "real board-to-robot registration",
+    "actual capture timestamps",
+    "external publication and application submission"
+  ],
+  "created_utc": "2026-10-08T14:09:47.294449+00:00",
+  "status": "frozen before policy training or evaluation"
+}

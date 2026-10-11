@@ -1,0 +1,34 @@
+{
+  "tag": "v1.1.0",
+  "release_url": "https://github.com/jinzzze/simu-lab/releases/tag/v1.1.0",
+  "assets": [
+    {
+      "name": "simu-lab-v1.1.0-replay.zip",
+      "bytes": 12835869,
+      "sha256": "0f897b615967b36ed87b7d2403c90d6a938fbbcba2fe3d4c973109dbb0bbcb11",
+      "files": 61
+    },
+    {
+      "name": "simu-lab-v1.1.0-evidence.zip",
+      "bytes": 1801513373,
+      "sha256": "966ca7a50adf050056fd9f1e6b49a76ceed73f89b116e95a1b964e1b25008abc",
+      "files": 2195
+    },
+    {
+      "name": "evidence_walkthrough.mp4",
+      "bytes": 2449809,
+      "sha256": "1dcb367f49a29669fe5f77a5fdf2274bb572915795d88cd1f932cd7344b1c9df"
+    },
+    {
+      "name": "VERIFICATION.json",
+      "bytes": 1081,
+      "sha256": "424cd9d35ba1848142350ed20851da8d3585efe25c8d248a1ce559836647f491"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 367,
+      "sha256": "feb849add0b28c0a0cd771bacced9992b1d0137dc315890fef2f0a7fad1d6cc1"
+    }
+  ],
+  "result_sha256": "170c966236acd76542a07f552ad1b7778cd9d0e3c9600a3176deadbb960f4d2f"
+}

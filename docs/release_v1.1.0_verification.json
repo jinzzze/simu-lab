@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "created_utc": "2026-10-11T02:39:31.795452+00:00",
+  "archives": [
+    {
+      "kind": "replay",
+      "archive_sha256": "0f897b615967b36ed87b7d2403c90d6a938fbbcba2fe3d4c973109dbb0bbcb11",
+      "verified_files": 61
+    },
+    {
+      "kind": "evidence",
+      "archive_sha256": "966ca7a50adf050056fd9f1e6b49a76ceed73f89b116e95a1b964e1b25008abc",
+      "verified_files": 2195
+    }
+  ],
+  "replays": [
+    {
+      "condition": "geometry_only_24",
+      "arrays_identical": true,
+      "scoring_identical": true,
+      "strict_success": false,
+      "frames": 193
+    },
+    {
+      "condition": "video_timing_24",
+      "arrays_identical": true,
+      "scoring_identical": true,
+      "strict_success": false,
+      "frames": 193
+    }
+  ],
+  "frozen_dependency_files": 26,
+  "boundary_tests": 5,
+  "fresh_workspace_boundary_tests": 5,
+  "training_started": false,
+  "scope": "Actual packaged replay on same Windows host with existing independent Oct7 environment; no full retraining or another-machine validation."
+}

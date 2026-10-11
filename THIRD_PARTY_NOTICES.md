@@ -1,3 +1,5 @@
+> v1.1.0: neither the replay ZIP nor the full evidence ZIP includes third-party MediaPipe/ImageNet base weights. Fetch documented upstream files with `scripts/fetch_external_models.py` when required for preprocessing. Project-generated checkpoints and personal recordings are distributed with permission; the notices below do not grant a blanket license.
+
 # Third-party sources and release review
 
 This is a source and provenance notice, not a blanket license grant for data or model weights. The project source license is pending owner selection; `docs/LICENSE_PROPOSAL.md` contains the proposal. Dependency distributions retain their own notices. No Python environment or third-party package source is included in the source archive.

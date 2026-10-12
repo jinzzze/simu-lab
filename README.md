@@ -38,27 +38,38 @@ Each stage asks a different question. The outcome predictor is a supporting stud
 
 ## Task 1: learning from object boxes and hand positions
 
-The simple-transfer study asks whether knowing **where the object is** and **where the hand is** helps a visual model learn from personal video. Twelve phone clips supply 438 shared pretraining frames. The example below plots the actual stored targets for one of those frames.
+**Question:** do object boxes and hand positions help visual learning? Twelve phone clips provide 438 shared RGB frames. Green boxes and 21 yellow hand landmarks below are stored auxiliary targets; the model sees the unannotated image.
 
 ![One recorded training frame shown as raw RGB, with a green object box, and with 21 yellow hand landmarks](media/task-1-supervision.png)
 
-The box describes the visible object region; the hand target contains 21 two-dimensional landmarks. These are automatically generated candidate labels, with unmeasured annotation accuracy. Missing labels are masked independently. The overlays are for illustration: every model receives the same unannotated RGB images. This is hand-position supervision, not gesture classification or recovery of human 3D actions.
-
-**A** uses RGB consistency alone; **B** adds the object-box target; **C** adds hand keypoints; **D** adds both. **R** is an ImageNet-only reference that skips personal-video pretraining. All groups then adapt to simulated images, estimate the block's XY position and use the same fixed grasp controller.
+**Comparison:** A = RGB only; B = + object box; C = + hand keypoints; D = + both. R skips phone-video pretraining. All groups adapt to simulated images and share a fixed grasp controller.
 
 ![Task 1 success counts for A, B, C, D and R: all 192 of 192 with 256 adaptation images; 184, 183, 184, 181 and 182 of 192 with 32 images](media/task-1-results.png)
 
-With **256 adaptation images**, every group reaches **192/192** successful transfers. With **32 images**, A/B/C/D/R score **184/183/184/181/182 out of 192**. Adding both targets did not improve task success in this pilot. The smaller-data follow-up reuses the same scenes and is exploratory; these small differences do not establish a reliable benefit or degradation.
+**Result:** all groups score 192/192 with 256 adaptation images. With 32, A/B/C/D/R score 184/183/184/181/182. Combined supervision shows no success advantage. Labels are unvalidated candidates; the 32-image follow-up reuses test scenes.
 
-[Full Task 1 report](docs/studies/SIMPLE_TRANSFER.md) · [Localization-error comparison](artifacts/reports/visual_ablation_v1/comparison.png) · [Original label-review examples](artifacts/diagnostics/pilot_labels_v2/619481ad2df077adff353cb4ced816b5_review.jpg) · [Figure sources](media/task-1-figure-sources.json)
+[Full report](docs/studies/SIMPLE_TRANSFER.md) · [Localization results](artifacts/reports/visual_ablation_v1/comparison.png) · [Label-review examples](artifacts/diagnostics/pilot_labels_v2/619481ad2df077adff353cb4ced816b5_review.jpg) · [Figure sources](media/task-1-figure-sources.json)
 
-## Task 2: how the video is used
+## Task 2: learning from video timing and progress
 
-In the latest study, 24 personal training clips supply target locations. One condition also uses their coarse transport duration and two-dimensional image progress to shape robot demonstrations in simulation. The learner imitates the robot commands actually executed in those demonstrations.
+**Question:** does video timing help beyond knowing the goal? Both groups use goal locations from 24 personal clips. One also uses coarse transport time and visible 2D progress, illustrated below, to shape simulated robot demonstrations.
+
+![Task 2 training example: the specified goal in the first video frame, a visible object candidate, and the frozen timing and image-progress guide](media/task-2-video-example.png)
+
+**Comparison:** shared geometry versus added timing/progress; 24 robot demonstrations per group, the same recurrent policy, 2,500 updates and three seeds. At runtime, the policy uses current RGB, robot state, goal and previous command.
+
+![Task 2 results: shared geometry versus video timing and progress, showing all test categories, model seeds and start-goal pairs](experiments/personal_video_timing_v4/artifacts/figures/personal_timing_v2/results.png)
+
+**Result:** 7/96 versus 11/96 strict placements (7.3% versus 11.5%); a reliable benefit is not established. Most runs fail to lift: 75/96 versus 69/96. Eight physical starts are reused, and four initial test images overlap training/development; exclusions are reported separately.
+
+[Full results and exclusions](experiments/personal_video_timing_v4/RESULTS_EN.md) · [Video-to-command comparison](experiments/personal_video_timing_v4/artifacts/intervention_audit_v1/REPORT_EN.md) · [Method](docs/METHOD.md) · [Figure sources](media/task-2-figure-sources.json)
+
+<details>
+<summary>Training and execution diagram</summary>
 
 ![Video information shapes offline demonstrations; the policy acts on current observations](media/method.svg)
 
-At execution time, the policy receives the current simulated camera image, robot state, requested goal and previous command. It predicts the next gripper movement and opening. A recurrent model carries information from previous steps. [Method and information boundaries](docs/METHOD.md).
+</details>
 
 ## What the experiments found
 
@@ -69,8 +80,6 @@ At execution time, the policy receives the current simulated camera image, robot
 | Does video timing help the four-goal learner? | Shared geometry **7/96**; added timing/progress **11/96** strict placements | A small observed difference; overall success is low and a reliable benefit is not established |
 
 The tasks, controllers and data budgets differ across rows. The [experiment guide](docs/EXPERIMENTS.md) includes the learned-action and goal-coverage studies, all model seeds and links to the underlying results.
-
-Grasping is the main bottleneck in the latest study: **75/96** and **69/96** runs did not achieve a qualified lift. Its 96 executions per condition reuse eight physical starts across goals and three model seeds. Four initial test-task images also repeat training/development pixels; [the full results](experiments/personal_video_timing_v4/RESULTS_EN.md) retain the original scores and report exclusions separately.
 
 ## Run the recorded policy
 

@@ -1,0 +1,32 @@
+{
+  "episode_id": "X01_E01",
+  "selection": "First named X01 training clip; first frame and valid sample closest to 0.5 pre-envelope image progress.",
+  "frame_indices": [
+    0,
+    111
+  ],
+  "source_video": "experiments/cross_goal_composition_v3/data/raw/X01_train/train_P1_G3_01.mp4",
+  "source_sha256": {
+    "experiments/cross_goal_composition_v3/data/raw/X01_train/train_P1_G3_01.mp4": "d3f02c10ac0c2c921ee032c5e1d1e7f67f099de00437f82b00fdd5843954426a",
+    "experiments/cross_goal_composition_v3/data/processed/intake/x01_intake_v1/manifest.json": "9694991197f41aba768c621b5adb202e90d6636223b9331c3b81ddc2ee3b5cd7",
+    "experiments/cross_goal_composition_v3/data/processed/X01_calibration_v2/X01_E01.json": "87fd0b565db2dc786882aa7798b208247c6e55465051a83508e43fb134d64e2f",
+    "experiments/cross_goal_composition_v3/data/processed/X01_trajectories_v1/X01_E01.frames.jsonl": "814ca52bcd9962982b4ebd6615d523c7cb79654317e81abb78005ed3f78d08b0",
+    "experiments/cross_goal_composition_v3/data/processed/X01_trajectories_v1/X01_E01.reviewed.json": "d8ba2c8a6555f90d714919b7c84cca8e8b189046924a510632c469df60d030d0"
+  },
+  "profile_sha256": "b6d5125a5a34e3db8f5ee6de91af3b87be0a46fea0ed26f29d7323530d76e305",
+  "goal_center_image_pixels": [
+    875.1724614547728,
+    339.4319538731331
+  ],
+  "object_bbox_xywh_pixels": [
+    709,
+    145,
+    69,
+    54
+  ],
+  "coarse_time_interval_s": [
+    2.7781944444444444,
+    5.188194444444444
+  ],
+  "scope": "Visualization of frozen inputs, not a new annotation, training run or policy evaluation."
+}

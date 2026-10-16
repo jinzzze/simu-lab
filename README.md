@@ -102,4 +102,4 @@ Start with the [quick replay guide](docs/QUICKSTART.md). It runs two frozen deve
 
 This is a small simulation study. There is no real-robot evaluation or language-conditioned policy. The recordings share a limited scene family, and the extracted image labels do not recover human metric 3D actions. Exact replay was checked on the original Windows host with an independently installed environment; another-machine compatibility and full-retraining determinism remain unverified.
 
-The author collected the personal recordings and confirmed the task layout. Codex assisted with implementation, experiment execution, candidate-label inspection and writing. Recordings and project checkpoints are public with permission; no blanket source/data/model reuse license has been granted. See [data provenance](docs/DATA_MODEL_CARD.md) and [third-party notices](THIRD_PARTY_NOTICES.md).
+Recordings and project checkpoints are public with permission; no blanket source/data/model reuse license has been granted. See [data provenance](docs/DATA_MODEL_CARD.md) and [third-party notices](THIRD_PARTY_NOTICES.md).
